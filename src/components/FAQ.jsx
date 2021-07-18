@@ -7,6 +7,7 @@ export function FAQ() {
                 <FAQCard />
                 <FAQCard />
                 <FAQCard />
+                <FAQCard />
             </div>
         </div>
     )
