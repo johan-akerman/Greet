@@ -3,12 +3,12 @@ export function Jumbotron() {
     <main className="bg-primary">
       <div className="text-left w-10/12 mx-auto py-44">
         <h1 className="text-white text-6xl sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
-          Få betalt för att referera dina vänner
+          Get paid to refer your talented friends
           <br />
         </h1>
         <p className="mt-3 text-base text-gray-100 sm:mt-5 sm:text-lg sm:max-w-xl sm:mx-auto md:mt-5 md:text-xl lg:mx-0">
-          Greet låter dig hjälpa dina vänner att hitta deras drömjobb. Som
-          belöning får du betalt om dem får en intervju eller blir anställda.
+          Greet let's you help your friend get their dream job. As a reward, you
+          get paid if they get an interview or get hired.
         </p>
         <div className="mt-5 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
           <div className="rounded-md shadow">
