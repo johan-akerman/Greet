@@ -8,8 +8,8 @@ export function InfoBar() {
         <div className="relative">
           <p className="ml-3 text-white truncate">
             <span className="md:inline">
-              🚀 Stora nyheter, vi publicerade precis <strong>27</strong> nya
-              jobb!
+              🚀 Big news, we just published our first <strong>3</strong> open
+              positions!
             </span>
           </p>
 

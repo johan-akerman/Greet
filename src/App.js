@@ -8,15 +8,16 @@ import { Table } from "./components/Table";
 import { FAQ } from "./components/FAQ";
 import { Banner } from "./components/Banner";
 import { Footer } from "./components/Footer";
+import { JobBoard } from "./components/JobBoard";
 
 function App() {
   return (
     <div className="App">
-      <InfoBar />
       <Navbar />
       <Jumbotron />
       <HowItWorks />
-      <Table />
+      <JobBoard />
+
       <FAQ />
       <Banner />
       <Footer />

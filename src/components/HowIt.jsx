@@ -40,7 +40,7 @@ export default function HowIt() {
             <Popover.Button
               className={`
                 ${open ? "" : "text-opacity-90"}
-                text-white group bg-orange-700 px-3 py-2 rounded-md inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+                text-white group bg-orange-700 py-2 rounded-md inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
             >
               <span>How it works</span>
               <FontAwesomeIcon

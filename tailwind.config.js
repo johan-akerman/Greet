@@ -4,8 +4,10 @@ module.exports = {
   theme: {
     backgroundColor: (theme) => ({
       ...theme("colors"),
-      primary: "#FF7859",
-      secondary: "#F3DDD7",
+      //primary: "#FF7859",
+      primary: "#FF3B78",
+      //secondary: "#F3DDD7",
+      secondary: "#FFE2EB",
       danger: "#e3342f",
     }),
   },

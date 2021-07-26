@@ -15,7 +15,7 @@ export function FAQCard() {
                 <FontAwesomeIcon
                   className={`${
                     open ? "transform rotate-180" : ""
-                  } w-5 h-5 text-purple-500`}
+                  } w-5 h-5 text-primary`}
                   icon={faChevronUp}
                 />
               </Disclosure.Button>
