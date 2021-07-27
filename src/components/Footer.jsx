@@ -1,7 +1,7 @@
 export function Footer() {
   return (
     <div className="bg-primary text-white text-left pb-16">
-      <div className="w-10/12 mx-auto pt-12 flex flex-col sm:flex-row space-y-2 justify-start">
+      <div className="w-10/12 mx-auto pt-20 pb-8 flex flex-col sm:flex-row space-y-2 justify-start">
         <div className="w-full sm:w-3/5 pr-6 flex flex-col space-y-2 pb-6">
           <h1 className="text-4xl">Greet</h1>
           <p>Made in Sweden 🇸🇪</p>

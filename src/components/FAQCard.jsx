@@ -9,7 +9,7 @@ export function FAQCard() {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full p-5 text-lg align-middle font-medium  rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
+              <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold  rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
                 <span clasName="align-middle">What is your refund policy?</span>
 
                 <FontAwesomeIcon
@@ -19,7 +19,7 @@ export function FAQCard() {
                   icon={faChevronUp}
                 />
               </Disclosure.Button>
-              <Disclosure.Panel className="px-5 pb-3 text-sm text-gray-500">
+              <Disclosure.Panel className="px-5 pb-3 text-lg text-gray-500">
                 If you're unhappy with your purchase for any reason, email us
                 within 90 days and we'll refund you in full, no questions asked.
               </Disclosure.Panel>

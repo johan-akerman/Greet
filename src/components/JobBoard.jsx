@@ -28,10 +28,12 @@ const jobAds = [
 export function JobBoard() {
   return (
     <div className="bg-white">
-      <div className="w-10/12 mx-auto h-full pt-8 pb-40 ">
+      <div className="w-10/12 mx-auto h-full pt-8 pb-28 ">
         <div className="flex justify-between">
-          <h1 className="text-5xl pb-16 text-left">Trending jobs</h1>
-          <p className="text-lg text-black font-bold">
+          <h1 className="text-3xl font-bold text-gray-900 sm:text-5xl text-left pb-16">
+            Trending jobs
+          </h1>
+          <p className="text-lg text-black pt-4 font-bold">
             🤫 Pssst, more jobs coming soon!
           </p>
         </div>
@@ -46,7 +48,7 @@ export function JobBoard() {
                   alt="Company logo"
                 />
                 <div>
-                  <p class="text-2xl text-gray-900 leading-none">
+                  <p class="text-xl font-semibold text-gray-900 leading-none">
                     {job.position}
                   </p>
                   <p class="text-md text-gray-600">{job.company}</p>
@@ -56,7 +58,7 @@ export function JobBoard() {
               <p className="text-lg">📌 {job.location}</p>
 
               <div className="flex items-center pt-6">
-                <a className="flex items-center justify-center px-8 py-3 bg-primary rounded-xl text-white">
+                <a className="flex items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white">
                   Refer
                 </a>
 
@@ -68,9 +70,9 @@ export function JobBoard() {
           ))}
         </div>
 
-        <span className="flex mx-auto w-96 pt-20 justify-center text-lg">
+        <span className="flex mx-auto w-96 pt-12 justify-center text-lg">
           <h2>Want to post a job? </h2>
-          <a className="ml-4 cursor-pointer border-b-2 border-black hover:text-primary">
+          <a className="ml-2 cursor-pointer border-b-2 border-black hover:text-primary">
             Contact us
           </a>
         </span>

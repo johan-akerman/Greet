@@ -1,8 +1,10 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 export function Jumbotron() {
   return (
     <main className="bg-primary">
       <div className="text-left w-10/12 mx-auto py-44">
-        <h1 className="text-white text-6xl sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
+        <h1 className="text-white text-6xl sm:mt-5 font-bold sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
           Get paid to refer your talented friends
           <br />
         </h1>
@@ -14,9 +16,10 @@ export function Jumbotron() {
           <div className="rounded-md shadow">
             <a
               href="#"
-              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-indigo-600 hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
+              className="w-full flex items-center justify-center px-8 py-3 border border-transparent text-base font-medium rounded-md text-white bg-bam hover:bg-indigo-700 md:py-4 md:text-lg md:px-10"
             >
-              Se lediga jobb
+              Se lediga jobb{" "}
+              <FontAwesomeIcon className="ml-3" icon={faLongArrowAltRight} />
             </a>
           </div>
         </div>

@@ -8,7 +8,8 @@ module.exports = {
       primary: "#FF3B78",
       //secondary: "#F3DDD7",
       secondary: "#FFE2EB",
-      danger: "#e3342f",
+      bam: "#98ACFF",
+      light: "#FFAAC9",
     }),
   },
   variants: {
