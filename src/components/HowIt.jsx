@@ -5,24 +5,18 @@ import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
 
 const solutions = [
   {
-    name: "For hunters",
+    name: "For Greeters",
     description: "Measure actions your users take",
     href: "##",
     icon: IconOne,
   },
   {
-    name: "For companies",
+    name: "For startups",
     description: "Create your own targeted content",
     href: "##",
     icon: IconTwo,
   },
 
-  {
-    name: "Pricing and rewards",
-    description: "Keep track of your growth",
-    href: "##",
-    icon: IconThree,
-  },
   {
     name: "Frequently asked questions",
     description: "Keep track of your growth",

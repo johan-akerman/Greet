@@ -12,9 +12,12 @@ export function HowItWorks() {
         How Greet works
       </h1>
 
-      <div className="grid grid-cols-3 gap-14 py-32 text-left w-10/12 mx-auto ">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 py-32 text-left w-10/12 mx-auto ">
         <div>
-          <FontAwesomeIcon className="text-5xl mb-6" icon={faGlasses} />
+          <FontAwesomeIcon
+            className="text-5xl mb-6 text-pink-300"
+            icon={faGlasses}
+          />
           <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
             All eyes on the job board
           </h1>
@@ -25,7 +28,10 @@ export function HowItWorks() {
         </div>
 
         <div>
-          <FontAwesomeIcon className="text-5xl mb-6" icon={faHandshake} />
+          <FontAwesomeIcon
+            className="text-5xl mb-6 text-pink-300"
+            icon={faHandshake}
+          />
           <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
             Refer a friend or yourself
           </h1>
@@ -36,7 +42,10 @@ export function HowItWorks() {
         </div>
 
         <div>
-          <FontAwesomeIcon className="text-5xl mb-6" icon={faWallet} />
+          <FontAwesomeIcon
+            className="text-5xl mb-6 text-pink-300"
+            icon={faWallet}
+          />
           <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
             Get paid for your referral
           </h1>

@@ -20,26 +20,19 @@ export function Navbar() {
               <img className="h-10" src={logo} />
               <h1 className="pl-4 text-2xl text-white">Greet</h1>
             </div>
-            <div className="block">
-              <div className="flex">
+            <div className="block lg:col-span-1 col-span-2">
+              <div className="flex lg:justify-center justify-end">
                 <HowIt />
                 <a
                   href=""
-                  className="text-white font-medium pl-3 pr-6 py-2 hover:text-gray-200"
+                  className="lg:block hidden text-white font-medium pl-3 pr-6 py-2 hover:text-gray-200"
                 >
                   Job board
-                </a>
-
-                <a
-                  href=""
-                  className="text-white font-medium px-3 py-2 hover:text-gray-200"
-                >
-                  About
                 </a>
               </div>
             </div>
 
-            <div className="relative">
+            <div className="relative lg:block hidden">
               <div className="absolute right-0">
                 <a className="w-44 flex justify-center px-8 py-3 bg-secondary rounded">
                   Post a job!
