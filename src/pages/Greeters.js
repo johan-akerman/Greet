@@ -1,5 +1,7 @@
+import { HowItWorks } from "../components/HowItWorks";
+
 function Greeters() {
-  return <div className="h-96">Greeters</div>;
+  return <HowItWorks />;
 }
 
 export default Greeters;

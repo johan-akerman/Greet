@@ -20,6 +20,13 @@ const solutions = [
   },
 
   {
+    name: "Pricing",
+    description: "Keep track of your growth",
+    href: "/Pricing",
+    icon: IconThree,
+  },
+
+  {
     name: "Frequently asked questions",
     description: "Keep track of your growth",
     href: "/FAQ",

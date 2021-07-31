@@ -1,10 +1,12 @@
 import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
 import Home from "./pages/Home";
 import Refer from "./pages/Refer";
+import Pricing from "./pages/Pricing";
 import PostJob from "./pages/PostJob";
 import Jobs from "./pages/Jobs";
 import Startups from "./pages/Startups";
 import Greeters from "./pages/Greeters";
+import VoltaGreentech from "./pages/startups/VoltaGreentech";
 import FrequentQuestions from "./pages/FrequentQuestions";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
@@ -41,6 +43,14 @@ export default function App() {
 
           <Route path="/refer">
             <Refer />
+          </Route>
+
+          <Route path="/pricing">
+            <Pricing />
+          </Route>
+
+          <Route path="/volta-greentech">
+            <VoltaGreentech />
           </Route>
         </Switch>
       </div>

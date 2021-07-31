@@ -1,5 +1,7 @@
+import { HowItWorks } from "../components/HowItWorks";
+
 function Startups() {
-  return <div className="h-96">Startups</div>;
+  return <HowItWorks />;
 }
 
 export default Startups;

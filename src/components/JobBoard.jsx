@@ -2,6 +2,7 @@ import { Dialog, Transition } from "@headlessui/react";
 import { Fragment, useState } from "react";
 import { ReferModal } from "./ReferModal";
 import { AboutModal } from "./AboutModal";
+import { Link } from "react-router-dom";
 
 const jobAds = [
   {
@@ -81,19 +82,19 @@ export function JobBoard() {
                 <p className="text-lg">📌 {job.location}</p>
 
                 <div className="flex items-center pt-6">
-                  <a
-                    onClick={() => openReferModal()}
+                  <Link
+                    to="/refer"
                     className="flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                   >
                     Refer
-                  </a>
+                  </Link>
 
-                  <a
-                    onClick={() => openAboutModal()}
+                  <Link
+                    to="/volta-greentech"
                     className="ml-2 mr-2 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
                   >
                     About the job
-                  </a>
+                  </Link>
                 </div>
               </div>
             ))}

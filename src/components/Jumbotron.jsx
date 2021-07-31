@@ -28,7 +28,7 @@ export function Jumbotron() {
           </div>
         </div>
         <div className="">
-          <img className="pt-20 w-9/12 float-right" src={phones} />
+          <img className="pt-16 w-8/12 float-right" src={phones} />
         </div>
       </div>
     </main>
