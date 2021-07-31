@@ -18,7 +18,7 @@ export function ReferModal() {
     <div className="">
       <a href=""></a>
 
-      <div className="p-6 overflow-y-auto">{renderStep(index)}</div>
+      <div className="p-6 h-96 overflow-y-auto">{renderStep(index)}</div>
 
       {index != 3 ? (
         <div className="border-t-2 border-gray-200">

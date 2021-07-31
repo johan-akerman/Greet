@@ -9,6 +9,7 @@ module.exports = {
       //secondary: "#F3DDD7",
       secondary: "#FFE2EB",
       bam: "#98ACFF",
+      brownish: "#F1EFE3",
       light: "#FFAAC9",
     }),
   },

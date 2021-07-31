@@ -18,12 +18,15 @@ export function HowItWorks() {
             className="text-5xl mb-6 text-pink-300"
             icon={faGlasses}
           />
+          <p className="text-sm tracking-wide font-semibold text-gray-500 pb-1">
+            STEP 1
+          </p>
           <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
-            All eyes on the job board
+            Take a look on the jobs
           </h1>
           <p className="text-xl font-light">
-            Rows is the first true spreadsheet with built-in integrations and a
-            slick sharing experience.{" "}
+            On the job board you can find jobs at exciting startups. Take a look
+            and see if you find something interesting.
           </p>
         </div>
 
@@ -32,12 +35,15 @@ export function HowItWorks() {
             className="text-5xl mb-6 text-pink-300"
             icon={faHandshake}
           />
+          <p className="text-sm tracking-wide font-semibold text-gray-500 pb-1">
+            STEP 2
+          </p>
           <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
             Refer a friend or yourself
           </h1>
           <p className="text-xl font-light">
-            Rows is the first true spreadsheet with built-in integrations and a
-            slick sharing experience.{" "}
+            Found a job that would be a perfect fit for your friend (or
+            youself)? Don't be shy, refer them!
           </p>
         </div>
 
@@ -46,12 +52,15 @@ export function HowItWorks() {
             className="text-5xl mb-6 text-pink-300"
             icon={faWallet}
           />
+          <p className="text-sm tracking-wide font-semibold text-gray-500 pb-1">
+            STEP 3
+          </p>
           <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
             Get paid for your referral
           </h1>
           <p className="text-xl font-light">
-            Rows is the first true spreadsheet with built-in integrations and a
-            slick sharing experience.{" "}
+            If it was a good fit and your refferral results in an interview or
+            an hiring, you will get rewarded.
           </p>
         </div>
       </div>

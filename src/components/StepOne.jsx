@@ -3,14 +3,14 @@ import { useState, useEffect } from "react";
 export function StepOne() {
   return (
     <div className="h-96 overflow-y-auto">
-      <h1 className="text-3xl text-left mb-3">
+      <h1 className="text-4xl text-left mb-3">
         Refer a Software Engineer for Voi Technology
       </h1>
-      <p className="text-left mb-2">
+      <p className="text-left text-lg mb-2 text-gray-500">
         Refer someone who would be a great fit. Is that your friend or yourself?
       </p>
-      <form class="w-full ">
-        <label class="block w-48 text-gray-500 font-bold mb-12">
+      <form class="w-full pt-2 ">
+        <label class="block text-gray-500 font-bold mb-6">
           <input class="mr-2 leading-tight" type="checkbox" />
           <span class="uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
             I want to refer myself

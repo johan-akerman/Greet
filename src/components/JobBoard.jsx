@@ -164,7 +164,7 @@ export function JobBoard() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block pt-5 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="w-8/12 inline-block pt-5 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
                 <ReferModal />
               </div>
             </Transition.Child>
