@@ -2,36 +2,41 @@ import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import { Link } from "react-router-dom";
+import { useRef } from "react";
 
 const solutions = [
   {
     name: "For Greeters",
     description: "Measure actions your users take",
-    href: "##",
+    href: "/greeters",
     icon: IconOne,
   },
   {
     name: "For startups",
     description: "Create your own targeted content",
-    href: "##",
+    href: "/startups",
     icon: IconTwo,
   },
 
   {
     name: "Frequently asked questions",
     description: "Keep track of your growth",
-    href: "##",
+    href: "/FAQ",
     icon: IconThree,
   },
 ];
 
 export default function HowIt() {
+  const buttonRef = useRef();
+
   return (
     <div className="px-4">
       <Popover className="relative">
-        {({ open }) => (
+        {({ open, close }) => (
           <>
             <Popover.Button
+              ref={buttonRef}
               className={`
                 ${open ? "" : "text-opacity-90"}
                 text-white group py-2 rounded-md inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
@@ -55,11 +60,13 @@ export default function HowIt() {
                 <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
                   <div className="relative bg-white p-7">
                     {solutions.map((item) => (
-                      <a
+                      <Link
                         key={item.name}
-                        href={item.href}
+                        onClick={() => buttonRef.current?.click()}
+                        to={item.href}
                         className="flex items-center text-left p-2 -m-3 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                       >
+                        {console.log(open)}
                         <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
                           <item.icon aria-hidden="true" />
                         </div>
@@ -71,7 +78,7 @@ export default function HowIt() {
                             {item.description}
                           </p>
                         </div>
-                      </a>
+                      </Link>
                     ))}
                   </div>
                 </div>

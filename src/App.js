@@ -1,28 +1,50 @@
-import logo from "./logo.svg";
-import "./App.css";
-import { InfoBar } from "./components/InfoBar";
+import { BrowserRouter as Router, Switch, Route, Link } from "react-router-dom";
+import Home from "./pages/Home";
+import Refer from "./pages/Refer";
+import PostJob from "./pages/PostJob";
+import Jobs from "./pages/Jobs";
+import Startups from "./pages/Startups";
+import Greeters from "./pages/Greeters";
+import FrequentQuestions from "./pages/FrequentQuestions";
 import { Navbar } from "./components/Navbar";
-import { Jumbotron } from "./components/Jumbotron";
-import { HowItWorks } from "./components/HowItWorks";
-import { Table } from "./components/Table";
-import { FAQ } from "./components/FAQ";
-import { Banner } from "./components/Banner";
 import { Footer } from "./components/Footer";
-import { JobBoard } from "./components/JobBoard";
 
-function App() {
+export default function App() {
   return (
-    <div className="App">
-      <Navbar />
-      <Jumbotron />
-      <HowItWorks />
-      <JobBoard />
+    <Router>
+      <div>
+        <Navbar />
+        <Switch>
+          <Route exact path="/">
+            <Home />
+          </Route>
 
-      <FAQ />
-      <Banner />
+          <Route path="/post-job">
+            <PostJob />
+          </Route>
+
+          <Route path="/job-board">
+            <Jobs />
+          </Route>
+
+          <Route path="/startups">
+            <Startups />
+          </Route>
+
+          <Route path="/greeters">
+            <Greeters />
+          </Route>
+
+          <Route path="/faq">
+            <FrequentQuestions />
+          </Route>
+
+          <Route path="/refer">
+            <Refer />
+          </Route>
+        </Switch>
+      </div>
       <Footer />
-    </div>
+    </Router>
   );
 }
-
-export default App;

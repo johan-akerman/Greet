@@ -6,7 +6,7 @@ export function Jumbotron() {
   return (
     <main className="bg-primary ">
       <div className="w-10/12 flex mx-auto">
-        <div className="text-left w-8/12 mx-auto lg:py-44 py-32">
+        <div className="text-left w-8/12 mx-auto lg:py-36 py-32">
           <h1 className="text-white lg:text-6xl text-4xl sm:mt-5 font-bold sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
             Get paid to refer your friends to exciting startups
             <br />

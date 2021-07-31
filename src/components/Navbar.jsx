@@ -1,10 +1,7 @@
-/* This example requires Tailwind CSS v2.0+ */
-import { Fragment } from "react";
-import { Disclosure, Menu, Transition } from "@headlessui/react";
+import { Disclosure } from "@headlessui/react";
 import logo from "../images/logo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faBars, faTimes } from "@fortawesome/free-solid-svg-icons";
 import HowIt from "./HowIt";
+import { Link } from "react-router-dom";
 
 function classNames(...classes) {
   return classes.filter(Boolean).join(" ");
@@ -15,28 +12,33 @@ export function Navbar() {
     <Disclosure as="nav" className="bg-primary">
       {({ open }) => (
         <>
-          <div className="grid grid-cols-3 gap-4 justify-between h-16 py-6 w-10/12 mx-auto">
-            <div className="flex">
+          <div className="grid grid-cols-3 gap-4 justify-between h-24 py-6 w-10/12 mx-auto">
+            <Link className="flex" to="/">
               <img className="h-10" src={logo} />
               <h1 className="pl-4 text-2xl text-white">Greet</h1>
-            </div>
+            </Link>
+
             <div className="block lg:col-span-1 col-span-2">
               <div className="flex lg:justify-center justify-end">
                 <HowIt />
-                <a
-                  href=""
+
+                <Link
                   className="lg:block hidden text-white font-medium pl-3 pr-6 py-2 hover:text-gray-200"
+                  to="/job-board"
                 >
                   Job board
-                </a>
+                </Link>
               </div>
             </div>
 
             <div className="relative lg:block hidden">
               <div className="absolute right-0">
-                <a className="w-44 flex justify-center px-8 py-3 bg-secondary rounded">
+                <Link
+                  className="w-44 flex justify-center px-8 py-3 bg-secondary rounded"
+                  to="/post-job"
+                >
                   Post a job!
-                </a>
+                </Link>
               </div>
             </div>
           </div>
