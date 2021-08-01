@@ -6,9 +6,9 @@ function PostJob() {
           <h1 className="text-5xl text-left mb-3">Post a job on Greet</h1>
           <p className="text-left text-lg mb-2 text-gray-500">
             We just launched Greet are very happy that you are interested in
-            partnering with us. Before posting your jobs we would love to get to
-            know you better and how we can help your company. Please fill in the
-            form below and we will get in touch.
+            partnering with us. Before posting your jobs, we would love to get
+            to know you better to understand how we can help grow your company.
+            Please fill in the form below and we will get in touch.
           </p>
           <form class="w-full">
             <div class="mt-8 mb-8">

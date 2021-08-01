@@ -1,7 +1,11 @@
 import { Popover, Transition } from "@headlessui/react";
 import { Fragment } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown } from "@fortawesome/free-solid-svg-icons";
+import {
+  faChevronDown,
+  faHandSparkles,
+  faRocket,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 import { useRef } from "react";
 
@@ -10,13 +14,13 @@ const solutions = [
     name: "For Greeters",
     description: "Measure actions your users take",
     href: "/greeters",
-    icon: IconOne,
+    icon: "faChevronDown",
   },
   {
     name: "For startups",
     description: "Create your own targeted content",
     href: "/startups",
-    icon: IconTwo,
+    icon: "faChevronDown",
   },
 ];
 
@@ -30,9 +34,9 @@ export default function HowIt() {
           <>
             <Popover.Button
               ref={buttonRef}
-              className={`
-                ${open ? "" : "text-opacity-90"}
-                text-white group py-2 rounded-md inline-flex items-center text-base font-medium hover:text-opacity-100 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75`}
+              className="
+                
+                text-white group py-2 rounded-md inline-flex items-center text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               <span>How it works</span>
               <FontAwesomeIcon
@@ -49,30 +53,37 @@ export default function HowIt() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute z-10 w-96 max-w-sm px-4 mt-3 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
-                <div className="overflow-hidden rounded-lg shadow-lg ring-1 ring-black ring-opacity-5">
-                  <div className="relative bg-white p-7">
-                    {solutions.map((item) => (
-                      <Link
-                        key={item.name}
-                        onClick={() => buttonRef.current?.click()}
-                        to={item.href}
-                        className="flex items-center text-left p-2 -m-3 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-50 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
-                      >
-                        {console.log(open)}
-                        <div className="flex items-center justify-center flex-shrink-0 w-10 h-10 text-white sm:h-12 sm:w-12">
-                          <item.icon aria-hidden="true" />
-                        </div>
-                        <div className="ml-4">
-                          <p className="text-sm font-medium text-gray-900">
-                            {item.name}
-                          </p>
-                          <p className="text-sm text-gray-500">
-                            {item.description}
-                          </p>
-                        </div>
-                      </Link>
-                    ))}
+              <Popover.Panel className="absolute z-10 w-60 max-w-sm mt-8 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+                <div className="overflow-hidden rounded-lg shadow-lg">
+                  <div className="relative bg-white p-3">
+                    <Link
+                      onClick={() => buttonRef.current?.click()}
+                      to="/greeters"
+                      className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                    >
+                      <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-pink-500 bg-secondary rounded-lg sm:h-12 sm:w-12">
+                        <FontAwesomeIcon icon={faHandSparkles} />
+                      </div>
+                      <div className="ml-4">
+                        <p className="text-md font-semibold text-gray-900">
+                          For Greeters
+                        </p>
+                      </div>
+                    </Link>
+                    <Link
+                      onClick={() => buttonRef.current?.click()}
+                      to="/startups"
+                      className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
+                    >
+                      <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-pink-500 bg-secondary rounded-lg sm:h-12 sm:w-12">
+                        <FontAwesomeIcon icon={faRocket} />
+                      </div>
+                      <div className="ml-4">
+                        <p className="text-md font-semibold text-gray-900">
+                          For Startups
+                        </p>
+                      </div>
+                    </Link>
                   </div>
                 </div>
               </Popover.Panel>

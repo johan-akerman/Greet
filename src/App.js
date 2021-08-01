@@ -3,6 +3,7 @@ import Home from "./pages/Home";
 import Refer from "./pages/Refer";
 import PostJob from "./pages/PostJob";
 import Jobs from "./pages/Jobs";
+import { InfoBar } from "./components/InfoBar";
 import Startups from "./pages/Startups";
 import Greeters from "./pages/Greeters";
 import VoltaGreentech from "./pages/startups/VoltaGreentech";
@@ -13,6 +14,7 @@ export default function App() {
   return (
     <Router>
       <div>
+        <InfoBar />
         <Navbar />
         <Switch>
           <Route exact path="/">

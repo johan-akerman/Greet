@@ -21,7 +21,7 @@ export function Navbar() {
               <div className="flex pl-5 pt-1">
                 <HowIt />
                 <Link
-                  className="lg:block hidden text-white font-medium pl-3 pr-6 py-2 hover:text-gray-200"
+                  className="lg:block hidden text-white text-lg font-semibold pl-3 pr-6 py-2 hover:text-gray-200"
                   to="/job-board"
                 >
                   Job board
@@ -30,14 +30,12 @@ export function Navbar() {
             </div>
 
             <div className="relative lg:block hidden">
-              <div className="absolute right-0">
-                <Link
-                  className="w-44 flex justify-center px-8 py-3 bg-secondary rounded"
-                  to="/post-job"
-                >
-                  Post a job!
-                </Link>
-              </div>
+              <Link
+                className="w-44 flex justify-center px-8 py-3 bg-white text-pink-500 rounded-xl text-lg font-semibold absolute right-0 hover:bg-secondary"
+                to="/post-job"
+              >
+                Post a job
+              </Link>
             </div>
           </div>
         </>

@@ -9,8 +9,10 @@ export function FAQCard() {
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold  rounded-lg focus:outline-none focus-visible:ring focus-visible:ring-purple-500 focus-visible:ring-opacity-75">
-                <span clasName="align-middle">What is your refund policy?</span>
+              <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold  rounded-lg focus:outline-none">
+                <span clasName={open ? "text-pink-500" : "text-black"}>
+                  What is your refund policy?
+                </span>
 
                 <FontAwesomeIcon
                   className={`${
