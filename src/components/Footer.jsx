@@ -6,7 +6,7 @@ export function Footer() {
       <div className="w-10/12 mx-auto pt-20 pb-8 flex flex-col sm:flex-row space-y-2 justify-start">
         <div className="w-full sm:w-3/5 pr-6 flex flex-col space-y-2 pb-6">
           <Link to="/">
-            <h1 className="text-4xl">Greet</h1>
+            <h1 className="text-4xl font-medium">Greet</h1>
           </Link>
           <p>Currently available in Sweden 🇸🇪</p>
           <a className="w-28  border-b-2 border-white hover:text-primary">
@@ -27,12 +27,6 @@ export function Footer() {
           <Link className="w-24 opacity-60 hover:opacity-100" to="/greeters">
             For Greeters
           </Link>
-          <Link className="w-24 opacity-60 hover:opacity-100" to="/pricing">
-            Pricing
-          </Link>
-          <Link className="w-24 opacity-60 hover:opacity-100" to="/FAQ">
-            FAQ
-          </Link>{" "}
         </div>
       </div>
     </div>

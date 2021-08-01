@@ -12,16 +12,14 @@ export function Navbar() {
     <Disclosure as="nav" className="bg-primary">
       {({ open }) => (
         <>
-          <div className="grid grid-cols-3 gap-4 justify-between h-24 py-6 w-10/12 mx-auto">
-            <Link className="flex" to="/">
-              <img className="h-10" src={logo} />
-              <h1 className="pl-4 text-2xl text-white">Greet</h1>
-            </Link>
-
-            <div className="block lg:col-span-1 col-span-2">
-              <div className="flex lg:justify-center justify-end">
+          <div className="flex justify-between h-24 py-6 w-10/12 mx-auto">
+            <div className="flex">
+              <Link className="flex pt-1" to="/">
+                <img className="h-10 " src={logo} />
+                <h1 className="pl-4 text-3xl text-white font-medium">Greet</h1>
+              </Link>
+              <div className="flex pl-5 pt-1">
                 <HowIt />
-
                 <Link
                   className="lg:block hidden text-white font-medium pl-3 pr-6 py-2 hover:text-gray-200"
                   to="/job-board"

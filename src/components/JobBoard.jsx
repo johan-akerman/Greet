@@ -31,7 +31,7 @@ const jobAds = [
   },
 ];
 
-export function JobBoard() {
+export function JobBoard({ title }) {
   let [referIsOpen, setReferIsOpen] = useState(false);
   let [aboutIsOpen, setAboutIsOpen] = useState(false);
 
@@ -53,14 +53,16 @@ export function JobBoard() {
     <>
       <div className="bg-white">
         <div className="w-10/12 mx-auto h-full pt-8 pb-28 ">
-          <div className="flex justify-between">
-            <h1 className="text-3xl font-bold text-gray-900 sm:text-5xl text-left pb-16">
-              Trending jobs
-            </h1>
-            <p className="text-lg text-black pt-4 lg:block hidden font-bold">
-              🤫 Pssst, more jobs coming soon!
-            </p>
-          </div>
+          {title ? (
+            <div className="flex justify-between">
+              <h1 className="text-3xl font-bold text-gray-900 sm:text-5xl text-left pb-16">
+                Trending jobs
+              </h1>
+              <p className="text-lg text-black pt-4 lg:block hidden font-bold">
+                🤫 Pssst, more jobs coming soon!
+              </p>
+            </div>
+          ) : null}
 
           <div className="grid lg:grid-cols-3 gap-6 grid-cols-1 ">
             {jobAds.map((job, id) => (
@@ -102,9 +104,12 @@ export function JobBoard() {
 
           <span className="flex mx-auto w-full pt-12 justify-center text-lg">
             <h2>Want to post a job? </h2>
-            <a className="ml-2 cursor-pointer border-b-2 border-black hover:text-primary">
+            <Link
+              to="/post-job"
+              className="ml-2 cursor-pointer border-b-2 border-black hover:text-primary"
+            >
               Contact us
-            </a>
+            </Link>
           </span>
         </div>
       </div>

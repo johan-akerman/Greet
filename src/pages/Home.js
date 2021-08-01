@@ -9,7 +9,7 @@ function Home() {
     <div>
       <Jumbotron />
       <HowItWorks />
-      <JobBoard />
+      <JobBoard title={true} />
       <FAQ />
       <Banner />
     </div>
