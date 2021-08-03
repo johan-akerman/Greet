@@ -21,7 +21,7 @@ export function Jumbotron() {
             <div className="rounded-md shadow">
               <Link
                 to="/job-board"
-                className="w-full font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base text-pink-500 bg-white hover:bg-secondary md:py-4 md:text-lg md:px-10"
+                className="w-full font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base text-primary bg-white hover:bg-secondary md:py-4 md:text-lg md:px-10"
               >
                 See available jobs
               </Link>
