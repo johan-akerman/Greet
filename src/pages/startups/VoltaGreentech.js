@@ -214,6 +214,9 @@ function VoltaGreentech() {
                 company
               </li>
             </ul>
+            <div className="bg-primary text-white px-5 py-3  w-52 text-center rounded-xl mt-4">
+              Refer someone
+            </div>
           </div>
         </div>
       </div>
