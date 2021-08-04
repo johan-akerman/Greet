@@ -29,27 +29,30 @@ export default function Refer() {
   }, [index]); //
 
   return (
-    <div className="bg-light pb-32">
+    <div className="bg-white pb-32 min-h-screen">
       <canvas id="my-canvas" className="absolute z-0 "></canvas>
       <div className="h-32"></div>
 
-      <div className="bg-white rounded-2xl p-12 w-7/12 mx-auto">
-        <div className="p-6 z-10">{renderStep(index)}</div>
+      <div className=" rounded-2xl p-12 w-7/12 mx-auto">
+        <div className="p-6 z-30">{renderStep(index)}</div>
 
         {index != 3 ? (
           <div>
-            <div className="flex">
+            <div className="flex mx-auto w-full text-center justify-center">
+              {index === 0 ? null : (
+                <a
+                  className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 py-3 rounded-xl border-none"
+                  onClick={() => setIndex(index - 1)}
+                >
+                  Go back
+                </a>
+              )}
+
               <a
-                className="flex ml-6 mr-2 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                className="flex ml-2 mr-2 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                 onClick={() => setIndex(index + 1)}
               >
                 {index === 2 ? "Submit" : "Next"}
-              </a>
-              <a
-                className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 py-3 rounded-xl border-none"
-                onClick={() => setIndex(index - 1)}
-              >
-                Go back
               </a>
             </div>
           </div>

@@ -1,8 +1,14 @@
+import { useEffect } from "react";
+
 export function StepFour() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="overflow-y-auto">
-      <h1 className="text-5xl text-left mb-3">Ready, set, pitch!</h1>
-      <p className="text-left text-lg mb-2 text-gray-500">
+      <h1 className="text-5xl text-center mb-3">Ready, set, pitch!</h1>
+      <p className="text-center text-lg mb-2 text-gray-500">
         Make your refferal stand out. Why should your candidate get hired?
       </p>
       <form class="w-full mt-8">
@@ -15,7 +21,7 @@ export function StepFour() {
               Motivation
             </label>
             <textarea
-              class="appearance-none block w-full text-lg bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+              class="appearance-none block w-full text-lg bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
               id="grid-password"
               type="password"
               rows="8"

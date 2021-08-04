@@ -1,40 +1,21 @@
+import { Link } from "react-router-dom";
 function VoltaGreentech() {
   return (
     <>
-      <div className="bg-secondary py-32">
+      <div className=" py-32">
         <div className="w-8/12 mx-auto bg-white rounded-xl">
-          {/*   <div className="flex">
-            <div className="rounded w-20 bg-white p-1 shadow mr-4">
+          <div className="p-8">
+            <div className="flex">
               <img
-                className="w-32 rounded-md"
+                className="w-20 mr-6 rounded-md"
                 src="https://media-exp1.licdn.com/dms/image/C4E0BAQFo65CzbG9jhQ/company-logo_200_200/0/1597158989808?e=1634774400&v=beta&t=nnnDMsM1zrAZnnKZv8BgB0DNd3C51sDrOxKyogbrwbc"
               />
+
+              <div>
+                <h1 className="text-4xl pt-4">Voi Technology</h1>
+              </div>
             </div>
-            <div>
-              <h1 className="text-2xl pt-3">Voi Technology</h1>
-              <a
-                href="voiscooters.com"
-                target="_blank"
-                className="text-blue-500"
-              >
-                voiscooters.com
-              </a>
-            </div>
-          </div> */}
-          <div
-            className="bg-cover w-full h-40 bg-bottom rounded-t-xl"
-            style={{
-              backgroundImage: `url("https://cdn.breakit.se/assets/article/4b8b3f7db04885a9cdf581811558a246.jpg")`,
-            }}
-          ></div>
-          <div className="rounded w-32 bg-white p-1 shadow -mt-20 ml-12">
-            <img
-              className="w-32 rounded-md"
-              src="https://media-exp1.licdn.com/dms/image/C4E0BAQFo65CzbG9jhQ/company-logo_200_200/0/1597158989808?e=1634774400&v=beta&t=nnnDMsM1zrAZnnKZv8BgB0DNd3C51sDrOxKyogbrwbc"
-            />
-          </div>
-          <div className="p-8">
-            <div className="grid grid-cols-3 gap-14 pt-3 border-b-2 border-gray-200 pb-6">
+            <div className="grid grid-cols-3 gap-14 pt-3 ">
               <div className="col-span-2">
                 <h1 className="text-3xl mt-12 mb-3">About Voi</h1>
                 <p className="text-lg">
@@ -193,7 +174,7 @@ function VoltaGreentech() {
               </li>
             </ul>
             <h2 className="text-2xl mt-12 mb-3">WHAT YOU'LL GET</h2>
-            <ul className="list-disc text-xl">
+            <ul className="list-disc text-xl mb-12">
               <li>
                 {" "}
                 Defining and leading the launch of our new, environmentally
@@ -214,9 +195,12 @@ function VoltaGreentech() {
                 company
               </li>
             </ul>
-            <div className="bg-primary text-white px-5 py-3  w-52 text-center rounded-xl mt-4">
+            <Link
+              to="/refer"
+              className="cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+            >
               Refer someone
-            </div>
+            </Link>
           </div>
         </div>
       </div>

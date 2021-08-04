@@ -1,22 +1,30 @@
+import { useEffect } from "react";
+
 export function StepOne() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="overflow-y-auto">
-      <h1 className="text-5xl text-left mb-3">
+      <h1 className="text-5xl text-center mb-3">
         Refer a Software Engineer to Voi
       </h1>
-      <p className="text-left text-lg mb-4 text-gray-500">
+      <p className="text-center text-lg mb-4 text-gray-500">
         Refer someone who would be a great fit. Is that your friend or yourself?
       </p>
       <form class="w-full">
-        <label>
-          <input
-            class="mr-2 leading-tight h-6 w-6 text-black"
-            type="checkbox"
-          />
-          <span class="text-left text-lg  text-gray-500">
-            I want to refer myself
-          </span>
-        </label>
+        <div className="mx-auto w-52">
+          <label>
+            <input
+              class="mr-2  cursor-pointer leading-tight h-6 w-6 text-black"
+              type="checkbox"
+            />
+            <span class="text-left text-lg-2 text-gray-500">
+              I want to refer myself
+            </span>
+          </label>
+        </div>
 
         <div class="mt-8 mb-8">
           <label
@@ -26,7 +34,7 @@ export function StepOne() {
             Candidate name
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-first-name"
             type="text"
             placeholder="Jane"
@@ -40,7 +48,7 @@ export function StepOne() {
             Candidate current job title
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-last-name"
             type="text"
             placeholder="Doe"
@@ -55,7 +63,7 @@ export function StepOne() {
             Candidate email
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-first-name"
             type="text"
             placeholder="Jane"
@@ -69,7 +77,7 @@ export function StepOne() {
             Candidate LinkedIn
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-last-name"
             type="text"
             placeholder="Doe"

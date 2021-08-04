@@ -1,8 +1,14 @@
+import { useEffect } from "react";
+
 export function StepTwo() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
   return (
     <div className="overflow-y-auto">
-      <h1 className="text-5xl text-left mb-3">Who are you?</h1>
-      <p className="text-left text-lg mb-2 text-gray-500">
+      <h1 className="text-5xl text-center mb-3">Who are you?</h1>
+      <p className=" text-center text-lg mb-2 text-gray-500">
         Tell us more about yourself to make your referral more credible.
       </p>
       <form class="w-full">
@@ -14,7 +20,7 @@ export function StepTwo() {
             Your name
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-first-name"
             type="text"
             placeholder="Jane"
@@ -28,7 +34,7 @@ export function StepTwo() {
             Your current job title
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-last-name"
             type="text"
             placeholder="Doe"
@@ -43,7 +49,7 @@ export function StepTwo() {
             Your email
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-first-name"
             type="text"
             placeholder="Jane"
@@ -57,7 +63,7 @@ export function StepTwo() {
             Your LinkedIn
           </label>
           <input
-            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+            class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
             id="grid-last-name"
             type="text"
             placeholder="Doe"

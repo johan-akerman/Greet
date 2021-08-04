@@ -1,6 +1,11 @@
+import { useEffect } from "react";
+
 function PostJob() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
-    <div className="py-32 bg-light">
+    <div className="py-32 ">
       <div className="bg-white rounded-2xl p-12 w-7/12 mx-auto ">
         <div className="overflow-y-auto">
           <h1 className="text-5xl text-left mb-3">Post a job on Greet</h1>
@@ -19,7 +24,7 @@ function PostJob() {
                 Which company do you represent?
               </label>
               <input
-                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -34,7 +39,7 @@ function PostJob() {
                 Company website
               </label>
               <input
-                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -48,7 +53,7 @@ function PostJob() {
                 Your name
               </label>
               <input
-                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
@@ -63,7 +68,7 @@ function PostJob() {
                 Your email
               </label>
               <input
-                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white"
+                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
                 id="grid-first-name"
                 type="text"
                 placeholder="Jane"
@@ -77,7 +82,7 @@ function PostJob() {
                 Your phone number
               </label>
               <input
-                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-gray-500"
+                class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
                 id="grid-last-name"
                 type="text"
                 placeholder="Doe"
@@ -85,6 +90,7 @@ function PostJob() {
             </div>
           </form>
         </div>
+
         <a className="w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white">
           Submit
         </a>
