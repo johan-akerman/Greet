@@ -7,11 +7,11 @@ export function StepFour() {
 
   return (
     <div className=" overflow-x-hidden">
-      <h1 className="md:text-5xl text-4xl text-center mb-3 ">
-        Ready, set, pitch!
+      <h1 className="font-semibold md:text-5xl text-4xl text-center mb-3 ">
+        Ready, set, pitch! 🎬
       </h1>
       <p className="text-center text-lg mb-2 text-gray-500">
-        Make your refferal stand out. Why should your candidate get hired?
+        Make your referral stand out. Why should your candidate get hired?
       </p>
       <form class="w-full mt-8">
         <div class="flex flex-wrap -mx-3 mb-6">

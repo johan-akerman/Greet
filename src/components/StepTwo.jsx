@@ -7,7 +7,9 @@ export function StepTwo() {
 
   return (
     <div className="overflow-y-auto">
-      <h1 className="md:text-5xl text-4xl text-center mb-3">Who are you?</h1>
+      <h1 className="font-semibold md:text-5xl text-4xl text-center mb-3">
+        Who are you? 🤔
+      </h1>
       <p className=" text-center text-lg mb-2 text-gray-500">
         Tell us more about yourself to make your referral more credible.
       </p>

@@ -7,8 +7,8 @@ export function StepOne() {
 
   return (
     <div className="overflow-y-auto">
-      <h1 className="md:text-5xl text-4xl text-center mb-3">
-        Refer a Software Engineer to Voi
+      <h1 className="md:text-5xl font-semibold text-4xl text-center mb-3">
+        Refer someone to Volta Greentech 🐄
       </h1>
       <p className="text-center text-lg mb-4 text-gray-500">
         Refer someone who would be a great fit. Is that your friend or yourself?

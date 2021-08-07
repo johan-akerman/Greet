@@ -12,6 +12,9 @@ function renderStep(index) {
 }
 
 export default function Refer() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   const [index, setIndex] = useState(0);
   const [referMyself, setReferMyself] = useState(false);
   useEffect(() => {
@@ -49,7 +52,7 @@ export default function Refer() {
               )}
 
               <a
-                className="flex ml-2 mr-2 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                 onClick={() => setIndex(index + 1)}
               >
                 {index === 2 ? "Submit" : "Next"}

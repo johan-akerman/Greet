@@ -1,8 +1,11 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faWallet,
-  faHandshake,
+  faHandPeace,
+  faSearch,
   faGlasses,
+  faCoins,
+  faMoneyBillWave,
+  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 export function HowItWorks() {
@@ -15,12 +18,10 @@ export function HowItWorks() {
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-32 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
         <div>
           <FontAwesomeIcon
-            className="text-5xl mb-6 text-pink-300"
-            icon={faGlasses}
+            className="text-5xl mb-6 text-indigo-500"
+            icon={faSearch}
           />
-          <p className="text-sm tracking-wide font-semibold text-gray-500 pb-1">
-            STEP 1
-          </p>
+
           <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
             Take a look on the jobs
           </h1>
@@ -32,12 +33,10 @@ export function HowItWorks() {
 
         <div>
           <FontAwesomeIcon
-            className="text-5xl mb-6 text-pink-300"
-            icon={faHandshake}
+            className="text-5xl mb-6 text-yellow-400"
+            icon={faHandPeace}
           />
-          <p className="text-sm tracking-wide font-semibold text-gray-500 pb-1">
-            STEP 2
-          </p>
+
           <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
             Refer a friend or yourself
           </h1>
@@ -49,18 +48,16 @@ export function HowItWorks() {
 
         <div>
           <FontAwesomeIcon
-            className="text-5xl mb-6 text-pink-300"
-            icon={faWallet}
+            className="text-5xl mb-6 text-green-500"
+            icon={faMoneyBillWave}
           />
-          <p className="text-sm tracking-wide font-semibold text-gray-500 pb-1">
-            STEP 3
-          </p>
+
           <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
             Get paid for your referral
           </h1>
           <p className="text-xl font-light">
-            If it was a good fit and your refferral results in an interview or
-            an hiring, you will get rewarded.
+            If it was a good fit and your referral results in an interview or an
+            hiring, you will get rewarded.
           </p>
         </div>
       </div>

@@ -4,12 +4,12 @@ import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
 export function FAQCard() {
   return (
-    <div className="w-full pt-4">
+    <div className="w-full mt-4 transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg rounded-2xl">
       <div className="w-full p-2 mx-auto bg-white rounded-2xl text-left">
         <Disclosure>
           {({ open }) => (
             <>
-              <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold  rounded-lg focus:outline-none">
+              <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold focus:outline-none">
                 <span clasName={open ? "text-pink-500" : "text-black"}>
                   What is your refund policy?
                 </span>

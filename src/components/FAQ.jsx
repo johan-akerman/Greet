@@ -2,7 +2,7 @@ import { FAQCard } from "./FAQCard";
 export function FAQ() {
   return (
     <div className="bg-secondary md:pb-32 pb-12 text-center">
-      <h1 className="md:pt-24 pt-16 md:pb-12 pb-8 text-black  md:text-5xl text-4xl font-bold">
+      <h1 className="md:pt-24 pt-16 md:pb-12 pb-8 text-black  md:text-6xl text-4xl font-bold">
         Got any questions?
       </h1>
 

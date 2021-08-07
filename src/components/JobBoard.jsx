@@ -1,34 +1,42 @@
 import certificate from "../images/certificate.png";
-
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faCoins,
+  faMoneyBillWave,
+  faMapMarkerAlt,
+} from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
 const jobAds = [
-  {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C4E0BAQFo65CzbG9jhQ/company-logo_200_200/0/1597158989808?e=1634774400&v=beta&t=nnnDMsM1zrAZnnKZv8BgB0DNd3C51sDrOxKyogbrwbc",
-    company: "Voi Technology",
-    certificate: true,
-    position: "Frontend developer",
-    location: "Stockholm, Sweden",
-    prize: "10.000 SEK",
-  },
   {
     image:
       "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
     company: "Volta Greentech",
     certificate: true,
     position: "Business developer",
-    location: "Stockholm, Sweden",
-    prize: "15.000 SEK",
+    location: "Stockholm",
+    hiringBonus: "12.500 SEK",
+    interviewBonus: "250 SEK",
   },
   {
     image:
-      "https://media-exp1.licdn.com/dms/image/C4E0BAQHjlxsPphRpqw/company-logo_200_200/0/1619786501790?e=1634774400&v=beta&t=rhv88S6S27PtHrtYUfV_J16Y2aIJsBB1wS0XUEU53rg",
-    company: "Curb Food",
-    certificate: false,
-    position: "Frontend developer",
-    location: "Stockholm, Sweden",
-    prize: "7.500 SEK",
+      "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
+    company: "Volta Greentech",
+    certificate: true,
+    position: "Head of manufacturing",
+    location: "Stockholm",
+    hiringBonus: "15.000 SEK",
+    interviewBonus: "300 SEK",
+  },
+  {
+    image:
+      "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
+    company: "Volta Greentech",
+    certificate: true,
+    position: "Production engineer",
+    location: "Stockholm",
+    hiringBonus: "10.000 SEK",
+    interviewBonus: "200 SEK",
   },
 ];
 
@@ -56,7 +64,7 @@ export function JobBoard({ title }) {
 
           <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 ">
             {jobAds.map((job, id) => (
-              <div className="w-full bg-gray-100 rounded-2xl p-6 text-left relative">
+              <div className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-gray-100 rounded-2xl p-6 text-left relative">
                 {job.certificate ? (
                   <img
                     src={certificate}
@@ -77,20 +85,51 @@ export function JobBoard({ title }) {
                     <p class="text-md text-gray-600">{job.company}</p>
                   </div>
                 </div>
-                <p className="text-lg">💰 {job.prize}</p>
-                <p className="text-lg">📌 {job.location}</p>
+                <p className="pl-1 pb-1">
+                  <FontAwesomeIcon
+                    icon={faMoneyBillWave}
+                    className="text-xl text-green-500 mr-2"
+                  />
+                  <span className="text-xl font-medium">
+                    {job.hiringBonus}{" "}
+                  </span>
+                  <span className="text-sm font-medium text-gray-600">
+                    {" "}
+                    / Hiring
+                  </span>
+                </p>
+                <p className="pl-1 pb-1">
+                  <FontAwesomeIcon
+                    icon={faCoins}
+                    className="text-xl ml-0.5 text-yellow-400 mr-1.5"
+                  />{" "}
+                  <span className="text-xl font-medium">
+                    {job.interviewBonus}{" "}
+                  </span>
+                  <span className="text-sm font-medium text-gray-600">
+                    {" "}
+                    / Interview
+                  </span>
+                </p>
+                <p className="pl-1">
+                  <FontAwesomeIcon
+                    icon={faMapMarkerAlt}
+                    className="text-xl text-red-500 mr-3.5 ml-1"
+                  />
+                  <span className="font-medium text-xl">{job.location}</span>
+                </p>
 
                 <div className="flex items-center pt-6">
                   <Link
                     to="/refer"
-                    className="flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                   >
                     Refer
                   </Link>
 
                   <Link
                     to="/volta-greentech"
-                    className="ml-2 mr-2 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
+                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
                   >
                     About the job
                   </Link>

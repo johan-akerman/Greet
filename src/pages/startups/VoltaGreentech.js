@@ -1,209 +1,249 @@
-import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import {
+  faBriefcase,
+  faCalendarDay,
+  faMapMarkedAlt,
+} from "@fortawesome/free-solid-svg-icons";
+
+import volta from "../../images/volta.jpeg";
+import { Banner } from "../../components/Banner";
+import { useEffect } from "react";
+
 function VoltaGreentech() {
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
   return (
     <>
-      <div className=" py-32">
-        <div className="w-8/12 mx-auto bg-white rounded-xl">
-          <div className="p-8">
-            <div className="flex">
-              <img
-                className="w-20 mr-6 rounded-md"
-                src="https://media-exp1.licdn.com/dms/image/C4E0BAQFo65CzbG9jhQ/company-logo_200_200/0/1597158989808?e=1634774400&v=beta&t=nnnDMsM1zrAZnnKZv8BgB0DNd3C51sDrOxKyogbrwbc"
-              />
+      <div className="md:pt-32 pt-12 pb-12">
+        <div className="lg:w-8/12 w-11/12 mx-auto rounded-xl">
+          <div className="flex">
+            <img
+              className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
+              src="https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg"
+            />
 
-              <div>
-                <h1 className="text-4xl pt-4">Voi Technology</h1>
-              </div>
-            </div>
-            <div className="grid grid-cols-3 gap-14 pt-3 ">
-              <div className="col-span-2">
-                <h1 className="text-3xl mt-12 mb-3">About Voi</h1>
-                <p className="text-lg">
-                  We are passionate about shaping cities for people, reducing
-                  pollution and breaking traffic gridlock across Europe. Our
-                  mission is to provide sustainable and inclusive last-mile
-                  mobility solutions, enabling people to move freely while at
-                  the same time helping cities reach their 2030 climate goals.
+            <div>
+              <h1 className="font-semibold lg:text-4xl text-xl md:pt-3 pt-1">
+                Business developer
+              </h1>
+              <span className="flex md:gap-6 gap-2 pt-1 md:text-md text-sm text-gray-500">
+                <p className="md:block hidden">
+                  <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
+                  Volta Greentech
                 </p>
-              </div>
-              <div>
-                <h1 className="text-3xl mt-12 mb-3">Company facts</h1>
-                <table class="table-auto w-full text-lg">
-                  <tbody>
-                    <tr>
-                      <td className="text-bold">Website</td>
-                      <td className="text-right">
-                        <a
-                          href="voiscooters.com"
-                          target="_blank"
-                          className="text-blue-500"
-                        >
-                          voiscooters.com
-                        </a>
-                      </td>
-                    </tr>
-                    <tr class="bg-emerald-200">
-                      <td className="text-bold">Founded</td>
-                      <td className="text-right">2018</td>
-                    </tr>
-                    <tr>
-                      <td className="text-bold">Employees</td>
-                      <td className="text-right">200+</td>
-                    </tr>
-                  </tbody>
-                </table>
-              </div>
+                <p>
+                  <FontAwesomeIcon icon={faCalendarDay} className="mr-2" />
+                  Full time
+                </p>
+                <p>
+                  <FontAwesomeIcon icon={faMapMarkedAlt} className="mr-2" />
+                  Stockholm
+                </p>
+              </span>
             </div>
-            <h1 className="text-3xl mt-12 mb-3">About the job</h1>
-            {/* <div className="mt-6">
-          <span className="bg-gray-100 w-52 rounded-3xl px-5 py-2">
-            Stockholm, Sweden
-          </span>
-          <span className="bg-gray-100 w-52 rounded-3xl px-5 py-2">2018</span>
-          <span className="bg-gray-100 w-52 rounded-3xl px-5 py-2">200+</span>
-        </div> */}
-            <p className="pb-2 text-lg">
-              You? A fearless, dedicated Business Developer, ready to take on
-              CO2-emitters acting as if Greta had never gone on strike. Us?
-              We’re a-just-over-two-year-old company backed by experienced
-              investors with a mission to fight global warming by removing farts
-              and burps from cows.{" "}
-            </p>
-            <p className="text-lg">
-              Over here, things are moving at a high pace. Getting closer to
-              introducing our first climate-friendly products, we need to boost
-              our team further. We are now looking for a Business Developer,
-              supporting us with the critical launch of a potentially
-              revolutionizing type of product in Sweden (and later,
-              internationally). Specs below!
-            </p>
-            <h2 className="text-2xl mt-12 mb-3">Start date & location</h2>
-            <p className="text-lg">
-              ASAP. The role is based out of our Stockholm HQ at Karolinska
-              Institutet, with occasional trips to our production facility in
-              Lysekil on the Swedish west coast.
-            </p>
-            <h2 className="text-2xl mt-12 mb-3">
-              THE WORK YOU’LL TAKE ON INCLUDES:
-            </h2>
-            <ul className="list-disc text-xl">
-              <li>
-                {" "}
-                Defining and leading the launch of our new, environmentally
-                groundbreaking product line in Swedish supermarkets
-              </li>
-              <li>
-                Nurturing and initiating relationships with both new and
-                existing clients{" "}
-              </li>
-              <li>
-                Support in project financing, directing consultants as well as
-                taking on writing yourself when necessary
-              </li>
-              <li>
-                {" "}
-                When required (and have no doubt, it will be!) - jumping into
-                additional projects and roles supporting additional parts of the
-                company
-              </li>
-            </ul>
-            <h2 className="text-2xl mt-12 mb-3">THE SKILLS YOU'LL NEED</h2>
-            <ul className="list-disc text-xl">
-              <li>
-                {" "}
-                Defining and leading the launch of our new, environmentally
-                groundbreaking product line in Swedish supermarkets
-              </li>
-              <li>
-                Nurturing and initiating relationships with both new and
-                existing clients{" "}
-              </li>
-              <li>
-                Support in project financing, directing consultants as well as
-                taking on writing yourself when necessary
-              </li>
-              <li>
-                {" "}
-                When required (and have no doubt, it will be!) - jumping into
-                additional projects and roles supporting additional parts of the
-                company
-              </li>
-            </ul>
-            <h2 className="text-2xl mt-12 mb-3">YOUR (PRESUMED) BACKGROUND:</h2>
-            <ul className="list-disc text-xl">
-              <li>
-                {" "}
-                Defining and leading the launch of our new, environmentally
-                groundbreaking product line in Swedish supermarkets
-              </li>
-              <li>
-                Nurturing and initiating relationships with both new and
-                existing clients{" "}
-              </li>
-              <li>
-                Support in project financing, directing consultants as well as
-                taking on writing yourself when necessary
-              </li>
-              <li>
-                {" "}
-                When required (and have no doubt, it will be!) - jumping into
-                additional projects and roles supporting additional parts of the
-                company
-              </li>
-            </ul>
-            <h2 className="text-2xl mt-12 mb-3">Extra credits if you:</h2>{" "}
-            <ul className="list-disc text-xl">
-              <li>
-                {" "}
-                Defining and leading the launch of our new, environmentally
-                groundbreaking product line in Swedish supermarkets
-              </li>
-              <li>
-                Nurturing and initiating relationships with both new and
-                existing clients{" "}
-              </li>
-              <li>
-                Support in project financing, directing consultants as well as
-                taking on writing yourself when necessary
-              </li>
-              <li>
-                {" "}
-                When required (and have no doubt, it will be!) - jumping into
-                additional projects and roles supporting additional parts of the
-                company
-              </li>
-            </ul>
-            <h2 className="text-2xl mt-12 mb-3">WHAT YOU'LL GET</h2>
-            <ul className="list-disc text-xl mb-12">
-              <li>
-                {" "}
-                Defining and leading the launch of our new, environmentally
-                groundbreaking product line in Swedish supermarkets
-              </li>
-              <li>
-                Nurturing and initiating relationships with both new and
-                existing clients{" "}
-              </li>
-              <li>
-                Support in project financing, directing consultants as well as
-                taking on writing yourself when necessary
-              </li>
-              <li>
-                {" "}
-                When required (and have no doubt, it will be!) - jumping into
-                additional projects and roles supporting additional parts of the
-                company
-              </li>
-            </ul>
-            <Link
-              to="/refer"
-              className="cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
-            >
-              Refer someone
-            </Link>
           </div>
+          <div className="grid grid-cols-3 lg:gap-14 gap-3">
+            <div className="lg:col-span-2 col-span-3">
+              <h1 className="text-3xl font-medium md:mt-12 mt-6 mb-3">
+                About Volta Greentech
+              </h1>
+              <p className="md:text-xl text-md">
+                There are around one billion cows on the planet. Together they
+                produce over 4% of the world’s greenhouse gas emissions just by
+                farting and burping methane gas. Volta is on a mission to reduce
+                these emissions to mitigate global warming. By providing farmers
+                with an entirely natural seaweed-based feed supplement to
+                drastically reduce the methane emissions produced by dairy cows
+                and beef cattle, Volta is supporting the agriculture sector in
+                taking a massive leap in going sustainable.
+              </p>
+            </div>
+            <div className="lg:col-span-1 col-span-3">
+              <h1 className="text-3xl font-medium md:mt-12 mt-4 mb-3">
+                Company facts
+              </h1>
+              <table class="table-auto w-full md:text-xl text-md lg:mb-0 mb-6">
+                <tbody>
+                  <tr>
+                    <td className="text-bold">Website</td>
+                    <td className="text-right">
+                      <a
+                        href="https://www.voltagreentech.com/"
+                        target="_blank"
+                        className="text-pink-500"
+                      >
+                        voltagreentech.com
+                      </a>
+                    </td>
+                  </tr>
+                  <tr class="bg-emerald-200">
+                    <td className="text-bold">Founded</td>
+                    <td className="text-right">2018</td>
+                  </tr>
+                  <tr>
+                    <td className="text-bold">Employees</td>
+                    <td className="text-right">10+</td>
+                  </tr>
+                </tbody>
+              </table>
+            </div>
+            <div className="col-span-3">
+              <img src={volta} />
+              <p className="pt-2 text-gray-500">
+                Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter
+              </p>
+            </div>
+          </div>
+          <h1 className="text-4xl font-semibold mt-12 mb-3">About the job</h1>
+          <p className="pb-2 md:text-xl text-md">
+            You? A fearless, dedicated Business Developer, ready to take on
+            CO2-emitters acting as if Greta had never gone on strike. Us? We’re
+            a-just-over-two-year-old company backed by experienced investors
+            with a mission to fight global warming by removing farts and burps
+            from cows.{" "}
+          </p>
+          <p className="md:text-xl text-md">
+            Over here, things are moving at a high pace. Getting closer to
+            introducing our first climate-friendly products, we need to boost
+            our team further. We are now looking for a Business Developer,
+            supporting us with the critical launch of a potentially
+            revolutionizing type of product in Sweden (and later,
+            internationally). Specs below!
+          </p>
+          <h2 className="text-3xl font-medium  mt-12 mb-3">
+            Start date & location
+          </h2>
+          <p className="text-lg">
+            ASAP. The role is based out of our Stockholm HQ at Karolinska
+            Institutet, with occasional trips to our production facility in
+            Lysekil on the Swedish west coast.
+          </p>
+          <h2 className="text-3xl font-medium  mt-12 mb-3">
+            The work you'll take on includes
+          </h2>
+          <ul className="list-disc md:text-xl text-md ml-6">
+            <li>
+              {" "}
+              Defining and leading the launch of our new, environmentally
+              groundbreaking product line in Swedish supermarkets
+            </li>
+            <li>
+              Nurturing and initiating relationships with both new and existing
+              clients{" "}
+            </li>
+            <li>
+              Support in project financing, directing consultants as well as
+              taking on writing yourself when necessary
+            </li>
+            <li>
+              {" "}
+              When required (and have no doubt, it will be!) - jumping into
+              additional projects and roles supporting additional parts of the
+              company
+            </li>
+          </ul>
+          <h2 className="text-3xl font-medium mt-12 mb-3">
+            The skills you'll need
+          </h2>
+          <ul className="list-disc md:text-xl text-md ml-6">
+            <li>
+              {" "}
+              Defining and leading the launch of our new, environmentally
+              groundbreaking product line in Swedish supermarkets
+            </li>
+            <li>
+              Nurturing and initiating relationships with both new and existing
+              clients{" "}
+            </li>
+            <li>
+              Support in project financing, directing consultants as well as
+              taking on writing yourself when necessary
+            </li>
+            <li>
+              {" "}
+              When required (and have no doubt, it will be!) - jumping into
+              additional projects and roles supporting additional parts of the
+              company
+            </li>
+          </ul>
+          <h2 className="text-3xl font-medium  mt-12 mb-3">
+            Your (presumed) background
+          </h2>
+          <ul className="list-disc md:text-xl text-md ml-6">
+            <li>
+              {" "}
+              Defining and leading the launch of our new, environmentally
+              groundbreaking product line in Swedish supermarkets
+            </li>
+            <li>
+              Nurturing and initiating relationships with both new and existing
+              clients{" "}
+            </li>
+            <li>
+              Support in project financing, directing consultants as well as
+              taking on writing yourself when necessary
+            </li>
+            <li>
+              {" "}
+              When required (and have no doubt, it will be!) - jumping into
+              additional projects and roles supporting additional parts of the
+              company
+            </li>
+          </ul>
+          <h2 className="text-3xl font-medium  mt-12 mb-3">
+            Extra credits if you
+          </h2>{" "}
+          <ul className="list-disc md:text-xl text-md ml-6">
+            <li>
+              {" "}
+              Defining and leading the launch of our new, environmentally
+              groundbreaking product line in Swedish supermarkets
+            </li>
+            <li>
+              Nurturing and initiating relationships with both new and existing
+              clients{" "}
+            </li>
+            <li>
+              Support in project financing, directing consultants as well as
+              taking on writing yourself when necessary
+            </li>
+            <li>
+              {" "}
+              When required (and have no doubt, it will be!) - jumping into
+              additional projects and roles supporting additional parts of the
+              company
+            </li>
+          </ul>
+          <h2 className="text-3xl font-medium  mt-12 mb-3">What you'll get</h2>
+          <ul className="list-disc md:text-xl text-md mb-12 ml-6">
+            <li>
+              {" "}
+              Defining and leading the launch of our new, environmentally
+              groundbreaking product line in Swedish supermarkets
+            </li>
+            <li>
+              Nurturing and initiating relationships with both new and existing
+              clients{" "}
+            </li>
+            <li>
+              Support in project financing, directing consultants as well as
+              taking on writing yourself when necessary
+            </li>
+            <li>
+              {" "}
+              When required (and have no doubt, it will be!) - jumping into
+              additional projects and roles supporting additional parts of the
+              company
+            </li>
+          </ul>
         </div>
       </div>
+      <Banner
+        title="Have a perfect candidate in mind?"
+        button="Refer someone"
+        link="/refer"
+      />
     </>
   );
 }
