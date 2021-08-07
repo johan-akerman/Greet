@@ -12,7 +12,7 @@ function Home() {
       <HowItWorks />
       <JobBoard title={true} />
       <FAQ />
-      <Banner title="Hire your next superstar! ✨" />
+      <Banner title="Hire your next superstar!" />
     </div>
   );
 }

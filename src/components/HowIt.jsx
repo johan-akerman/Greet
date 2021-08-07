@@ -36,7 +36,7 @@ export default function HowIt() {
               ref={buttonRef}
               className="
                 
-                text-white group py-2 rounded-md inline-flex items-center text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              text-white group md:py-2 py-1 rounded-md inline-flex items-center  text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               <span>How it works</span>
               <FontAwesomeIcon
@@ -53,7 +53,7 @@ export default function HowIt() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="absolute z-10 w-60 max-w-sm mt-8 transform -translate-x-1/2 left-1/2 sm:px-0 lg:max-w-3xl">
+              <Popover.Panel className="absolute z-10 w-60  max-w-sm mt-2 transform -translate-x-1/2 md:left-1/2 left-0 sm:px-0 lg:max-w-3xl">
                 <div className="overflow-hidden rounded-lg shadow-lg">
                   <div className="relative bg-white p-3">
                     <Link

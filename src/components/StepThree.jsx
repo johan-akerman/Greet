@@ -9,9 +9,13 @@ export function StepThree() {
 
   return (
     <>
-      <h1 className="text-5xl text-center mb-2">Congratulations 🎉</h1>
-      <h2 className="text-3xl text-center mb-6">Your referral is complete.</h2>
-      <p className="text-center text-lg text-gray-500 w-96 mx-auto">
+      <h1 className="md:text-5xl text-4xl text-center mb-2">
+        Congratulations 🎉
+      </h1>
+      <h2 className="md:text-3xl text-2xl text-center mb-6">
+        Your referral is complete.
+      </h2>
+      <p className="text-center text-lg text-gray-500  mx-auto">
         We will be in touch with you if the company wants to proceed with your
         candidate.
       </p>

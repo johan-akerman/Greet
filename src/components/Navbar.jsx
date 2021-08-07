@@ -12,13 +12,15 @@ export function Navbar() {
     <Disclosure as="nav" className="bg-primary">
       {({ open }) => (
         <>
-          <div className="flex justify-between h-24 py-6 w-10/12 mx-auto">
+          <div className="flex justify-between h-24 py-6 md:w-10/12 w-11/12 mx-auto">
             <div className="flex">
               <Link className="flex pt-1" to="/">
-                <img className="h-10 " src={logo} />
-                <h1 className="pl-4 text-3xl text-white font-medium">Greet</h1>
+                <img className="md:h-10 h-8" src={logo} />
+                <h1 className="md:pl-4 pl-2 md:text-3xl text-2xl text-white font-medium">
+                  Greet
+                </h1>
               </Link>
-              <div className="flex pl-5 pt-1">
+              <div className="flex pl-5 pt-1 ">
                 <HowIt />
                 <Link
                   className="lg:block hidden text-white text-lg font-semibold pl-3 pr-6 py-2 hover:text-gray-200"
@@ -29,7 +31,7 @@ export function Navbar() {
               </div>
             </div>
 
-            <div className="relative lg:block hidden">
+            <div className="relative md:block hidden">
               <Link
                 className="w-44 flex justify-center px-8 py-3 bg-white text-pink-500 rounded-xl text-lg font-semibold absolute right-0 hover:bg-secondary"
                 to="/post-job"

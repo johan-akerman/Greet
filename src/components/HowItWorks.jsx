@@ -7,12 +7,12 @@ import {
 
 export function HowItWorks() {
   return (
-    <div className="bg-white pt-32">
-      <h1 className="text-4xl font-bold text-center text-gray-900 sm:text-5xl md:text-6xl">
+    <div className="bg-white md:pt-32 pt-16">
+      <h1 className="md:text-6xl text-4xl font-bold text-center text-gray-900 ">
         How Greet works
       </h1>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 py-32 text-left w-10/12 mx-auto ">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-32 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
         <div>
           <FontAwesomeIcon
             className="text-5xl mb-6 text-pink-300"

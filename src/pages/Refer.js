@@ -29,12 +29,12 @@ export default function Refer() {
   }, [index]); //
 
   return (
-    <div className="bg-white pb-32 min-h-screen">
+    <div className="bg-white pb-32 md:min-h-screen h-auto">
       <canvas id="my-canvas" className="absolute z-0 "></canvas>
-      <div className="h-32"></div>
+      <div className="md:h-32 h-12"></div>
 
-      <div className=" rounded-2xl p-12 w-7/12 mx-auto">
-        <div className="p-6 z-30">{renderStep(index)}</div>
+      <div className="rounded-2xl md:w-7/12 w-10/12 mx-auto">
+        <div className="pt-12 z-30">{renderStep(index)}</div>
 
         {index != 3 ? (
           <div>

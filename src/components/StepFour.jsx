@@ -6,8 +6,10 @@ export function StepFour() {
   }, []);
 
   return (
-    <div className="overflow-y-auto">
-      <h1 className="text-5xl text-center mb-3">Ready, set, pitch!</h1>
+    <div className=" overflow-x-hidden">
+      <h1 className="md:text-5xl text-4xl text-center mb-3 ">
+        Ready, set, pitch!
+      </h1>
       <p className="text-center text-lg mb-2 text-gray-500">
         Make your refferal stand out. Why should your candidate get hired?
       </p>

@@ -6,7 +6,7 @@ function PostJob() {
   }, []);
   return (
     <div className="py-32 ">
-      <div className="bg-white rounded-2xl p-12 w-7/12 mx-auto ">
+      <div className="bg-white rounded-2xl md:w-7/12 w-10/12 mx-auto ">
         <div className="overflow-y-auto">
           <h1 className="text-5xl text-left mb-3">Post a job on Greet</h1>
           <p className="text-left text-lg mb-2 text-gray-500">

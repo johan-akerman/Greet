@@ -7,7 +7,7 @@ export function StepOne() {
 
   return (
     <div className="overflow-y-auto">
-      <h1 className="text-5xl text-center mb-3">
+      <h1 className="md:text-5xl text-4xl text-center mb-3">
         Refer a Software Engineer to Voi
       </h1>
       <p className="text-center text-lg mb-4 text-gray-500">

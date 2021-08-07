@@ -36,10 +36,10 @@ export function JobBoard({ title }) {
   return (
     <>
       <div className="bg-white">
-        <div className="w-10/12 mx-auto h-full pt-8 pb-28 ">
+        <div className="md:w-10/12 w-11/12 mx-auto h-full pt-8 md:pb-28 pb-12 ">
           {title ? (
-            <div className="flex justify-between">
-              <h1 className="text-3xl font-bold text-gray-900 sm:text-5xl text-left pb-16">
+            <div className="md:flex justify-between block">
+              <h1 className="md:text-6xl text-4xl font-bold text-gray-900 md:text-left text-center md:pb-16 pb-12">
                 Trending jobs
               </h1>
               <span className="text-lg text-black pt-4 lg:flex h-12 hidden font-semibold">
@@ -54,7 +54,7 @@ export function JobBoard({ title }) {
             </div>
           ) : null}
 
-          <div className="grid lg:grid-cols-3 gap-6 grid-cols-1 ">
+          <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 ">
             {jobAds.map((job, id) => (
               <div className="w-full bg-gray-100 rounded-2xl p-6 text-left relative">
                 {job.certificate ? (
