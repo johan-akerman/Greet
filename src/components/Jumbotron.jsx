@@ -30,7 +30,7 @@ export function Jumbotron() {
           </p>
         </div>
 
-        <div className="md:w-7/12 w-12/12 md:pt-24 pt-0 md:pb-12 pb-20 mx-auto">
+        <div className="md:w-7/12 w-12/12 md:pt-12 md:pl-10 pl-0 pt-0 md:pb-12 pb-20 mx-auto">
           <img
             className="md:mt-28 mt-0 w-full lg:float-right float-none mx-auto"
             src={pinkphones}

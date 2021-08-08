@@ -12,7 +12,7 @@ export function HowItWorks() {
   return (
     <div className="bg-white md:pt-32 pt-16">
       <h1 className="md:text-6xl text-4xl font-bold text-center text-gray-900 ">
-        How Greet works
+        How it works
       </h1>
 
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-32 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
@@ -26,8 +26,8 @@ export function HowItWorks() {
             Take a look on the jobs
           </h1>
           <p className="text-xl font-light">
-            On the job board you can find jobs at exciting startups. Take a look
-            and see if you find something interesting.
+            On the job board you can find jobs at exciting tech companies. Take
+            a look and see if you find something interesting.
           </p>
         </div>
 

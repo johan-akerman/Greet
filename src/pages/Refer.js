@@ -29,7 +29,7 @@ export default function Refer() {
 
       return () => confetti.clear();
     }
-  }, [index]); //
+  }, [index]);
 
   return (
     <div className="bg-white pb-32 md:min-h-screen h-auto">

@@ -4,9 +4,11 @@ import Refer from "./pages/Refer";
 import PostJob from "./pages/PostJob";
 import Jobs from "./pages/Jobs";
 import { InfoBar } from "./components/InfoBar";
-import Startups from "./pages/Startups";
+import Companies from "./pages/Companies";
+import { BusinessDeveloper } from "./pages/companies/voltaGreentech/BusinessDeveloper";
+import { HeadOfManufacturing } from "./pages/companies/voltaGreentech/HeadOfManufacturing";
+import { ProductionEngineer } from "./pages/companies/voltaGreentech/ProductionEngineer";
 import Greeters from "./pages/Greeters";
-import VoltaGreentech from "./pages/startups/VoltaGreentech";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 
@@ -29,8 +31,8 @@ export default function App() {
             <Jobs />
           </Route>
 
-          <Route path="/startups">
-            <Startups />
+          <Route path="/companies">
+            <Companies />
           </Route>
 
           <Route path="/greeters">
@@ -41,8 +43,16 @@ export default function App() {
             <Refer />
           </Route>
 
-          <Route path="/volta-greentech">
-            <VoltaGreentech />
+          <Route path="/volta-greentech/business-developer">
+            <BusinessDeveloper />
+          </Route>
+
+          <Route path="/volta-greentech/head-of-manufacturing">
+            <HeadOfManufacturing />
+          </Route>
+
+          <Route path="/volta-greentech/production-engineer">
+            <ProductionEngineer />
           </Route>
         </Switch>
       </div>

@@ -1,5 +1,6 @@
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
+import emailjs from "emailjs-com";
 import ConfettiGenerator from "confetti-js";
 
 function PostJob() {
@@ -23,6 +24,27 @@ function PostJob() {
     }
   }, [submited]);
 
+  function sendEmail(e) {
+    e.preventDefault();
+
+    emailjs
+      .sendForm(
+        "service_npwny0r",
+        "template_bd8yczf",
+        e.target,
+        "user_VegSOnKK2dbe2SMaWvaPZ"
+      )
+      .then(
+        (result) => {
+          console.log(result.text);
+        },
+        (error) => {
+          console.log(error.text);
+        }
+      );
+    e.target.reset();
+  }
+
   return (
     <div>
       <canvas id="my-canvas" className="absolute z-0 "></canvas>
@@ -30,12 +52,11 @@ function PostJob() {
         {submited ? (
           <div className="pt-52 pb-80">
             <h1 className="font-semibold md:text-5xl text-4xl text-center mb-2">
-              Congratulations 🎉
+              Thank you! 🎉
             </h1>
 
             <p className="text-center text-lg text-gray-500  mx-auto">
-              Thanks for your message! We will be in touch with you as soon as
-              possible.
+              We will be in touch with you as soon as possible.
             </p>
             <div className="flex mx-auto w-48 mt-8">
               <Link
@@ -56,48 +77,39 @@ function PostJob() {
               before posting your job ads. Please fill in your details, and
               we'll be in touch soon.
             </p>
-            <form class="w-full">
+            <form class="w-full" onSubmit={sendEmail}>
               <div class="mt-8 mb-8">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
-                >
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Which company do you represent?
                 </label>
                 <input
                   class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
-                  id="grid-first-name"
                   type="text"
-                  placeholder="Jane"
+                  placeholder="Google"
+                  name="company"
                 />
               </div>
 
               <div class="mt-8 mb-8">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
-                >
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Company website
                 </label>
                 <input
                   class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
-                  id="grid-first-name"
                   type="text"
-                  placeholder="Jane"
+                  placeholder="www.google.com"
+                  name="website"
                 />
               </div>
               <div class="mb-8">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-last-name"
-                >
+                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
                   Your name
                 </label>
                 <input
                   class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
-                  id="grid-last-name"
                   type="text"
-                  placeholder="Doe"
+                  placeholder="Firstname Lastname"
+                  name="name"
                 />
               </div>
 
@@ -110,9 +122,9 @@ function PostJob() {
                 </label>
                 <input
                   class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
-                  id="grid-first-name"
                   type="text"
-                  placeholder="Jane"
+                  placeholder="firstname@google.com"
+                  name="email"
                 />
               </div>
               <div class="mb-8">
@@ -126,17 +138,27 @@ function PostJob() {
                   class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
                   id="grid-last-name"
                   type="text"
-                  placeholder="Doe"
+                  placeholder="123 456 789"
+                  name="phone"
                 />
               </div>
-            </form>
 
-            <a
-              className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
-              onClick={() => setSubmited(true)}
-            >
-              Submit
-            </a>
+              <input
+                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                type="submit"
+                value="Send"
+                onClick={() => setSubmited(true)}
+              />
+
+              {/* <input
+                type="submit"
+                value="send message"
+                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                onClick={() => setSubmited(true)}
+              >
+                Submit
+              </input> */}
+            </form>
           </div>
         )}
       </div>

@@ -17,9 +17,9 @@ const solutions = [
     icon: "faChevronDown",
   },
   {
-    name: "For startups",
+    name: "For Companies",
     description: "Create your own targeted content",
-    href: "/startups",
+    href: "/companies",
     icon: "faChevronDown",
   },
 ];
@@ -72,7 +72,7 @@ export default function HowIt() {
                     </Link>
                     <Link
                       onClick={() => buttonRef.current?.click()}
-                      to="/startups"
+                      to="/companies"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-pink-500 bg-secondary rounded-lg sm:h-12 sm:w-12">
@@ -80,7 +80,7 @@ export default function HowIt() {
                       </div>
                       <div className="ml-4">
                         <p className="text-md font-semibold text-gray-900">
-                          For Startups
+                          For Companies
                         </p>
                       </div>
                     </Link>

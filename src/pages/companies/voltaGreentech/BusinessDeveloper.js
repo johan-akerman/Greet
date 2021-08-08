@@ -5,11 +5,11 @@ import {
   faMapMarkedAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
-import volta from "../../images/volta.jpeg";
-import { Banner } from "../../components/Banner";
+import volta from "../../../images/volta.jpeg";
+import { Banner } from "../../../components/Banner";
 import { useEffect } from "react";
 
-function VoltaGreentech() {
+export function BusinessDeveloper() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -114,7 +114,7 @@ function VoltaGreentech() {
           <h2 className="text-3xl font-medium  mt-12 mb-3">
             Start date & location
           </h2>
-          <p className="text-lg">
+          <p className="md:text-xl text-md">
             ASAP. The role is based out of our Stockholm HQ at Karolinska
             Institutet, with occasional trips to our production facility in
             Lysekil on the Swedish west coast.
@@ -247,5 +247,3 @@ function VoltaGreentech() {
     </>
   );
 }
-
-export default VoltaGreentech;

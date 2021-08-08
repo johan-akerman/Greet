@@ -1,4 +1,5 @@
 import certificate from "../images/certificate.png";
+import hot from "../images/hot.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCoins,
@@ -12,31 +13,37 @@ const jobAds = [
     image:
       "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
     company: "Volta Greentech",
-    certificate: true,
+    certificate: false,
+    hot: true,
     position: "Business developer",
     location: "Stockholm",
     hiringBonus: "12.500 SEK",
     interviewBonus: "250 SEK",
+    link: "/volta-greentech/business-developer",
   },
   {
     image:
       "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
     company: "Volta Greentech",
     certificate: true,
+    hot: false,
     position: "Head of manufacturing",
     location: "Stockholm",
     hiringBonus: "15.000 SEK",
     interviewBonus: "300 SEK",
+    link: "/volta-greentech/head-of-manufacturing",
   },
   {
     image:
       "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
     company: "Volta Greentech",
     certificate: true,
+    hot: false,
     position: "Production engineer",
     location: "Stockholm",
     hiringBonus: "10.000 SEK",
     interviewBonus: "200 SEK",
+    link: "/volta-greentech/production-engineer",
   },
 ];
 
@@ -70,6 +77,10 @@ export function JobBoard({ title }) {
                     src={certificate}
                     className="absolute right-4 -top-4 w-12"
                   />
+                ) : null}
+
+                {job.hot ? (
+                  <img src={hot} className="absolute right-4 -top-6 w-12" />
                 ) : null}
 
                 <div class="flex items-center text-left pb-4">
@@ -128,7 +139,7 @@ export function JobBoard({ title }) {
                   </Link>
 
                   <Link
-                    to="/volta-greentech"
+                    to={job.link}
                     className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
                   >
                     About the job
