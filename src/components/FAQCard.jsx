@@ -2,7 +2,7 @@ import { Disclosure } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
 
-export function FAQCard() {
+export function FAQCard({ question, answer }) {
   return (
     <div className="w-full mt-4 transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg rounded-2xl">
       <div className="w-full p-2 mx-auto bg-white rounded-2xl text-left">
@@ -10,8 +10,8 @@ export function FAQCard() {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold focus:outline-none">
-                <span clasName={open ? "text-pink-500" : "text-black"}>
-                  What is your refund policy?
+                <span clasName={open ? "text-primary" : "text-black"}>
+                  {question}
                 </span>
 
                 <FontAwesomeIcon
@@ -22,8 +22,7 @@ export function FAQCard() {
                 />
               </Disclosure.Button>
               <Disclosure.Panel className="px-5 pb-3 text-lg text-gray-500">
-                If you're unhappy with your purchase for any reason, email us
-                within 90 days and we'll refund you in full, no questions asked.
+                {answer}
               </Disclosure.Panel>
             </>
           )}

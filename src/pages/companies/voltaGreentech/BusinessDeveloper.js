@@ -71,7 +71,7 @@ export function BusinessDeveloper() {
                       <a
                         href="https://www.voltagreentech.com/"
                         target="_blank"
-                        className="text-pink-500"
+                        className="text-primary"
                       >
                         voltagreentech.com
                       </a>
@@ -147,102 +147,65 @@ export function BusinessDeveloper() {
             The skills you'll need
           </h2>
           <ul className="list-disc md:text-xl text-md ml-6">
+            <li>Excellent project management skills</li>
             <li>
-              {" "}
-              Defining and leading the launch of our new, environmentally
-              groundbreaking product line in Swedish supermarkets
+              Love closing new clients, and do everything that it takes to make
+              both Volta and our partners succeed
             </li>
             <li>
-              Nurturing and initiating relationships with both new and existing
-              clients{" "}
+              A talent for communication, in writing and in person, in English
+              and in Swedish
             </li>
             <li>
-              Support in project financing, directing consultants as well as
-              taking on writing yourself when necessary
+              Thus, also being a maven with presentations (we use Google Slides
+              / Keynote)
             </li>
             <li>
-              {" "}
-              When required (and have no doubt, it will be!) - jumping into
-              additional projects and roles supporting additional parts of the
-              company
+              Be a team player, with strong self motivation, results-orientation
+              and sense of purpose
             </li>
           </ul>
           <h2 className="text-3xl font-medium  mt-12 mb-3">
             Your (presumed) background
           </h2>
           <ul className="list-disc md:text-xl text-md ml-6">
+            <li>Relevant education and work experience</li>
+            <li>Led and executed successful projects with many stakeholders</li>
             <li>
-              {" "}
-              Defining and leading the launch of our new, environmentally
-              groundbreaking product line in Swedish supermarkets
+              A minimum 3 years of work experience in a fast-paced environment
             </li>
             <li>
-              Nurturing and initiating relationships with both new and existing
-              clients{" "}
-            </li>
-            <li>
-              Support in project financing, directing consultants as well as
-              taking on writing yourself when necessary
-            </li>
-            <li>
-              {" "}
-              When required (and have no doubt, it will be!) - jumping into
-              additional projects and roles supporting additional parts of the
-              company
+              5+ years of experience, including leadership, from complex sales
+              and project management, preferably from the food and/or
+              agriculture industry
             </li>
           </ul>
           <h2 className="text-3xl font-medium  mt-12 mb-3">
             Extra credits if you
           </h2>{" "}
           <ul className="list-disc md:text-xl text-md ml-6">
-            <li>
-              {" "}
-              Defining and leading the launch of our new, environmentally
-              groundbreaking product line in Swedish supermarkets
-            </li>
-            <li>
-              Nurturing and initiating relationships with both new and existing
-              clients{" "}
-            </li>
-            <li>
-              Support in project financing, directing consultants as well as
-              taking on writing yourself when necessary
-            </li>
-            <li>
-              {" "}
-              When required (and have no doubt, it will be!) - jumping into
-              additional projects and roles supporting additional parts of the
-              company
-            </li>
+            <li>Have experience of working with FMCG</li>
+            <li>Have previously worked with OKR’s or similar</li>
           </ul>
           <h2 className="text-3xl font-medium  mt-12 mb-3">What you'll get</h2>
           <ul className="list-disc md:text-xl text-md mb-12 ml-6">
             <li>
-              {" "}
-              Defining and leading the launch of our new, environmentally
-              groundbreaking product line in Swedish supermarkets
+              A chance to work on one of the world’s biggest, yet unresolved
+              climate challenges
             </li>
             <li>
-              Nurturing and initiating relationships with both new and existing
-              clients{" "}
+              A chance to be surrounded daily by a team of industry experts, as
+              well as brand-name clients and partners
             </li>
-            <li>
-              Support in project financing, directing consultants as well as
-              taking on writing yourself when necessary
-            </li>
-            <li>
-              {" "}
-              When required (and have no doubt, it will be!) - jumping into
-              additional projects and roles supporting additional parts of the
-              company
-            </li>
+            <li>A competitive salary package, with a stock option plan</li>
+            <li>A yearly stipend for health and tech expenses</li>
           </ul>
         </div>
       </div>
       <Banner
         title="Have a perfect candidate in mind?"
         button="Refer someone"
-        link="/refer"
+        link="/refer/business-developer"
       />
     </>
   );

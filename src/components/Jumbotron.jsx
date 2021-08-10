@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-import pinkphones from "../images/pinkphones.png";
+import phones from "../images/phones.png";
 
 export function Jumbotron() {
   return (
@@ -20,7 +20,7 @@ export function Jumbotron() {
           <div className="mt-4 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <Link
               to="/job-board"
-              className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 mx-auto w-60 text-pink-500 shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base text-primary bg-white  md:py-4 md:text-lg md:px-10"
+              className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 mx-auto w-60 text-primary shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-white  md:py-4 md:text-lg md:px-10"
             >
               See available jobs
             </Link>
@@ -33,7 +33,7 @@ export function Jumbotron() {
         <div className="md:w-7/12 w-12/12 md:pt-12 md:pl-10 pl-0 pt-0 md:pb-12 pb-20 mx-auto">
           <img
             className="md:mt-28 mt-0 w-full lg:float-right float-none mx-auto"
-            src={pinkphones}
+            src={phones}
           />
         </div>
       </div>

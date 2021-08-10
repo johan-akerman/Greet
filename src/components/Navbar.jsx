@@ -33,7 +33,7 @@ export function Navbar() {
 
             <div className="relative md:block hidden">
               <Link
-                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-44 flex justify-center px-8 py-3 bg-white text-pink-500 rounded-xl text-lg font-semibold absolute right-0"
+                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-44 flex justify-center px-8 py-3 bg-white text-primary rounded-xl text-lg font-semibold absolute right-0"
                 to="/post-job"
               >
                 Post a job

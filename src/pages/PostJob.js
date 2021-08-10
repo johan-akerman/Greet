@@ -10,6 +10,21 @@ function PostJob() {
     window.scrollTo(0, 0);
   }, []);
 
+  const [form, setForm] = useState({
+    company: "",
+    companyWebsite: "",
+    name: "",
+    email: "",
+    phone: "",
+  });
+
+  let allFieldsChecked =
+    form.company.length > 0 &&
+    form.companyWebsite.length > 0 &&
+    form.name.length > 0 &&
+    form.email.length > 0 &&
+    form.phone.length > 0;
+
   useEffect(() => {
     if (submited) {
       const confettiSettings = {
@@ -28,12 +43,7 @@ function PostJob() {
     e.preventDefault();
 
     emailjs
-      .sendForm(
-        "service_npwny0r",
-        "template_bd8yczf",
-        e.target,
-        "user_VegSOnKK2dbe2SMaWvaPZ"
-      )
+      .sendForm("gmail", "join_greet", e.target, "user_VegSOnKK2dbe2SMaWvaPZ")
       .then(
         (result) => {
           console.log(result.text);
@@ -43,6 +53,7 @@ function PostJob() {
         }
       );
     e.target.reset();
+    setSubmited(true);
   }
 
   return (
@@ -83,10 +94,14 @@ function PostJob() {
                   Which company do you represent?
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
+                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
                   placeholder="Google"
                   name="company"
+                  value={form.company}
+                  onChange={(e) =>
+                    setForm({ ...form, company: e.target.value })
+                  }
                 />
               </div>
 
@@ -95,10 +110,14 @@ function PostJob() {
                   Company website
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
+                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
                   placeholder="www.google.com"
                   name="website"
+                  value={form.companyWebsite}
+                  onChange={(e) =>
+                    setForm({ ...form, companyWebsite: e.target.value })
+                  }
                 />
               </div>
               <div class="mb-8">
@@ -106,10 +125,12 @@ function PostJob() {
                   Your name
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
+                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
                   placeholder="Firstname Lastname"
                   name="name"
+                  value={form.name}
+                  onChange={(e) => setForm({ ...form, name: e.target.value })}
                 />
               </div>
 
@@ -121,10 +142,12 @@ function PostJob() {
                   Your email
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
+                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
                   placeholder="firstname@google.com"
                   name="email"
+                  value={form.email}
+                  onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
               </div>
               <div class="mb-8">
@@ -135,29 +158,28 @@ function PostJob() {
                   Your phone number
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-pink-500 focus:border-4"
+                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   id="grid-last-name"
                   type="text"
                   placeholder="123 456 789"
                   name="phone"
+                  value={form.phone}
+                  onChange={(e) => setForm({ ...form, phone: e.target.value })}
                 />
               </div>
 
-              <input
-                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
-                type="submit"
-                value="Send"
-                onClick={() => setSubmited(true)}
-              />
-
-              {/* <input
-                type="submit"
-                value="send message"
-                className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
-                onClick={() => setSubmited(true)}
-              >
-                Submit
-              </input> */}
+              {allFieldsChecked ? (
+                <input
+                  className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                  type="submit"
+                  value="Send"
+                  // onClick={() => setSubmited(true)}
+                />
+              ) : (
+                <a className="w-60 cursor-not-allowed transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 items-center font-semibold text-md justify-center px-8 py-3 bg-gray-300 rounded-xl text-black">
+                  Waiting for responses
+                </a>
+              )}
             </form>
           </div>
         )}

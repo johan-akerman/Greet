@@ -15,12 +15,14 @@ function Home() {
       <Jumbotron />
       <HowItWorks />
       <JobBoard title={true} />
-      <FAQ />
-      {/* <Banner
-        title="Hire your next superstar!"
-        button="Post a job"
-        link="/post-job"
-      /> */}
+      <FAQ
+        questionOne="How do I post jobs on Greet?"
+        answerOne="Reach out to us at join.greet@gmail.com"
+        questionTwo="When will there be more jobs on Greet?"
+        answerTwo="We just launched Greet and are currently looking for the most exciting tech companies in Sweden to post their jobs on the site. In order words: soon. "
+        questionThree="When does the Greeter get paid?"
+        answerThree="The one who refer someone to a job (also known as a Greeter) gets paid when their candidate get and interview or get hired. The amount is specified on the job ads."
+      />
     </div>
   );
 }

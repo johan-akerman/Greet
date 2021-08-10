@@ -71,7 +71,7 @@ export function ProductionEngineer() {
                       <a
                         href="https://www.voltagreentech.com/"
                         target="_blank"
-                        className="text-pink-500"
+                        className="text-primary"
                       >
                         voltagreentech.com
                       </a>
@@ -156,7 +156,7 @@ export function ProductionEngineer() {
       <Banner
         title="Have a perfect candidate in mind?"
         button="Refer someone"
-        link="/refer"
+        link="/refer/production-engineer"
       />
     </>
   );

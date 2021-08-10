@@ -16,6 +16,7 @@ const jobAds = [
     certificate: false,
     hot: true,
     position: "Business developer",
+    jobLink: "business-developer",
     location: "Stockholm",
     hiringBonus: "12.500 SEK",
     interviewBonus: "250 SEK",
@@ -28,6 +29,7 @@ const jobAds = [
     certificate: true,
     hot: false,
     position: "Head of manufacturing",
+    jobLink: "head-of-manufacturing",
     location: "Stockholm",
     hiringBonus: "15.000 SEK",
     interviewBonus: "300 SEK",
@@ -40,6 +42,7 @@ const jobAds = [
     certificate: true,
     hot: false,
     position: "Production engineer",
+    jobLink: "production-engineer",
     location: "Stockholm",
     hiringBonus: "10.000 SEK",
     interviewBonus: "200 SEK",
@@ -132,7 +135,7 @@ export function JobBoard({ title }) {
 
                 <div className="flex items-center pt-6">
                   <Link
-                    to="/refer"
+                    to={`/refer/${job.jobLink}`}
                     className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                   >
                     Refer
@@ -140,7 +143,7 @@ export function JobBoard({ title }) {
 
                   <Link
                     to={job.link}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
+                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
                   >
                     About the job
                   </Link>
