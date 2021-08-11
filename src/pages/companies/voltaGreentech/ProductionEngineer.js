@@ -4,8 +4,8 @@ import {
   faCalendarDay,
   faMapMarkedAlt,
 } from "@fortawesome/free-solid-svg-icons";
-
 import volta from "../../../images/volta.jpeg";
+import voltaLogo from "../../../images/voltaLogo.png";
 import { Banner } from "../../../components/Banner";
 import { useEffect } from "react";
 
@@ -20,7 +20,7 @@ export function ProductionEngineer() {
           <div className="flex">
             <img
               className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
-              src="https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg"
+              src={voltaLogo}
             />
 
             <div>
