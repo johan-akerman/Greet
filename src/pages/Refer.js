@@ -343,41 +343,75 @@ export default function Refer() {
               </form>
 
               <form class="w-full" onSubmit={sendEmail}>
-                <input type="text" name="job" value={job} />
+                <input className="hidden" type="text" name="job" value={job} />
 
-                <input type="text" name="referMyself" value={referMyself} />
-
-                <input type="text" name="candidateName" value={friend.name} />
-                <input type="text" name="candidateTitle" value={friend.title} />
-                <input type="text" name="candidateEmail" value={friend.email} />
                 <input
+                  className="hidden"
+                  type="text"
+                  name="referMyself"
+                  value={referMyself}
+                />
+
+                <input
+                  className="hidden"
+                  type="text"
+                  name="candidateName"
+                  value={friend.name}
+                />
+                <input
+                  className="hidden"
+                  type="text"
+                  name="candidateTitle"
+                  value={friend.title}
+                />
+                <input
+                  className="hidden"
+                  type="text"
+                  name="candidateEmail"
+                  value={friend.email}
+                />
+                <input
+                  className="hidden"
                   type="text"
                   name="candidateLinkedin"
                   value={friend.linkedin}
                 />
 
-                <input type="text" name="referrerName" value={referrer.name} />
                 <input
+                  className="hidden"
+                  type="text"
+                  name="referrerName"
+                  value={referrer.name}
+                />
+                <input
+                  className="hidden"
                   type="text"
                   name="referrerTitle"
                   value={referrer.title}
                 />
                 <input
+                  className="hidden"
                   type="text"
                   name="referrerEmail"
                   value={referrer.email}
                 />
                 <input
+                  className="hidden"
                   type="text"
                   name="referrerLinkedin"
                   value={referrer.linkedin}
                 />
 
-                <input type="text" name="motivation" value={motivation} />
+                <input
+                  className="hidden"
+                  type="text"
+                  name="motivation"
+                  value={motivation}
+                />
 
                 <div className="flex mx-auto w-full text-center justify-center">
                   <a
-                    className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 py-3 rounded-xl border-none"
+                    className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black  hover:bg-gray-300 py-3 rounded-xl border-none"
                     onClick={
                       referMyself
                         ? () => setIndex(index - 2)
@@ -427,7 +461,7 @@ export default function Refer() {
           <div className="flex mx-auto w-full text-center justify-center">
             {index != 0 ? (
               <a
-                className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black hover:text-primary hover:bg-gray-300 py-3 rounded-xl border-none"
+                className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black  hover:bg-gray-300 py-3 rounded-xl border-none"
                 onClick={
                   index == 2 && referMyself
                     ? () => setIndex(index - 2)

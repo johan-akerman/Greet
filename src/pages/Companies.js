@@ -5,8 +5,13 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHandPeace,
   faSearch,
-  faGlasses,
+  faTasks,
+  faBullhorn,
+  faCopy,
   faCoins,
+  faFolderOpen,
+  faIdCard,
+  faHandsHelping,
   faMoneyBillWave,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -31,8 +36,8 @@ function Companies() {
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-40 md:pb-12 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
           <div>
             <FontAwesomeIcon
-              className="text-5xl mb-6 text-indigo-500"
-              icon={faSearch}
+              className="text-5xl mb-6  text-green-500"
+              icon={faCopy}
             />
 
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
@@ -47,8 +52,8 @@ function Companies() {
 
           <div>
             <FontAwesomeIcon
-              className="text-5xl mb-6 text-yellow-400"
-              icon={faHandPeace}
+              className="text-5xl mb-6 text-indigo-500 "
+              icon={faIdCard}
             />
 
             <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
@@ -63,8 +68,8 @@ function Companies() {
 
           <div>
             <FontAwesomeIcon
-              className="text-5xl mb-6 text-green-500"
-              icon={faMoneyBillWave}
+              className="text-5xl mb-6  text-yellow-400"
+              icon={faHandsHelping}
             />
 
             <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
@@ -105,7 +110,7 @@ function Companies() {
           <div>
             <FontAwesomeIcon
               className="text-5xl mb-6 text-indigo-500"
-              icon={faSearch}
+              icon={faFolderOpen}
             />
 
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
@@ -119,8 +124,8 @@ function Companies() {
 
           <div>
             <FontAwesomeIcon
-              className="text-5xl mb-6 text-yellow-400"
-              icon={faHandPeace}
+              className="text-5xl mb-6 text-primary"
+              icon={faBullhorn}
             />
 
             <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
@@ -135,7 +140,7 @@ function Companies() {
           <div>
             <FontAwesomeIcon
               className="text-5xl mb-6 text-green-500"
-              icon={faMoneyBillWave}
+              icon={faTasks}
             />
 
             <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
