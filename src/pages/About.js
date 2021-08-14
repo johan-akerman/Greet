@@ -15,7 +15,7 @@ function About() {
 
       <p className="text-xl font-light text-center max-w-2xl mx-auto px-3">
         Except for being founded in Sweden and being Unicorns 🦄 (a startup that
-        are valued at 1 billion USD or more). They have a really talented team.
+        is valued at 1 billion USD or more), they have a really talented team.
         <br />
         <br />
         There are a lot of tech companies in Sweden that are working on really
