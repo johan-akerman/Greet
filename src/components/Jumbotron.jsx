@@ -1,7 +1,4 @@
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
-
 import phones from "../images/phones.png";
 
 export function Jumbotron() {
@@ -34,6 +31,7 @@ export function Jumbotron() {
           <img
             className="md:mt-28 mt-0 w-full lg:float-right float-none mx-auto"
             src={phones}
+            alt="phones"
           />
         </div>
       </div>

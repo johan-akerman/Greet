@@ -3,10 +3,6 @@ import logo from "../images/logo.png";
 import HowIt from "./HowIt";
 import { Link } from "react-router-dom";
 
-function classNames(...classes) {
-  return classes.filter(Boolean).join(" ");
-}
-
 export function Navbar() {
   return (
     <Disclosure as="nav" className="bg-primary">
@@ -15,7 +11,7 @@ export function Navbar() {
           <div className="flex justify-between h-24 py-6  w-11/12 mx-auto">
             <div className="flex">
               <Link className="flex pt-1" to="/">
-                <img className="md:h-10 h-8" src={logo} />
+                <img className="md:h-10 h-8" src={logo} alt="logo" />
                 <h1 className="md:pl-4 pl-2 md:text-3xl text-2xl text-white font-medium">
                   Greet
                 </h1>

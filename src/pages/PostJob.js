@@ -176,9 +176,9 @@ function PostJob() {
                   // onClick={() => setSubmited(true)}
                 />
               ) : (
-                <a className="w-60 cursor-not-allowed transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 items-center font-semibold text-md justify-center px-8 py-3 bg-gray-300 rounded-xl text-black">
+                <div className="w-60 cursor-not-allowed transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 items-center font-semibold text-md justify-center px-8 py-3 bg-gray-300 rounded-xl text-black">
                   Waiting for responses
-                </a>
+                </div>
               )}
             </form>
           </div>

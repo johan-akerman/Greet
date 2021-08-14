@@ -2,10 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHandPeace,
   faSearch,
-  faGlasses,
-  faCoins,
   faMoneyBillWave,
-  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 export function HowItWorks() {

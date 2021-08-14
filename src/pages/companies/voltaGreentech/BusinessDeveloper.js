@@ -19,6 +19,7 @@ export function BusinessDeveloper() {
         <div className="lg:w-8/12 w-11/12 mx-auto rounded-xl">
           <div className="flex">
             <img
+              alt="logo"
               className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
               src="https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg"
             />
@@ -71,6 +72,7 @@ export function BusinessDeveloper() {
                       <a
                         href="https://www.voltagreentech.com/"
                         target="_blank"
+                        rel="noreferrer"
                         className="text-primary"
                       >
                         voltagreentech.com
@@ -89,7 +91,7 @@ export function BusinessDeveloper() {
               </table>
             </div>
             <div className="col-span-3">
-              <img src={volta} />
+              <img src={volta} alt="founders" />
               <p className="pt-2 text-gray-500">
                 Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter
               </p>

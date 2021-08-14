@@ -6,9 +6,9 @@ import { Link } from "react-router-dom";
 
 function WaitingBtn() {
   return (
-    <a className="cursor-not-allowed transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 items-center font-semibold text-md justify-center px-8 py-3 bg-gray-300 rounded-xl text-black">
+    <div className="cursor-not-allowed transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 items-center font-semibold text-md justify-center px-8 py-3 bg-gray-300 rounded-xl text-black">
       Waiting for responses
-    </a>
+    </div>
   );
 }
 
@@ -56,16 +56,16 @@ export default function Refer() {
 
   function NextBtn() {
     return (
-      <a
+      <div
         className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
         onClick={
-          index == 0 && referMyself
+          index === 0 && referMyself
             ? () => setIndex(index + 2)
             : () => setIndex(index + 1)
         }
       >
         {index === 2 ? "Submit" : "Next"}
-      </a>
+      </div>
     );
   }
 
@@ -410,7 +410,7 @@ export default function Refer() {
                 />
 
                 <div className="flex mx-auto w-full text-center justify-center">
-                  <a
+                  <div
                     className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black  hover:bg-gray-300 py-3 rounded-xl border-none"
                     onClick={
                       referMyself
@@ -419,7 +419,7 @@ export default function Refer() {
                     }
                   >
                     Go back
-                  </a>
+                  </div>
 
                   {isStepThreeComplete ? (
                     <input
@@ -440,7 +440,7 @@ export default function Refer() {
               <h1 className="font-semibold md:text-5xl text-4xl text-center mb-2">
                 Congratulations 🎉
               </h1>
-              <h2 className="md:text-3xl text-2xl text-center mb-6"></h2>
+
               <p className="text-center text-lg text-gray-500  mx-auto">
                 Thanks for your referral! We will be in touch with you if the
                 company wants to proceed with your candidate.
@@ -459,17 +459,17 @@ export default function Refer() {
 
         {index < 2 ? (
           <div className="flex mx-auto w-full text-center justify-center">
-            {index != 0 ? (
-              <a
+            {index !== 0 ? (
+              <div
                 className="pt-4 ml-2 px-4 cursor-pointer border-b-2 border-black  hover:bg-gray-300 py-3 rounded-xl border-none"
                 onClick={
-                  index == 2 && referMyself
+                  index === 2 && referMyself
                     ? () => setIndex(index - 2)
                     : () => setIndex(index - 1)
                 }
               >
                 Go back
-              </a>
+              </div>
             ) : null}
 
             {index === 0 ? (

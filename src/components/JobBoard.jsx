@@ -74,29 +74,37 @@ export function JobBoard({ title }) {
 
           <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 ">
             {jobAds.map((job, id) => (
-              <div className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-gray-100 rounded-2xl p-6 text-left relative">
+              <div
+                key={id}
+                className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-gray-100 rounded-2xl p-6 text-left relative"
+              >
                 {job.certificate ? (
                   <img
                     src={certificate}
                     className="absolute right-4 -top-4 w-12"
+                    alt="certificate"
                   />
                 ) : null}
 
                 {job.hot ? (
-                  <img src={hot} className="absolute right-4 -top-6 w-12" />
+                  <img
+                    alt="hot"
+                    src={hot}
+                    className="absolute right-4 -top-6 w-12"
+                  />
                 ) : null}
 
-                <div class="flex items-center text-left pb-4">
+                <div className="flex items-center text-left pb-4">
                   <img
-                    class="w-14 h-14 rounded-2xl mr-4"
+                    className="w-14 h-14 rounded-2xl mr-4"
                     src={job.image}
                     alt="Company logo"
                   />
                   <div>
-                    <p class="text-xl font-semibold text-gray-900 leading-none">
+                    <p className="text-xl font-semibold text-gray-900 leading-none">
                       {job.position}
                     </p>
-                    <p class="text-md text-gray-600">{job.company}</p>
+                    <p className="text-md text-gray-600">{job.company}</p>
                   </div>
                 </div>
                 <p className="pl-1 pb-1">

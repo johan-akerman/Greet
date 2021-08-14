@@ -3,17 +3,12 @@ import { Banner } from "../components/Banner";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faHandPeace,
-  faSearch,
   faTasks,
   faBullhorn,
   faCopy,
-  faCoins,
   faFolderOpen,
   faIdCard,
   faHandsHelping,
-  faMoneyBillWave,
-  faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 
 function Companies() {

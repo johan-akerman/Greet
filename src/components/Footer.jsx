@@ -58,6 +58,7 @@ export function Footer() {
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             href="https://www.instagram.com/joingreet/"
             target="_blank"
+            rel="noreferrer"
           >
             Instagram
           </a>
@@ -65,6 +66,7 @@ export function Footer() {
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             href="https://www.linkedin.com/company/joingreet/"
             target="_blank"
+            rel="noreferrer"
           >
             LinkedIn
           </a>
