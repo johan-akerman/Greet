@@ -79,8 +79,8 @@ function Greeters() {
         answerOne="You can refer how many friends you want. What are you waiting for?"
         questionTwo="When and how much do I get paid?"
         answerTwo="It varies. On each job ad you can find the specified hiring bonus and the interview bonus. You get paid when your candidate get an interview or get hired."
-        questionThree="Can I refer myself?"
-        answerThree="Of course!"
+        questionThree="What happens if someone already referred my friend?"
+        answerThree="The first one that refers someone to a job is the one that will get all the rewards. We will let you know if your friend has already been refered to that specific job. But remember, there are more great jobs on the job board that you can refer your friend to. "
       />
     </>
   );

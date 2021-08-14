@@ -28,6 +28,13 @@ export function Navbar() {
                 >
                   Job board
                 </Link>
+
+                <Link
+                  className="lg:block hidden text-white text-lg font-semibold pl-3 pr-6 py-2 hover:text-gray-200"
+                  to="/About"
+                >
+                  About us
+                </Link>
               </div>
             </div>
 

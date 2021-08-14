@@ -5,6 +5,7 @@ import PostJob from "./pages/PostJob";
 import Jobs from "./pages/Jobs";
 import { InfoBar } from "./components/InfoBar";
 import Companies from "./pages/Companies";
+import About from "./pages/About";
 import { BusinessDeveloper } from "./pages/companies/voltaGreentech/BusinessDeveloper";
 import { HeadOfManufacturing } from "./pages/companies/voltaGreentech/HeadOfManufacturing";
 import { ProductionEngineer } from "./pages/companies/voltaGreentech/ProductionEngineer";
@@ -21,6 +22,10 @@ export default function App() {
         <Switch>
           <Route exact path="/">
             <Home />
+          </Route>
+
+          <Route exact path="/about">
+            <About />
           </Route>
 
           <Route path="/post-job">

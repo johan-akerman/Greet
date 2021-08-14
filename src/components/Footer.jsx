@@ -44,6 +44,13 @@ export function Footer() {
           >
             For Greeters
           </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/about"
+          >
+            About us
+          </Link>
         </div>
       </div>
     </div>

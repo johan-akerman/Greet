@@ -64,7 +64,7 @@ export function JobBoard({ title }) {
                 <h2>Want to post a job? </h2>
                 <Link
                   to="/post-job"
-                  className="ml-2 cursor-pointer border-b-2 border-black hover:text-primary"
+                  className="ml-2 cursor-pointer border-b-2 border-primary hover:text-primary hover:border-white"
                 >
                   Contact us
                 </Link>

@@ -1,6 +1,6 @@
 import { Disclosure } from "@headlessui/react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronUp } from "@fortawesome/free-solid-svg-icons";
+import { faPlus, faMinus } from "@fortawesome/free-solid-svg-icons";
 
 export function FAQCard({ question, answer }) {
   return (
@@ -10,15 +10,11 @@ export function FAQCard({ question, answer }) {
           {({ open }) => (
             <>
               <Disclosure.Button className="flex justify-between w-full p-5 text-xl align-middle font-semibold focus:outline-none">
-                <span clasName={open ? "text-primary" : "text-black"}>
-                  {question}
-                </span>
+                <span>{question}</span>
 
                 <FontAwesomeIcon
-                  className={`${
-                    open ? "transform rotate-180" : ""
-                  } w-5 h-5 text-primary`}
-                  icon={faChevronUp}
+                  className="w-5 h-5"
+                  icon={open ? faMinus : faPlus}
                 />
               </Disclosure.Button>
               <Disclosure.Panel className="px-5 pb-3 text-lg text-gray-500">

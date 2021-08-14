@@ -22,7 +22,7 @@ export function FAQ({
       <span className="pt-12 text-lg">
         Got any other questions? Contact{" "}
         <a
-          className="border-b-2 border-black hover:text-primary"
+          className="border-b-2 border-primary hover:text-primary hover:border-secondary"
           href="mailto:join.greet@gmail.com"
         >
           join.greet@gmail.com

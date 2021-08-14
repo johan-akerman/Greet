@@ -27,16 +27,16 @@ export function ProductionEngineer() {
               <h1 className="font-semibold lg:text-4xl text-xl md:pt-3 pt-1">
                 Production engineer
               </h1>
-              <span className="flex md:gap-6 gap-2 pt-1 md:text-md text-sm text-gray-500">
-                <p className="md:block hidden">
+              <span className="flex pt-1 md:text-md text-sm text-gray-500">
+                <p className="md:block hidden mr-4">
                   <FontAwesomeIcon icon={faBriefcase} className="mr-2" />
                   Volta Greentech
                 </p>
-                <p>
+                <p className="mr-4">
                   <FontAwesomeIcon icon={faCalendarDay} className="mr-2" />
                   Full time
                 </p>
-                <p>
+                <p className="mr-4">
                   <FontAwesomeIcon icon={faMapMarkedAlt} className="mr-2" />
                   Stockholm
                 </p>
