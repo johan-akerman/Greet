@@ -52,6 +52,23 @@ export function Footer() {
             About us
           </Link>
         </div>
+        <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
+          <h1 className="text-2xl font-semibold">Follow us</h1>
+          <a
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            href="https://www.instagram.com/joingreet/"
+            target="_blank"
+          >
+            Instagram
+          </a>
+          <a
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            href="https://www.linkedin.com/company/joingreet/"
+            target="_blank"
+          >
+            LinkedIn
+          </a>
+        </div>
       </div>
     </div>
   );
