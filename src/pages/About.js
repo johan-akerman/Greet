@@ -20,10 +20,12 @@ function About() {
         <br />
         There are a lot of tech companies in Sweden that are working on really
         important (and cool) projects. And there are even more smart people who
-        want to work on those really important (and cool) companies. Finding the
-        team to make a company successful is not easy and the company depends on
-        it. Greet was founded to help tech companies find the talent they need
-        to make their projects succeed.
+        want to work on those really important (and cool) companies. But finding
+        the perfect candidate for a job can be difficult. Finding the team to
+        make a company successful is not easy and the company depends on it.
+        Greet was founded to help tech companies find the talent they need to
+        make their projects succeed and to help people find a job they love.
+        Win-win! 🏆
       </p>
     </div>
   );
