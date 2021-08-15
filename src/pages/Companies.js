@@ -22,10 +22,9 @@ function Companies() {
           Greet for Companies
         </h1>
         <p className="text-xl font-light text-center pt-4 max-w-2xl mx-auto px-3">
-          What does companies like Spotify and Klarna have in common? A talented
-          team. Finding the team to make your company successful is not easy and
-          your project depends on it. But luckily for you, Greet is here to help
-          you hire your next superstar.
+          Finding the team to make your company successful is not easy and your
+          project depends on it. But luckily for you, Greet is here to help you
+          hire your next superstar.
         </p>
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-40 md:pb-12 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
@@ -39,9 +38,9 @@ function Companies() {
               1. Post a job
             </h1>
             <p className="text-xl font-light">
-              We post your jobs on our site and promote them to our community.
-              You set a "referral bonus" that the referrer will get if you
-              decide to hire their candidate.
+              We post your jobs and promote them to our community. You set an
+              interview and hiring bonus that the referrer will get if you
+              decide to interview or hire their candidate.
             </p>
           </div>
 
@@ -56,8 +55,8 @@ function Companies() {
             </h1>
             <p className="text-xl font-light">
               Our community of Greeters refer their talented friends who would
-              be a good fit for your job. We screen the candidates and give you
-              a list of the best candidates.
+              be a great fit for your job. We screen the candidates and give you
+              a list of the best matches.
             </p>
           </div>
 
@@ -71,9 +70,8 @@ function Companies() {
               3. Interviews and hiring
             </h1>
             <p className="text-xl font-light">
-              If you like any candidate you can proceed with interviews and
-              hiring them. You have no obligation to interview or hire anyone
-              and you only pay when you hire someone.
+              Like a candidate? Great. You have no obligation to interview or
+              hire anyone and you only pay when you interview or hire someone.
             </p>
           </div>
         </div>
@@ -85,14 +83,36 @@ function Companies() {
         </h1>
         <p className="text-xl font-light text-center pt-4 max-w-2xl mx-auto px-3">
           Glad you asked. It's free to post a job. You only pay when and if you
-          decide to hire a candidate that someone referred. The "referral bonus"
-          that you specify when posting your job is what the referrer will get.
+          decide to interview or hire a candidate that someone referred.
           <br />
           <br />
-          Greet takes a fee of <strong>20%</strong> of the "referral bonus". For
-          example, if you post a job with a referral bonus of 10.000 SEK. You
-          will in total be charged 12.000 SEK. 10.000 will get paid to the
-          referrer and 2.000 will get paid to Greet.
+        </p>
+
+        <h2 className="text-2xl font-medium text-center pt-2 max-w-2xl mx-auto px-3">
+          Interview bonus
+        </h2>
+        <p className="text-xl font-light text-center max-w-2xl mx-auto px-3">
+          The "interview bonus" that you specify when posting your job is what
+          the referrer will get if you decide to interview their candidate.
+        </p>
+
+        <h2 className="text-2xl font-medium text-center pt-6 max-w-2xl mx-auto px-3">
+          Hiring bonus
+        </h2>
+        <p className="text-xl font-light text-center max-w-2xl mx-auto px-3">
+          The "hiring bonus" that you specify when posting your job is what the
+          referrer will get if you decide to hire their candidate.
+        </p>
+
+        <h2 className="text-2xl font-medium text-center pt-6 max-w-2xl mx-auto px-3">
+          What does Greet take?
+        </h2>
+        <p className="text-xl font-light text-center  max-w-2xl mx-auto px-3">
+          Greet takes a fee of <strong>20%</strong> of the "hiring bonus". For
+          example, if you post a job with a hiring bonus of 10.000 SEK. You will
+          in total be charged 12.000 SEK. 10.000 will get paid to the referrer
+          and 2.000 will get paid to Greet. Greet does not take a fee of the
+          interview bonus.
         </p>
       </div>
 
@@ -113,7 +133,7 @@ function Companies() {
             </h1>
             <p className="text-xl font-light">
               Post your job for free on our site. You only pay if you decide to
-              hire a candidate that someone referred.
+              interview or hire a candidate that someone referred.
             </p>
           </div>
 
@@ -128,7 +148,8 @@ function Companies() {
             </h1>
             <p className="text-xl font-light">
               Get free promotion of your jobs and your company. You are not
-              obligated to hire someone only because you posted a job.
+              obligated to interview or hire someone only because you posted a
+              job.
             </p>
           </div>
 
@@ -149,13 +170,13 @@ function Companies() {
         </div>
       </div>
       <FAQ
-        questionOne="Who pays for the interview bonus?"
-        answerOne="Greet pays for the interview bonus. This is a bonus that the referrer get if they candidates get an interview for the position that you posted. "
+        questionOne="What does it cost to post a job?"
+        answerOne="Nothing, you pay when you decide to interview or hire a candidate that someone referred."
         questionTwo="How much do we pay?"
-        answerTwo="The referral bonus that you specify when posting your job is what the referrer will get. Greet takes a fee of 20% of the referral bonus. For
-        example, if you post a job with a referral bonus of 10.000 SEK. You
-        will in total be charged 12.000 SEK. 10.000 will get paid to the
-        referrer and 2.000 will get paid to Greet."
+        answerTwo="You pay for each interview you have with a candidate, this is called the interview bonus. If you post a job with a hiring bonus of 10.000 SEK. You will
+        in total be charged 12.000 SEK. 10.000 will get paid to the referrer
+        and 2.000 will get paid to Greet. Greet does not take a fee of the
+        interview bonus."
         questionThree="How do I post my jobs on Greet?"
         answerThree="We just launched Greet and currently looking for the most exciting tech companies in Sweden to post their jobs on the site. Feel free to reach out to us at join.greet@gmail.com"
       />

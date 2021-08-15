@@ -84,7 +84,7 @@ function PostJob() {
               Post a job on Greet
             </h1>
             <p className="text-center text-lg mb-12 text-gray-500">
-              We would love to understand how we can help grow your company
+              We would love to understand how we can help your company grow
               before posting your job ads. Please fill in your details, and
               we'll be in touch soon.
             </p>

@@ -18,8 +18,8 @@ const jobAds = [
     position: "Business developer",
     jobLink: "business-developer",
     location: "Stockholm",
-    hiringBonus: "12.500 SEK",
-    interviewBonus: "250 SEK",
+    hiringBonus: "15.000 SEK",
+    interviewBonus: "500 SEK",
     link: "/volta-greentech/business-developer",
   },
   {
@@ -32,7 +32,7 @@ const jobAds = [
     jobLink: "head-of-manufacturing",
     location: "Stockholm",
     hiringBonus: "15.000 SEK",
-    interviewBonus: "300 SEK",
+    interviewBonus: "500 SEK",
     link: "/volta-greentech/head-of-manufacturing",
   },
   {
@@ -44,8 +44,8 @@ const jobAds = [
     position: "Production engineer",
     jobLink: "production-engineer",
     location: "Stockholm",
-    hiringBonus: "10.000 SEK",
-    interviewBonus: "200 SEK",
+    hiringBonus: "15.000 SEK",
+    interviewBonus: "500 SEK",
     link: "/volta-greentech/production-engineer",
   },
 ];
