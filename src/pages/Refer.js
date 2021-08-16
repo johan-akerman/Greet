@@ -35,7 +35,7 @@ export default function Refer() {
     window.scrollTo(0, 0);
   }, [index]);
 
-  const [job] = useState(/[^/]*$/.exec(window.location.href)[0]);
+  const [job] = useState(window.location.href.split("refer/").pop());
   console.log(job);
   const [referMyself, setReferMyself] = useState(false);
   const [friend, setFriend] = useState({
@@ -111,7 +111,7 @@ export default function Refer() {
           {index === 0 ? (
             <div className="overflow-y-auto">
               <h1 className="md:text-5xl font-semibold text-4xl text-center mb-3">
-                Refer someone to Volta Greentech 🐄
+                👋 Refer someone
               </h1>
               <p className="text-center text-lg mb-4 text-gray-500">
                 Refer someone who would be a great fit. Is that your friend or

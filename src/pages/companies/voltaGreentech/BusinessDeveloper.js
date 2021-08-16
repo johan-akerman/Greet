@@ -207,7 +207,7 @@ export function BusinessDeveloper() {
       <Banner
         title="Have a perfect candidate in mind?"
         button="Refer someone"
-        link="/refer/business-developer"
+        link="/refer/volta-greentech/business-developer"
       />
     </>
   );

@@ -1,6 +1,7 @@
 import certificate from "../images/certificate.png";
 import hot from "../images/hot.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
 import {
   faCoins,
   faMoneyBillWave,
@@ -8,49 +9,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-const jobAds = [
-  {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
-    company: "Volta Greentech",
-    certificate: false,
-    hot: true,
-    position: "Business developer",
-    jobLink: "business-developer",
-    location: "Stockholm",
-    hiringBonus: "15.000 SEK",
-    interviewBonus: "500 SEK",
-    link: "/volta-greentech/business-developer",
-  },
-  {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
-    company: "Volta Greentech",
-    certificate: true,
-    hot: false,
-    position: "Head of manufacturing",
-    jobLink: "head-of-manufacturing",
-    location: "Stockholm",
-    hiringBonus: "15.000 SEK",
-    interviewBonus: "500 SEK",
-    link: "/volta-greentech/head-of-manufacturing",
-  },
-  {
-    image:
-      "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1634774400&v=beta&t=TGNEgHFF03bEzD8eraOT2Q607woNrSHUVMUm8o63DRg",
-    company: "Volta Greentech",
-    certificate: true,
-    hot: false,
-    position: "Production engineer",
-    jobLink: "production-engineer",
-    location: "Stockholm",
-    hiringBonus: "15.000 SEK",
-    interviewBonus: "500 SEK",
-    link: "/volta-greentech/production-engineer",
-  },
-];
-
-export function JobBoard({ title }) {
+export function JobBoard({ jobAds, title }) {
   return (
     <>
       <div className="bg-white">
@@ -72,6 +31,7 @@ export function JobBoard({ title }) {
             </div>
           ) : null}
 
+          {console.log(jobAds)}
           <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 ">
             {jobAds.map((job, id) => (
               <div
@@ -143,7 +103,7 @@ export function JobBoard({ title }) {
 
                 <div className="flex items-center pt-6">
                   <Link
-                    to={`/refer/${job.jobLink}`}
+                    to={`/refer${job.link}`}
                     className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                   >
                     Refer
@@ -159,6 +119,16 @@ export function JobBoard({ title }) {
               </div>
             ))}
           </div>
+          {title ? (
+            <div className="w-40 mt-20 mx-auto">
+              <Link
+                to="job-board"
+                className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+              >
+                View all jobs
+              </Link>
+            </div>
+          ) : null}
         </div>
       </div>
     </>

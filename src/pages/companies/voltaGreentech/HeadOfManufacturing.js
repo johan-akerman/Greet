@@ -193,7 +193,7 @@ export function HeadOfManufacturing() {
       <Banner
         title="Have a perfect candidate in mind?"
         button="Refer someone"
-        link="/refer/head-of-manufacturing"
+        link="/refer/volta-greentech/head-of-manufacturing"
       />
     </>
   );
