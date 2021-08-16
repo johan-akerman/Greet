@@ -21,7 +21,7 @@ export default function HowIt() {
               ref={buttonRef}
               className="
                 
-              text-white group md:py-2 py-1 rounded-md inline-flex items-center  text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              hidden  text-white group md:py-2 py-1 rounded-md lg:inline-flex items-center  text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               <span>How it works</span>
               <FontAwesomeIcon
@@ -39,11 +39,11 @@ export default function HowIt() {
               leaveTo="opacity-0 translate-y-1"
             >
               <Popover.Panel className="absolute z-10 w-60  max-w-sm mt-2 transform -translate-x-1/2 md:left-1/2 left-0 sm:px-0 lg:max-w-3xl">
-                <div className="overflow-hidden rounded-lg shadow-lg">
+                <div className="lg:block hidden overflow-hidden rounded-lg shadow-lg">
                   <div className="relative bg-white p-3">
                     <Link
                       onClick={() => buttonRef.current?.click()}
-                      to="/greeters"
+                      to="/for-greeters"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-primary bg-secondary rounded-lg sm:h-12 sm:w-12">
@@ -57,7 +57,7 @@ export default function HowIt() {
                     </Link>
                     <Link
                       onClick={() => buttonRef.current?.click()}
-                      to="/companies"
+                      to="/for-companies"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
                       <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-primary bg-secondary rounded-lg sm:h-12 sm:w-12">

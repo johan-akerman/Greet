@@ -26,6 +26,13 @@ export function Footer() {
           >
             Job board
           </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/companies"
+          >
+            Companies
+          </Link>
           <Link
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             to="/post-job"
@@ -34,13 +41,13 @@ export function Footer() {
           </Link>
           <Link
             className="w-32 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/companies"
+            to="/for-companies"
           >
             For Companies
           </Link>
           <Link
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/greeters"
+            to="/for-greeters"
           >
             For Greeters
           </Link>

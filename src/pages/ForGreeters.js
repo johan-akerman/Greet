@@ -7,7 +7,7 @@ import {
   faMoneyBillWave,
 } from "@fortawesome/free-solid-svg-icons";
 
-function Greeters() {
+function ForGreeters() {
   useEffect(() => {
     window.scrollTo(0, 0);
   }, []);
@@ -83,4 +83,4 @@ function Greeters() {
   );
 }
 
-export default Greeters;
+export default ForGreeters;
