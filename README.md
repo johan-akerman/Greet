@@ -1,5 +1,5 @@
 # Greet
-Started Greet, a website where you get paid to refer friends to tech jobs in Sweden. Built an MVP in React and Tailwind. 
+Started Greet, a website where you get paid to refer friends to tech jobs in Sweden. Built an MVP in React.
 
 <strong>Try Greet:</strong> www.joingreet.com
 <br />
