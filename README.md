@@ -1,28 +1,28 @@
 # Greet
+Started Greet, a website where you get paid to refer friends to tech jobs in Sweden. Built an MVP in React and Tailwind. 
 
-<strong>Try Greet here:</strong> https://joingreet.com
+<strong>Try Greet:</strong> www.joingreet.com
 <br />
 
-<img src="/src/images/readme/home.png" alt="gif"
-	title="home" width="600" /> <br /><br/>
+<img src="/src/images/readme/home.png" alt="homepage"
+	title="homepage" width="600" /> <br /><br/>
+	
+	
+## Screenshots
+<strong>Homepage<br /></strong>
+<img src="/src/images/readme/homescreen.gif" alt="homepage"
+	title="homepage" width="600" /> <br /><br/>
 
-## Story about the project
-
-Text goes here
-
-<strong>Home page</strong><br>
-<br />
-<img src="/src/images/readme/homescreen.gif" alt="home screen"
-	title="home preview" width="500" />
-<br />
-
-<strong>How to refer <br /><br>
-<img src="/src/images/readme/how_to_refer.gf" alt="Logo"
-	title="refer preview" width="500" />
+<strong>How to refer someone<br /></strong>
+The idea was to make it as simple as possible to refer someone.
+<img src="/src/images/readme/how_to_refer.gif" alt="Logo"
+	title="refer preview" width="600" />
 <br />
 
 ## Technologies used
+Frontend built in React, styled with Tailwind and handled email submissions with EmailJS.
+	
+## Project status
+Built an MVP, contacted startups and gathered feedback from recruiters and possible users. Got a few startups to join but struggled to get high quality referals. The project is currently on hold.  
 
-This is an MVP and I built in React JS, styled it with Tailwind and handled email submissions with EmailJS.
-
-<strong>Try out Homerun here:</strong> https://joingreet.com
+<strong>Try out Greet here:</strong> www.joingreet.com
