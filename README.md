@@ -22,7 +22,4 @@ The idea was to make it as simple as possible to refer someone.
 ## Technologies used
 Frontend built in React, styled with Tailwind and handled email submissions with EmailJS.
 	
-## Project status
-Built an MVP, contacted startups and gathered feedback from recruiters and possible users. Got a few startups to join but struggled to get high quality referals. The project is currently on hold.  
-
 <strong>Try out Greet here:</strong> www.joingreet.com
