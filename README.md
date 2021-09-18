@@ -7,7 +7,6 @@ Started Greet, a website where you get paid to refer friends to tech jobs in Swe
 <img src="/src/images/readme/home.png" alt="homepage"
 	title="homepage" width="600" /> <br /><br/>
 	
-	
 ## Screenshots
 <strong>Homepage<br /></strong>
 <img src="/src/images/readme/homescreen.gif" alt="homepage"
@@ -21,5 +20,5 @@ The idea was to make it as simple as possible to refer someone.
 
 ## Technologies used
 Frontend built in React, styled with Tailwind and handled email submissions with EmailJS.
-	
+
 <strong>Try out Greet here:</strong> www.joingreet.com

@@ -14,15 +14,9 @@ function ForGreeters() {
   return (
     <>
       <div className="bg-white md:pt-32 pt-16">
-        <h1 className="md:text-6xl text-4xl font-medium text-center text-gray-900 ">
+        <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
           Greet for Greeters
         </h1>
-        <p className="text-xl font-light text-center pt-4 max-w-lg mx-auto px-3">
-          Greetings! Regardless if you are here to help your friend (or
-          yourself) to get their dream job or just to earn some quick money. We
-          are super excited to have you on board and help us help the tech
-          companies in Sweden.
-        </p>
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-40 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
           <div>
@@ -30,9 +24,11 @@ function ForGreeters() {
               className="text-5xl mb-6 text-indigo-500"
               icon={faSearch}
             />
-
+            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+              Step 1:
+            </h2>
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
-              1. Take a look on the jobs
+              Take a look on the jobs
             </h1>
             <p className="text-xl font-light">
               On the job board you can find jobs at exciting tech companies.
@@ -45,9 +41,11 @@ function ForGreeters() {
               className="text-5xl mb-6 text-yellow-400"
               icon={faHandPeace}
             />
-
+            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+              Step 2:
+            </h2>
             <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
-              2. Refer someone
+              Refer someone
             </h1>
             <p className="text-xl font-light">
               Found a job that would be a perfect fit for your friend (or
@@ -60,9 +58,11 @@ function ForGreeters() {
               className="text-5xl mb-6 text-green-500"
               icon={faMoneyBillWave}
             />
-
+            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+              Step 3:
+            </h2>
             <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
-              3. Get paid for your referral
+              Get paid for your referral
             </h1>
             <p className="text-xl font-light">
               If it was a good fit and your referral results in an interview or
@@ -77,7 +77,7 @@ function ForGreeters() {
         questionTwo="When and how much do I get paid?"
         answerTwo="It varies. On each job ad you can find the specified hiring bonus and the interview bonus. You get paid when your candidate get an interview or get hired."
         questionThree="What happens if someone already referred my friend?"
-        answerThree="The first one that refers someone to a job is the one that will get all the rewards. We will let you know if your friend has already been refered to that specific job. But remember, there are more great jobs on the job board that you can refer your friend to. "
+        answerThree="The first one that refers someone to a job is the one that will get all the rewards. We will let you know if your friend has already been referred to that specific job. But remember, there are more great jobs on the job board that you can refer your friend to. "
       />
     </>
   );

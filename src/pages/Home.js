@@ -1,6 +1,7 @@
 import { Jumbotron } from "../components/Jumbotron";
 import { HowItWorks } from "../components/HowItWorks";
 import { FAQ } from "../components/FAQ";
+import { SocialMedia } from "../components/SocialMedia";
 
 import { useEffect } from "react";
 
@@ -65,6 +66,7 @@ function Home() {
         questionThree="When does the Greeter get paid?"
         answerThree="The one who refer someone to a job (also known as a Greeter) gets paid when their candidate get an interview or get hired. The amount is specified on the job ads."
       />
+      <SocialMedia />
     </div>
   );
 }
