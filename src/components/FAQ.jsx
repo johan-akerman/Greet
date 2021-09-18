@@ -8,7 +8,7 @@ export function FAQ({
   answerThree,
 }) {
   return (
-    <div className="bg-secondary md:pb-32 pb-12 text-center">
+    <div className="bg-secondary pb-12 text-center">
       <h1 className="md:pt-24 pt-16 md:pb-12 pb-8 text-black  md:text-6xl text-4xl font-bold">
         Got any questions?
       </h1>

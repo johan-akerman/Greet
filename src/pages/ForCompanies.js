@@ -18,14 +18,9 @@ function ForCompanies() {
   return (
     <>
       <div className="bg-white md:pt-32 pt-16">
-        <h1 className="md:text-6xl text-4xl font-medium text-center  text-gray-900 ">
+        <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
           Greet for Companies
         </h1>
-        <p className="text-xl font-light text-center pt-4 max-w-2xl mx-auto px-3">
-          Finding the team to make your company successful is not easy and your
-          project depends on it. But luckily for you, Greet is here to help you
-          hire your next superstar.
-        </p>
 
         <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-40 md:pb-12 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
           <div>
@@ -34,13 +29,16 @@ function ForCompanies() {
               icon={faCopy}
             />
 
+            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+              Step 1:
+            </h2>
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
-              1. Post a job
+              You post a job
             </h1>
             <p className="text-xl font-light">
-              We post your jobs and promote them to our community. You set an
-              interview and hiring bonus that the referrer will get if you
-              decide to interview or hire their candidate.
+              We post your jobs and promote them to our community of Greeters.
+              You set an interview and hiring bonus that the Greeter will get if
+              you decide to interview or hire their referral.
             </p>
           </div>
 
@@ -50,13 +48,16 @@ function ForCompanies() {
               icon={faIdCard}
             />
 
+            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+              Step 2:
+            </h2>
             <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
-              2. Referrals come in
+              Referrals and screening
             </h1>
             <p className="text-xl font-light">
-              Our community of Greeters refer their talented friends who would
-              be a great fit for your job. We screen the candidates and give you
-              a list of the best matches.
+              Our community of Greeters refer their talented friends. We screen
+              the candidates and give you a list of the best matches for your
+              position.
             </p>
           </div>
 
@@ -65,63 +66,100 @@ function ForCompanies() {
               className="text-5xl mb-6  text-yellow-400"
               icon={faHandsHelping}
             />
-
+            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+              Step 3:
+            </h2>
             <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
-              3. Interviews and hiring
+              Interview and hire
             </h1>
             <p className="text-xl font-light">
-              Like a candidate? Great. You have no obligation to interview or
-              hire anyone and you only pay when you interview or hire someone.
+              When you find a great fit you move on to interview and hire them.
             </p>
           </div>
         </div>
       </div>
 
-      <div className="bg-white md:py-32 py-16">
-        <h1 className="md:text-6xl text-4xl font-medium text-center  text-gray-900 ">
-          How much does it cost?
+      <div className="bg-white pt-20 md:pb-20">
+        <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
+          Pricing
         </h1>
-        <p className="text-xl font-light text-center pt-4 max-w-2xl mx-auto px-3">
-          Glad you asked. It's free to post a job. You only pay when and if you
-          decide to interview or hire a candidate that someone referred.
-          <br />
-          <br />
+
+        <p className="text-xl mx-auto max-w-2xl text-center pt-4">
+          The cost of Greet can be divided into four segments: Job post, Hiring
+          Bonus, Interview Bonus and Greet Fee.{" "}
         </p>
 
-        <h2 className="text-2xl font-medium text-center pt-2 max-w-2xl mx-auto px-3">
-          Interview bonus
-        </h2>
-        <p className="text-xl font-light text-center max-w-2xl mx-auto px-3">
-          The "interview bonus" that you specify when posting your job is what
-          the referrer will get if you decide to interview their candidate.
-        </p>
+        <div className="grid lg:grid-cols-4 grid-cols-1 gap-14 md:py-24 md:pb-12 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
+          <div>
+            <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
+              Job post
+            </h1>
+            <p className="text-xl font-light">
+              Free. Yes, you post your job and get promotion of your company for
+              free.
+            </p>
+          </div>
 
-        <h2 className="text-2xl font-medium text-center pt-6 max-w-2xl mx-auto px-3">
-          Hiring bonus
-        </h2>
-        <p className="text-xl font-light text-center max-w-2xl mx-auto px-3">
-          The "hiring bonus" that you specify when posting your job is what the
-          referrer will get if you decide to hire their candidate.
-        </p>
+          <div>
+            <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
+              Hiring Bonus
+            </h1>
+            <p className="text-xl font-light">
+              You decide the hiring bonus that the Greeter who referred your
+              candidate will get.
+            </p>
+          </div>
 
-        <h2 className="text-2xl font-medium text-center pt-6 max-w-2xl mx-auto px-3">
-          What does Greet take?
-        </h2>
-        <p className="text-xl font-light text-center  max-w-2xl mx-auto px-3">
-          Greet takes a fee of <strong>20%</strong> of the "hiring bonus". For
-          example, if you post a job with a hiring bonus of 10.000 SEK. You will
-          in total be charged 12.000 SEK. 10.000 will get paid to the referrer
-          and 2.000 will get paid to Greet. Greet does not take a fee of the
-          interview bonus.
+          <div>
+            <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
+              Interview Bonus
+            </h1>
+            <p className="text-xl font-light">
+              You can make the ad more attractive by adding an interview bonus
+              that the Greeter will get if their referral results in an
+              interview. You only pay for the first interview with each
+              candidate.
+            </p>
+          </div>
+
+          <div>
+            <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
+              Greet Fee
+            </h1>
+            <p className="text-xl font-light">
+              Greet takes a fee equal to 20% of the hiring bonus. The Greeter
+              will still get 100% of the hiring bonus. So you pay at minimum
+              120% of the hiring bonus.
+            </p>
+          </div>
+        </div>
+      </div>
+
+      <div className="bg-white py-12 px-3">
+        <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
+          Pricing example
+        </h1>
+
+        <p className="text-xl mx-auto max-w-2xl text-center pt-4">
+          You post a job with an hiring bonus of 10 000 SEK and an interview
+          bonus of 1000 SEK. You decide to interview 3 candidates before you
+          decide to hire one of them. You only pay for the first interview with
+          each candidate. In total you will be charged for the hiring bonus (10
+          000 SEK), 3 interviews (3000 SEK) and the Greet Fee (20 % of the
+          hiring bonus = 2000 SEK). 10 000 + 3000 + 2000 = 15 000 SEK in total.{" "}
+          <br /> <br /> Out of these 15 000 SEK. 10 000 will be given to the one
+          who referred the candidate you hired. 1000 SEK will be given to each
+          Greeter who referred someone who got an interview. 2000 will be given
+          to Greet.
         </p>
       </div>
 
-      <div className="bg-white md:pb-20">
-        <h1 className="md:text-6xl text-4xl font-medium text-center text-gray-900 ">
+      <div className="bg-white pt-20 md:pb-20">
+        <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
           Extra things you get
         </h1>
 
-        <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-28 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
+        <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-40 md:pb-12 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
           <div>
             <FontAwesomeIcon
               className="text-5xl mb-6 text-indigo-500"
@@ -169,6 +207,7 @@ function ForCompanies() {
           </div>
         </div>
       </div>
+
       <FAQ
         questionOne="What does it cost to post a job?"
         answerOne="Nothing, you pay when you decide to interview or hire a candidate that someone referred."
