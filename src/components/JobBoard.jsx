@@ -75,9 +75,9 @@ export function JobBoard({ jobAds, title }) {
                   <span className="text-xl font-medium">
                     {job.hiringBonus}{" "}
                   </span>
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-semibold tracking-wide">
                     {" "}
-                    / Hiring
+                    / hiring bonus
                   </span>
                 </p>
                 <p className="pl-1 pb-1">
@@ -88,9 +88,9 @@ export function JobBoard({ jobAds, title }) {
                   <span className="text-xl font-medium">
                     {job.interviewBonus}{" "}
                   </span>
-                  <span className="text-sm font-medium text-gray-600">
+                  <span className="text-sm font-semibold tracking-wide">
                     {" "}
-                    / Interview
+                    / interview bonus
                   </span>
                 </p>
                 <p className="pl-1">
