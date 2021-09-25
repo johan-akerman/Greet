@@ -81,9 +81,9 @@ function PostJob() {
         ) : (
           <div className="py-32">
             <h1 className="text-5xl text-center mb-3 font-semibold">
-              Post a job on Greet
+              Join Greet
             </h1>
-            <p className="text-center text-lg mb-12 text-gray-500">
+            <p className="text-center md:w-8/12 w-12/12 mx-auto text-lg mb-12 text-gray-500">
               We would love to understand how we can help your company grow
               before posting your job ads. Please fill in your details, and
               we'll be in touch soon.

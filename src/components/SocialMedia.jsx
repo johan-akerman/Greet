@@ -8,18 +8,26 @@ export function SocialMedia() {
   return (
     <div className="bg-secondary py-20">
       <h1 className="md:text-6xl text-4xl font-bold text-gray-900 text-center pb-3">
-        Follow us on Instagram
+        Follow us
       </h1>
       <p className="text-lg text-center mb-12 px-3">
-        Follow{" "}
+        Follow @joingreet on{" "}
         <a
           className="text-primary"
           href="https://www.instagram.com/joingreet/"
           target="_blank"
         >
-          @joingreet
+          Instagram{" "}
         </a>{" "}
-        on Instagram to get updates on new positions and other fun stuff.
+        and{" "}
+        <a
+          className="text-primary"
+          href="https://www.linkedin.com/company/joingreet/"
+          target="_blank"
+        >
+          LinkedIn{" "}
+        </a>
+        to get updates on new positions and other fun stuff.
       </p>
       <div className="w-11/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-3">
         <a
