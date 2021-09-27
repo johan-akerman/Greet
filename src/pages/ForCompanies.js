@@ -1,6 +1,7 @@
 import { FAQ } from "../components/FAQ";
 import { Banner } from "../components/Banner";
 import { useEffect } from "react";
+import chart from "../images/chart.png";
 import hot from "../images/hot.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
@@ -172,23 +173,28 @@ function ForCompanies() {
           You can switch and cancel plan at any time.
         </p>
       </div>
-      <div className="bg-white md:pt-0 pt-12 mb-20 px-3">
-        <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
-          Pricing example
-        </h1>
-
-        <p className="text-xl mx-auto max-w-2xl text-center pt-4">
-          You post a job with a hiring bonus of 10 000 SEK and an interview
-          bonus of 1000 SEK. You get 17 referrals. After interviewing 3
-          candidates you decide to hire one of them. You would now owe 15 000
-          SEK in total. 10 000 for the hiring bonus, 3 x 1000 for the interviews
-          and 2000 for the Greet Fee (20% of the hiring bonus).
-          <br />
-          <br />
-          Out of these 15 000 SEK. 10 000 will be given to the one who referred
-          the candidate you hired. 1000 SEK will be given to each Greeter who
-          referred someone who got an interview. 2000 will be given to Greet.
-        </p>
+      <div className="bg-white md:pt-0 pt-12 mb-20 md:w-10/12 w-11/12 mx-auto">
+        <div className="grid lg:grid-cols-5 md:gap-6 gap-24 grid-cols-1 md:mt-20 mt-0 mx-auto">
+          <div className="md:col-span-3 col-span-1 md:mt-14 mt-0">
+            <h1 className=" mx-auto md:text-left text-center md:text-6xl text-4xl font-bold text-gray-900">
+              Pricing example
+            </h1>
+            <p className="text-xl mx-auto md:text-left text-center pt-4 md:pr-16 pr-0">
+              You post a job with a hiring bonus of 10 000 SEK and an interview
+              bonus of 1000 SEK. You get 17 referrals. After interviewing 3
+              candidates you decide to hire one of them. You would now owe 15
+              000 SEK in total. 10 000 for the hiring bonus, 3 x 1000 for the
+              interviews and 2000 for the Greet Fee (20% of the hiring bonus).
+              <br />
+              <br />
+              Out of these 15 000 SEK. 10 000 will be given to the one who
+              referred the candidate you hired. 1000 SEK will be given to each
+              Greeter who referred someone who got an interview. 2000 will be
+              given to Greet.
+            </p>
+          </div>
+          <img className="md:col-span-2 col-span-1" src={chart} />
+        </div>
       </div>
 
       <FAQ
