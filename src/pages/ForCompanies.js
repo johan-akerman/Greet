@@ -102,7 +102,7 @@ function ForCompanies() {
 
         <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 mt-20 mx-auto">
           <div className="w-full bg-gray-200 text-black rounded-2xl p-6 text-left relative">
-            <h1 className=" md:text-2xl text-xl font-bold">Greet Basic</h1>
+            <h1 className=" md:text-2xl text-xl font-bold">Greet Free</h1>
             <span className="flex items-baseline mt-5 mb-2">
               <h1 className=" md:text-5xl text-2xl font-bold mr-3">0 SEK</h1>
               <p className="font-semibold tracking-wide align-baseline text-2xl">
@@ -125,7 +125,7 @@ function ForCompanies() {
           </div>
           <div className="w-full bg-gray-200 text-black rounded-2xl p-6 text-left relative">
             <img src={hot} className="absolute right-4 -top-6 w-12" alt="hot" />
-            <h1 className=" md:text-2xl text-xl font-bold">Greet Pro</h1>
+            <h1 className=" md:text-2xl text-xl font-bold">Greet Basic</h1>
             <span className="flex items-baseline mt-5 mb-2">
               <h1 className=" md:text-5xl text-2xl font-bold mr-3">250 SEK</h1>
               <p className="font-semibold tracking-wide align-baseline text-2xl">
@@ -133,9 +133,11 @@ function ForCompanies() {
               </p>
             </span>
 
+            <p className="text-black font-medium text-xl">
+              All Greet Free features plus:
+            </p>
             <ul className="list-disc ml-5 mb-6 text-xl">
-              <li>Everything you get in Greet Basic.</li>
-              <li>3 job posts simultaneously. </li>
+              <li>Tot 3 job posts simultaneously. </li>
               <li>Screening of candidates.</li>
             </ul>
 
@@ -148,7 +150,7 @@ function ForCompanies() {
           </div>
 
           <div className="w-full bg-gray-200 text-black rounded-2xl p-6 text-left relative">
-            <h1 className=" md:text-2xl text-xl font-bold">Greet Plus</h1>
+            <h1 className=" md:text-2xl text-xl font-bold">Greet Pro</h1>
             <span className="flex items-baseline mt-5 mb-2">
               <h1 className=" md:text-5xl text-2xl font-bold mr-3">500 SEK</h1>
               <p className="font-semibold tracking-wide align-baseline text-2xl">
@@ -156,9 +158,11 @@ function ForCompanies() {
               </p>
             </span>
 
+            <p className="text-black font-medium text-xl">
+              All Greet Basic features plus:
+            </p>
             <ul className="list-disc ml-5 mb-6 text-xl">
-              <li>Everything you get in Greet Pro. </li>
-              <li>Unlimited job posts simultaneously.</li>
+              <li>Tot 10 job posts simultaneously.</li>
             </ul>
 
             <Link
@@ -200,10 +204,10 @@ function ForCompanies() {
       <FAQ
         questionOne="What is the Hiring Bonus, Interview Bonus and Greet Fee?"
         answerOne="The hiring bonus is what the Greeters will see on the job board and get paid if their referral results in a hiring. The Interview bonus is what is paid if a referral ends up with an interview. You decide what the hiring- and interview bonus should be. The Greet Fee is equal to 20% of your hiring bonus."
-        questionTwo="When and how much do I pay if I am on the Greet Basic plan?"
+        questionTwo="When and how much do I pay for a hire if I am on the Greet Free plan?"
         answerTwo="You pay when you interview and/ or hire someone. You decide how much you will pay by deciding your own Hiring Bonus and Interview Bonus. Take a look at the example above for more information."
         questionThree="What does the screening include?"
-        answerThree="In the  Greet Pro and Greet Plus plan a screening is included. This means that we take a close look at all the candidates and make a list of the ones that are the best fit. 
+        answerThree="In the Greet Basic and Greet Pro plan a screening is included. This means that we take a close look at all the candidates and make a list of the ones that are the best fit. 
         "
       />
       <Banner
