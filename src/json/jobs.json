@@ -1,0 +1,22 @@
+[
+  {
+    "company": "volta-greentech",
+    "jobs": [
+      {
+        "title": "frontend-developer",
+        "location": "remote",
+        "elements": [
+          {
+            "type": "text",
+            "title": "hej hej",
+            "text": "hahah"
+          },
+          {
+            "type": "list",
+            "content": ["1", "2"]
+          }
+        ]
+      }
+    ]
+  }
+]

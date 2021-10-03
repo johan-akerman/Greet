@@ -1,0 +1,72 @@
+[
+  {
+    "url": "volta-greentech",
+    "name": "Volta Greentech",
+    "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
+    "website": "https://www.voltagreentech.com",
+    "founded": 2018,
+    "employees": "10+",
+    "image": "https://media.wired.co.uk/photos/61096114d37d93e45ddd7149/master/w_1600,c_limit/0421-WIRED-Startups9.jpg",
+    "imageCaption": "Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter",
+    "text": "There are around one billion cows on the planet. Together they produce over 4% of the world’s greenhouse gas emissions just by farting and burping methane gas. Volta is on a mission to reduce these emissions to mitigate global warming. By providing farmers with an entirely natural seaweed-based feed supplement to drastically reduce the methane emissions produced by dairy cows and beef cattle, Volta is supporting the agriculture sector in taking a massive leap in going sustainable.",
+    "jobAds": [
+      {
+        "image": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
+        "company": "Volta Greentech",
+        "certificate": false,
+        "hot": true,
+        "position": "Business developer",
+        "location": "Stockholm",
+        "hiringBonus": "15.000 SEK",
+        "interviewBonus": "500 SEK",
+        "link": "/volta-greentech/business-developer"
+      },
+      {
+        "image": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
+        "company": "Volta Greentech",
+        "certificate": true,
+        "hot": false,
+        "position": "Head of manufacturing",
+        "location": "Stockholm",
+        "hiringBonus": "15.000 SEK",
+        "interviewBonus": "500 SEK",
+        "link": "/volta-greentech/head-of-manufacturing"
+      },
+      {
+        "image": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
+        "company": "Volta Greentech",
+        "certificate": true,
+        "hot": false,
+        "position": "Production Engineer",
+        "location": "Stockholm",
+        "hiringBonus": "15.000 SEK",
+        "interviewBonus": "500 SEK",
+        "link": "/volta-greentech/production-engineer"
+      }
+    ]
+  },
+  {
+    "url": "bemlo",
+    "name": "Bemlo",
+    "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG0F3giqIFzfA/company-logo_200_200/0/1623881357221?e=1637193600&v=beta&t=A-GjUKU74NqREB7rwRqdtUngkBElPruXNLiapcT_4cs",
+    "website": "https://www.bemlo.se",
+    "founded": 2019,
+    "employees": "6",
+    "image": "https://www.joingreet.com/static/media/nurse.6eaf49f5.jpg",
+    "imageCaption": "Bemlo’s vision is to become Europe's leading matching platform for health care.",
+    "text": "Bemlo’s vision is to become Europe's leading matching platform for health care. We have started with Sweden and staffing companies. Our goal is that the heroes of the healthcare industry get properly paid and that they find the optimal job for their life situation. Swedish staffing companies for nurses and doctors have a revenue of 6 BSEK. This is only a few percent of the European market. Bemlo is helping 16 000 nurses and doctors on a monthly basis when they are looking for a new job. In Europe, we will be able to grow to millions of users.",
+    "jobAds": [
+      {
+        "image": "https://media-exp1.licdn.com/dms/image/C4E0BAQG0F3giqIFzfA/company-logo_200_200/0/1623881357221?e=1637193600&v=beta&t=A-GjUKU74NqREB7rwRqdtUngkBElPruXNLiapcT_4cs",
+        "company": "Bemlo",
+        "certificate": true,
+        "hot": false,
+        "position": "Senior Full Stack Engineer",
+        "location": "Stockholm",
+        "hiringBonus": "15.000 SEK",
+        "interviewBonus": "0 SEK",
+        "link": "/bemlo/senior-full-stack-engineer"
+      }
+    ]
+  }
+]

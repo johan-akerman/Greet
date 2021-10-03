@@ -13,7 +13,7 @@ const companies = [
     description:
       "Battling global warming by reducing methane emissions from cows.",
     certificate: true,
-    link: "/volta-greentech",
+    link: "volta-greentech",
     jobs: 3,
   },
   {
@@ -22,7 +22,7 @@ const companies = [
     description:
       "A service where you easily compare staffing companies in health care.",
     certificate: true,
-    link: "/bemlo",
+    link: "bemlo",
     jobs: 1,
   },
 ];
@@ -64,14 +64,14 @@ export function CompanyBoard() {
 
                 <div className="flex items-center pt-6">
                   <Link
-                    to={company.link}
+                    to={`/companies/${company.link}`}
                     className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                   >
                     Read more
                   </Link>
 
                   <HashLink
-                    to={`${company.link}/#jobs`}
+                    to={`/companies/${company.link}#jobs`}
                     className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
                   >
                     View jobs ({company.jobs})
