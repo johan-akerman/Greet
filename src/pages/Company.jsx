@@ -1,19 +1,19 @@
 import { withRouter } from "react-router";
 import { JobBoard } from "../components/JobBoard";
-import companies from "../json/companies.json";
+import jobs from "../json/jobs.json";
 
 function Company(props) {
-  let company = companies.find((c) => c.url == props.match.params.url);
+  let company = jobs.find((c) => (c.company = props.match.params.url));
 
   if (company != null) {
     return (
       <div className="md:pt-32 pt-12 pb-12">
-        <div className="lg:w-10/12 w-11/12 mx-auto rounded-xl">
+        <div className="lg:w-9/12 w-11/12 mx-auto rounded-xl">
           <div className="flex">
             <img
               alt="logo"
               className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
-              src={company.logo}
+              src={company.about.logo}
             />
 
             <div>
@@ -27,7 +27,7 @@ function Company(props) {
               <h1 className="text-3xl font-medium md:mt-12 mt-6 mb-3">
                 About {company.name}
               </h1>
-              <p className="md:text-xl text-md">{company.text}</p>
+              <p className="md:text-xl text-md">{company.about.about}</p>
             </div>
             <div className="lg:col-span-1 col-span-3">
               <h1 className="text-3xl font-medium md:mt-12 mt-4 mb-3">
@@ -39,31 +39,31 @@ function Company(props) {
                     <td className="text-bold">Website</td>
                     <td className="text-right">
                       <a
-                        href={company.website}
+                        href={company.about.website}
                         target="_blank"
                         rel="noreferrer"
                         className="text-primary"
                       >
-                        {company.website.substring(
-                          company.website.indexOf("/") + 6
+                        {company.about.website.substring(
+                          company.about.website.indexOf("/") + 6
                         )}
                       </a>
                     </td>
                   </tr>
                   <tr class="bg-emerald-200">
                     <td className="text-bold">Founded</td>
-                    <td className="text-right">{company.founded}</td>
+                    <td className="text-right">{company.about.founded}</td>
                   </tr>
                   <tr>
                     <td className="text-bold">Employees</td>
-                    <td className="text-right">{company.employees}</td>
+                    <td className="text-right">{company.about.employees}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div className="col-span-3">
-              <img src={company.image} alt="founders" />
-              <p className="pt-2 text-gray-500">{company.imageCaption}</p>
+              <img src={company.about.image} alt="founders" />
+              <p className="pt-2 text-gray-500">{company.about.imageCaption}</p>
             </div>
           </div>
         </div>
@@ -72,7 +72,7 @@ function Company(props) {
             Jobs at {company.name}
           </h1>
         </div>
-        <JobBoard title={false} jobAds={company.jobAds} />
+        {/* <JobBoard title={false} jobAds={company.jobAds} /> */}
       </div>
     );
   }

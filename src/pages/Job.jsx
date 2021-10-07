@@ -1,25 +1,33 @@
 import { withRouter } from "react-router";
 import jobs from "../json/jobs.json";
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+
+import { faLongArrowAltRight } from "@fortawesome/free-solid-svg-icons";
 
 function Job(props) {
   let company = jobs.find((c) => (c.company = props.match.params.url));
   let job = company.jobs.find((c) => (c.url = props.match.params.job));
 
   return (
-    <div className="lg:w-5/12 w-11/12 mx-auto md:mt-32 mt-20 pb-20">
+    <div className="lg:w-6/12 w-11/12 mx-auto md:mt-32 mt-20 pb-20">
       <div className="flex">
         <img
-          alt="logo"
+          alt="company logo"
           className="md:h-24 md:w-24 w-20 h-20 md:mr-6 mr-4 rounded-md"
-          src={company.logo}
+          src={company.about.logo}
         />
 
         <div>
-          <h1 className="font-semibold lg:text-4xl text-2xl md:pt-4 mt-2 pt-1">
+          <h1 className="font-semibold lg:text-4xl text-2xl mt-3">
             {job.title}
           </h1>
-          <h2 className="font-medium md:text-xl text-lg ">{company.name}</h2>
+          <Link
+            to="/companies/volta-greentech"
+            className=" md:text-xl text-lg hover:text-primary"
+          >
+            {company.name}
+          </Link>
         </div>
       </div>
       <div className="flex justify-between md:mt-12 mt-12 mb-3">
@@ -29,7 +37,8 @@ function Job(props) {
           to="/companies/volta-greentech"
           className="text-xl text-primary underline md:block hidden"
         >
-          View company profile
+          View company profile{" "}
+          <FontAwesomeIcon icon={faLongArrowAltRight} className="text-xl" />
         </Link>
       </div>
       <table class="table-auto w-full mb-3">
@@ -38,7 +47,7 @@ function Job(props) {
             return (
               <tr>
                 <td className="text-bold">{key}</td>
-                <td className="text-right">{Object.values.key}</td>
+                <td className="text-right">{job.summary[key]}</td>
               </tr>
             );
           })}

@@ -1,9 +1,20 @@
 [
   {
-    "company": "volta-greentech",
     "name": "Volta Greentech",
-    "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
-    "url": "/companies/volta-greentech",
+    "url": "volta-greentech",
+    "about": {
+      "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
+      "website": "https://www.voltagreentech.com",
+      "founded": 2018,
+      "employees": "10+",
+      "industry": "Biotechnology",
+      "intro": "Battling global warming by reducing methane emissions from cows.",
+      "about": "There are around one billion cows on the planet. Together they produce over 4% of the world’s greenhouse gas emissions just by farting and burping methane gas. Volta is on a mission to reduce these emissions to mitigate global warming. By providing farmers with an entirely natural seaweed-based feed supplement to drastically reduce the methane emissions produced by dairy cows and beef cattle, Volta is supporting the agriculture sector in taking a massive leap in going sustainable.",
+      "image": "https://media.wired.co.uk/photos/61096114d37d93e45ddd7149/master/w_1600,c_limit/0421-WIRED-Startups9.jpg",
+      "imageCaption": "Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter",
+      "hot": false,
+      "new": false
+    },
     "jobs": [
       {
         "title": "Business Developer",
@@ -13,8 +24,6 @@
         "summary": {
           "Location": "Stockholm",
           "Employment": "Full time",
-          "Founded": "2018",
-          "Employees": "10+",
           "Hiring bonus": "15 000 SEK",
           "Interview bonus": "500 SEK"
         },
@@ -29,7 +38,79 @@
             "title": "Start date & location",
             "text": "ASAP. The role is based out of our Stockholm HQ at Karolinska Institutet, with occasional trips to our production facility in Lysekil on the Swedish west coast."
           },
-
+          {
+            "type": "list",
+            "title": "The work you'll take on includes",
+            "content": [
+              "Defining and leading the launch of our new, environmentally groundbreaking product line in Swedish supermarkets",
+              "Nurturing and initiating relationships with both new and existing clients",
+              "Support in project financing, directing consultants as well as taking on writing yourself when necessary",
+              "When required (and have no doubt, it will be!) - jumping into additional projects and roles supporting additional parts of the company"
+            ]
+          },
+          {
+            "type": "list",
+            "title": "The skills you'll need",
+            "content": [
+              "Excellent project management skills",
+              "Love closing new clients, and do everything that it takes to make both Volta and our partners succeed",
+              "A talent for communication, in writing and in person, in English and in Swedish",
+              "Thus, also being a maven with presentations (we use Google Slides / Keynote)",
+              "Be a team player, with strong self motivation, results-orientation and sense of purpose"
+            ]
+          },
+          {
+            "type": "list",
+            "title": "Your (presumed) background",
+            "content": [
+              "Relevant education and work experience",
+              "Led and executed successful projects with many stakeholders",
+              "A minimum 3 years of work experience in a fast-paced environment",
+              "5+ years of experience, including leadership, from complex sales and project management, preferably from the food and/or agriculture industry"
+            ]
+          },
+          {
+            "type": "list",
+            "title": "Extra credits if you",
+            "content": [
+              "Have experience of working with FMCG",
+              "Have previously worked with OKR’s or similar"
+            ]
+          },
+          {
+            "type": "list",
+            "title": "What you'll get",
+            "content": [
+              "A chance to work on one of the world’s biggest, yet unresolved climate challenges",
+              "A chance to be surrounded daily by a team of industry experts, as well as brand-name clients and partners",
+              "A competitive salary package, with a stock option plan",
+              "A yearly stipend for health and tech expenses"
+            ]
+          }
+        ]
+      },
+      {
+        "title": "Head of manufacturing",
+        "url": "head-of-manufacturing",
+        "hot": false,
+        "new": true,
+        "summary": {
+          "Location": "Stockholm",
+          "Employment": "Full time",
+          "Hiring bonus": "15 000 SEK",
+          "Interview bonus": "500 SEK"
+        },
+        "elements": [
+          {
+            "type": "text",
+            "title": "About the job",
+            "text": "You? A fearless, dedicated Business Developer, ready to take on CO2-emitters acting as if Greta had never gone on strike. Us? We’re a-just-over-two-year-old company backed by experienced investors with a mission to fight global warming by removing farts and burps from cows.  Over here, things are moving at a high pace. Getting closer to introducing our first climate-friendly products, we need to boost our team further. We are now looking for a Business Developer, supporting us with the critical launch of a potentially revolutionizing type of product in Sweden (and later, internationally). Specs below!"
+          },
+          {
+            "type": "text",
+            "title": "Start date & location",
+            "text": "ASAP. The role is based out of our Stockholm HQ at Karolinska Institutet, with occasional trips to our production facility in Lysekil on the Swedish west coast."
+          },
           {
             "type": "list",
             "title": "The work you'll take on includes",
