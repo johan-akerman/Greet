@@ -6,10 +6,7 @@ import hot from "../images/hot.png";
 import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
-  faTasks,
-  faBullhorn,
   faCopy,
-  faFolderOpen,
   faEnvelopeOpenText,
   faIdCard,
   faHandsHelping,
@@ -197,7 +194,11 @@ function ForCompanies() {
               given to Greet.
             </p>
           </div>
-          <img className="md:col-span-2 col-span-1" src={chart} />
+          <img
+            alt="pricing example chart"
+            className="md:col-span-2 col-span-1"
+            src={chart}
+          />
         </div>
       </div>
 

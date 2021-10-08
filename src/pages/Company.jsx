@@ -1,23 +1,34 @@
 import { withRouter } from "react-router";
+import { Link } from "react-router-dom";
 import { JobBoard } from "../components/JobBoard";
+import companies from "../json/companies.json";
+import { useEffect } from "react";
+
 import jobs from "../json/jobs.json";
 
 function Company(props) {
-  let company = jobs.find((c) => (c.company = props.match.params.url));
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, []);
+
+  let desiredCompany = props.match.params.url;
+  let company = companies.find((c) => c.url === desiredCompany);
 
   if (company != null) {
+    let jobsAtCompany = jobs.filter((j) => j.company === company.name);
+
     return (
       <div className="md:pt-32 pt-12 pb-12">
         <div className="lg:w-9/12 w-11/12 mx-auto rounded-xl">
           <div className="flex">
             <img
-              alt="logo"
+              alt="company logo"
               className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
-              src={company.about.logo}
+              src={company.logo}
             />
 
             <div>
-              <h1 className="font-semibold lg:text-4xl text-xl md:pt-6 pt-1">
+              <h1 className="font-semibold lg:text-4xl text-2xl md:pt-6 pt-3">
                 {company.name}
               </h1>
             </div>
@@ -27,7 +38,7 @@ function Company(props) {
               <h1 className="text-3xl font-medium md:mt-12 mt-6 mb-3">
                 About {company.name}
               </h1>
-              <p className="md:text-xl text-md">{company.about.about}</p>
+              <p className="md:text-xl text-md">{company.aboutText}</p>
             </div>
             <div className="lg:col-span-1 col-span-3">
               <h1 className="text-3xl font-medium md:mt-12 mt-4 mb-3">
@@ -39,31 +50,31 @@ function Company(props) {
                     <td className="text-bold">Website</td>
                     <td className="text-right">
                       <a
-                        href={company.about.website}
+                        href={company.website}
                         target="_blank"
                         rel="noreferrer"
                         className="text-primary"
                       >
-                        {company.about.website.substring(
-                          company.about.website.indexOf("/") + 6
+                        {company.website.substring(
+                          company.website.indexOf("w") + 4
                         )}
                       </a>
                     </td>
                   </tr>
                   <tr class="bg-emerald-200">
                     <td className="text-bold">Founded</td>
-                    <td className="text-right">{company.about.founded}</td>
+                    <td className="text-right">{company.founded}</td>
                   </tr>
                   <tr>
                     <td className="text-bold">Employees</td>
-                    <td className="text-right">{company.about.employees}</td>
+                    <td className="text-right">{company.employees}</td>
                   </tr>
                 </tbody>
               </table>
             </div>
             <div className="col-span-3">
-              <img src={company.about.image} alt="founders" />
-              <p className="pt-2 text-gray-500">{company.about.imageCaption}</p>
+              <img src={company.image} alt="founders" />
+              <p className="pt-2 text-gray-500">{company.imageCaption}</p>
             </div>
           </div>
         </div>
@@ -72,16 +83,27 @@ function Company(props) {
             Jobs at {company.name}
           </h1>
         </div>
-        {/* <JobBoard title={false} jobAds={company.jobAds} /> */}
+
+        {jobsAtCompany.length > 0 ? (
+          <JobBoard title={false} jobAds={jobsAtCompany} />
+        ) : null}
       </div>
     );
   }
 
   return (
-    <div className="h-screen lg:w-10/12 w-11/12 mx-auto rounded-xl">
-      <h1 className="md:pt-32">
-        This company page does not exist. Make sure the url is correct.
+    <div className="h-screen lg:w-6/12 w-11/12 text-center mt-44 mx-auto rounded-xl">
+      <h1 className="font-semibold lg:text-5xl text-2xl mb-5">
+        Company page not found
       </h1>
+      <p className="text-xl">Please check out all the companies below.</p>
+
+      <Link
+        to="/companies"
+        className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg mx-auto w-60 mt-10 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
+      >
+        View companies
+      </Link>
     </div>
   );
 }
