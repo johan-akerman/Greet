@@ -9,7 +9,7 @@ export function Footer() {
             <h1 className="text-4xl font-medium">Greet</h1>
           </Link>
           <p className="text-lg font-medium">
-            Currently available in Sweden 🇸🇪
+            Get rewarded to refer your friends to tech jobs.
           </p>
           <a
             className="w-44 text-lg font-medium border-b-2 border-white hover:opacity-60"

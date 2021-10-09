@@ -17,7 +17,9 @@ function Job(props) {
     window.scrollTo(0, 0);
   }, []);
 
-  let job = jobs.find((j) => j.url === props.match.params.job);
+  let company = props.match.params.url;
+  let jobsAtCompany = jobs.filter((j) => j.companyUrl === company);
+  let job = jobsAtCompany.find((j) => j.url === props.match.params.job);
 
   if (job != null) {
     let company = companies.find((c) => c.name === job.company);

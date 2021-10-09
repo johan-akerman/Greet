@@ -1,6 +1,7 @@
 [
   {
     "company": "Bemlo",
+    "companyUrl": "bemlo",
     "title": "Senior Full Stack Engineer",
     "url": "senior-full-stack-engineer",
     "date": "01.10.21",
@@ -73,6 +74,7 @@
   },
   {
     "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
     "title": "Business Developer",
     "url": "business-developer",
     "date": "01.10.21",
@@ -149,6 +151,7 @@
 
   {
     "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
     "title": "Head of manufacturing",
     "url": "head-of-manufacturing",
     "date": "01.10.21",
@@ -208,6 +211,7 @@
 
   {
     "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
     "title": "Production Engineer",
     "url": "production-engineer",
     "date": "01.10.21",
