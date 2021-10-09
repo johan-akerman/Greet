@@ -22,9 +22,6 @@ export function Jumbotron() {
               See available jobs
             </Link>
           </div>
-          <p className="opacity-80 text-gray-50 pt-6 text-sm">
-            Currently available in Sweden 🇸🇪
-          </p>
         </div>
 
         <div className="md:w-7/12 w-12/12 md:pt-12 md:pl-10 pl-0 pt-0 md:pb-12 pb-20 mx-auto">

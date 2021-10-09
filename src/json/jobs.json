@@ -1,0 +1,288 @@
+[
+  {
+    "company": "Bemlo",
+    "companyUrl": "bemlo",
+    "title": "Senior Full Stack Engineer",
+    "url": "senior-full-stack-engineer",
+    "date": "01.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "15 000 SEK",
+      "interviewBonus": "0 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "We are looking for a senior full stack developer that will also lead our team of developers. At Bemlo, you will do a bit of everything. Some days you will focus on strategy and recruiting. Other days you will dive into the codebase and deliver value to the customers."
+      },
+
+      {
+        "type": "list",
+        "title": "Responsibilities",
+        "content": [
+          "Architecture: Improve the codebase and Bemlos already existing architecture.",
+          "Recruiting: Be responsible for sourcing, setting up processes and recruiting a team of stars.",
+          "Develop the team: Set up goals for each individual in the development team and help them improve.",
+          "Coding: Development in full-stack Typescript. Set up and deliver processes needed for an effective code organisation, everything from development board to pipelines."
+        ]
+      },
+      {
+        "type": "list",
+        "title": "The skills you'll need",
+        "content": [
+          "Excellent project management skills",
+          "Love closing new clients, and do everything that it takes to make both Volta and our partners succeed",
+          "A talent for communication, in writing and in person, in English and in Swedish",
+          "Thus, also being a maven with presentations (we use Google Slides / Keynote)",
+          "Be a team player, with strong self motivation, results-orientation and sense of purpose"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Qualifications",
+        "content": [
+          "A general understanding of web development, everything from backend to frontend.",
+          "Have built multiple web applications with databases, backend and frontend.",
+          "Senior Full-stack Typescript developer.",
+          "Have experience of leading a team and interested in leadership.",
+          "Be able to resonate about the product and understand what is important for the users. And be able to come up with ideas on how the product can be improved."
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Extra credits if you",
+        "content": [
+          "Have experience of working with FMCG",
+          "Have previously worked with OKR’s or similar"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "What you'll get",
+        "content": [
+          "A chance to work on one of the world’s biggest, yet unresolved climate challenges",
+          "A chance to be surrounded daily by a team of industry experts, as well as brand-name clients and partners",
+          "A competitive salary package, with a stock option plan",
+          "A yearly stipend for health and tech expenses"
+        ]
+      }
+    ]
+  },
+  {
+    "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
+    "title": "Business Developer",
+    "url": "business-developer",
+    "date": "01.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "15 000 SEK",
+      "interviewBonus": "500 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "You? A fearless, dedicated Business Developer, ready to take on CO2-emitters acting as if Greta had never gone on strike. Us? We’re a-just-over-two-year-old company backed by experienced investors with a mission to fight global warming by removing farts and burps from cows.  Over here, things are moving at a high pace. Getting closer to introducing our first climate-friendly products, we need to boost our team further. We are now looking for a Business Developer, supporting us with the critical launch of a potentially revolutionizing type of product in Sweden (and later, internationally). Specs below!"
+      },
+      {
+        "type": "text",
+        "title": "Start date & location",
+        "text": "ASAP. The role is based out of our Stockholm HQ at Karolinska Institutet, with occasional trips to our production facility in Lysekil on the Swedish west coast."
+      },
+      {
+        "type": "list",
+        "title": "The work you'll take on includes",
+        "content": [
+          "Defining and leading the launch of our new, environmentally groundbreaking product line in Swedish supermarkets",
+          "Nurturing and initiating relationships with both new and existing clients",
+          "Support in project financing, directing consultants as well as taking on writing yourself when necessary",
+          "When required (and have no doubt, it will be!) - jumping into additional projects and roles supporting additional parts of the company"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "The skills you'll need",
+        "content": [
+          "Excellent project management skills",
+          "Love closing new clients, and do everything that it takes to make both Volta and our partners succeed",
+          "A talent for communication, in writing and in person, in English and in Swedish",
+          "Thus, also being a maven with presentations (we use Google Slides / Keynote)",
+          "Be a team player, with strong self motivation, results-orientation and sense of purpose"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Your (presumed) background",
+        "content": [
+          "Relevant education and work experience",
+          "Led and executed successful projects with many stakeholders",
+          "A minimum 3 years of work experience in a fast-paced environment",
+          "5+ years of experience, including leadership, from complex sales and project management, preferably from the food and/or agriculture industry"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Extra credits if you",
+        "content": [
+          "Have experience of working with FMCG",
+          "Have previously worked with OKR’s or similar"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "What you'll get",
+        "content": [
+          "A chance to work on one of the world’s biggest, yet unresolved climate challenges",
+          "A chance to be surrounded daily by a team of industry experts, as well as brand-name clients and partners",
+          "A competitive salary package, with a stock option plan",
+          "A yearly stipend for health and tech expenses"
+        ]
+      }
+    ]
+  },
+
+  {
+    "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
+    "title": "Head of manufacturing",
+    "url": "head-of-manufacturing",
+    "date": "01.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "15 000 SEK",
+      "interviewBonus": "500 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "As Head of Manufacturing you will lead our manufacturing efforts. That means that you will build up large-scale factories to enable the production of Volta Seafeed that will transform the food industry. We are a tightly knit team, and you’ll work together with our founders, business team and R&D team in developing all manufacturing aspects."
+      },
+      {
+        "type": "text",
+        "title": "Responsibilities",
+        "text": "Volta is a new company, in a fast-changing environment. The company will evolve, and your role, responsibilities and deliverables will change with it."
+      },
+      {
+        "type": "list",
+        "title": "",
+        "content": [
+          "Lead the manufacturing strategy and execute tactical plans to scale up production of our macroalgae based feed supplement by working closely with R&D and Engineering team.",
+          "Develop strategic partnership with key production partners and suppliers",
+          "Lead / assist in recruitment of key team members",
+          "Supply chain management",
+          "Project management of site selection and site construction from idea to start up to assure early choices and decisions are made to maximize speed and scale up.",
+          "Work closely with R&D and Engineering team on development of Volta Greentech’s production blueprint to ensure excellent production results optimized for low-cost, high output production.",
+          "Financial cost breakdown and budgeting"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Key skills",
+        "content": [
+          "Degree in Engineering",
+          "Purpose driven",
+          "Experience of working in a startup",
+          "Experience of leading teams to take manufacturing from lab scale to large scale production",
+          "Experience with developing and commercializing technologies within food, beverages, biotechnology, life sciences or synthetic biology sector.",
+          "A working knowledge of a wide range of food and bio manufacturing processes",
+          "Strong project management skills and ability to lead large manufacturing expansion projects",
+          "A deep expertise in operations and quality management leveraging LEAN, six-sigma and/or other leading metrics-driven methodologies; Known for establishing an operating system and cadence based on KPIs.",
+          "Problem solving: you thrive in change, learn fast and view challenges as growth opportunities",
+          "Excellent execution: you get things done, fast and with high quality",
+          "Team player: you believe a good company starts from within, and act accordingly",
+          "Excellent verbal and written communication skills and are a hard working, self-motivated individual.",
+          "A skilled prioritizer"
+        ]
+      }
+    ]
+  },
+
+  {
+    "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
+    "title": "Production Engineer",
+    "url": "production-engineer",
+    "date": "01.10.21",
+    "hot": false,
+    "new": true,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "15 000 SEK",
+      "interviewBonus": "500 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "As a Production Engineer at Volta Greentech you will be a core team member in Volta Greentech’s manufacturing team. That means you will be designing and building up large-scale factories to enable the production of Volta Seafeed that will transform the food industry. We are a tightly knit team, and you’ll work together with our founders, business team and R&D team in developing all manufacturing aspects."
+      },
+      {
+        "type": "text",
+        "title": "Responsibilities",
+        "text": "Volta is a new company, in a fast-changing environment. The company will evolve, and your role, responsibilities and deliverables will change with it."
+      },
+      {
+        "type": "list",
+        "title": "",
+        "content": [
+          "Work closely with R&D and Engineering team on development of Volta Greentech’s production blueprint to ensure excellent production results optimized for low-cost, high output production",
+          "Design, build and improve Volta Greentech’s production blueprint including systems for upstream treatment of water, bioreactors for cultivation, downstream processing and automation of production",
+          "Be heavily involved in the designing, engineering and buildup of Volta Greentechs pilot factory in Lysekil, Sweden and future factories",
+          "Lead / assist in recruitment of key team members"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Key skills",
+        "content": [
+          "Degree in mechanical engineering, electrical engineering, computer science or similar",
+          "Purpose driven and experience of working in a startup",
+          "Experience of taking manufacturing from prototype stage to large scale production",
+          "A working knowledge of a wide range of food and bio manufacturing processes",
+          "Track record of having excelled at designing and building up high performing production lines"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Your (presumed) background",
+        "content": [
+          "Relevant education and work experience",
+          "Led and executed successful projects with many stakeholders",
+          "A minimum 3 years of work experience in a fast-paced environment",
+          "5+ years of experience, including leadership, from complex sales and project management, preferably from the food and/or agriculture industry"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Extra credits if you",
+        "content": [
+          "Have experience of working with FMCG",
+          "Have previously worked with OKR’s or similar"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "What you'll get",
+        "content": [
+          "A chance to work on one of the world’s biggest, yet unresolved climate challenges",
+          "A chance to be surrounded daily by a team of industry experts, as well as brand-name clients and partners",
+          "A competitive salary package, with a stock option plan",
+          "A yearly stipend for health and tech expenses"
+        ]
+      }
+    ]
+  }
+]

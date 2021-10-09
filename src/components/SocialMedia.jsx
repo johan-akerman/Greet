@@ -16,6 +16,7 @@ export function SocialMedia() {
           className="text-primary"
           href="https://www.instagram.com/joingreet/"
           target="_blank"
+          rel="noreferrer"
         >
           Instagram{" "}
         </a>{" "}
@@ -24,6 +25,7 @@ export function SocialMedia() {
           className="text-primary"
           href="https://www.linkedin.com/company/joingreet/"
           target="_blank"
+          rel="noreferrer"
         >
           LinkedIn{" "}
         </a>
@@ -34,40 +36,45 @@ export function SocialMedia() {
           className="md:block hidden transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
           href="https://www.instagram.com/p/CT70tbhIRKp/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img className="rounded-lg " src={one} />
+          <img className="rounded-lg" src={one} alt="instagram post" />
         </a>
 
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
           href="https://www.instagram.com/p/CT71yM3ozHu/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img className="rounded-lg" src={two} />
+          <img className="rounded-lg" src={two} alt="instagram post" />
         </a>
 
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
           href="https://www.instagram.com/p/CT71ijVo9AI/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img className="rounded-lg" src={four} />
+          <img className="rounded-lg" src={four} alt="instagram post" />
         </a>
 
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
           href="https://www.instagram.com/p/CT71To_I5dc/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img className="rounded-lg" src={three} />
+          <img className="rounded-lg" src={three} alt="instagram post" />
         </a>
 
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
           href="https://www.instagram.com/p/CT71-evobwS/"
           target="_blank"
+          rel="noreferrer"
         >
-          <img className="rounded-lg" src={five} />
+          <img className="rounded-lg" src={five} alt="instagram post" />
         </a>
       </div>
     </div>

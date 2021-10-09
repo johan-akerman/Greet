@@ -36,7 +36,6 @@ export default function Refer() {
   }, [index]);
 
   const [job] = useState(window.location.href.split("refer/").pop());
-  console.log(job);
   const [referMyself, setReferMyself] = useState(false);
   const [friend, setFriend] = useState({
     name: "",
@@ -82,10 +81,6 @@ export default function Refer() {
     referrer.linkedin.length > 0;
 
   let isStepThreeComplete = motivation.length > 0;
-
-  useEffect(() => {
-    console.log(friend);
-  }, [friend]);
 
   useEffect(() => {
     if (index === 3) {
