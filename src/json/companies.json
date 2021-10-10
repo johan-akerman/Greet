@@ -36,7 +36,7 @@
     "founded": 2019,
     "industry": "E-commerce",
     "employees": "15",
-    "image": "https://www.joingreet.com/static/media/depict.png",
+    "image": "../src/images/depict.png",
     "imageCaption": "Depict.ai - AI-driven product recommendations",
     "introText": "AI-driven product recommendations to help customers find products they love.",
     "aboutText": "Depict.ai is building AI-driven product recommendations to help customers find products they love. We use modern deep learning techniques in computer vision and natural language processing to understand products. This way we can make high-quality recommendations – without complex data-dependencies.",

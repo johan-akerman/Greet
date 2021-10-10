@@ -3,6 +3,9 @@ import { Link } from "react-router-dom";
 import { JobBoard } from "../components/JobBoard";
 import companies from "../json/companies.json";
 import { useEffect } from "react";
+import volta from "../images/volta.png";
+import bemlo from "../images/bemlo.png";
+import depict from "../images/depict.png";
 
 import jobs from "../json/jobs.json";
 
@@ -15,6 +18,16 @@ function Company(props) {
   let company = companies.find((c) => c.url === desiredCompany);
 
   if (company != null) {
+    let img = "";
+
+    if (company.url == "volta-greentech") {
+      img = volta;
+    } else if (company.url == "bemlo") {
+      img = bemlo;
+    } else if (company.url == "depict") {
+      img = depict;
+    }
+
     let jobsAtCompany = jobs.filter((j) => j.company === company.name);
 
     return (
@@ -73,7 +86,7 @@ function Company(props) {
               </table>
             </div>
             <div className="col-span-3">
-              <img src={company.image} alt="founders" />
+              <img src={img} alt="company" />
               <p className="pt-2 text-gray-500">{company.imageCaption}</p>
             </div>
           </div>
