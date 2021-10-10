@@ -27,5 +27,20 @@
     "aboutText": "There are around one billion cows on the planet. Together they produce over 4% of the world’s greenhouse gas emissions just by farting and burping methane gas. Volta is on a mission to reduce these emissions to mitigate global warming. By providing farmers with an entirely natural seaweed-based feed supplement to drastically reduce the methane emissions produced by dairy cows and beef cattle, Volta is supporting the agriculture sector in taking a massive leap in going sustainable.",
     "new": true,
     "hot": false
+  },
+  {
+    "name": "Depict",
+    "url": "depict",
+    "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQEeCgVhmeuwyw/company-logo_200_200/0/1631868909703?e=1642032000&v=beta&t=yZQbLapbln4703eWLstIJD_JMwlIgIBwiwUFATdUK_U",
+    "website": "https://www.depict.ai",
+    "founded": 2019,
+    "industry": "E-commerce",
+    "employees": "15",
+    "image": "https://www.joingreet.com/static/media/depict.png",
+    "imageCaption": "Depict.ai - AI-driven product recommendations",
+    "introText": "AI-driven product recommendations to help customers find products they love.",
+    "aboutText": "Depict.ai is building AI-driven product recommendations to help customers find products they love. We use modern deep learning techniques in computer vision and natural language processing to understand products. This way we can make high-quality recommendations – without complex data-dependencies.",
+    "new": true,
+    "hot": false
   }
 ]

@@ -1,5 +1,233 @@
 [
   {
+    "company": "Depict",
+    "companyUrl": "depict",
+    "title": "Senior Software Engineer",
+    "url": "senior-software-engineer",
+    "date": "10.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "25 000 SEK",
+      "interviewBonus": "600 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "Do you want to join a fast-paced startup and work on the bleeding edge of recommendation systems, where your work immediately impacts the user experience for millions of users? We are looking for a Senior Fullstack / Backend Engineer who thrives in a fast-moving environment."
+      },
+
+      {
+        "type": "text",
+        "title": "What you will be building:",
+        "text": "Recommendation systems that are guaranteed to always show relevant recommendations for any scenario and that are easy to maintain, deploy and improve."
+      },
+
+      {
+        "type": "list",
+        "title": "We need someone who we can count on to:",
+        "content": [
+          "🙋 Own: Improve our recommendation systems for new and existing customers, improve tooling to deploy, introspect and monitor our recommendation systems to constantly make them better.",
+          "💻 Teach: What's possible and what's not possible? Tradeoffs between iteration speed and complexity of architecture. How to build a system that is easy to debug and that fails gracefully if there would be changes in the input data.",
+          "🎒 Learn: Our approach to recommendation systems, data engineering best practices, machine learning basics.",
+          "🚴 Improve: Robustness, performance, and observability of our system, to delight the end-users of our product."
+        ]
+      },
+      {
+        "type": "list",
+        "title": "We expect you to:",
+        "content": [
+          "Be proficient in Python (or able to quickly learn it)",
+          "Care about writing good code",
+          "Be comfortable with command line tools",
+          "Enjoy architecting and developing solutions to ambiguous problems."
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Desired skills and qualities",
+        "content": [
+          "Deployed applications using cloud platforms or your own servers",
+          "Having worked in a mature data engineering codebases",
+          "Experience taking product decisions",
+          "Proficiency with cloud computing (AWS, GCP, or Azure)",
+          "Used Docker, Kubernetes, Argo or similar"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Within 1 month we expect you to:",
+        "content": [
+          "Understand the ins and outs of how our current recommendation system, data pipelines, and recommendation API works",
+          "Have been in several customer calls understanding how they perceive our product",
+          "Get to know the team and learn from and collaborate on directing the product development forward",
+          "Configure, optimize and measure the performance for newly onboarded e-commerce stores"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Within 3 months we expect you to:",
+        "content": [
+          "Significantly improve the quality of recommendations using more facets of data impacting the user experience on > 50% of our integrated customers",
+          "Generalize our system further, ensuring that recommendations for new customers are perfect from day zero with close to no fine-tuning necessary",
+          "Improve our codebase such as adding tests and monitoring of our recommendation's performance"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Within 6 months we expect you to:",
+        "content": [
+          "Lead focused projects to improve our product further, e.g. relating to model performance, deeper personalization, knowing users across platforms, etc",
+          "Have ownership of one or multiple areas in a rapidly growing company",
+          "Ensure our codebase supports adding new features in a seamless way"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Within 12 months we expect you to:",
+        "content": [
+          "Architect new product features and lead the implementation",
+          "Contribute to the vision and long-term strategy of our company and product",
+          "Start exploring ways to increase our product offering outside of just product recommendations"
+        ]
+      }
+    ]
+  },
+
+  {
+    "company": "Depict",
+    "companyUrl": "depict",
+    "title": "Frontend engineer",
+    "url": "frontend-engineer",
+    "date": "10.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "25 000 SEK",
+      "interviewBonus": "600 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "Do you want to join a fast-paced startup and work on the bleeding edge of recommendation systems, where your work immediately impacts the user experience for millions of users?"
+      },
+
+      {
+        "type": "text",
+        "title": "",
+        "text": "We’re looking​ for a frontend developer to help to expand our efforts in providing world-class product recommendations to any e-commerce store. You’ll be working with internal state-of-the-art tech that can be used to deploy our service anywhere in 5-minutes."
+      },
+
+      {
+        "type": "list",
+        "title": "We need someone to:",
+        "content": [
+          "🙋 Own: Rapid deployments for new customers, using and building upon our micro-frontend deployments technology.",
+          "🎒 Learn: Architect integrations resilient to minor style changes, optimize loading speeds, and how to hack into popular SPA-frameworks.",
+          "🚴 Improve: Efficiency and robustness of integrations operating inside evolving environments."
+        ]
+      },
+
+      {
+        "type": "text",
+        "title": "What you will be building",
+        "text": "Self-contained JavaScript scripts that add Depict.ai’s AI-functionality to e-commerce websites."
+      },
+
+      {
+        "type": "list",
+        "title": "We expect you to know how to",
+        "content": [
+          "Write robust Javascript for web browsers",
+          "Design and implement beautiful recommendation surfaces with HTML and CSS"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Nice to haves",
+        "content": [
+          "Typescript",
+          "Experience using JSX",
+          "Experience with tracking and analytics",
+          "Deep knowledge of how to optimize browser performance",
+          "Having read the book Third-Party Javascript"
+        ]
+      }
+    ]
+  },
+
+  {
+    "company": "Depict",
+    "companyUrl": "depict",
+    "title": "Deployment Lead",
+    "url": "deployment-lead",
+    "date": "10.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "25 000 SEK",
+      "interviewBonus": "600 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "Do you want to join a fast-paced startup and work on the bleeding edge of recommendation systems, where your work immediately impacts the user experience for millions of users? We are looking for tech lead who thrives in a fast-moving environment."
+      },
+
+      {
+        "type": "text",
+        "title": "What you will be doing:",
+        "text": "Your mission will be to lead and manage the Expansion Team working on implementing new clients of Depict. This is a super exciting role where no day looks the same."
+      },
+
+      {
+        "type": "list",
+        "title": "We need someone who we can count on to:",
+        "content": [
+          "🙋 Own: Streamline our delivery process. Head up and run our new expansion team – shipping integrations to new customers and improve our processes to deploy, iterate and improve our recommendation systems to constantly make them better.",
+          "💻 Teach: What's possible and what's not possible? Tradeoffs between iteration speed and complexity of custom integrations and one-size-fits-all. How to build a system that is a one-click onboarding for new stores to use Depict.",
+          "🎒 Learn: Our deployment workflows, data collection best practices, the art and science of third-party javascript as well as efficient architectures for Machine Learning in production.",
+          "🚴 Improve: Developer Experience and productivity, time to go live for completely new e-commerce website, iteration speed and robustness of our entire system."
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Your profile:",
+        "content": [
+          "You are a developer by heart and thrive in a super techie environment.",
+          "You see yourself as somewhat of a hustler and can take initiative to hustle a team through any challenge.",
+          "Previous experience in leading developers, informally or as team-lead.",
+          "Understanding of key aspects of good project management.",
+          "Can have a clear vision in the intersection of tech and business."
+        ]
+      },
+      {
+        "type": "list",
+        "title": "We expect you to:",
+        "content": [
+          "Keen on taking on leadership and responsibility.",
+          "Have previous experience in a startup-like environment.",
+          "Business-focused, keen on understanding what value we are bringing to the clients."
+        ]
+      },
+      {
+        "type": "text",
+        "title": "Depict.ai - What we are doing",
+        "text": "In just a matter of months we, a small team of engineers in Stockholm, have been changing the playing field for recommendation systems in e-commerce – a gigantic market where our competitors are among the largest tech companies to find. And this is just the beginning – we see a path of immense growth ahead of us. As for the next steps, we are starting to look at our international expansion to get Depict.ai into larger markets outside of Sweden – if you are up for a ride of a lifetime, this is your new home!"
+      }
+    ]
+  },
+
+  {
     "company": "Bemlo",
     "companyUrl": "bemlo",
     "title": "Senior Full Stack Engineer",
@@ -155,8 +383,8 @@
     "title": "Head of manufacturing",
     "url": "head-of-manufacturing",
     "date": "01.10.21",
-    "hot": true,
-    "new": false,
+    "hot": false,
+    "new": true,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",
