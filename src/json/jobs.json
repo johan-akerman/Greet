@@ -401,8 +401,8 @@
     "title": "Deployment Lead",
     "url": "deployment-lead",
     "date": "10.10.21",
-    "hot": true,
-    "new": false,
+    "hot": false,
+    "new": true,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",
