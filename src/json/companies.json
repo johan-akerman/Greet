@@ -1,5 +1,34 @@
 [
   {
+    "name": "Curb Food",
+    "url": "curb-food",
+    "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQHjlxsPphRpqw/company-logo_200_200/0/1619786501790?e=1642032000&v=beta&t=Syqp-pSmvFqrT_3DJY_2rj8oddQyUhrtsPwAMVO-UQo",
+    "website": "https://www.curbfood.com",
+    "founded": 2020,
+    "employees": "40+",
+    "image": "",
+    "imageCaption": "We create ambitious food experiences, fully tailored to home delivery.",
+    "introText": "Creating high quality food experiences fully tailored for home delivery.",
+    "aboutText": "Curb is ambitiously creating high quality food experiences fully tailored for home delivery. We offer different high quality food choices - all delivered to your doorstep at the same time. We don't compromise, so you don't have to either. We believe in adaptability, high quality and people. We are constantly staying in motion, adapting to change and that's why our tables have legs. Together we stand in the frontline of changing the restaurant industry with a large passion for food and a twist of tech.",
+    "new": true,
+    "hot": false
+  },
+  {
+    "name": "Depict",
+    "url": "depict",
+    "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQEeCgVhmeuwyw/company-logo_200_200/0/1631868909703?e=1642032000&v=beta&t=yZQbLapbln4703eWLstIJD_JMwlIgIBwiwUFATdUK_U",
+    "website": "https://www.depict.ai",
+    "founded": 2019,
+    "industry": "E-commerce",
+    "employees": "15",
+    "image": "../src/images/depict.png",
+    "imageCaption": "Depict.ai - AI-driven product recommendations",
+    "introText": "AI-driven product recommendations to help customers find products they love.",
+    "aboutText": "Depict.ai is building AI-driven product recommendations to help customers find products they love. We use modern deep learning techniques in computer vision and natural language processing to understand products. This way we can make high-quality recommendations – without complex data-dependencies.",
+    "new": true,
+    "hot": false
+  },
+  {
     "name": "Bemlo",
     "url": "bemlo",
     "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG0F3giqIFzfA/company-logo_200_200/0/1623881357221?e=1637193600&v=beta&t=A-GjUKU74NqREB7rwRqdtUngkBElPruXNLiapcT_4cs",
@@ -25,21 +54,6 @@
     "imageCaption": "Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter",
     "introText": "Battling global warming by reducing methane emissions from cows.",
     "aboutText": "There are around one billion cows on the planet. Together they produce over 4% of the world’s greenhouse gas emissions just by farting and burping methane gas. Volta is on a mission to reduce these emissions to mitigate global warming. By providing farmers with an entirely natural seaweed-based feed supplement to drastically reduce the methane emissions produced by dairy cows and beef cattle, Volta is supporting the agriculture sector in taking a massive leap in going sustainable.",
-    "new": true,
-    "hot": false
-  },
-  {
-    "name": "Depict",
-    "url": "depict",
-    "logo": "https://media-exp1.licdn.com/dms/image/C4D0BAQEeCgVhmeuwyw/company-logo_200_200/0/1631868909703?e=1642032000&v=beta&t=yZQbLapbln4703eWLstIJD_JMwlIgIBwiwUFATdUK_U",
-    "website": "https://www.depict.ai",
-    "founded": 2019,
-    "industry": "E-commerce",
-    "employees": "15",
-    "image": "../src/images/depict.png",
-    "imageCaption": "Depict.ai - AI-driven product recommendations",
-    "introText": "AI-driven product recommendations to help customers find products they love.",
-    "aboutText": "Depict.ai is building AI-driven product recommendations to help customers find products they love. We use modern deep learning techniques in computer vision and natural language processing to understand products. This way we can make high-quality recommendations – without complex data-dependencies.",
     "new": true,
     "hot": false
   }

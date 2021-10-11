@@ -6,6 +6,7 @@ import { useEffect } from "react";
 import volta from "../images/volta.png";
 import bemlo from "../images/bemlo.png";
 import depict from "../images/depict.png";
+import curb from "../images/curb.jpeg";
 
 import jobs from "../json/jobs.json";
 
@@ -20,12 +21,14 @@ function Company(props) {
   if (company != null) {
     let img = "";
 
-    if (company.url == "volta-greentech") {
+    if (company.url === "volta-greentech") {
       img = volta;
-    } else if (company.url == "bemlo") {
+    } else if (company.url === "bemlo") {
       img = bemlo;
-    } else if (company.url == "depict") {
+    } else if (company.url === "depict") {
       img = depict;
+    } else if (company.url === "curb-food") {
+      img = curb;
     }
 
     let jobsAtCompany = jobs.filter((j) => j.company === company.name);
