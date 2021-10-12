@@ -15,8 +15,8 @@ function About() {
         <p className="text-xl font-light">
           Greetings, we are Greet. We reward people to refer their friends to
           their dream job. Greet was founded in 2021 to help tech companies find
-          the talent they need to make their projects succeed and to help people
-          find a job that they love. Win-win 🥂
+          the talent they need and to help people find a job that they love.
+          Win-win 🥂
           <br />
           <br />
         </p>
