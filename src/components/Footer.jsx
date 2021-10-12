@@ -11,12 +11,6 @@ export function Footer() {
           <p className="text-lg font-medium">
             Get rewarded to refer your friends to tech jobs.
           </p>
-          <a
-            className="w-44 text-lg font-medium border-b-2 border-white hover:opacity-60"
-            href="mailto:join.greet@gmail.com"
-          >
-            join.greet@gmail.com
-          </a>
         </div>
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
           <h1 className="text-2xl font-semibold">Product</h1>

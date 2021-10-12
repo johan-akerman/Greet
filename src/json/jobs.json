@@ -466,7 +466,7 @@
     "title": "Senior Full Stack Engineer",
     "url": "senior-full-stack-engineer",
     "date": "01.10.21",
-    "hot": true,
+    "hot": false,
     "new": false,
     "summary": {
       "location": "Stockholm",
@@ -539,7 +539,7 @@
     "title": "Business Developer",
     "url": "business-developer",
     "date": "01.10.21",
-    "hot": true,
+    "hot": false,
     "new": false,
     "summary": {
       "location": "Stockholm",
@@ -617,7 +617,7 @@
     "url": "head-of-manufacturing",
     "date": "01.10.21",
     "hot": false,
-    "new": true,
+    "new": false,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",
@@ -677,7 +677,7 @@
     "url": "production-engineer",
     "date": "01.10.21",
     "hot": false,
-    "new": true,
+    "new": false,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",

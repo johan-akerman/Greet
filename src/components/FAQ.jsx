@@ -8,7 +8,7 @@ export function FAQ({
   answerThree,
 }) {
   return (
-    <div className="bg-secondary pb-12 text-center">
+    <div className="bg-secondary pb-4 text-center">
       <h1 className="md:pt-24 pt-16 md:pb-12 pb-8 text-black  md:text-6xl text-4xl font-bold">
         Got any questions?
       </h1>
@@ -18,16 +18,6 @@ export function FAQ({
         <FAQCard question={questionTwo} answer={answerTwo} />
         <FAQCard question={questionThree} answer={answerThree} />
       </div>
-
-      <span className="pt-12 text-lg">
-        Got any other questions? Contact{" "}
-        <a
-          className="border-b-2 border-primary hover:text-primary hover:border-secondary"
-          href="mailto:join.greet@gmail.com"
-        >
-          join.greet@gmail.com
-        </a>
-      </span>
     </div>
   );
 }
