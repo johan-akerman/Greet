@@ -205,11 +205,10 @@ function ForCompanies() {
       <FAQ
         questionOne="What is the Hiring Bonus, Interview Bonus and Greet Fee?"
         answerOne="The hiring bonus is what the Greeters will see on the job board and get paid if their referral results in a hiring. The Interview bonus is what is paid if a referral ends up with an interview. You decide what the hiring- and interview bonus should be. The Greet Fee is equal to 20% of your hiring bonus."
-        questionTwo="When and how much do I pay for a hire if I am on the Greet Free plan?"
-        answerTwo="You pay when you interview and/ or hire someone. You decide how much you will pay by deciding your own Hiring Bonus and Interview Bonus. Take a look at the example above for more information."
-        questionThree="What does the screening include?"
-        answerThree="In the Greet Basic and Greet Pro plan a screening is included. This means that we take a close look at all the candidates and make a list of the ones that are the best fit. 
-        "
+        questionTwo="When and how much do I pay?"
+        answerTwo="Greet was recently launched and we are offering early adopters to start using the service for free (for a limited time), i.e no monthly pricing plan. Instead, you only pay for the interview bonus and hiring bonus when you interview or hire someone. So until then, you get free promotion."
+        questionThree="How do I get my company on Greet?"
+        answerThree="Contact johan@joingreet.com or fill in the form at www.joingreet.com/post-job"
       />
       <Banner
         title="Ready to hire your next star?"
