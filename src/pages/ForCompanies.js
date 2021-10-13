@@ -92,7 +92,7 @@ function ForCompanies() {
           </div>
         </div>
       </div>
-      <div className="bg-white pt-20 md:pb-20 lg:w-10/12 md:w-10/12 w-11/12 mx-auto">
+      {/* <div className="bg-white pt-20 md:pb-20 lg:w-10/12 md:w-10/12 w-11/12 mx-auto">
         <h1 className="text-center md:text-6xl text-4xl font-bold text-gray-900">
           Pricing
         </h1>
@@ -173,8 +173,8 @@ function ForCompanies() {
         <p className="mt-8 text-center text-xl text-gray-400">
           You can switch and cancel plan at any time.
         </p>
-      </div>
-      <div className="bg-white md:pt-0 pt-12 mb-20 md:w-10/12 w-11/12 mx-auto">
+      </div> */}
+      <div className="bg-white md:pt-0 mt-32 mb-20 md:w-10/12 w-11/12 mx-auto">
         <div className="grid lg:grid-cols-5 md:gap-6 gap-24 grid-cols-1 md:mt-20 mt-0 mx-auto">
           <div className="md:col-span-3 col-span-1 md:mt-14 mt-0">
             <h1 className=" mx-auto md:text-left text-center md:text-6xl text-4xl font-bold text-gray-900">

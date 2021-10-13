@@ -19,7 +19,7 @@ export function Jumbotron() {
               to="/job-board"
               className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 mx-auto w-60 text-primary shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-white  md:py-4 md:text-lg md:px-10"
             >
-              See available jobs
+              See job board
             </Link>
           </div>
         </div>
