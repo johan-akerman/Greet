@@ -34,13 +34,21 @@ export function SocialMedia() {
       <div className="w-11/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-3">
         <a
           className="md:block hidden transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
-          href="https://www.instagram.com/p/CT70tbhIRKp/"
+          href="https://www.instagram.com/p/CVDg7J-oa0c/"
           target="_blank"
           rel="noreferrer"
         >
           <img className="rounded-lg" src={one} alt="instagram post" />
         </a>
 
+        <a
+          className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
+          href="https://www.instagram.com/p/CVDjVNGoEPf/"
+          target="_blank"
+          rel="noreferrer"
+        >
+          <img className="rounded-lg" src={five} alt="instagram post" />
+        </a>
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
           href="https://www.instagram.com/p/CT71yM3ozHu/"
@@ -66,15 +74,6 @@ export function SocialMedia() {
           rel="noreferrer"
         >
           <img className="rounded-lg" src={three} alt="instagram post" />
-        </a>
-
-        <a
-          className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
-          href="https://www.instagram.com/p/CT71-evobwS/"
-          target="_blank"
-          rel="noreferrer"
-        >
-          <img className="rounded-lg" src={five} alt="instagram post" />
         </a>
       </div>
     </div>

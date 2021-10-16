@@ -19,7 +19,7 @@ function Home() {
       <JobBoard title={true} jobAds={hotJobs} />
       <FAQ
         questionOne="How do I post jobs on Greet?"
-        answerOne="Reach out to us at join.greet@gmail.com"
+        answerOne="Reach out to Johan at johan@joingreet.com"
         questionTwo="What is Hiring Bonus and Interview Bonus?"
         answerTwo="The hiring bonus is what the Greeter (the one who refers) will see on the job board and get paid if their referral results in a hiring. The Interview bonus is what is paid if a referral ends up with an interview. Both are listed on the job ads."
         questionThree="When does the Greeter get paid?"
