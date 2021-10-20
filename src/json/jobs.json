@@ -745,5 +745,67 @@
         ]
       }
     ]
+  },
+  {
+    "company": "Team Together",
+    "companyUrl": "team-together",
+    "title": "Fullstack Developer",
+    "url": "fullstack-developer",
+    "date": "01.20.21",
+    "hot": false,
+    "new": true,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "10 000 SEK",
+      "interviewBonus": "500 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "We are expanding the team and are looking for a fullstack javascript developer to maintain and further develop Team Togethers mobile app and web-extension. You will be part of a growing team working directly with the CTO."
+      },
+
+      {
+        "type": "list",
+        "title": "On a day-to-day basis, you will:",
+        "content": [
+          "Play a key role on the further development of Team Togethers technical platforms",
+          "Develop frontend, backend and mobile applications",
+          "Test new features based on user behaviour"
+        ]
+      },
+
+      {
+        "type": "text",
+        "title": "",
+        "text": "You will become a major part of Team Togethers future and have the possibility to grow into a senior role and further expand your work-areas. The job is full-time (paid) and equity options can be offered."
+      },
+      {
+        "type": "list",
+        "title": "Qualifications",
+        "content": [
+          "Experience with React, React Native, Node.js, Express, Firebase, and/or similar javascript frameworks",
+          "Experience with setting up backend environments for the web and structuring databases",
+          "Write and communicate in Swedish"
+        ]
+      },
+
+      {
+        "type": "text",
+        "title": "Culture",
+        "text": "We believe in learning by doing, honesty and having fun. We treat each other with respect, honesty and stay together through ups and downs."
+      },
+      {
+        "type": "list",
+        "title": "We are actively..",
+        "content": [
+          "Listening to each other through development talks",
+          "Encourage each other to act big",
+          "Celebrating achievements and failures"
+        ]
+      }
+    ]
   }
 ]

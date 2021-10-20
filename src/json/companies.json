@@ -29,6 +29,21 @@
     "hot": false
   },
   {
+    "name": "Volta Greentech",
+    "url": "volta-greentech",
+    "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
+    "website": "https://www.voltagreentech.com",
+    "founded": 2018,
+    "industry": "Biotechnology",
+    "employees": "10+",
+    "image": "https://media.wired.co.uk/photos/61096114d37d93e45ddd7149/master/w_1600,c_limit/0421-WIRED-Startups9.jpg",
+    "imageCaption": "Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter",
+    "introText": "Battling global warming by reducing methane emissions from cows.",
+    "aboutText": "There are around one billion cows on the planet. Together they produce over 4% of the world’s greenhouse gas emissions just by farting and burping methane gas. Volta is on a mission to reduce these emissions to mitigate global warming. By providing farmers with an entirely natural seaweed-based feed supplement to drastically reduce the methane emissions produced by dairy cows and beef cattle, Volta is supporting the agriculture sector in taking a massive leap in going sustainable.",
+    "new": false,
+    "hot": false
+  },
+  {
     "name": "Bemlo",
     "url": "bemlo",
     "logo": "https://media-exp1.licdn.com/dms/image/C4E0BAQG0F3giqIFzfA/company-logo_200_200/0/1623881357221?e=1637193600&v=beta&t=A-GjUKU74NqREB7rwRqdtUngkBElPruXNLiapcT_4cs",
@@ -42,19 +57,19 @@
     "new": false,
     "hot": false
   },
+
   {
-    "name": "Volta Greentech",
-    "url": "volta-greentech",
-    "logo": "https://media-exp1.licdn.com/dms/image/C560BAQFw44quZMineg/company-logo_200_200/0/1562677189546?e=1637193600&v=beta&t=tpA2_VE5r-HLl8dmBJDGIn-HGIbNlaKm_1vue4ny-wU",
-    "website": "https://www.voltagreentech.com",
+    "name": "Team Together",
+    "url": "team-together",
+    "logo": "https://media-exp1.licdn.com/dms/image/C560BAQE2mYPPbDJ18g/company-logo_200_200/0/1569332577766?e=1642636800&v=beta&t=882b7tgF2k6Bxn_bgNXOqez8Y-oet9OF-K3QffTVY_M",
+    "website": "https://www.teamtogether.se",
     "founded": 2018,
-    "industry": "Biotechnology",
-    "employees": "10+",
-    "image": "https://media.wired.co.uk/photos/61096114d37d93e45ddd7149/master/w_1600,c_limit/0421-WIRED-Startups9.jpg",
-    "imageCaption": "Volta Greentech co-founders Fredrik Åkerman and Angelo Demeter",
-    "introText": "Battling global warming by reducing methane emissions from cows.",
-    "aboutText": "There are around one billion cows on the planet. Together they produce over 4% of the world’s greenhouse gas emissions just by farting and burping methane gas. Volta is on a mission to reduce these emissions to mitigate global warming. By providing farmers with an entirely natural seaweed-based feed supplement to drastically reduce the methane emissions produced by dairy cows and beef cattle, Volta is supporting the agriculture sector in taking a massive leap in going sustainable.",
-    "new": false,
+    "employees": "5",
+    "image": "",
+    "imageCaption": "Impact driven shopping",
+    "introText": "Impact driven shopping app that let's you donate without paying extra.",
+    "aboutText": "A shopping app where you donate money to a cause of your choice without paying extra. Team Together is a fast-paced startup that believes in learning by doing, honesty and having fun. We treat each other with respect, honesty and stay together through ups and downs. If you want to challenge yourself, live the startup-life and create an impact with your career. This is the opportunity to make that dream a reality!",
+    "new": true,
     "hot": false
   }
 ]

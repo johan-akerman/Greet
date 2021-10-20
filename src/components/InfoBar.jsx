@@ -7,8 +7,8 @@ export function InfoBar() {
         <div className="relative">
           <p className="ml-3 text-white font-medium">
             <span>
-              👋 Greetings! Currently <strong>10</strong> jobs and{" "}
-              <strong>210 000</strong> SEK available.{" "}
+              👋 Greetings! Currently <strong>11</strong> jobs and{" "}
+              <strong>220 000</strong> SEK available.{" "}
               <Link to="/job-board" className="border-b-2 ">
                 See job board
               </Link>

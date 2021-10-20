@@ -7,6 +7,7 @@ import volta from "../images/volta.png";
 import bemlo from "../images/bemlo.png";
 import depict from "../images/depict.png";
 import curb from "../images/curb.jpeg";
+import teamTogether from "../images/teamTogetherWebsite.png";
 
 import jobs from "../json/jobs.json";
 
@@ -29,6 +30,8 @@ function Company(props) {
       img = depict;
     } else if (company.url === "curb-food") {
       img = curb;
+    } else if (company.url === "team-together") {
+      img = teamTogether;
     }
 
     let jobsAtCompany = jobs.filter((j) => j.company === company.name);
