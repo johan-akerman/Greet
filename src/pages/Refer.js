@@ -37,6 +37,8 @@ export default function Refer() {
 
   const [job] = useState(window.location.href.split("refer/").pop());
   const [referMyself, setReferMyself] = useState(false);
+  const [shareBonus, setShareBonus] = useState(false);
+
   const [friend, setFriend] = useState({
     name: "",
     title: "",
@@ -212,6 +214,21 @@ export default function Refer() {
                     }
                   />
                 </div>
+                {referMyself ? null : (
+                  <div class="mb-8">
+                    <label>
+                      <input
+                        class="mr-2  cursor-pointer leading-tight h-6 w-6 text-black"
+                        type="checkbox"
+                        checked={shareBonus}
+                        onChange={() => setShareBonus(!shareBonus)}
+                      />
+                      <span class="text-left text-lg-2 text-gray-500">
+                        I want to split the hiring bonus 50 / 50 with my friend.
+                      </span>
+                    </label>
+                  </div>
+                )}
               </form>
             </div>
           ) : null}
@@ -347,6 +364,13 @@ export default function Refer() {
                   type="text"
                   name="referMyself"
                   value={referMyself}
+                />
+
+                <input
+                  className="hidden"
+                  type="text"
+                  name="shareBonus"
+                  value={shareBonus}
                 />
 
                 <input
