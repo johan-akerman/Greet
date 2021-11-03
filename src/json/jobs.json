@@ -150,8 +150,8 @@
     "title": "Product Manager, In-Person Experience",
     "url": "product-manager-in-person-experience",
     "date": "11.10.21",
-    "hot": false,
-    "new": true,
+    "hot": true,
+    "new": false,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",
@@ -539,7 +539,7 @@
     "title": "Business Developer",
     "url": "business-developer",
     "date": "01.10.21",
-    "hot": false,
+    "hot": true,
     "new": false,
     "summary": {
       "location": "Stockholm",

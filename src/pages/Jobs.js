@@ -8,7 +8,7 @@ function Jobs() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="pt-32">
+    <div className="pt-32 bg-light">
       <JobBoard title={false} jobAds={jobs} />
       <Banner
         title="Want your job ad posted above?"

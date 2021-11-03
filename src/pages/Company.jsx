@@ -37,7 +37,7 @@ function Company(props) {
     let jobsAtCompany = jobs.filter((j) => j.company === company.name);
 
     return (
-      <div className="md:pt-32 pt-12 pb-12">
+      <div className="md:pt-32 pt-12 ">
         <div className="lg:w-9/12 w-11/12 mx-auto rounded-xl">
           <div className="flex">
             <img
@@ -97,15 +97,17 @@ function Company(props) {
             </div>
           </div>
         </div>
-        <div className="lg:w-10/12 w-11/12 mx-auto pt-20 -mb-8" id="jobs">
-          <h1 className="md:text-6xl text-4xl font-bold text-gray-900 md:text-left text-center md:pb-16 pb-12">
-            Jobs at {company.name}
-          </h1>
-        </div>
+        <div className="bg-light mt-20">
+          <div className="lg:w-10/12 w-11/12 mx-auto" id="jobs">
+            <h1 className="pt-20 md:text-6xl text-4xl font-bold text-gray-900 md:text-left text-center md:pb-16 pb-12">
+              Jobs at {company.name}
+            </h1>
+          </div>
 
-        {jobsAtCompany.length > 0 ? (
-          <JobBoard title={false} jobAds={jobsAtCompany} />
-        ) : null}
+          {jobsAtCompany.length > 0 ? (
+            <JobBoard title={false} jobAds={jobsAtCompany} />
+          ) : null}
+        </div>
       </div>
     );
   }

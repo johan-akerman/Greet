@@ -7,7 +7,7 @@ function Jobs() {
     window.scrollTo(0, 0);
   }, []);
   return (
-    <div className="pt-32">
+    <div className="pt-32 bg-light">
       <CompanyBoard />
       <Banner
         title="Want your company featured above?"

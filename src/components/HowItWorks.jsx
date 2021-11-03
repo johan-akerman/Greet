@@ -15,7 +15,7 @@ export function HowItWorks() {
       <div className="grid lg:grid-cols-3 grid-cols-1 gap-14 md:py-32 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
         <div>
           <FontAwesomeIcon
-            className="text-5xl mb-6 text-indigo-500"
+            className="text-5xl mb-6 text-secondary"
             icon={faSearch}
           />
 
