@@ -7,7 +7,8 @@ import { JobBoard } from "../components/JobBoard";
 import { Trusted } from "../components/Trusted";
 import jobs from "../json/jobs.json";
 
-let hotJobs = jobs.filter((j) => j.hot).slice(0, 6);
+//let hotJobs = jobs.filter((j) => j.hot).slice(0, 9);
+let hotJobs = jobs.slice(0, 9);
 
 function Home() {
   useEffect(() => {

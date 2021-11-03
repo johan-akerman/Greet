@@ -66,13 +66,13 @@ export function Footer() {
 
           <Link
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/"
+            to="/terms-of-use"
           >
             Terms of use
           </Link>
           <Link
             className="w-32 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/cookies"
+            to="/privary-policy"
           >
             Privary policy
           </Link>
