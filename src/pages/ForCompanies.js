@@ -34,7 +34,7 @@ function ForCompanies() {
               Step 1:
             </h2>
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
-              Create a company profile
+              Create a profile
             </h1>
             <p className="text-xl font-light">
               Promote your company to our community of tech people.

@@ -10,8 +10,8 @@ function Jobs() {
     <div className="pt-32 bg-light">
       <CompanyBoard />
       <Banner
-        title="Want your company featured above?"
-        button="Contact us"
+        title="Want to post your own jobs?"
+        button="Post a job"
         link="/post-job"
       />
     </div>

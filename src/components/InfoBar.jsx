@@ -10,7 +10,7 @@ export function InfoBar() {
               Currently <strong>11</strong> jobs and <strong>220 000</strong>{" "}
               SEK available.{" "}
               <Link to="/job-board" className="border-b-2 border-black ">
-                See job board
+                View jobs
               </Link>
             </span>
           </p>

@@ -1,4 +1,6 @@
 import { Link } from "react-router-dom";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export function Banner({ title, button, link }) {
   return (
@@ -10,9 +12,13 @@ export function Banner({ title, button, link }) {
 
         <Link
           to={link}
-          className=" w-60 px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-black md:py-4 md:text-lg md:px-10 transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
+          className="w-60 px-8 py-3 border border-transparent text-base font-medium rounded-md text-primary bg-black md:py-4 md:text-lg md:px-10 transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg"
         >
           {button}
+          <FontAwesomeIcon
+            className="ml-3 mb-0.5 text-sm"
+            icon={faArrowRight}
+          />
         </Link>
       </div>
     </div>

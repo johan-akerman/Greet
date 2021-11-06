@@ -18,7 +18,7 @@ export function CompanyBoard() {
                 {company.new ? (
                   <img
                     src={certificate}
-                    className="absolute right-4 -top-4 w-12"
+                    className="absolute right-4 -top-4 w-10"
                     alt="certificate"
                   />
                 ) : null}
@@ -49,7 +49,7 @@ export function CompanyBoard() {
 
                   <HashLink
                     to={`/companies/${company.url}#jobs`}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
+                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
                   >
                     View jobs (
                     {jobs.filter((j) => j.company === company.name).length})

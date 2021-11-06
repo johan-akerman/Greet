@@ -11,7 +11,7 @@ function Jobs() {
     <div className="pt-32 bg-light">
       <JobBoard title={false} jobAds={jobs} />
       <Banner
-        title="Want your job ad posted above?"
+        title="Want to post your own jobs?"
         button="Post a job"
         link="/post-job"
       />

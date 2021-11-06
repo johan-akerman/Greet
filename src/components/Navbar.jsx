@@ -3,6 +3,8 @@ import logo from "../images/logo.png";
 import HowIt from "./HowIt";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export function Navbar() {
   return (
@@ -32,13 +34,6 @@ export function Navbar() {
                 >
                   Companies
                 </Link>
-
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/about"
-                >
-                  About us
-                </Link>
               </div>
             </div>
 
@@ -48,6 +43,10 @@ export function Navbar() {
                 to="/post-job"
               >
                 Post a job
+                <FontAwesomeIcon
+                  className="ml-3 mb-0.5 text-sm"
+                  icon={faArrowRight}
+                />
               </Link>
 
               <MobileMenu />

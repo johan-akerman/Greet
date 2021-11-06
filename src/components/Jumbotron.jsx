@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import phones from "../images/phone.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
 
 export function Jumbotron() {
   return (
@@ -17,9 +19,13 @@ export function Jumbotron() {
           <div className="mt-4 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <Link
               to="/job-board"
-              className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 mx-auto w-60 text-primary shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-black  md:py-4 md:text-lg md:px-10"
+              className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 mx-auto  text-primary shadow font-semibold rounded-xl flex items-center justify-center py-3 border border-transparent text-base  bg-black md:py-4 md:text-lg px-8"
             >
-              See job board
+              Explore the job board{" "}
+              <FontAwesomeIcon
+                className="ml-3 mb-0.5 text-sm"
+                icon={faArrowRight}
+              />
             </Link>
           </div>
         </div>

@@ -6,7 +6,7 @@ import five from "../images/6.png";
 
 export function SocialMedia() {
   return (
-    <div className="bg-lightYellow py-28">
+    <div className="bg-lightYellow py-20">
       <h1 className="md:text-6xl text-4xl font-bold text-gray-900 text-center pb-3">
         Follow us
       </h1>
@@ -31,7 +31,7 @@ export function SocialMedia() {
         </a>
         to get updates on new positions and other fun stuff.
       </p>
-      <div className="w-11/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-5 ">
+      <div className="w-10/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-5 ">
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 "
           href="https://www.instagram.com/p/CT71ijVo9AI/"

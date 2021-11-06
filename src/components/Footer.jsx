@@ -1,5 +1,7 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export function Footer() {
   return (
@@ -62,22 +64,6 @@ export function Footer() {
         </div>
 
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
-          <h1 className="text-2xl font-semibold">Legal</h1>
-
-          <Link
-            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/terms-of-use"
-          >
-            Terms of use
-          </Link>
-          <Link
-            className="w-32 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/privary-policy"
-          >
-            Privary policy
-          </Link>
-        </div>
-        <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
           <h1 className="text-2xl font-semibold">Social</h1>
           <a
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
@@ -100,7 +86,7 @@ export function Footer() {
         <div className="w-full sm:w-2/5 flex flex-col space-y-2 pb-6">
           <h1 className="text-2xl font-semibold">Newsletter</h1>
           <p>Latest news and job posts straight to your inbox.</p>
-          <form action="#" class="mt-2">
+          <form action="#" class="mt-2 w-full">
             <div class="flex items-center">
               <input
                 type="email"
@@ -110,6 +96,10 @@ export function Footer() {
               />
               <button className="bg-black text-primary font-semibold px-5 py-2 rounded ">
                 Subscribe
+                <FontAwesomeIcon
+                  className="ml-3 mb-0.5 text-sm"
+                  icon={faPaperPlane}
+                />
               </button>
             </div>
           </form>

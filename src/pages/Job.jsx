@@ -107,7 +107,7 @@ function Job(props) {
 
         <Banner
           title="Looking for something else?"
-          button="View available jobs"
+          button="Explore the job board"
           link="/job-board"
         />
       </>

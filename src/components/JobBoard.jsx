@@ -5,6 +5,7 @@ import companies from "../json/companies.json";
 
 import {
   faCoins,
+  faArrowRight,
   faMoneyBillWave,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -32,7 +33,7 @@ export function JobBoard({ jobAds, title }) {
                 {job.new ? (
                   <img
                     src={certificate}
-                    className="absolute right-4 -top-4 w-12"
+                    className="absolute right-4 -top-4 w-10"
                     alt="certificate"
                   />
                 ) : null}
@@ -41,7 +42,7 @@ export function JobBoard({ jobAds, title }) {
                   <img
                     alt="hot"
                     src={hot}
-                    className="absolute right-4 -top-6 w-12"
+                    className="absolute right-4 -top-4 w-10"
                   />
                 ) : null}
 
@@ -108,7 +109,7 @@ export function JobBoard({ jobAds, title }) {
                     to={`/companies/${
                       companies.find((c) => c.name === job.company).url
                     }/${job.url}`}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
+                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
                   >
                     About the job
                   </Link>
@@ -117,12 +118,16 @@ export function JobBoard({ jobAds, title }) {
             ))}
           </div>
           {title ? (
-            <div className="w-40 mt-20 mx-auto">
+            <div className="w-48 mt-20 mx-auto">
               <Link
                 to="job-board"
-                className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
+                className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-black rounded-xl text-light"
               >
                 View all jobs
+                <FontAwesomeIcon
+                  className="ml-3 mb-0.5 text-sm"
+                  icon={faArrowRight}
+                />
               </Link>
             </div>
           ) : null}
