@@ -14,7 +14,7 @@ export function Footer() {
               Greet
             </h1>
           </Link>
-          <p className="w-80  text-lg font-medium -mt-2 ">
+          <p className="md:w-80 w-full text-lg font-medium -mt-2 ">
             Get rewarded to refer your friends to tech jobs in Sweden.
           </p>
 
@@ -82,7 +82,7 @@ export function Footer() {
             LinkedIn
           </a>
         </div>
-
+        {/* 
         <div className="w-full sm:w-2/5 flex flex-col space-y-2 pb-6">
           <h1 className="text-2xl font-semibold">Newsletter</h1>
           <p>Latest news and job posts straight to your inbox.</p>
@@ -103,7 +103,7 @@ export function Footer() {
               </button>
             </div>
           </form>
-        </div>
+        </div> */}
       </div>
     </div>
   );

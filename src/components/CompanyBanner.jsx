@@ -5,16 +5,16 @@ import { faCheck } from "@fortawesome/free-solid-svg-icons";
 
 export function CompanyBanner() {
   return (
-    <div className="w-10/12 flex flex-wrap mx-auto">
-      <div className="lg:text-left text-center lg:w-6/12 w-12/12 lg:pt-24 pt-12 pb-20 mx-auto">
+    <div className="md:w-10/12 w-11/12 flex flex-wrap mx-auto">
+      <div className="text-left lg:w-6/12 w-12/12 lg:pt-24 pt-12 pb-20 mx-auto">
         <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
           Greet for companies
         </h2>
-        <h1 className="text-black lg:text-6xl text-4xl font-bold  sm:mx-auto lg:mx-0">
+        <h1 className="text-black lg:text-6xl text-4xl font-bold  sm:mx-auto lg:mx-0 mb-4">
           Generate high quality leads with referrals
         </h1>
 
-        <p className="mt-3 text-xl text-black sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
+        <p className="mt-3 text-xl text-left text-black sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
           <FontAwesomeIcon icon={faCheck} className="mr-3  opacity-70" />
           Get high quality candidates referred by industry professionals.
         </p>
@@ -46,7 +46,7 @@ export function CompanyBanner() {
         </div>
       </div>
 
-      <div className="md:w-6/12 w-12/12 md:pt-20 md:pb-20 md:pl-10 pl-0 mx-auto">
+      <div className="md:w-6/12 w-12/12 md:block hidden md:pt-20 pb-20 md:pl-10 pl-0 mx-auto">
         <img
           className=" mt-0 w-full lg:float-right float-none mx-auto"
           src={company}

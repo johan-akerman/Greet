@@ -4,7 +4,7 @@ import volta from "../images/volta_bw.png";
 
 export function Trusted() {
   return (
-    <div className="grid grid-cols-12 w-11/12 mx-auto mt-12 gap-4 md:text-left text-center ">
+    <div className="hidden md:grid grid-cols-12 w-11/12 mx-auto mt-12 gap-4 md:text-left text-center ">
       <div className="md:col-span-5 col-span-12">
         <h1 className="text-2xl text-black pb-3 font-semibold  mt-3">
           Trusted by

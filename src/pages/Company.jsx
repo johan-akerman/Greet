@@ -72,7 +72,7 @@ function Company(props) {
                         href={company.website}
                         target="_blank"
                         rel="noreferrer"
-                        className="text-secondary"
+                        className="text-primary"
                       >
                         {company.website.substring(
                           company.website.indexOf("w") + 4
