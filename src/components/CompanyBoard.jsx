@@ -7,18 +7,18 @@ import jobs from "../json/jobs.json";
 export function CompanyBoard() {
   return (
     <>
-      <div className="bg-white">
+      <div className="bg-light">
         <div className="md:w-10/12 w-11/12 mx-auto h-full pt-8 md:pb-28 pb-12 ">
           <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 ">
             {companies.map((company, id) => (
               <div
                 key={id}
-                className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-gray-100 rounded-2xl p-6 text-left"
+                className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-white rounded-2xl p-6 text-left"
               >
                 {company.new ? (
                   <img
                     src={certificate}
-                    className="absolute right-4 -top-4 w-12"
+                    className="absolute right-4 -top-4 w-10"
                     alt="certificate"
                   />
                 ) : null}
@@ -42,14 +42,14 @@ export function CompanyBoard() {
                 <div className="flex items-center pt-6">
                   <Link
                     to={`/companies/${company.url}`}
-                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
                   >
                     Read more
                   </Link>
 
                   <HashLink
                     to={`/companies/${company.url}#jobs`}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
+                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
                   >
                     View jobs (
                     {jobs.filter((j) => j.company === company.name).length})

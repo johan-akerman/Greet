@@ -35,7 +35,7 @@ function ForGreeters() {
               Find a job
             </h1>
             <p className="text-xl font-light">
-              Find exciting tech jobs on our job board.
+              Head over to the job board to find exciting tech jobs in Sweden.
             </p>
           </div>
           <div>
@@ -50,7 +50,8 @@ function ForGreeters() {
               Refer someone
             </h1>
             <p className="text-xl font-light">
-              Refer a friend (or yourself) if you find a good fit.
+              Refer a friend that fits the job description and who is looking
+              for new challenges.
             </p>
           </div>
           <div>
@@ -66,7 +67,7 @@ function ForGreeters() {
               Get paid
             </h1>
             <p className="text-xl font-light">
-              Get paid if your referral results in an interview or hiring.
+              Get paid if the friend you referred gets interviewed or hired.
             </p>
           </div>
         </div>

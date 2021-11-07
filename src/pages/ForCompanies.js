@@ -34,7 +34,7 @@ function ForCompanies() {
               Step 1:
             </h2>
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
-              Create a company profile
+              Create a profile
             </h1>
             <p className="text-xl font-light">
               Promote your company to our community of tech people.
@@ -54,7 +54,7 @@ function ForCompanies() {
               Post a job
             </h1>
             <p className="text-xl font-light">
-              Write a job description, set a hiring bonus and interview bonus.
+              Write a job description, set a hiring reward and interview reward.
             </p>
           </div>
 
@@ -181,11 +181,11 @@ function ForCompanies() {
               Pricing example
             </h1>
             <p className="text-xl mx-auto md:text-left text-center pt-4 md:pr-16 pr-0">
-              You post a job with a hiring bonus of 10 000 SEK and an interview
+              You post a job with a hiring reward of 10 000 SEK and an interview
               bonus of 1000 SEK. You get 17 referrals. After interviewing 3
               candidates you decide to hire one of them. You would now owe 15
-              000 SEK in total. 10 000 for the hiring bonus, 3 x 1000 for the
-              interviews and 2000 for the Greet Fee (20% of the hiring bonus).
+              000 SEK in total. 10 000 for the hiring reward, 3 x 1000 for the
+              interviews and 2000 for the Greet Fee (20% of the hiring reward).
               <br />
               <br />
               Out of these 15 000 SEK. 10 000 will be given to the one who
@@ -203,12 +203,12 @@ function ForCompanies() {
       </div>
 
       <FAQ
-        questionOne="What is the Hiring Bonus, Interview Bonus and Greet Fee?"
-        answerOne="The hiring bonus is what the Greeters will see on the job board and get paid if their referral results in a hiring. The Interview bonus is what is paid if a referral ends up with an interview. You decide what the hiring- and interview bonus should be. The Greet Fee is equal to 20% of your hiring bonus."
+        questionOne="What is the hiring reward, interview reward and Greet Fee?"
+        answerOne="The hiring reward is what the Greeters will see on the job board and get paid if their referral results in a hiring. The interview reward is what is paid if a referral ends up with an interview. You decide what the hiring- and interview reward should be. The Greet Fee is equal to 20% of your hiring reward."
         questionTwo="When and how much do I pay?"
-        answerTwo="Greet was recently launched and we are offering early adopters to start using the service for free (for a limited time), i.e no monthly pricing plan. Instead, you only pay for the interview bonus and hiring bonus when you interview or hire someone. So until then, you get free promotion."
+        answerTwo="Greet was recently launched and we are offering early adopters to start using the service for free (for a limited time), i.e no monthly pricing plan. Instead, you only pay for the interview reward and hiring reward when you interview or hire someone. So until then, you get free promotion."
         questionThree="How do I get my company on Greet?"
-        answerThree="Contact johan@joingreet.com or fill in the form at www.joingreet.com/post-job"
+        answerThree="Contact johan@joingreet.com"
       />
       <Banner
         title="Ready to hire your next star?"

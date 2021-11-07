@@ -1,26 +1,40 @@
 import { Link } from "react-router-dom";
+import logo from "../images/logo.png";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export function Footer() {
   return (
-    <div className="bg-primary text-white text-left pb-16">
-      <div className="w-10/12 mx-auto pt-20 pb-8 flex flex-col sm:flex-row space-y-2 justify-start">
-        <div className="w-full sm:w-3/5 pr-6 flex flex-col space-y-2 pb-6">
-          <Link to="/">
-            <h1 className="text-4xl font-medium">Greet</h1>
+    <div className="bg-primary text-whblackite text-left">
+      <div className="w-11/12 mx-auto pt-20 pb-8 flex flex-col sm:flex-row space-y-2 justify-start">
+        <div className="w-full sm:w-2/5 pr-6 flex flex-col space-y-2 pb-6">
+          <Link className="flex pt-1" to="/">
+            <img className="h-12 pb-2 " src={logo} alt="logo" />
+            <h1 className="md:pl-2 pl-2 text-4xl text-black font-medium hover:opacity-60">
+              Greet
+            </h1>
           </Link>
-          <p className="text-lg font-medium">
-            Get rewarded to refer your friends to tech jobs.
+          <p className="md:w-80 w-full text-lg font-medium -mt-2 ">
+            Get rewarded to refer your friends to tech jobs in Sweden.
           </p>
 
           <a
-            className="w-44 text-lg font-medium border-b-2 border-white hover:opacity-60"
+            className="w-44 text-lg font-medium border-b-2 border-black hover:opacity-60"
             href="mailto:johan@joingreet.com"
           >
             johan@joingreet.com
           </a>
         </div>
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
-          <h1 className="text-2xl font-semibold">Product</h1>
+          <h1 className="text-2xl font-semibold">Greet</h1>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/about"
+          >
+            About us
+          </Link>
+
           <Link
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             to="/job-board"
@@ -34,12 +48,7 @@ export function Footer() {
           >
             Companies
           </Link>
-          <Link
-            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/post-job"
-          >
-            Post a job
-          </Link>
+
           <Link
             className="w-32 opacity-60 hover:opacity-100 font-semibold text-lg"
             to="/for-companies"
@@ -52,16 +61,10 @@ export function Footer() {
           >
             For Greeters
           </Link>
-
-          <Link
-            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/about"
-          >
-            About us
-          </Link>
         </div>
+
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
-          <h1 className="text-2xl font-semibold">Follow us</h1>
+          <h1 className="text-2xl font-semibold">Social</h1>
           <a
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             href="https://www.instagram.com/joingreet/"
@@ -79,6 +82,28 @@ export function Footer() {
             LinkedIn
           </a>
         </div>
+        {/* 
+        <div className="w-full sm:w-2/5 flex flex-col space-y-2 pb-6">
+          <h1 className="text-2xl font-semibold">Newsletter</h1>
+          <p>Latest news and job posts straight to your inbox.</p>
+          <form action="#" class="mt-2 w-full">
+            <div class="flex items-center">
+              <input
+                type="email"
+                placeholder="Email"
+                class="appearance-none h-10 text-md block bg-white  border-black text-gray-700 border-2 rounded py-3 px-4  leading-tight focus:outline-none  focus:border-black focus:border-4 mr-3"
+                required
+              />
+              <button className="bg-black text-primary font-semibold px-5 py-2 rounded ">
+                Subscribe
+                <FontAwesomeIcon
+                  className="ml-3 mb-0.5 text-sm"
+                  icon={faPaperPlane}
+                />
+              </button>
+            </div>
+          </form>
+        </div> */}
       </div>
     </div>
   );

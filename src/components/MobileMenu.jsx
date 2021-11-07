@@ -15,10 +15,10 @@ export default function MobileMenu() {
             <Popover.Button
               c
               ref={buttonRef}
-              className="lg:hidden block text-white group md:py-2 py-1 rounded-md  items-center  text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              className="lg:hidden block text-black group md:py-2 py-1 rounded-md  items-center  text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               <FontAwesomeIcon
-                className="text-3xl text-white"
+                className="text-3xl text-black"
                 icon={open ? faTimes : faBars}
               />
             </Popover.Button>

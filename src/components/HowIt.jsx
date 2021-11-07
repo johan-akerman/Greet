@@ -21,7 +21,7 @@ export default function HowIt() {
               ref={buttonRef}
               className="
                 
-              hidden  text-white group md:py-2 py-1 rounded-md lg:inline-flex items-center  text-lg font-semibold hover:text-gray-200 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
+              hidden  text-black group md:py-2 py-1 rounded-md lg:inline-flex items-center  text-lg font-semibold hover:opacity-60 focus:outline-none focus-visible:ring-2 focus-visible:ring-white focus-visible:ring-opacity-75"
             >
               <span>How it works</span>
               <FontAwesomeIcon
@@ -46,7 +46,7 @@ export default function HowIt() {
                       to="/for-greeters"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
-                      <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-primary bg-secondary rounded-lg sm:h-12 sm:w-12">
+                      <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-secondary bg-primary rounded-lg sm:h-12 sm:w-12">
                         <FontAwesomeIcon icon={faHandSparkles} />
                       </div>
                       <div className="ml-4">
@@ -60,7 +60,7 @@ export default function HowIt() {
                       to="/for-companies"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
                     >
-                      <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-primary bg-secondary rounded-lg sm:h-12 sm:w-12">
+                      <div className="flex items-center text-2xl justify-center flex-shrink-0 w-10 h-10 text-secondary bg-primary rounded-lg sm:h-12 sm:w-12">
                         <FontAwesomeIcon icon={faRocket} />
                       </div>
                       <div className="ml-4">

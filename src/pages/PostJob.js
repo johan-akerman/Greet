@@ -59,7 +59,7 @@ function PostJob() {
   return (
     <div>
       <canvas id="my-canvas" className="absolute z-0 "></canvas>
-      <div className="bg-white md:w-7/12 w-10/12 mx-auto ">
+      <div className="bg-white md:w-6/12 w-10/12 mx-auto ">
         {submited ? (
           <div className="pt-52 pb-80">
             <h1 className="font-semibold md:text-5xl text-4xl text-center mb-2">
@@ -83,20 +83,20 @@ function PostJob() {
             <h1 className="text-5xl text-center mb-3 font-semibold">
               Join Greet
             </h1>
-            <p className="text-center md:w-8/12 w-12/12 mx-auto text-lg mb-12 text-gray-500">
+            <p className="text-center  w-12/12 mx-auto text-lg mb-12 text-gray-500">
               We would love to understand how we can help your company grow
               before posting your job ads. Please fill in your details, and
               we'll be in touch soon.
             </p>
             <form class="w-full" onSubmit={sendEmail}>
               <div class="mt-8 mb-8">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                   Which company do you represent?
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
+                  class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
-                  placeholder="Google"
+                  placeholder="Company"
                   name="company"
                   value={form.company}
                   onChange={(e) =>
@@ -106,13 +106,13 @@ function PostJob() {
               </div>
 
               <div class="mt-8 mb-8">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                   Company website
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
+                  class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
-                  placeholder="www.google.com"
+                  placeholder="www.company.com"
                   name="website"
                   value={form.companyWebsite}
                   onChange={(e) =>
@@ -121,11 +121,11 @@ function PostJob() {
                 />
               </div>
               <div class="mb-8">
-                <label class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2">
+                <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                   Your name
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
+                  class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
                   placeholder="Firstname Lastname"
                   name="name"
@@ -135,30 +135,24 @@ function PostJob() {
               </div>
 
               <div class="mb-8">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-first-name"
-                >
+                <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                   Your email
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border rounded py-3 px-4 mb-3 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
+                  class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   type="text"
-                  placeholder="firstname@google.com"
+                  placeholder="firstname@company.com"
                   name="email"
                   value={form.email}
                   onChange={(e) => setForm({ ...form, email: e.target.value })}
                 />
               </div>
               <div class="mb-8">
-                <label
-                  class="block uppercase tracking-wide text-gray-700 text-xs font-bold mb-2"
-                  for="grid-last-name"
-                >
+                <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
                   Your phone number
                 </label>
                 <input
-                  class="appearance-none h-16 text-lg block w-full bg-gray-200 text-gray-700 border border-gray-200 rounded py-3 px-4 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
+                  class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
                   id="grid-last-name"
                   type="text"
                   placeholder="123 456 789"
@@ -173,7 +167,6 @@ function PostJob() {
                   className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-40 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                   type="submit"
                   value="Send"
-                  // onClick={() => setSubmited(true)}
                 />
               ) : (
                 <div className="w-60 cursor-not-allowed transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg flex ml-2 mr-2 items-center font-semibold text-md justify-center px-8 py-3 bg-gray-300 rounded-xl text-black">

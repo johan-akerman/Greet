@@ -78,7 +78,7 @@
     "title": "QA Engineer",
     "url": "qa-engineer",
     "date": "11.10.21",
-    "hot": true,
+    "hot": false,
     "new": false,
     "summary": {
       "location": "Stockholm",
@@ -150,8 +150,8 @@
     "title": "Product Manager, In-Person Experience",
     "url": "product-manager-in-person-experience",
     "date": "11.10.21",
-    "hot": false,
-    "new": true,
+    "hot": true,
+    "new": false,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",
@@ -238,7 +238,7 @@
     "title": "Senior Software Engineer",
     "url": "senior-software-engineer",
     "date": "10.10.21",
-    "hot": true,
+    "hot": false,
     "new": false,
     "summary": {
       "location": "Stockholm",
@@ -402,7 +402,7 @@
     "url": "deployment-lead",
     "date": "10.10.21",
     "hot": false,
-    "new": true,
+    "new": false,
     "summary": {
       "location": "Stockholm",
       "employment": "Full time",

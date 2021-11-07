@@ -5,6 +5,7 @@ import companies from "../json/companies.json";
 
 import {
   faCoins,
+  faArrowRight,
   faMoneyBillWave,
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
@@ -13,22 +14,13 @@ import { Link } from "react-router-dom";
 export function JobBoard({ jobAds, title }) {
   return (
     <>
-      <div className="bg-white">
-        <div className="md:w-10/12 w-11/12 mx-auto h-full pt-8 md:pb-28 pb-12 ">
+      <div className="bg-light">
+        <div className="md:w-10/12 w-11/12 mx-auto h-full md:pb-28 pb-12 ">
           {title ? (
-            <div className="md:flex justify-between block">
+            <div className="md:flex justify-between block pt-20">
               <h1 className="md:text-6xl text-4xl font-bold text-gray-900 md:text-left text-center md:pb-16 pb-12">
                 Trending jobs
               </h1>
-              <span className="text-lg text-black pt-4 lg:flex h-12 hidden font-semibold">
-                <h2>Want to post a job? </h2>
-                <Link
-                  to="/post-job"
-                  className="ml-2 cursor-pointer border-b-2 border-primary hover:text-primary hover:border-white"
-                >
-                  Contact us
-                </Link>
-              </span>
             </div>
           ) : null}
 
@@ -36,12 +28,12 @@ export function JobBoard({ jobAds, title }) {
             {jobAds.map((job, id) => (
               <div
                 key={id}
-                className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-gray-100 rounded-2xl p-6 text-left relative"
+                className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-white rounded-2xl p-6 text-left relative"
               >
                 {job.new ? (
                   <img
                     src={certificate}
-                    className="absolute right-4 -top-4 w-12"
+                    className="absolute right-4 -top-4 w-10"
                     alt="certificate"
                   />
                 ) : null}
@@ -50,7 +42,7 @@ export function JobBoard({ jobAds, title }) {
                   <img
                     alt="hot"
                     src={hot}
-                    className="absolute right-4 -top-6 w-12"
+                    className="absolute right-4 -top-4 w-10"
                   />
                 ) : null}
 
@@ -77,7 +69,7 @@ export function JobBoard({ jobAds, title }) {
                   </span>
                   <span className="text-sm font-semibold tracking-wide">
                     {" "}
-                    / hiring bonus
+                    / hiring reward
                   </span>
                 </p>
                 <p className="pl-1 pb-1">
@@ -90,7 +82,7 @@ export function JobBoard({ jobAds, title }) {
                   </span>
                   <span className="text-sm font-semibold tracking-wide">
                     {" "}
-                    / interview bonus
+                    / interview reward
                   </span>
                 </p>
                 <p className="pl-1">
@@ -108,7 +100,7 @@ export function JobBoard({ jobAds, title }) {
                     to={`/refer/${
                       companies.find((c) => c.name === job.company).url
                     }/${job.url}`}
-                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
                   >
                     Refer
                   </Link>
@@ -117,7 +109,7 @@ export function JobBoard({ jobAds, title }) {
                     to={`/companies/${
                       companies.find((c) => c.name === job.company).url
                     }/${job.url}`}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-gray-300 px-3 py-3 rounded-xl border-none"
+                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
                   >
                     About the job
                   </Link>
@@ -126,12 +118,16 @@ export function JobBoard({ jobAds, title }) {
             ))}
           </div>
           {title ? (
-            <div className="w-40 mt-20 mx-auto">
+            <div className="w-48 mt-20 mx-auto">
               <Link
                 to="job-board"
-                className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
+                className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-black rounded-xl text-light"
               >
                 View all jobs
+                <FontAwesomeIcon
+                  className="ml-3 mb-0.5 text-sm"
+                  icon={faArrowRight}
+                />
               </Link>
             </div>
           ) : null}

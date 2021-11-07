@@ -1,12 +1,16 @@
 import { Jumbotron } from "../components/Jumbotron";
 import { HowItWorks } from "../components/HowItWorks";
-import { FAQ } from "../components/FAQ";
+import { Banner } from "../components/Banner";
 import { SocialMedia } from "../components/SocialMedia";
+import { CompanyBanner } from "../components/CompanyBanner";
 import { useEffect } from "react";
+
 import { JobBoard } from "../components/JobBoard";
+import { Trusted } from "../components/Trusted";
 import jobs from "../json/jobs.json";
 
-let hotJobs = jobs.filter((j) => j.hot).slice(0, 3);
+//let hotJobs = jobs.filter((j) => j.hot).slice(0, 9);
+let hotJobs = jobs.slice(0, 9);
 
 function Home() {
   useEffect(() => {
@@ -15,17 +19,16 @@ function Home() {
   return (
     <div>
       <Jumbotron />
+      <Trusted />
       <HowItWorks />
       <JobBoard title={true} jobAds={hotJobs} />
-      <FAQ
-        questionOne="How do I post jobs on Greet?"
-        answerOne="Reach out to Johan at johan@joingreet.com"
-        questionTwo="What is Hiring Bonus and Interview Bonus?"
-        answerTwo="The hiring bonus is what the Greeter (the one who refers) will see on the job board and get paid if their referral results in a hiring. The Interview bonus is what is paid if a referral ends up with an interview. Both are listed on the job ads."
-        questionThree="When does the Greeter get paid?"
-        answerThree="The one who refer someone to a job (also known as a Greeter) gets paid when their candidate get an interview or get hired. The amount is specified on the job ads."
-      />
+      <CompanyBanner />
       <SocialMedia />
+      <Banner
+        title="Ready to refer someone?"
+        button="Explore the job board"
+        link="/job-board"
+      />
     </div>
   );
 }
