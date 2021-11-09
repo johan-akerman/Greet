@@ -1,5 +1,4 @@
 import { useEffect } from "react";
-import { SocialMedia } from "../components/SocialMedia";
 
 function About() {
   useEffect(() => {

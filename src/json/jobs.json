@@ -673,13 +673,13 @@
   {
     "company": "Volta Greentech",
     "companyUrl": "volta-greentech",
-    "title": "Production Engineer",
-    "url": "production-engineer",
-    "date": "01.10.21",
+    "title": "Process Design Engineer",
+    "url": "process-design-engineer",
+    "date": "09.11.21",
     "hot": false,
-    "new": false,
+    "new": true,
     "summary": {
-      "location": "Stockholm",
+      "location": "Stockholm / Göteborg",
       "employment": "Full time",
       "hiringBonus": "15 000 SEK",
       "interviewBonus": "500 SEK"
@@ -688,7 +688,7 @@
       {
         "type": "text",
         "title": "About the job",
-        "text": "As a Production Engineer at Volta Greentech you will be a core team member in Volta Greentech’s manufacturing team. That means you will be designing and building up large-scale factories to enable the production of Volta Seafeed that will transform the food industry. We are a tightly knit team, and you’ll work together with our founders, business team and R&D team in developing all manufacturing aspects."
+        "text": "As a Process Design Engineer at Volta Greentech you will be a core team member in Volta Greentech’s engineering team. That means you will be designing and building up large-scale seaweed factories to enable the production of Volta Seafeed. We are a tightly knit team, and you’ll work together with our founders, engineers and R&D team in developing all manufacturing aspects."
       },
       {
         "type": "text",
@@ -701,7 +701,8 @@
         "content": [
           "Work closely with R&D and Engineering team on development of Volta Greentech’s production blueprint to ensure excellent production results optimized for low-cost, high output production",
           "Design, build and improve Volta Greentech’s production blueprint including systems for upstream treatment of water, bioreactors for cultivation, downstream processing and automation of production",
-          "Be heavily involved in the designing, engineering and buildup of Volta Greentechs pilot factory in Lysekil, Sweden and future factories",
+          "Be heavily involved in the designing, engineering, testing and build-up of Volta Greentechs pilot factory in Lysekil, Sweden and Volta Factory 02",
+          "Produce Process Flow Diagrams with engineering requirements for further detailed engineering work",
           "Lead / assist in recruitment of key team members"
         ]
       },
@@ -709,21 +710,22 @@
         "type": "list",
         "title": "Key skills",
         "content": [
-          "Degree in mechanical engineering, electrical engineering, computer science or similar",
-          "Purpose driven and experience of working in a startup",
-          "Experience of taking manufacturing from prototype stage to large scale production",
-          "A working knowledge of a wide range of food and bio manufacturing processes",
-          "Track record of having excelled at designing and building up high performing production lines"
+          "Degree in Chemical Engineering, or similar, and >2 years working experience",
+          "Experience in developing BFD, PFD and P&ID for chemical processes",
+          "Experience of taking manufacturing from prototype stage to large-scale production. Be prepared to showcase some of your designs.",
+          "Purpose-driven, hands-on and strategic",
+          "Good at leading projects and teams to meet tight deadlines"
         ]
       },
       {
         "type": "list",
-        "title": "Your (presumed) background",
+        "title": "Additional preferred skills",
         "content": [
-          "Relevant education and work experience",
-          "Led and executed successful projects with many stakeholders",
-          "A minimum 3 years of work experience in a fast-paced environment",
-          "5+ years of experience, including leadership, from complex sales and project management, preferably from the food and/or agriculture industry"
+          "Experience within Food Processing Industry",
+          "Experience within Dewatering and drying of sensitive organic materials",
+          "Experience within water mixing, dosing and pH control",
+          "Knowledge of a wide range of food processing and biomanufacturing technologies",
+          "Experience of working in a startup"
         ]
       },
       {
