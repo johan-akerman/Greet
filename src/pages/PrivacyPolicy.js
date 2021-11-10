@@ -63,8 +63,8 @@ function PrivacyPolicy() {
         <p>
           If you get referred by someone, we will contact you and ask for your
           approval. If you do not approve or answer to this message, the
-          referral your personal data that someone submitted when they referred
-          you will be deleted.
+          personal data that someone submitted when they referred you will be
+          deleted.
         </p>
 
         <h2 className="text-3xl mb-4 mt-10">
