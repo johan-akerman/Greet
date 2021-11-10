@@ -4,6 +4,9 @@ import Refer from "./pages/Refer";
 import PostJob from "./pages/PostJob";
 import Jobs from "./pages/Jobs";
 import Company from "./pages/Company";
+import PrivacyPolicy from "./pages/PrivacyPolicy";
+import CookiePolicy from "./pages/CookiePolicy";
+
 import Job from "./pages/Job";
 import { InfoBar } from "./components/InfoBar";
 import ForCompanies from "./pages/ForCompanies";
@@ -21,6 +24,14 @@ export default function App() {
       <Switch>
         <Route exact path="/">
           <Home />
+        </Route>
+
+        <Route exact path="/privacy-policy">
+          <PrivacyPolicy />
+        </Route>
+
+        <Route exact path="/cookie-policy">
+          <CookiePolicy />
         </Route>
 
         <Route exact path="/companies">
@@ -59,6 +70,7 @@ export default function App() {
           <Job />
         </Route>
       </Switch>
+
       <Footer />
     </Router>
   );

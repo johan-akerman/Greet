@@ -64,6 +64,24 @@ export function Footer() {
         </div>
 
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
+          <h1 className="text-2xl font-semibold">Legal</h1>
+
+          <Link
+            className="opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/privacy-policy"
+          >
+            Privacy policy
+          </Link>
+
+          <Link
+            className="opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/cookie-policy"
+          >
+            Cookie policy
+          </Link>
+        </div>
+
+        <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
           <h1 className="text-2xl font-semibold">Social</h1>
           <a
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
