@@ -73,6 +73,147 @@
   },
 
   {
+    "company": "Depict",
+    "companyUrl": "depict",
+    "title": "Frontend engineer",
+    "url": "frontend-engineer",
+    "date": "10.10.21",
+    "hot": true,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "25 000 SEK",
+      "interviewBonus": "600 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "Do you want to join a fast-paced startup and work on the bleeding edge of recommendation systems, where your work immediately impacts the user experience for millions of users?"
+      },
+
+      {
+        "type": "text",
+        "title": "",
+        "text": "We’re looking​ for a frontend developer to help to expand our efforts in providing world-class product recommendations to any e-commerce store. You’ll be working with internal state-of-the-art tech that can be used to deploy our service anywhere in 5-minutes."
+      },
+
+      {
+        "type": "list",
+        "title": "We need someone to:",
+        "content": [
+          "🙋 Own: Rapid deployments for new customers, using and building upon our micro-frontend deployments technology.",
+          "🎒 Learn: Architect integrations resilient to minor style changes, optimize loading speeds, and how to hack into popular SPA-frameworks.",
+          "🚴 Improve: Efficiency and robustness of integrations operating inside evolving environments."
+        ]
+      },
+
+      {
+        "type": "text",
+        "title": "What you will be building",
+        "text": "Self-contained JavaScript scripts that add Depict.ai’s AI-functionality to e-commerce websites."
+      },
+
+      {
+        "type": "list",
+        "title": "We expect you to know how to",
+        "content": [
+          "Write robust Javascript for web browsers",
+          "Design and implement beautiful recommendation surfaces with HTML and CSS"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Nice to haves",
+        "content": [
+          "Typescript",
+          "Experience using JSX",
+          "Experience with tracking and analytics",
+          "Deep knowledge of how to optimize browser performance",
+          "Having read the book Third-Party Javascript"
+        ]
+      }
+    ]
+  },
+
+  {
+    "company": "Volta Greentech",
+    "companyUrl": "volta-greentech",
+    "title": "Business Developer",
+    "url": "business-developer",
+    "date": "01.10.21",
+    "hot": false,
+    "new": false,
+    "summary": {
+      "location": "Stockholm",
+      "employment": "Full time",
+      "hiringBonus": "15 000 SEK",
+      "interviewBonus": "500 SEK"
+    },
+    "elements": [
+      {
+        "type": "text",
+        "title": "About the job",
+        "text": "You? A fearless, dedicated Business Developer, ready to take on CO2-emitters acting as if Greta had never gone on strike. Us? We’re a-just-over-two-year-old company backed by experienced investors with a mission to fight global warming by removing farts and burps from cows.  Over here, things are moving at a high pace. Getting closer to introducing our first climate-friendly products, we need to boost our team further. We are now looking for a Business Developer, supporting us with the critical launch of a potentially revolutionizing type of product in Sweden (and later, internationally). Specs below!"
+      },
+      {
+        "type": "text",
+        "title": "Start date & location",
+        "text": "ASAP. The role is based out of our Stockholm HQ at Karolinska Institutet, with occasional trips to our production facility in Lysekil on the Swedish west coast."
+      },
+      {
+        "type": "list",
+        "title": "The work you'll take on includes",
+        "content": [
+          "Defining and leading the launch of our new, environmentally groundbreaking product line in Swedish supermarkets",
+          "Nurturing and initiating relationships with both new and existing clients",
+          "Support in project financing, directing consultants as well as taking on writing yourself when necessary",
+          "When required (and have no doubt, it will be!) - jumping into additional projects and roles supporting additional parts of the company"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "The skills you'll need",
+        "content": [
+          "Excellent project management skills",
+          "Love closing new clients, and do everything that it takes to make both Volta and our partners succeed",
+          "A talent for communication, in writing and in person, in English and in Swedish",
+          "Thus, also being a maven with presentations (we use Google Slides / Keynote)",
+          "Be a team player, with strong self motivation, results-orientation and sense of purpose"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Your (presumed) background",
+        "content": [
+          "Relevant education and work experience",
+          "Led and executed successful projects with many stakeholders",
+          "A minimum 3 years of work experience in a fast-paced environment",
+          "5+ years of experience, including leadership, from complex sales and project management, preferably from the food and/or agriculture industry"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "Extra credits if you",
+        "content": [
+          "Have experience of working with FMCG",
+          "Have previously worked with OKR’s or similar"
+        ]
+      },
+      {
+        "type": "list",
+        "title": "What you'll get",
+        "content": [
+          "A chance to work on one of the world’s biggest, yet unresolved climate challenges",
+          "A chance to be surrounded daily by a team of industry experts, as well as brand-name clients and partners",
+          "A competitive salary package, with a stock option plan",
+          "A yearly stipend for health and tech expenses"
+        ]
+      }
+    ]
+  },
+  {
     "company": "Curb Food",
     "companyUrl": "curb-food",
     "title": "QA Engineer",
@@ -333,71 +474,6 @@
   {
     "company": "Depict",
     "companyUrl": "depict",
-    "title": "Frontend engineer",
-    "url": "frontend-engineer",
-    "date": "10.10.21",
-    "hot": true,
-    "new": false,
-    "summary": {
-      "location": "Stockholm",
-      "employment": "Full time",
-      "hiringBonus": "25 000 SEK",
-      "interviewBonus": "600 SEK"
-    },
-    "elements": [
-      {
-        "type": "text",
-        "title": "About the job",
-        "text": "Do you want to join a fast-paced startup and work on the bleeding edge of recommendation systems, where your work immediately impacts the user experience for millions of users?"
-      },
-
-      {
-        "type": "text",
-        "title": "",
-        "text": "We’re looking​ for a frontend developer to help to expand our efforts in providing world-class product recommendations to any e-commerce store. You’ll be working with internal state-of-the-art tech that can be used to deploy our service anywhere in 5-minutes."
-      },
-
-      {
-        "type": "list",
-        "title": "We need someone to:",
-        "content": [
-          "🙋 Own: Rapid deployments for new customers, using and building upon our micro-frontend deployments technology.",
-          "🎒 Learn: Architect integrations resilient to minor style changes, optimize loading speeds, and how to hack into popular SPA-frameworks.",
-          "🚴 Improve: Efficiency and robustness of integrations operating inside evolving environments."
-        ]
-      },
-
-      {
-        "type": "text",
-        "title": "What you will be building",
-        "text": "Self-contained JavaScript scripts that add Depict.ai’s AI-functionality to e-commerce websites."
-      },
-
-      {
-        "type": "list",
-        "title": "We expect you to know how to",
-        "content": [
-          "Write robust Javascript for web browsers",
-          "Design and implement beautiful recommendation surfaces with HTML and CSS"
-        ]
-      },
-      {
-        "type": "list",
-        "title": "Nice to haves",
-        "content": [
-          "Typescript",
-          "Experience using JSX",
-          "Experience with tracking and analytics",
-          "Deep knowledge of how to optimize browser performance",
-          "Having read the book Third-Party Javascript"
-        ]
-      }
-    ]
-  },
-
-  {
-    "company": "Depict",
-    "companyUrl": "depict",
     "title": "Deployment Lead",
     "url": "deployment-lead",
     "date": "10.10.21",
@@ -511,82 +587,6 @@
           "Senior Full-stack Typescript developer.",
           "Have experience of leading a team and interested in leadership.",
           "Be able to resonate about the product and understand what is important for the users. And be able to come up with ideas on how the product can be improved."
-        ]
-      },
-      {
-        "type": "list",
-        "title": "Extra credits if you",
-        "content": [
-          "Have experience of working with FMCG",
-          "Have previously worked with OKR’s or similar"
-        ]
-      },
-      {
-        "type": "list",
-        "title": "What you'll get",
-        "content": [
-          "A chance to work on one of the world’s biggest, yet unresolved climate challenges",
-          "A chance to be surrounded daily by a team of industry experts, as well as brand-name clients and partners",
-          "A competitive salary package, with a stock option plan",
-          "A yearly stipend for health and tech expenses"
-        ]
-      }
-    ]
-  },
-  {
-    "company": "Volta Greentech",
-    "companyUrl": "volta-greentech",
-    "title": "Business Developer",
-    "url": "business-developer",
-    "date": "01.10.21",
-    "hot": false,
-    "new": false,
-    "summary": {
-      "location": "Stockholm",
-      "employment": "Full time",
-      "hiringBonus": "15 000 SEK",
-      "interviewBonus": "500 SEK"
-    },
-    "elements": [
-      {
-        "type": "text",
-        "title": "About the job",
-        "text": "You? A fearless, dedicated Business Developer, ready to take on CO2-emitters acting as if Greta had never gone on strike. Us? We’re a-just-over-two-year-old company backed by experienced investors with a mission to fight global warming by removing farts and burps from cows.  Over here, things are moving at a high pace. Getting closer to introducing our first climate-friendly products, we need to boost our team further. We are now looking for a Business Developer, supporting us with the critical launch of a potentially revolutionizing type of product in Sweden (and later, internationally). Specs below!"
-      },
-      {
-        "type": "text",
-        "title": "Start date & location",
-        "text": "ASAP. The role is based out of our Stockholm HQ at Karolinska Institutet, with occasional trips to our production facility in Lysekil on the Swedish west coast."
-      },
-      {
-        "type": "list",
-        "title": "The work you'll take on includes",
-        "content": [
-          "Defining and leading the launch of our new, environmentally groundbreaking product line in Swedish supermarkets",
-          "Nurturing and initiating relationships with both new and existing clients",
-          "Support in project financing, directing consultants as well as taking on writing yourself when necessary",
-          "When required (and have no doubt, it will be!) - jumping into additional projects and roles supporting additional parts of the company"
-        ]
-      },
-      {
-        "type": "list",
-        "title": "The skills you'll need",
-        "content": [
-          "Excellent project management skills",
-          "Love closing new clients, and do everything that it takes to make both Volta and our partners succeed",
-          "A talent for communication, in writing and in person, in English and in Swedish",
-          "Thus, also being a maven with presentations (we use Google Slides / Keynote)",
-          "Be a team player, with strong self motivation, results-orientation and sense of purpose"
-        ]
-      },
-      {
-        "type": "list",
-        "title": "Your (presumed) background",
-        "content": [
-          "Relevant education and work experience",
-          "Led and executed successful projects with many stakeholders",
-          "A minimum 3 years of work experience in a fast-paced environment",
-          "5+ years of experience, including leadership, from complex sales and project management, preferably from the food and/or agriculture industry"
         ]
       },
       {
