@@ -1,7 +1,7 @@
 import { withRouter } from "react-router";
-import jobs from "../json/jobs.json";
-import companies from "../json/companies.json";
-import { Banner } from "../components/Banner";
+import jobs from "src/json/jobs.json";
+import companies from "src/json/companies.json";
+import { Banner } from "src/components/Banner";
 import { Link } from "react-router-dom";
 import { useEffect } from "react";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";

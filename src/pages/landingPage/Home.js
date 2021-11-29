@@ -1,13 +1,13 @@
-import { Jumbotron } from "../components/Jumbotron";
-import { HowItWorks } from "../components/HowItWorks";
-import { Banner } from "../components/Banner";
-import { SocialMedia } from "../components/SocialMedia";
-import { CompanyBanner } from "../components/CompanyBanner";
+import { Jumbotron } from "src/components/Jumbotron";
+import { HowItWorks } from "src/components/HowItWorks";
+import { Banner } from "src/components/Banner";
+import { SocialMedia } from "src/components/SocialMedia";
+import { CompanyBanner } from "src/components/CompanyBanner";
 import { useEffect } from "react";
 
-import { JobBoard } from "../components/JobBoard";
-import { Trusted } from "../components/Trusted";
-import jobs from "../json/jobs.json";
+import { JobBoard } from "src/components/JobBoard";
+import { Trusted } from "src/components/Trusted";
+import jobs from "src/json/jobs.json";
 
 //let hotJobs = jobs.filter((j) => j.hot).slice(0, 9);
 let hotJobs = jobs.slice(0, 9);

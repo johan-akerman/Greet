@@ -1,15 +1,14 @@
 import { withRouter } from "react-router";
 import { Link } from "react-router-dom";
-import { JobBoard } from "../components/JobBoard";
-import companies from "../json/companies.json";
+import { JobBoard } from "src/components/JobBoard";
+import companies from "src/json/companies.json";
 import { useEffect } from "react";
-import volta from "../images/volta.png";
-import bemlo from "../images/bemlo.png";
-import depict from "../images/depict.png";
-import curb from "../images/curb.jpeg";
-import teamTogether from "../images/teamTogetherWebsite.png";
-
-import jobs from "../json/jobs.json";
+import volta from "src/images/volta.png";
+import bemlo from "src/images/bemlo.png";
+import depict from "src/images/depict.png";
+import curb from "src/images/curb.jpeg";
+import teamTogether from "src/images/teamTogetherWebsite.png";
+import jobs from "src/json/jobs.json";
 
 function Company(props) {
   useEffect(() => {

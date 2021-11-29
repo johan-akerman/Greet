@@ -1,6 +1,6 @@
-import { FAQ } from "../components/FAQ";
+import { FAQ } from "src/components/FAQ";
 import { useEffect } from "react";
-import { Banner } from "../components/Banner";
+import { Banner } from "src/components/Banner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faHandPeace,

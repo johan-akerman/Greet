@@ -1,77 +1,136 @@
-import { BrowserRouter as Router, Switch, Route } from "react-router-dom";
-import Home from "./pages/Home";
-import Refer from "./pages/Refer";
-import PostJob from "./pages/PostJob";
-import Jobs from "./pages/Jobs";
-import Company from "./pages/Company";
-import PrivacyPolicy from "./pages/PrivacyPolicy";
-import CookiePolicy from "./pages/CookiePolicy";
+import {
+  BrowserRouter as Router,
+  Switch,
+  Route,
+  Redirect,
+} from "react-router-dom";
+import Home from "./pages/landingPage/Home";
+import Refer from "./pages/landingPage/Refer";
+import PostJob from "./pages/landingPage/PostJob";
+import Jobs from "./pages/landingPage/Jobs";
+import Company from "./pages/landingPage/Company";
+import PrivacyPolicy from "./pages/landingPage/PrivacyPolicy";
+import CookiePolicy from "./pages/landingPage/CookiePolicy";
+import ForGreeters from "./pages/landingPage/ForGreeters";
+import ForCompanies from "./pages/landingPage/ForCompanies";
+import Companies from "./pages/landingPage/Companies";
+import Job from "./pages/landingPage/Job";
+import About from "./pages/landingPage/About";
+import SignIn from "./pages/landingPage/SignIn";
 
-import Job from "./pages/Job";
 import { InfoBar } from "./components/InfoBar";
-import ForCompanies from "./pages/ForCompanies";
-import Companies from "./pages/Companies";
-import About from "./pages/About";
-import ForGreeters from "./pages/ForGreeters";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
+import { useAuthState, AuthContextProvider } from "src/firebase";
+import AdminJobs from "./pages/admin/AdminJobs";
+import AdminSettings from "./pages/admin/AdminSettings";
+import AdminProfile from "./pages/admin/AdminProfile";
+import AdminJob from "./pages/admin/AdminJob";
+import AdminRefer from "./pages/admin/AdminRefer";
+import AdminReferral from "./pages/admin/AdminReferral";
+import AdminAddJob from "./pages/admin/AdminAddJob";
 
-export default function App() {
+function AuthenticatedRoute({ component: C, ...props }) {
+  const { isAuthenticated } = useAuthState();
   return (
-    <Router>
-      <InfoBar />
-      <Navbar />
-      <Switch>
-        <Route exact path="/">
-          <Home />
-        </Route>
-
-        <Route exact path="/privacy-policy">
-          <PrivacyPolicy />
-        </Route>
-
-        <Route exact path="/cookie-policy">
-          <CookiePolicy />
-        </Route>
-
-        <Route exact path="/companies">
-          <Companies />
-        </Route>
-
-        <Route exact path="/about">
-          <About />
-        </Route>
-
-        <Route path="/post-job">
-          <PostJob />
-        </Route>
-
-        <Route path="/job-board">
-          <Jobs />
-        </Route>
-
-        <Route path="/for-companies">
-          <ForCompanies />
-        </Route>
-
-        <Route path="/for-greeters">
-          <ForGreeters />
-        </Route>
-
-        <Route path="/refer">
-          <Refer />
-        </Route>
-
-        <Route exact path="/companies/:url">
-          <Company />
-        </Route>
-
-        <Route exact path="/companies/:url/:job">
-          <Job />
-        </Route>
-      </Switch>
-
-      <Footer />
-    </Router>
+    <Route
+      {...props}
+      render={(routeProps) =>
+        isAuthenticated ? <C {...routeProps} /> : <Redirect to="/sign-in" />
+      }
+    />
   );
 }
+
+function UnauthenticatedRoute({ component: C, ...props }) {
+  const { isAuthenticated } = useAuthState();
+  return (
+    <Route
+      {...props}
+      render={(routeProps) =>
+        !isAuthenticated ? <C {...routeProps} /> : <Redirect to="/admin" />
+      }
+    />
+  );
+}
+
+function App() {
+  return (
+    <AuthContextProvider>
+      <Router>
+        <InfoBar />
+        <Navbar />
+
+        <UnauthenticatedRoute exact path="/" component={Home} />
+        <UnauthenticatedRoute
+          exact
+          path="/privacy-policy"
+          component={PrivacyPolicy}
+        />
+        <UnauthenticatedRoute
+          exact
+          path="/cookie-policy"
+          component={CookiePolicy}
+        />
+        <UnauthenticatedRoute exact path="/companies" component={Companies} />
+        <UnauthenticatedRoute exact path="/about" component={About} />
+        <UnauthenticatedRoute exact path="/sign-in" component={SignIn} />
+        <UnauthenticatedRoute exact path="/sign-up" component={PostJob} />
+        <UnauthenticatedRoute exact path="/job-board" component={Jobs} />
+        <UnauthenticatedRoute
+          exact
+          path="/for-companies"
+          component={ForCompanies}
+        />
+        <UnauthenticatedRoute
+          exact
+          path="/for-greeters"
+          component={ForGreeters}
+        />
+        <UnauthenticatedRoute exact path="/refer" component={Refer} />
+        <UnauthenticatedRoute
+          exact
+          path="/companies/:url"
+          component={Company}
+        />
+        <UnauthenticatedRoute
+          exact
+          path="/companies/:url/:job"
+          component={Job}
+        />
+
+        <AuthenticatedRoute exact path="/admin" component={AdminJobs} />
+        <AuthenticatedRoute
+          exact
+          path="/admin/profile"
+          component={AdminProfile}
+        />
+        <AuthenticatedRoute
+          exact
+          path="/admin/settings"
+          component={AdminSettings}
+        />
+        <AuthenticatedRoute
+          exact
+          path="/admin/create-new-job"
+          component={AdminAddJob}
+        />
+        <AuthenticatedRoute exact path="/admin/:job" component={AdminJob} />
+        <UnauthenticatedRoute
+          exact
+          path="/admin/:job/refer"
+          component={AdminRefer}
+        />
+
+        <AuthenticatedRoute
+          exact
+          path="/:job/candidates/:candidate"
+          component={AdminReferral}
+        />
+        <Footer />
+      </Router>
+    </AuthContextProvider>
+  );
+}
+
+export default App;

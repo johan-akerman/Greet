@@ -3,10 +3,11 @@ import logo from "../images/logo.png";
 import HowIt from "./HowIt";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faArrowRight } from "@fortawesome/free-solid-svg-icons";
+import { getAuth, signOut } from "@firebase/auth";
+import { useAuthState } from "src/firebase";
 
 export function Navbar() {
+  const { user } = useAuthState();
   return (
     <Disclosure as="nav" className="bg-primary">
       {({ open }) => (
@@ -37,17 +38,30 @@ export function Navbar() {
               </div>
             </div>
 
-            <div className="relative">
-              <Link
-                className="lg:block hidden text-center transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-44  justify-center px-8 py-3 bg-black text-primary rounded-xl text-lg font-semibold absolute right-0"
-                to="/post-job"
-              >
-                Post a job
-                <FontAwesomeIcon
-                  className="ml-3 mb-0.5 text-sm"
-                  icon={faArrowRight}
-                />
-              </Link>
+            <div className="flex">
+              {user ? (
+                <a
+                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+                  onClick={() => signOut(getAuth())}
+                >
+                  Logout
+                </a>
+              ) : (
+                <>
+                  <Link
+                    className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+                    to="/sign-in"
+                  >
+                    Sign in
+                  </Link>
+                  <Link
+                    className="lg:block hidden text-center transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg w-32 justify-center px-8 py-2 mb-1 bg-black text-primary rounded-xl text-lg font-semibold"
+                    to="/sign-up"
+                  >
+                    Sign up
+                  </Link>
+                </>
+              )}
 
               <MobileMenu />
             </div>

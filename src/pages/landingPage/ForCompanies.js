@@ -1,9 +1,7 @@
-import { FAQ } from "../components/FAQ";
-import { Banner } from "../components/Banner";
+import { FAQ } from "src/components/FAQ";
+import { Banner } from "src/components/Banner";
 import { useEffect } from "react";
-import chart from "../images/chart.png";
-import hot from "../images/hot.png";
-import { Link } from "react-router-dom";
+import chart from "src/images/chart.png";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import {
   faCopy,
