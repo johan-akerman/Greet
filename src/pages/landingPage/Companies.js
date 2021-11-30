@@ -12,7 +12,7 @@ function Jobs() {
       <Banner
         title="Want to post your own jobs?"
         button="Post a job"
-        link="/post-job"
+        link="/sign-up"
       />
     </div>
   );

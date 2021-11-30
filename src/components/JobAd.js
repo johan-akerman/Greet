@@ -19,7 +19,7 @@ export default function JobAd({ job, description }) {
               {job?.title || "Job title"}
             </h1>
             <h6 className="md:text-xl text-lg ">
-              {user.displayName || "Company"}
+              {user?.displayName || "Company"}
             </h6>
           </div>
         </div>

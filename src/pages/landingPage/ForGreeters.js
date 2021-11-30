@@ -83,7 +83,7 @@ function ForGreeters() {
       <Banner
         title="Ready to refer someone?"
         button="See available jobs"
-        link="/job-board"
+        link="/jobs"
       />
     </>
   );

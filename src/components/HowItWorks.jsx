@@ -19,9 +19,9 @@ export function HowItWorks() {
             icon={faSearch}
           />
 
-          <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+          <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
             Step 1:
-          </h2>
+          </div>
           <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
             Find a job
           </h1>
@@ -35,9 +35,9 @@ export function HowItWorks() {
             className="text-5xl mb-6 text-yellow-400"
             icon={faHandPeace}
           />
-          <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+          <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
             Step 2:
-          </h2>
+          </div>
           <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
             Refer a friend
           </h1>
@@ -53,9 +53,9 @@ export function HowItWorks() {
             icon={faMoneyBillWave}
           />
 
-          <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+          <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
             Step 3:
-          </h2>
+          </div>
           <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
             Get paid
           </h1>

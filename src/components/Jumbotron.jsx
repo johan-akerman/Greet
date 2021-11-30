@@ -18,7 +18,7 @@ export function Jumbotron() {
           </p>
           <div className="mt-4 sm:mt-8 sm:flex sm:justify-center lg:justify-start">
             <Link
-              to="/job-board"
+              to="/jobs"
               className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 mx-auto  text-primary shadow font-semibold rounded-xl flex items-center justify-center py-3 border border-transparent text-base  bg-black md:py-4 md:text-lg px-8"
             >
               Explore the job board{" "}

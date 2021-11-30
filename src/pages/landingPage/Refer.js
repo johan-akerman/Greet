@@ -1,6 +1,7 @@
 import { useState, useEffect } from "react";
 import ConfettiGenerator from "confetti-js";
 import emailjs from "emailjs-com";
+import { withRouter } from "react-router";
 
 import { Link } from "react-router-dom";
 
@@ -12,7 +13,7 @@ function WaitingBtn() {
   );
 }
 
-export default function Refer() {
+function Refer() {
   function sendEmail(e) {
     e.preventDefault();
 
@@ -453,7 +454,7 @@ export default function Refer() {
               </p>
               <div className="flex mx-auto w-48 mt-8">
                 <Link
-                  to="/job-board"
+                  to="/jobs"
                   className="z-30 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-white"
                 >
                   To the job board
@@ -499,3 +500,5 @@ export default function Refer() {
     </div>
   );
 }
+
+export default withRouter(Refer);

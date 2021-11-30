@@ -1,8 +1,6 @@
 import certificate from "../images/certificate.png";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
 import companies from "../json/companies.json";
-import jobs from "../json/jobs.json";
 
 export function CompanyBoard() {
   return (
@@ -46,14 +44,6 @@ export function CompanyBoard() {
                   >
                     Read more
                   </Link>
-
-                  <HashLink
-                    to={`/companies/${company.url}#jobs`}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
-                  >
-                    View jobs (
-                    {jobs.filter((j) => j.company === company.name).length})
-                  </HashLink>
                 </div>
               </div>
             ))}

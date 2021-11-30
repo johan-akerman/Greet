@@ -37,7 +37,7 @@ export function Footer() {
 
           <Link
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/job-board"
+            to="/jobs"
           >
             Job board
           </Link>

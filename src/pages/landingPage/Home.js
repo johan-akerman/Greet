@@ -27,7 +27,7 @@ function Home() {
       <Banner
         title="Ready to refer someone?"
         button="Explore the job board"
-        link="/job-board"
+        link="/jobs"
       />
     </div>
   );

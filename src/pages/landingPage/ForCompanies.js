@@ -112,7 +112,7 @@ function ForCompanies() {
             </ul>
 
             <Link
-              to="/post-job"
+              to="/sign-up"
               className="md:absolute md:bottom-6 transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0  w-48 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
             >
               Get started
@@ -137,7 +137,7 @@ function ForCompanies() {
             </ul>
 
             <Link
-              to="/post-job"
+              to="/sign-up"
               className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 w-48 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
             >
               Get started
@@ -161,7 +161,7 @@ function ForCompanies() {
             </ul>
 
             <Link
-              to="/post-job"
+              to="/sign-up"
               className="md:absolute md:bottom-6 transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg  w-48 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
             >
               Get started
@@ -211,7 +211,7 @@ function ForCompanies() {
       <Banner
         title="Ready to hire your next star?"
         button="Post a job"
-        link="/post-job"
+        link="/sign-up"
       />
     </>
   );

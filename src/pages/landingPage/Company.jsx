@@ -9,6 +9,7 @@ import depict from "src/images/depict.png";
 import curb from "src/images/curb.jpeg";
 import teamTogether from "src/images/teamTogetherWebsite.png";
 import jobs from "src/json/jobs.json";
+import NoCompany from "src/components/emptyStates/NoCompany";
 
 function Company(props) {
   useEffect(() => {
@@ -36,7 +37,7 @@ function Company(props) {
     let jobsAtCompany = jobs.filter((j) => j.company === company.name);
 
     return (
-      <div className="md:pt-32 pt-12 ">
+      <div className="md:pt-32 pt-12 pb-20">
         <div className="lg:w-9/12 w-11/12 mx-auto rounded-xl">
           <div className="flex">
             <img
@@ -96,36 +97,11 @@ function Company(props) {
             </div>
           </div>
         </div>
-        <div className="bg-light mt-20">
-          <div className="lg:w-10/12 w-11/12 mx-auto" id="jobs">
-            <h1 className="pt-20 md:text-6xl text-4xl font-bold text-gray-900 md:text-left text-center md:pb-16 pb-12">
-              Jobs at {company.name}
-            </h1>
-          </div>
-
-          {jobsAtCompany.length > 0 ? (
-            <JobBoard title={false} jobAds={jobsAtCompany} />
-          ) : null}
-        </div>
       </div>
     );
   }
 
-  return (
-    <div className="h-screen lg:w-6/12 w-11/12 text-center mt-44 mx-auto rounded-xl">
-      <h1 className="font-semibold lg:text-5xl text-2xl mb-5">
-        Company page not found
-      </h1>
-      <p className="text-xl">Please check out all the companies below.</p>
-
-      <Link
-        to="/companies"
-        className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg mx-auto w-60 mt-10 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
-      >
-        View companies
-      </Link>
-    </div>
-  );
+  return <NoCompany />;
 }
 
 export default withRouter(Company);

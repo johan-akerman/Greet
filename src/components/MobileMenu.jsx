@@ -36,7 +36,7 @@ export default function MobileMenu() {
                   <div className="relative bg-white p-3">
                     <Link
                       onClick={() => buttonRef.current?.click()}
-                      to="/job-board"
+                      to="/jobs"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                     >
                       Job board
@@ -59,7 +59,7 @@ export default function MobileMenu() {
                     </Link>
                     <Link
                       onClick={() => buttonRef.current?.click()}
-                      to="/post-job"
+                      to="/sign-up"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                     >
                       Post a job
