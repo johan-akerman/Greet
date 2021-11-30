@@ -34,7 +34,7 @@ export default function JobTable({ jobs }) {
   }
 
   function handleClick(id) {
-    history.push(`/${id}`);
+    history.push(`/admin/${id}`);
   }
 
   function calculateDays(date) {

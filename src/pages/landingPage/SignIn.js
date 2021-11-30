@@ -20,14 +20,6 @@ function SignIn() {
     }
   }, []);
 
-  async function handleLogout() {
-    try {
-      await logout();
-    } catch {
-      alert("Error!");
-    }
-  }
-
   return (
     <div class="bg-light min-h-screen flex flex-col">
       {currentUser?.email}
@@ -53,7 +45,7 @@ function SignIn() {
 
           <button
             type="submit"
-            class="w-full text-center py-3 rounded bg-primary text-white  focus:outline-none my-1"
+            class="w-full text-center py-3 rounded bg-primary text-black  focus:outline-none my-1"
             onClick={() => handleLogin()}
           >
             Login

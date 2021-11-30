@@ -71,7 +71,7 @@ export default function JobEditor({ jobToEdit, id }) {
     } else {
       await addDoc(collection(db, "jobs"), job);
     }
-    history.push("/");
+    history.push("/admin");
   }, [job, user, db, id]);
 
   return (

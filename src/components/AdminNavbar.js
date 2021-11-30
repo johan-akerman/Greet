@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import { getAuth, signOut } from "@firebase/auth";
 import { useAuthState } from "src/firebase";
 
-export default function Navbar() {
+export default function AdminNavbar() {
   const { user } = useAuthState();
 
   return (
@@ -19,33 +19,24 @@ export default function Navbar() {
         <div className="flex pl-5 pt-1">
           <Link
             className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-            to="/"
+            to="/admin"
           >
             Jobs
           </Link>
 
           <Link
             className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-            to="/settings"
+            to="/admin/settings"
           >
             Settings
           </Link>
 
-          {user ? (
-            <a
-              className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-              onClick={() => signOut(getAuth())}
-            >
-              Logout
-            </a>
-          ) : (
-            <Link
-              className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-              to="/sign-in"
-            >
-              Login
-            </Link>
-          )}
+          <a
+            className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+            onClick={() => signOut(getAuth())}
+          >
+            Logout
+          </a>
         </div>
       </div>
     </div>

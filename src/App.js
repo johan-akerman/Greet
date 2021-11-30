@@ -29,6 +29,7 @@ import AdminJob from "./pages/admin/AdminJob";
 import AdminRefer from "./pages/admin/AdminRefer";
 import AdminReferral from "./pages/admin/AdminReferral";
 import AdminAddJob from "./pages/admin/AdminAddJob";
+import AdminNavbar from "./components/AdminNavbar";
 
 function AuthenticatedRoute({ component: C, ...props }) {
   const { isAuthenticated } = useAuthState();
@@ -48,7 +49,16 @@ function UnauthenticatedRoute({ component: C, ...props }) {
     <Route
       {...props}
       render={(routeProps) =>
-        !isAuthenticated ? <C {...routeProps} /> : <Redirect to="/admin" />
+        !isAuthenticated ? (
+          <>
+            <InfoBar />
+            <Navbar />
+            <C {...routeProps} />
+            <Footer />
+          </>
+        ) : (
+          <Redirect to="/admin" />
+        )
       }
     />
   );
@@ -58,9 +68,6 @@ function App() {
   return (
     <AuthContextProvider>
       <Router>
-        <InfoBar />
-        <Navbar />
-
         <UnauthenticatedRoute exact path="/" component={Home} />
         <UnauthenticatedRoute
           exact
@@ -127,7 +134,6 @@ function App() {
           path="/:job/candidates/:candidate"
           component={AdminReferral}
         />
-        <Footer />
       </Router>
     </AuthContextProvider>
   );
