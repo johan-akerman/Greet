@@ -1,107 +1,75 @@
 import { withRouter } from "react-router";
-import { Link } from "react-router-dom";
-import { JobBoard } from "src/components/JobBoard";
-import companies from "src/json/companies.json";
-import { useEffect } from "react";
-import volta from "src/images/volta.png";
-import bemlo from "src/images/bemlo.png";
-import depict from "src/images/depict.png";
-import curb from "src/images/curb.jpeg";
-import teamTogether from "src/images/teamTogetherWebsite.png";
-import jobs from "src/json/jobs.json";
-import NoCompany from "src/components/emptyStates/NoCompany";
+import { useEffect, useState } from "react";
+import db from "src/firebase";
+import { doc, getDoc } from "@firebase/firestore";
 
-function Company(props) {
+function Company() {
+  const [company, setCompany] = useState();
+  const url = window.location.href;
+  const id = url.split("/")[url.split("/").length - 1];
+  console.log(id);
   useEffect(() => {
-    window.scrollTo(0, 0);
+    getDoc(doc(db, "companies", id)).then((doc) => setCompany(doc));
   }, []);
 
-  let desiredCompany = props.match.params.url;
-  let company = companies.find((c) => c.url === desiredCompany);
+  console.log(company?.data());
 
-  if (company != null) {
-    let img = "";
+  if (!company) {
+    return <h1>loading...</h1>;
+  }
 
-    if (company.url === "volta-greentech") {
-      img = volta;
-    } else if (company.url === "bemlo") {
-      img = bemlo;
-    } else if (company.url === "depict") {
-      img = depict;
-    } else if (company.url === "curb-food") {
-      img = curb;
-    } else if (company.url === "team-together") {
-      img = teamTogether;
-    }
+  return (
+    <div className="md:pt-32 pt-12 pb-20">
+      <div className="lg:w-9/12 w-11/12 mx-auto rounded-xl">
+        <div className="flex">
+          <img
+            alt="company logo"
+            className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
+            src={company?.data().logo}
+          />
 
-    let jobsAtCompany = jobs.filter((j) => j.company === company.name);
-
-    return (
-      <div className="md:pt-32 pt-12 pb-20">
-        <div className="lg:w-9/12 w-11/12 mx-auto rounded-xl">
-          <div className="flex">
-            <img
-              alt="company logo"
-              className="md:h-24 md:w-24 w-16 h-16 md:mr-6 mr-4 rounded-md"
-              src={company.logo}
-            />
-
-            <div>
-              <h1 className="font-semibold lg:text-4xl text-2xl md:pt-6 pt-3">
-                {company.name}
-              </h1>
-            </div>
+          <div>
+            <h1 className="font-semibold lg:text-4xl text-2xl md:pt-6 pt-3">
+              {company?.data().company}
+            </h1>
           </div>
-          <div className="grid grid-cols-3 lg:gap-14 gap-3">
-            <div className="lg:col-span-2 col-span-3">
-              <h1 className="text-3xl font-medium md:mt-12 mt-6 mb-3">
-                About {company.name}
-              </h1>
-              <p className="md:text-xl text-md">{company.aboutText}</p>
-            </div>
-            <div className="lg:col-span-1 col-span-3">
-              <h1 className="text-3xl font-medium md:mt-12 mt-4 mb-3">
-                Company facts
-              </h1>
-              <table class="table-auto w-full md:text-xl text-md lg:mb-0 mb-6">
-                <tbody>
-                  <tr>
-                    <td className="text-bold">Website</td>
-                    <td className="text-right">
-                      <a
-                        href={company.website}
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-primary"
-                      >
-                        {company.website.substring(
-                          company.website.indexOf("w") + 4
-                        )}
-                      </a>
-                    </td>
-                  </tr>
-                  <tr class="bg-emerald-200">
-                    <td className="text-bold">Founded</td>
-                    <td className="text-right">{company.founded}</td>
-                  </tr>
-                  <tr>
-                    <td className="text-bold">Employees</td>
-                    <td className="text-right">{company.employees}</td>
-                  </tr>
-                </tbody>
-              </table>
-            </div>
-            <div className="col-span-3">
-              <img src={img} alt="company" />
-              <p className="pt-2 text-gray-500">{company.imageCaption}</p>
-            </div>
+        </div>
+        <div className="grid grid-cols-3 lg:gap-14 gap-3">
+          <div className="lg:col-span-2 col-span-3">
+            <h1 className="text-3xl font-medium md:mt-12 mt-6 mb-3">
+              About {company?.data().company}
+            </h1>
+            <p className="md:text-xl text-md">{company?.data().about}</p>
+          </div>
+          <div className="lg:col-span-1 col-span-3">
+            <h1 className="text-3xl font-medium md:mt-12 mt-4 mb-3">
+              Company facts
+            </h1>
+            <table class="table-auto w-full md:text-xl text-md lg:mb-0 mb-6">
+              <tbody>
+                <tr>
+                  <td className="text-bold">Website</td>
+                  <td className="text-right">{company?.data().website}</td>
+                </tr>
+                <tr class="bg-emerald-200">
+                  <td className="text-bold">Founded</td>
+                  <td className="text-right">{company?.data().founded}</td>
+                </tr>
+                <tr>
+                  <td className="text-bold">Employees</td>
+                  <td className="text-right">{company?.data().employees}</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+          <div className="col-span-3">
+            <img src={company?.data().banner} alt="company" />
+            <p className="pt-2 text-gray-500">{company?.data().caption}</p>
           </div>
         </div>
       </div>
-    );
-  }
-
-  return <NoCompany />;
+    </div>
+  );
 }
 
 export default withRouter(Company);

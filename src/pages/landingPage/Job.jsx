@@ -1,16 +1,7 @@
 import db from "src/firebase";
 
-import {
-  doc,
-  getDoc,
-  getDocs,
-  query,
-  where,
-  collection,
-} from "@firebase/firestore";
+import { doc, getDoc } from "@firebase/firestore";
 import { withRouter } from "react-router";
-import jobs from "src/json/jobs.json";
-import companies from "src/json/companies.json";
 import { Banner } from "src/components/Banner";
 import { Link } from "react-router-dom";
 import { useEffect, useState } from "react";

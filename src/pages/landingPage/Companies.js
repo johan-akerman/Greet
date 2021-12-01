@@ -3,9 +3,6 @@ import { Banner } from "src/components/Banner";
 import { useEffect } from "react";
 
 function Jobs() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div className="pt-32 bg-light">
       <CompanyBoard />
