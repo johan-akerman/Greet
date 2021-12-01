@@ -34,7 +34,7 @@ function AdminReferral() {
       <AdminNavbar />
       <div className="bg-light py-32 min-h-screen">
         <div className="w-11/12 mx-auto">
-          <Link to={`/${job}`} className="text-4xl">
+          <Link to={`/admin/${job}`} className="text-4xl">
             <FontAwesomeIcon
               icon={faChevronLeft}
               className="mr-3 text-xl mb-1"
@@ -88,6 +88,10 @@ function AdminReferral() {
                   <tr>
                     <td className="text-bold">Linkedin</td>
                     <td className="text-right">{referral.referrer.linkedin}</td>
+                  </tr>
+                  <tr>
+                    <td className="text-bold">Openness to a new job</td>
+                    <td className="text-right">{referral.general.open}</td>
                   </tr>
                 </tbody>
               </table>
