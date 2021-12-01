@@ -40,14 +40,6 @@ export default function ReferNavigation({ changeIndex, index, waiting }) {
       );
   }
 
-  function ReturnBtn() {
-    return (
-      <div className="w-auto  text-center transform hover:-translate-y-1 hover:shadow-lg cursor-pointer font-bold text-md px-8 py-3 bg-primary rounded-xl text-black">
-        Back the job board
-      </div>
-    );
-  }
-
   return (
     <div className="w-70 mt-16 mx-auto flex justify-center">
       <BackBtn />

@@ -1,5 +1,5 @@
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import companies from "../json/companies.json";
+
 import db from "src/firebase";
 import { useState, useEffect } from "react";
 import { getDocs, collection, query } from "@firebase/firestore";
@@ -32,7 +32,6 @@ export function JobBoard({ title }) {
 
   return (
     <>
-      {console.log(jobs)}
       <div className="bg-light">
         <div className="md:w-10/12 w-11/12 mx-auto h-full md:pb-28 pb-12 ">
           {title ? (

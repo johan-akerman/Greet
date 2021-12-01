@@ -5,7 +5,7 @@ import {
   faRocket,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function Three() {
+export default function Three({ addGeneral, general }) {
   return (
     <>
       <div class="w-full px-3 mb-6 mt-12">
@@ -13,7 +13,15 @@ export default function Three() {
           How open are they to a new job?
         </label>
         <div class="relative mb-12">
-          <select class="block appearance-none w-full border-2 border-black  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white ">
+          <select
+            class="block appearance-none w-full border-2 border-black  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white"
+            onChange={(e) =>
+              addGeneral({
+                ...general,
+                open: e.target.value,
+              })
+            }
+          >
             <option>I don't know.</option>
             <option>Average.</option>
             <option>Looking actively.</option>
@@ -27,7 +35,15 @@ export default function Three() {
           Do you want to split the hiring bonus if they get hired?
         </label>
         <div class="relative mb-10">
-          <select class="block appearance-none w-full  border-2 border-black  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white ">
+          <select
+            class="block appearance-none w-full  border-2 border-black  text-gray-700 py-3 px-4 pr-8 rounded leading-tight focus:outline-none focus:bg-white"
+            onChange={(e) =>
+              addGeneral({
+                ...general,
+                share: e.target.value,
+              })
+            }
+          >
             <option>No, I will get 100%.</option>
             <option>Yes, we will get 50% each.</option>
           </select>
@@ -36,13 +52,10 @@ export default function Three() {
           </div>
         </div>
 
-        <input
-          class="mr-2 cursor-pointer leading-tight h-6 w-6"
-          type="checkbox"
-          //   checked={referMyself}
-          //   onChange={() => setReferMyself(!referMyself)}
-        />
-        <span>I agree to the Terms and Conditions and the Privacy Policy.</span>
+        <span className="text-xs">
+          By advancing you are submitting the referral and agree to the Terms
+          and Conditions and the Privacy Policy.
+        </span>
       </div>
     </>
   );
