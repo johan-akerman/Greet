@@ -90,10 +90,7 @@ The admin dashboard is only available for selected partner companies. It enables
 <br />
 <br />
 <img src="src/images/readme/17.png" alt="17"
-	title="17" width="400" />
-<img src="src/images/readme/18.png" alt="18"
-	title="18" width="400" />
-<br />
+	title="17" width="800" />
 <em>Settings page. Tabs to edit company profile, account settings and password.</em>
 <br />
 <br />
