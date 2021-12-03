@@ -95,3 +95,5 @@ The admin dashboard is only available for selected partner companies. It enables
 	title="18" width="400" />
 <br />
 <em>Settings page. Tabs to edit company profile, account settings and password.</em>
+<br />
+<br />
