@@ -86,7 +86,7 @@ The admin dashboard is only available for selected partner companies. It enables
 
 <br />
 <img src="src/images/readme/16.png" alt="16"
-	title="16" width="800" /> <br />
+	title="16" width="800" /><br />
 <em>“What you see is what you get” job editor.</em>
 <br />
 <br />
@@ -96,5 +96,3 @@ The admin dashboard is only available for selected partner companies. It enables
 	title="18" width="400" />
 <br />
 <em>Settings page. Tabs to edit company profile, account settings and password.</em>
-<br />
-<br />
