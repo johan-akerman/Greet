@@ -90,7 +90,6 @@ The admin dashboard is only available for selected partner companies. It enables
 <em>“What you see is what you get” job editor.</em>
 <br />
 <br />
-
 <img src="src/images/readme/17.png" alt="17"
 	title="17" width="400" />
 <img src="src/images/readme/18.png" alt="18"
