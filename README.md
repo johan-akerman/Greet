@@ -1,6 +1,6 @@
 # 👋 Greet
 
-I started thinking about how I could help people find a job they love and how I could help tech companies win the “war for talent”. As a result, I launched Greet. It is a marketplace where you get paid to refer your friends to tech jobs. It is an ongoing project and it currently consists of a landingpage and an admin dashboard. Both the landingpage and the admin dashboard is built with React and styled with Tailwind. Firebase is used as a database and to handle authentication.
+I started thinking about how I could help people get a job they love and how I could help tech companies win the “war for talent”. As a result, I launched Greet. It is a marketplace where you get paid to refer your friends to tech jobs in Sweden. It is an ongoing project and it currently consists of a landingpage and an admin dashboard. Both the landingpage and the admin dashboard is built with React and styled with Tailwind. Firebase is used as a database and to handle authentication.
 
 There are currently 5 companies on board, 11 jobs posted and in total 220 000 SEK available in hiring rewards. For example, you get rewarded 25 000 SEK if you refer a frontend engineer (who gets hired) to Depict.
 
@@ -9,7 +9,6 @@ There are currently 5 companies on board, 11 jobs posted and in total 220 000 SE
 
 <img src="src/images/readme/1.png" alt="1"
 	title="homepage" width="800" /> <br /><br/>
-<br />
 
 ## Product overview: Landingpage
 
