@@ -7,9 +7,9 @@ export function CompanyBanner() {
   return (
     <div className="md:w-10/12 w-11/12 flex flex-wrap mx-auto">
       <div className="text-left lg:w-6/12 w-12/12 lg:pt-24 pt-12 pb-20 mx-auto">
-        <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+        <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
           Greet for companies
-        </h2>
+        </div>
         <h1 className="text-black lg:text-6xl text-4xl font-bold  sm:mx-auto lg:mx-0 mb-4">
           Generate high quality leads with referrals
         </h1>

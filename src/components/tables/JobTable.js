@@ -2,6 +2,7 @@ import { useHistory } from "react-router-dom";
 import JobStatus from "src/components/statuses/JobStatus";
 import { useEffect, useState } from "react";
 import Select from "src/components/Select";
+import Loader from "../Loader";
 
 const statuses = ["Show all statuses", "Open", "Hidden"];
 const times = ["Newest first", "Oldest first"];
@@ -68,6 +69,10 @@ export default function JobTable({ jobs }) {
       displayedJobs.sort(
         (a, b) => b.data().time.toMillis() - a.data().time.toMillis()
       );
+  }
+
+  if (displayedJobs.length === 0) {
+    return <Loader />;
   }
 
   return (

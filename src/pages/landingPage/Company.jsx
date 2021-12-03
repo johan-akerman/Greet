@@ -2,6 +2,7 @@ import { withRouter } from "react-router";
 import { useEffect, useState } from "react";
 import db from "src/firebase";
 import { doc, getDoc } from "@firebase/firestore";
+import Loader from "src/components/Loader";
 
 function Company() {
   const [company, setCompany] = useState();
@@ -15,7 +16,7 @@ function Company() {
   console.log(company?.data());
 
   if (!company) {
-    return <h1>loading...</h1>;
+    return <Loader />;
   }
 
   return (

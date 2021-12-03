@@ -28,9 +28,9 @@ function ForCompanies() {
               icon={faCopy}
             />
 
-            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+            <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
               Step 1:
-            </h2>
+            </div>
             <h1 className="text-3xl text-gray-900 pb-3 font-semibold">
               Create a profile
             </h1>
@@ -45,9 +45,9 @@ function ForCompanies() {
               icon={faIdCard}
             />
 
-            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+            <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
               Step 2:
-            </h2>
+            </div>
             <h1 className="text-3xl text-gray-900 pb-3  font-semibold">
               Post a job
             </h1>
@@ -61,9 +61,9 @@ function ForCompanies() {
               className="text-5xl mb-6  text-primary"
               icon={faEnvelopeOpenText}
             />
-            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+            <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
               Step 3:
-            </h2>
+            </div>
             <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
               Greeters refer
             </h1>
@@ -77,9 +77,9 @@ function ForCompanies() {
               className="text-5xl mb-6  text-yellow-400"
               icon={faHandsHelping}
             />
-            <h2 className="text-gray-900 tracking-wide pb-2 uppercase font-semibold">
+            <div className="text-gray-900 text-md tracking-wide pb-2 uppercase font-semibold">
               Step 4:
-            </h2>
+            </div>
             <h1 className="text-3xl  text-gray-900 pb-3 font-semibold">
               Interview and hire
             </h1>

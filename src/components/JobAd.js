@@ -18,9 +18,7 @@ export default function JobAd({ job, description }) {
             <h1 className="font-semibold lg:text-4xl text-2xl mt-3">
               {job?.title || "Job title"}
             </h1>
-            <h6 className="md:text-xl text-lg ">
-              {user?.displayName || "Company"}
-            </h6>
+            <h6 className="md:text-xl text-lg ">{job.company || "Company"}</h6>
           </div>
         </div>
         <div className="flex justify-between md:mt-12 mt-12 mb-3">

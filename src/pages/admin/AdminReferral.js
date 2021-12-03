@@ -6,6 +6,7 @@ import db from "src/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import AdminNavbar from "src/components/AdminNavbar";
+import Loader from "src/components/Loader";
 
 function AdminReferral() {
   let [referral, setReferral] = useState({});
@@ -26,7 +27,7 @@ function AdminReferral() {
   }, []);
 
   if (Object.keys(referral).length === 0) {
-    return <h1>Loading...</h1>;
+    return <Loader />;
   }
 
   return (

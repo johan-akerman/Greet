@@ -25,3 +25,12 @@ ul {
   list-style-type: disc;
   margin-left: 16px;
 }
+
+.ql-editor {
+  min-height: 150px;
+  background-color: white;
+}
+
+.ql-toolbar {
+  background-color: white;
+}

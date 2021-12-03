@@ -2,7 +2,7 @@ import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 
 import db from "src/firebase";
 import { useState, useEffect } from "react";
-import { getDocs, collection, query } from "@firebase/firestore";
+import { getDocs, collection, query, where } from "@firebase/firestore";
 
 import {
   faCoins,
@@ -11,23 +11,30 @@ import {
   faMapMarkerAlt,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import Loader from "./Loader";
 
 export function JobBoard({ title }) {
   const [jobs, setJobs] = useState([]);
 
   useEffect(() => {
     const items = [];
-    const q = query(collection(db, "jobs"));
+
+    const q = query(collection(db, "jobs"), where("status", "==", "Open"));
+
     getDocs(q).then((querySnapshot) => {
       querySnapshot.forEach((doc) => {
         items.push(doc);
       });
-      setJobs(items);
+      if (title) {
+        setJobs(items.slice(0, 6));
+      } else {
+        setJobs(items);
+      }
     });
   }, []);
 
   if (jobs.length === 0) {
-    return <h1>Loading...</h1>;
+    return <Loader />;
   }
 
   return (
@@ -69,7 +76,7 @@ export function JobBoard({ title }) {
                     className="text-xl text-green-500 mr-2"
                   />
                   <span className="text-xl font-medium">
-                    {job.data().hiring}{" "}
+                    {job.data().hiring} SEK
                   </span>
                   <span className="text-sm font-semibold tracking-wide">
                     {" "}
@@ -82,7 +89,7 @@ export function JobBoard({ title }) {
                     className="text-xl ml-0.5 text-yellow-400 mr-1.5"
                   />{" "}
                   <span className="text-xl font-medium">
-                    {job.data().interview}{" "}
+                    {job.data().interview} SEK
                   </span>
                   <span className="text-sm font-semibold tracking-wide">
                     {" "}

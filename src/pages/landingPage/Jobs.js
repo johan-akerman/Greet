@@ -1,7 +1,6 @@
 import { JobBoard } from "src/components/JobBoard";
 import { Banner } from "src/components/Banner";
 import { useEffect } from "react";
-import jobs from "src/json/jobs.json";
 
 function Jobs() {
   useEffect(() => {
@@ -9,7 +8,7 @@ function Jobs() {
   }, []);
   return (
     <div className="pt-32 bg-light">
-      <JobBoard title={false} jobAds={jobs} />
+      <JobBoard title={false} />
       <Banner
         title="Want to post your own jobs?"
         button="Post a job"

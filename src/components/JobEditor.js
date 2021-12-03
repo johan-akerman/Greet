@@ -2,6 +2,10 @@ import InputField from "src/components/InputField";
 import JobAd from "src/components/JobAd";
 import db, { useAuthState } from "src/firebase";
 import ReactQuill from "react-quill";
+
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
+
 import { useCallback, useEffect, useState } from "react";
 import {
   addDoc,
@@ -75,8 +79,8 @@ export default function JobEditor({ jobToEdit, id }) {
   }, [job, user, db, id]);
 
   return (
-    <div className="grid grid-cols-12 gap-12">
-      <div className="col-span-6 mb-16">
+    <div className="grid grid-cols-12 overflow-y-hidden h-screen">
+      <div className="col-span-4 bg-light px-12 py-4 overflow-y-scroll">
         <InputField
           className="mt-12"
           label="Job Title"
@@ -175,7 +179,7 @@ export default function JobEditor({ jobToEdit, id }) {
           </Link>
         </div>
       </div>
-      <div className="col-span-6 border-2 border-gray-200">
+      <div className="col-span-8 overflow-y-scroll">
         <JobAd job={job} description={job.description} />
       </div>
     </div>

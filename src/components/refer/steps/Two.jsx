@@ -17,7 +17,7 @@ export default function Two({ toggleWaiting, referrer, addReferrer }) {
   return (
     <>
       <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2 mt-8">
-        Candidate name
+        Your name
       </label>
       <input
         class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
@@ -33,7 +33,7 @@ export default function Two({ toggleWaiting, referrer, addReferrer }) {
       />
 
       <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
-        Candidate current job title
+        Your current job title
       </label>
       <input
         class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
@@ -49,7 +49,7 @@ export default function Two({ toggleWaiting, referrer, addReferrer }) {
       />
 
       <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
-        Candidate private email
+        Your private email
       </label>
       <input
         class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
@@ -65,7 +65,7 @@ export default function Two({ toggleWaiting, referrer, addReferrer }) {
       />
 
       <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2">
-        Candidate LinkedIn
+        Your LinkedIn
       </label>
       <input
         class="appearance-none h-14 text-lg block w-full text-gray-700 border-2 border-black rounded py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
