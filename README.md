@@ -38,7 +38,7 @@ The goal of the landingpage is to let “Greeters” refer their friends and for
 
 <img src="src/images/readme/6.png" alt="6"
 	title="6" width="400" />
-<img src="src/images/readMe/7.png" alt="7"
+<img src="src/images/readme/7.png" alt="7"
 	title="7" width="400" />
 <br />
 <em>Step 1 & 2</em>
