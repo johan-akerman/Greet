@@ -7,7 +7,6 @@ import { getDownloadURL, ref, uploadBytesResumable } from "@firebase/storage";
 import InputField from "../InputField";
 
 export default function ProfileSettings({ user, profile }) {
-  const [progress, setProgress] = useState(0);
   const [tmpProfile, setTmpProfile] = useState();
   const [originalProfile] = useState(profile);
 

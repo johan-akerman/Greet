@@ -1,7 +1,5 @@
 import { Link } from "react-router-dom";
 import logo from "../images/logo.png";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPaperPlane } from "@fortawesome/free-solid-svg-icons";
 
 export function Footer() {
   return (

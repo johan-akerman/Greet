@@ -53,16 +53,7 @@ function AdminProfile() {
                 <tbody>
                   <tr>
                     <td className="text-bold">Website</td>
-                    <td className="text-right">
-                      <a
-                        href=""
-                        target="_blank"
-                        rel="noreferrer"
-                        className="text-primary"
-                      >
-                        Domain
-                      </a>
-                    </td>
+                    <td className="text-right">Domain</td>
                   </tr>
                   <tr class="bg-emerald-200">
                     <td className="text-bold">Founded</td>

@@ -1,6 +1,5 @@
 import { CompanyBoard } from "src/components/CompanyBoard";
 import { Banner } from "src/components/Banner";
-import { useEffect } from "react";
 
 function Jobs() {
   return (

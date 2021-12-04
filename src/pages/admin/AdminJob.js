@@ -50,7 +50,7 @@ function AdminJob() {
         </Link>
         <div className="flex mt-12 gap-3">
           <button
-            className={`${active == 0 ? "bg-light" : "bg-white text-gray-500"}
+            className={`${active === 0 ? "bg-light" : "bg-white text-gray-500"}
                      font-semibold cursor-pointer px-8 py-3 rounded-xl`}
             onClick={() => setActive(0)}
           >
@@ -59,7 +59,7 @@ function AdminJob() {
 
           <button
             className={`${
-              active == 1 ? "bg-light" : "bg-white text-gray-500"
+              active === 1 ? "bg-light" : "bg-white text-gray-500"
             } font-semibold cursor-pointer px-8 py-3 rounded-xl`}
             onClick={() => setActive(1)}
           >
@@ -68,7 +68,7 @@ function AdminJob() {
 
           <button
             className={`${
-              active == 2 ? "bg-light" : "bg-white text-gray-500"
+              active === 2 ? "bg-light" : "bg-white text-gray-500"
             } font-semibold cursor-pointer px-8 py-3 rounded-xl`}
             onClick={() => setActive(2)}
           >
@@ -76,9 +76,9 @@ function AdminJob() {
           </button>
         </div>
 
-        {active == 0 ? (
+        {active === 0 ? (
           <CandidateTable id={id} referrals={referrals} />
-        ) : active == 1 ? (
+        ) : active === 1 ? (
           <JobEditor jobToEdit={job} id={id} />
         ) : (
           <JobSettings job={job} id={id} />

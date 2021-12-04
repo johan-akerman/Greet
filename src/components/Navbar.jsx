@@ -40,12 +40,12 @@ export function Navbar() {
 
             <div className="flex">
               {user ? (
-                <a
+                <div
                   className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
                   onClick={() => signOut(getAuth())}
                 >
                   Logout
-                </a>
+                </div>
               ) : (
                 <>
                   <Link

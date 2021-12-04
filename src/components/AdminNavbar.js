@@ -1,11 +1,8 @@
 import logo from "src/images/logo.png";
 import { Link } from "react-router-dom";
 import { getAuth, signOut } from "@firebase/auth";
-import { useAuthState } from "src/firebase";
 
 export default function AdminNavbar() {
-  const { user } = useAuthState();
-
   return (
     <div className="bg-primary">
       <div className="flex justify-between h-20 py-5 w-11/12 mx-auto">
@@ -31,12 +28,12 @@ export default function AdminNavbar() {
             Settings
           </Link>
 
-          <a
+          <div
             className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60 cursor-pointer"
             onClick={() => signOut(getAuth())}
           >
             Logout
-          </a>
+          </div>
         </div>
       </div>
     </div>

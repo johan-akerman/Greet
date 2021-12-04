@@ -70,7 +70,7 @@ export default function CandidateTable({ referrals, id }) {
     }
   }
 
-  if (referrals.length == 0) {
+  if (referrals.length === 0) {
     return <NoReferral />;
   }
 

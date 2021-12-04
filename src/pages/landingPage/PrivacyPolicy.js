@@ -76,22 +76,33 @@ function PrivacyPolicy() {
           both accept it. In other words, if the person who got referred accepts
           the referral.
           <br /> <br />
-          We host our website through Netlify and handle email submissions
-          through EmailJS. Read more about their policies on{" "}
+          We host our website through Netlify, handle email submissions through
+          EmailJS and store data on Firebase. Read more about their policies on{" "}
           <a
+            rel="noreferrer"
             className="text-blue-400"
             href="https://www.netlify.com/"
             target="_blank"
           >
             https://www.netlify.com/
           </a>{" "}
-          and{" "}
+          ,{" "}
           <a
+            rel="noreferrer"
             className="text-blue-400"
             href="https://www.emailjs.com/"
             target="_blank"
           >
             https://www.emailjs.com/
+          </a>{" "}
+          and{" "}
+          <a
+            rel="noreferrer"
+            className="text-blue-400"
+            href="https://www.firebase.google.com"
+            target="_blank"
+          >
+            firebase.google.com
           </a>
           <br /> <br />
         </p>

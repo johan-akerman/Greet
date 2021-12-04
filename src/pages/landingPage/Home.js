@@ -7,10 +7,6 @@ import { useEffect } from "react";
 
 import { JobBoard } from "src/components/JobBoard";
 import { Trusted } from "src/components/Trusted";
-import jobs from "src/json/jobs.json";
-
-//let hotJobs = jobs.filter((j) => j.hot).slice(0, 9);
-let hotJobs = jobs.slice(0, 9);
 
 function Home() {
   useEffect(() => {
@@ -21,7 +17,7 @@ function Home() {
       <Jumbotron />
       <Trusted />
       <HowItWorks />
-      <JobBoard title={true} jobAds={hotJobs} />
+      <JobBoard title={true} />
       <CompanyBanner />
       <SocialMedia />
       <Banner

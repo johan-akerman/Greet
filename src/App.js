@@ -1,9 +1,4 @@
-import {
-  BrowserRouter as Router,
-  Switch,
-  Route,
-  Redirect,
-} from "react-router-dom";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Home from "./pages/landingPage/Home";
 import Refer from "./pages/landingPage/Refer";
 import PostJob from "./pages/landingPage/PostJob";

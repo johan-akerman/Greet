@@ -2,10 +2,6 @@ import InputField from "src/components/InputField";
 import JobAd from "src/components/JobAd";
 import db, { useAuthState } from "src/firebase";
 import ReactQuill from "react-quill";
-
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-
 import { useCallback, useEffect, useState } from "react";
 import {
   addDoc,

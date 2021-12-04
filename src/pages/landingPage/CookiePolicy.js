@@ -78,7 +78,11 @@ function CookiePolicy() {
           example to help understand how they may navigate wrong and to help
           them find what they look for. You can choose to opt-out from Google’s
           use of cookies. Read more at{" "}
-          <a href="https://tools.google.com/dlpage/gaoptout/" target="_blank">
+          <a
+            href="https://tools.google.com/dlpage/gaoptout/"
+            target="_blank"
+            rel="noreferrer"
+          >
             https://tools.google.com/dlpage/gaoptout/{" "}
           </a>
         </p>
@@ -102,6 +106,7 @@ function CookiePolicy() {
             className="text-blue-400"
             href="https://support.google.com/accounts/answer/32050"
             target="_blank"
+            rel="noreferrer"
           >
             https://support.google.com/accounts/answer/32050
           </a>
@@ -113,6 +118,7 @@ function CookiePolicy() {
             className="text-blue-400"
             href="http://support.microsoft.com/kb/278835"
             target="_blank"
+            rel="noreferrer"
           >
             http://support.microsoft.com/kb/278835
           </a>
@@ -123,6 +129,7 @@ function CookiePolicy() {
             className="text-blue-400"
             href="https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox"
             target="_blank"
+            rel="noreferrer"
           >
             https://support.mozilla.org/en-US/kb/clear-cookies-and-site-data-firefox
           </a>
@@ -134,6 +141,7 @@ function CookiePolicy() {
             className="text-blue-400"
             href="https://support.apple.com/sv-se/guide/safari/welcome/mac"
             target="_blank"
+            rel="noreferrer"
           >
             https://support.apple.com/sv-se/guide/safari/welcome/mac
           </a>

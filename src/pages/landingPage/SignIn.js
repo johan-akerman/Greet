@@ -1,4 +1,4 @@
-import { logout, useAuthState } from "src/firebase";
+import { useAuthState } from "src/firebase";
 import { useCallback, useRef } from "react";
 import { signInWithEmailAndPassword, getAuth } from "@firebase/auth";
 

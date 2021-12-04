@@ -1,9 +1,6 @@
 import "src/editor.css";
-import { useAuthState } from "src/firebase";
 
 export default function JobAd({ job, description }) {
-  const { user } = useAuthState();
-
   return (
     <>
       <div className="w-11/12 mx-auto md:mt-32 mt-20 pb-20">
