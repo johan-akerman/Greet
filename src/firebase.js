@@ -12,24 +12,14 @@ import { useEffect, useState, createContext, useContext } from "react";
 
 require("firebase/auth");
 
-// const app = initializeApp({
-//   apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
-//   authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
-//   projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
-//   storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
-//   messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
-//   appId: process.env.REACT_APP_FIREBASE_APP_ID,
-//   measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
-// });
-
 const app = initializeApp({
-  apiKey: "AIzaSyBHkB1zh6s2amVeIGhEMDQ-Zwry4QEmubg",
-  authDomain: "greet-9b04d.firebaseapp.com",
-  projectId: "greet-9b04d",
-  storageBucket: "greet-9b04d.appspot.com",
-  messagingSenderId: "74206322993",
-  appId: "1:74206322993:web:33af2cc7d5da6966855010",
-  measurementId: "G-4JTCL19WTB",
+  apiKey: process.env.REACT_APP_FIREBASE_API_KEY,
+  authDomain: process.env.REACT_APP_FIREBASE_AUTH_DOMAIN,
+  projectId: process.env.REACT_APP_FIREBASE_PROJECT_ID,
+  storageBucket: process.env.REACT_APP_FIREBASE_STORAGE_BUCKET,
+  messagingSenderId: process.env.REACT_APP_FIREBASE_MESSAGING_SENDER_ID,
+  appId: process.env.REACT_APP_FIREBASE_APP_ID,
+  measurementId: process.env.REACT_APP_FIREBASE_MEASUREMENT_ID,
 });
 
 const db = getFirestore();
