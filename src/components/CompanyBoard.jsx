@@ -1,10 +1,22 @@
-import certificate from "../images/certificate.png";
 import { Link } from "react-router-dom";
-import { HashLink } from "react-router-hash-link";
-import companies from "../json/companies.json";
-import jobs from "../json/jobs.json";
+import db from "src/firebase";
+import { useState, useEffect } from "react";
+import { getDocs, collection, query } from "@firebase/firestore";
 
 export function CompanyBoard() {
+  const [companies, setCompanies] = useState([]);
+
+  useEffect(() => {
+    const items = [];
+    const q = query(collection(db, "companies"));
+    getDocs(q).then((querySnapshot) => {
+      querySnapshot.forEach((doc) => {
+        items.push(doc);
+      });
+      setCompanies(items);
+    });
+  }, []);
+
   return (
     <>
       <div className="bg-light">
@@ -15,45 +27,29 @@ export function CompanyBoard() {
                 key={id}
                 className="transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg w-full bg-white rounded-2xl p-6 text-left"
               >
-                {company.new ? (
-                  <img
-                    src={certificate}
-                    className="absolute right-4 -top-4 w-10"
-                    alt="certificate"
-                  />
-                ) : null}
-
                 <div className="flex items-center text-left pb-4">
                   <img
                     className="w-16 h-16 rounded-2xl mr-4"
-                    src={company.logo}
+                    src={company.data().logo}
                     alt="Company logo"
                   />
                   <div>
                     <p className="text-2xl font-semibold text-gray-900 leading-none">
-                      {company.name}
+                      {company.data().company}
                     </p>
                   </div>
                 </div>
                 <p className="pl-1 pb-1">
-                  <span className="text-lg">{company.introText}</span>
+                  <span className="text-lg">{company.data().bio}</span>
                 </p>
 
                 <div className="flex items-center pt-6">
                   <Link
-                    to={`/companies/${company.url}`}
+                    to={`/companies/${company.id}`}
                     className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
                   >
                     Read more
                   </Link>
-
-                  <HashLink
-                    to={`/companies/${company.url}#jobs`}
-                    className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
-                  >
-                    View jobs (
-                    {jobs.filter((j) => j.company === company.name).length})
-                  </HashLink>
                 </div>
               </div>
             ))}

@@ -12,7 +12,7 @@ export default function Four() {
       </p>
       <div className="flex justify-center w-auto mt-8 mb-60">
         <Link
-          to="/job-board"
+          to="/jobs"
           className="z-30 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
         >
           Back to the job board

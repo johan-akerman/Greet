@@ -12,15 +12,19 @@ export function Trusted() {
       </div>
 
       <div className=" md:col-span-2 col-span-6 h-16">
-        <img src={curb} className="h-full w-auto mx-auto " />
+        <img src={curb} className="h-full w-auto mx-auto" alt="curb food" />
       </div>
 
       <div className=" md:col-span-2 col-span-6 h-16">
-        <img src={depict} className="h-full w-auto  mx-auto" />
+        <img src={depict} className="h-full w-auto  mx-auto" alt="depict" />
       </div>
 
       <div className="md:col-span-3 col-span-8  h-16">
-        <img src={volta} className="h-full w-auto  mx-auto" />
+        <img
+          src={volta}
+          className="h-full w-auto  mx-auto"
+          alt="volta greentech"
+        />
       </div>
     </div>
   );

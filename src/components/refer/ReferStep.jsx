@@ -5,8 +5,8 @@ import Three from "./steps/Three";
 import Four from "./steps/Four";
 
 let questions = [
-  "Who do you want to refer to _____?",
-  "Why should ______ hire _____?",
+  "Who do you want to refer?",
+  "Why should your friend get hired?",
   "Who are you?",
   "Last but not least...",
 ];
@@ -19,6 +19,8 @@ export default function ReferStep({
   referrer,
   addReferrer,
   motivation,
+  general,
+  addGeneral,
   addMotivation,
 }) {
   function generateStep(value) {
@@ -47,7 +49,7 @@ export default function ReferStep({
         />
       );
     } else if (value === 3) {
-      return <Three />;
+      return <Three general={general} addGeneral={addGeneral} />;
     } else if (value === 4) {
       return <Four />;
     }

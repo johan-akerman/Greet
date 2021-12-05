@@ -6,7 +6,7 @@ import {
 
 export default function ReferNavigation({ changeIndex, index, waiting }) {
   function BackBtn() {
-    if (index == 0 || index == 4) return null;
+    if (index === 0 || index === 4) return null;
     else
       return (
         <div
@@ -20,7 +20,7 @@ export default function ReferNavigation({ changeIndex, index, waiting }) {
   }
 
   function NextBtn() {
-    if (index == 4) return null;
+    if (index === 4) return null;
     if (waiting)
       return (
         <div className="w-32 ml-2 cursor-not-allowed flex items-center font-bold text-md justify-center px-8 py-3 bg-gray-200 rounded-xl text-black">
@@ -38,14 +38,6 @@ export default function ReferNavigation({ changeIndex, index, waiting }) {
           <FontAwesomeIcon className="ml-3 text-sm" icon={faChevronRight} />
         </div>
       );
-  }
-
-  function ReturnBtn() {
-    return (
-      <div className="w-auto  text-center transform hover:-translate-y-1 hover:shadow-lg cursor-pointer font-bold text-md px-8 py-3 bg-primary rounded-xl text-black">
-        Back the job board
-      </div>
-    );
   }
 
   return (
