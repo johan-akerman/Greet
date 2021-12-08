@@ -21,11 +21,11 @@ function SignIn() {
   }, []);
 
   return (
-    <div class="bg-light min-h-screen flex flex-col">
+    <div class="min-h-screen flex flex-col">
       {currentUser?.email}
       <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-        <div class="bg-white px-6 py-8 rounded shadow-md text-black w-full">
-          <h1 class="mb-8 text-3xl text-center">Sign in to Greet</h1>
+        <div class="bg-white px-6 text-black w-full">
+          <h1 class="mb-8 text-4xl text-center">Sign in to Greet</h1>
 
           <input
             ref={emailRef}
@@ -45,10 +45,10 @@ function SignIn() {
 
           <button
             type="submit"
-            class="w-full text-center py-3 rounded bg-primary text-black  focus:outline-none my-1"
+            class="w-full text-center py-3 rounded bg-primary text-black font-semibold focus:outline-none my-1"
             onClick={() => handleLogin()}
           >
-            Login
+            Sign in
           </button>
         </div>
       </div>
