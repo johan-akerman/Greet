@@ -123,13 +123,13 @@ export default function JobTable({ jobs }) {
                   className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                   onClick={() => handleClick(currentJob.id)}
                 >
-                  {currentJob.data().hiring}
+                  {currentJob.data().hiring} SEK
                 </td>
                 <td
                   className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                   onClick={() => handleClick(currentJob.id)}
                 >
-                  {currentJob.data().interview}
+                  {currentJob.data().interview} SEK
                 </td>
                 <td
                   className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"

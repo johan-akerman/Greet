@@ -2,6 +2,7 @@ import { Link } from "react-router-dom";
 import db from "src/firebase";
 import { useState, useEffect } from "react";
 import { getDocs, collection, query } from "@firebase/firestore";
+import Loader from "./Loader";
 
 export function CompanyBoard() {
   const [companies, setCompanies] = useState([]);
@@ -16,6 +17,10 @@ export function CompanyBoard() {
       setCompanies(items);
     });
   }, []);
+
+  if (companies.length === 0) {
+    return <Loader />;
+  }
 
   return (
     <>
