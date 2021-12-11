@@ -12,14 +12,12 @@ import Companies from "./pages/landingPage/Companies";
 import Job from "./pages/landingPage/Job";
 import About from "./pages/landingPage/About";
 import SignIn from "./pages/landingPage/SignIn";
-
 import { InfoBar } from "./components/InfoBar";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { useAuthState, AuthContextProvider } from "src/firebase";
 import AdminJobs from "./pages/admin/AdminJobs";
 import AdminSettings from "./pages/admin/AdminSettings";
-import AdminProfile from "./pages/admin/AdminProfile";
 import AdminJob from "./pages/admin/AdminJob";
 import AdminRefer from "./pages/admin/AdminRefer";
 import AdminReferral from "./pages/admin/AdminReferral";
@@ -31,7 +29,15 @@ function AuthenticatedRoute({ component: C, ...props }) {
     <Route
       {...props}
       render={(routeProps) =>
-        isAuthenticated ? <C {...routeProps} /> : <Redirect to="/sign-in" />
+        isAuthenticated ? (
+          <>
+            <InfoBar />
+            <Navbar />
+            <C {...routeProps} />
+          </>
+        ) : (
+          <Redirect to="/sign-in" />
+        )
       }
     />
   );
@@ -42,18 +48,14 @@ function UnauthenticatedRoute({ component: C, ...props }) {
   return (
     <Route
       {...props}
-      render={(routeProps) =>
-        !isAuthenticated ? (
-          <>
-            <InfoBar />
-            <Navbar />
-            <C {...routeProps} />
-            <Footer />
-          </>
-        ) : (
-          <Redirect to="/admin" />
-        )
-      }
+      render={(routeProps) => (
+        <>
+          <InfoBar />
+          <Navbar />
+          <C {...routeProps} />
+          <Footer />
+        </>
+      )}
     />
   );
 }
@@ -97,11 +99,7 @@ function App() {
         <UnauthenticatedRoute exact path="/jobs/:job" component={Job} />
 
         <AuthenticatedRoute exact path="/admin" component={AdminJobs} />
-        <AuthenticatedRoute
-          exact
-          path="/admin/profile"
-          component={AdminProfile}
-        />
+
         <AuthenticatedRoute
           exact
           path="/admin/settings"

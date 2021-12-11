@@ -4,7 +4,6 @@ import AccountSettings from "src/components/settings/AccountSettings";
 import PasswordSettings from "src/components/settings/PasswordSettings";
 import ProfileSettings from "src/components/settings/ProfileSettings";
 import { doc, getDoc } from "@firebase/firestore";
-import AdminNavbar from "src/components/AdminNavbar";
 
 function AdminSettings() {
   let [active, setActive] = useState(0);
@@ -12,7 +11,6 @@ function AdminSettings() {
   const { user } = useAuthState();
 
   useEffect(() => {
-    console.log(user.uid);
     getDoc(doc(db, "companies", user.uid)).then((doc) => {
       setProfile(doc.data());
     });
@@ -20,7 +18,6 @@ function AdminSettings() {
 
   return (
     <>
-      <AdminNavbar />
       <div className="bg-white">
         <div className="grid grid-cols-12 py-32  w-11/12 mx-auto min-h-screen gap-16">
           <div className="col-span-3">

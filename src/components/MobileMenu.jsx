@@ -31,7 +31,7 @@ export default function MobileMenu() {
               leaveFrom="opacity-100 translate-y-0"
               leaveTo="opacity-0 translate-y-1"
             >
-              <Popover.Panel className="lg:hidden block absolute -left-36 top-16 z-10 w-80  max-w-sm mt-2 transform -translate-x-1/2  sm:px-0 lg:max-w-3xl">
+              <Popover.Panel className="lg:hidden block absolute -left-24  z-10 w-60  max-w-sm mt-2 transform -translate-x-1/2  sm:px-0 lg:max-w-3xl">
                 <div className="overflow-hidden rounded-lg shadow-2xl">
                   <div className="relative bg-white p-3">
                     <Link

@@ -15,7 +15,6 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import CandidateTable from "src/components/tables/CandidateTable";
 import JobEditor from "src/components/JobEditor";
 import JobSettings from "src/components/JobSettings";
-import AdminNavbar from "src/components/AdminNavbar";
 
 function AdminJob() {
   let [active, setActive] = useState(0);
@@ -42,7 +41,6 @@ function AdminJob() {
 
   return (
     <div className="bg-white">
-      <AdminNavbar />
       <div className="py-32  w-11/12 mx-auto min-h-screen">
         <Link to="/" className="text-4xl">
           <FontAwesomeIcon icon={faChevronLeft} className="mr-3 text-xl mb-1" />

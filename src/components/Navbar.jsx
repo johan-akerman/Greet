@@ -3,8 +3,8 @@ import logo from "../images/logo.png";
 import HowIt from "./HowIt";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
-import { getAuth, signOut } from "@firebase/auth";
 import { useAuthState } from "src/firebase";
+import ProfileMenu from "./ProfileMenu";
 
 export function Navbar() {
   const { user } = useAuthState();
@@ -39,13 +39,9 @@ export function Navbar() {
             </div>
 
             <div className="flex">
+              <MobileMenu />
               {user ? (
-                <div
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  onClick={() => signOut(getAuth())}
-                >
-                  Logout
-                </div>
+                <ProfileMenu />
               ) : (
                 <>
                   <Link
@@ -62,8 +58,6 @@ export function Navbar() {
                   </Link>
                 </>
               )}
-
-              <MobileMenu />
             </div>
           </div>
         </>

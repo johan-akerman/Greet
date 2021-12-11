@@ -5,7 +5,6 @@ import React from "react";
 import JobTable from "src/components/tables/JobTable";
 import NoJobs from "src/components/emptyStates/NoJobs";
 import { useJobs } from "src/hooks/useJobs";
-import AdminNavbar from "src/components/AdminNavbar";
 
 export default function AdminJobs() {
   const jobs = useJobs();
@@ -13,9 +12,10 @@ export default function AdminJobs() {
   if (!jobs) {
     return <NoJobs />;
   }
+
   return (
     <>
-      <AdminNavbar />
+      
       <div className="bg-white py-32">
         <div className="md:w-11/12 w-11/12 mx-auto h-full md:pb-28 pb-12 ">
           <div className="flex justify-between">

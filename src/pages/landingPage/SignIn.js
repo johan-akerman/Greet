@@ -1,11 +1,13 @@
 import { useAuthState } from "src/firebase";
 import { useCallback, useRef } from "react";
 import { signInWithEmailAndPassword, getAuth } from "@firebase/auth";
+import { useHistory } from "react-router-dom";
 
 function SignIn() {
   const emailRef = useRef();
   const passwordRef = useRef();
   const currentUser = useAuthState();
+  const history = useHistory();
 
   const handleLogin = useCallback(async (e) => {
     const auth = getAuth();
@@ -15,6 +17,7 @@ function SignIn() {
         emailRef.current.value,
         passwordRef.current.value
       );
+      history.push("/admin");
     } catch (e) {
       alert(e);
     }

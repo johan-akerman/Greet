@@ -5,7 +5,6 @@ import { Link } from "react-router-dom";
 import db from "src/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
-import AdminNavbar from "src/components/AdminNavbar";
 import Loader from "src/components/Loader";
 
 function AdminReferral() {
@@ -32,8 +31,7 @@ function AdminReferral() {
 
   return (
     <>
-      <AdminNavbar />
-
+      
       <div className="py-32 min-h-screen">
         <div className="w-11/12 mx-auto">
           <Link to={`/admin/${job}`} className="text-4xl">
