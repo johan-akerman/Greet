@@ -50,26 +50,21 @@ function AdminJob() {
         </Link>
         <div className="flex mt-12 gap-3">
           <button
-            className={`${active === 0 ? "bg-light" : "bg-white text-gray-500"}
-                     font-semibold cursor-pointer px-8 py-3 rounded-xl`}
+            className={`${active === 0 ? "bg-yellow-100 text-yellow-800 border-yellow-100" : "bg-white text-black hover:bg-light"} font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(0)}
           >
             Referrals
           </button>
 
           <button
-            className={`${
-              active === 1 ? "bg-light" : "bg-white text-gray-500"
-            } font-semibold cursor-pointer px-8 py-3 rounded-xl`}
+            className={`${active === 1 ? "bg-yellow-100 text-yellow-800 border-yellow-100" : "bg-white text-black hover:bg-light"} font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(1)}
           >
             Job description
           </button>
 
           <button
-            className={`${
-              active === 2 ? "bg-light" : "bg-white text-gray-500"
-            } font-semibold cursor-pointer px-8 py-3 rounded-xl`}
+            className={`${active === 2 ? "bg-yellow-100 text-yellow-800 border-yellow-100" : "bg-white text-black hover:bg-light"} font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(2)}
           >
             Job settings
