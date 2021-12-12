@@ -4,15 +4,17 @@ import HowIt from "./HowIt";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import { useAuthState } from "src/firebase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
 import ProfileMenu from "./ProfileMenu";
 
 export function Navbar() {
   const { user } = useAuthState();
   return (
-    <Disclosure as="nav" className="bg-primary">
+    <Disclosure as="nav" className="bg-primary  w-full">
       {({ open }) => (
         <>
-          <div className="flex justify-between h-24 py-6 w-11/12 mx-auto">
+          <div className="flex justify-between h-24 py-6 w-11/12 mx-auto ">
             <div className="flex">
               <Link className="flex pt-1" to="/">
                 <img className="h-10 mb-1" src={logo} alt="logo" />
@@ -41,7 +43,16 @@ export function Navbar() {
             <div className="flex">
               <MobileMenu />
               {user ? (
-                <ProfileMenu />
+                <>
+                  <Link
+                    to="/admin/create-new-job"
+                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-black rounded-xl mr-12 text-white"
+                  >
+                    <FontAwesomeIcon icon={faPlus} className="mr-3" />
+                    Create new job
+                  </Link>
+                  <ProfileMenu />
+                </>
               ) : (
                 <>
                   <Link

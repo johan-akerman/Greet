@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  useLocation,
+} from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./pages/landingPage/Home";
 import Refer from "./pages/landingPage/Refer";
 import PostJob from "./pages/landingPage/PostJob";
@@ -7,12 +13,12 @@ import Company from "./pages/landingPage/Company";
 import PrivacyPolicy from "./pages/landingPage/PrivacyPolicy";
 import CookiePolicy from "./pages/landingPage/CookiePolicy";
 import ForGreeters from "./pages/landingPage/ForGreeters";
+
 import ForCompanies from "./pages/landingPage/ForCompanies";
 import Companies from "./pages/landingPage/Companies";
 import Job from "./pages/landingPage/Job";
 import About from "./pages/landingPage/About";
 import SignIn from "./pages/landingPage/SignIn";
-import { InfoBar } from "./components/InfoBar";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { useAuthState, AuthContextProvider } from "src/firebase";
@@ -31,9 +37,9 @@ function AuthenticatedRoute({ component: C, ...props }) {
       render={(routeProps) =>
         isAuthenticated ? (
           <>
-            <InfoBar />
             <Navbar />
             <C {...routeProps} />
+            <Footer />
           </>
         ) : (
           <Redirect to="/sign-in" />
@@ -45,12 +51,12 @@ function AuthenticatedRoute({ component: C, ...props }) {
 
 function UnauthenticatedRoute({ component: C, ...props }) {
   const { isAuthenticated } = useAuthState();
+
   return (
     <Route
       {...props}
       render={(routeProps) => (
         <>
-          <InfoBar />
           <Navbar />
           <C {...routeProps} />
           <Footer />

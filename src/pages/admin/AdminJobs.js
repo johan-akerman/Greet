@@ -1,6 +1,3 @@
-import { Link } from "react-router-dom";
-import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import React from "react";
 import JobTable from "src/components/tables/JobTable";
 import NoJobs from "src/components/emptyStates/NoJobs";
@@ -15,22 +12,11 @@ export default function AdminJobs() {
 
   return (
     <>
-      
-      <div className="bg-white py-32">
-        <div className="md:w-11/12 w-11/12 mx-auto h-full md:pb-28 pb-12 ">
-          <div className="flex justify-between">
-            <Link className="text-4xl" to="/admin">
-              All open positions
-            </Link>
-
-            <Link
-              to="/admin/create-new-job"
-              className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
-            >
-              <FontAwesomeIcon icon={faPlus} className="mr-3" />
-              Create new job
-            </Link>
-          </div>
+      <div className="bg-white pb-3 ">
+        <div className="md:w-11/12 w-11/12 mx-auto mt-32 mb-56">
+          <h3 className="text-4xl mt-8" to="/admin">
+            Jobs
+          </h3>
 
           <JobTable jobs={jobs} />
         </div>

@@ -41,28 +41,40 @@ function AdminJob() {
 
   return (
     <div className="bg-white">
-      <div className="py-32  w-11/12 mx-auto min-h-screen">
-        <Link to="/" className="text-4xl">
+      <div className="pt-32 pb-56 w-11/12 mx-auto min-h-screen">
+        <Link to="/admin" className="text-4xl">
           <FontAwesomeIcon icon={faChevronLeft} className="mr-3 text-xl mb-1" />
           {job.title}
         </Link>
         <div className="flex mt-12 gap-3">
           <button
-            className={`${active === 0 ? "bg-yellow-100 text-yellow-800 border-yellow-100" : "bg-white text-black hover:bg-light"} font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
+            className={`${
+              active === 0
+                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
+                : "bg-white text-black hover:bg-light"
+            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(0)}
           >
             Referrals
           </button>
 
           <button
-            className={`${active === 1 ? "bg-yellow-100 text-yellow-800 border-yellow-100" : "bg-white text-black hover:bg-light"} font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
+            className={`${
+              active === 1
+                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
+                : "bg-white text-black hover:bg-light"
+            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(1)}
           >
             Job description
           </button>
 
           <button
-            className={`${active === 2 ? "bg-yellow-100 text-yellow-800 border-yellow-100" : "bg-white text-black hover:bg-light"} font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
+            className={`${
+              active === 2
+                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
+                : "bg-white text-black hover:bg-light"
+            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(2)}
           >
             Job settings

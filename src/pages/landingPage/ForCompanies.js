@@ -11,9 +11,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ForCompanies() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <div className="bg-white md:pt-32 pt-16">
