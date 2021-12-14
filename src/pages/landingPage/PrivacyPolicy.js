@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
 function PrivacyPolicy() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div className="bg-light text-xl">
       <div className="md:py-44 py-16 max-w-4xl mx-auto px-3 text-left">

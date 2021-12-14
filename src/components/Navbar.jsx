@@ -46,7 +46,7 @@ export function Navbar() {
                 <>
                   <Link
                     to="/admin/create-new-job"
-                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-black rounded-xl mr-12 text-white"
+                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-sm justify-center px-6 bg-black rounded-lg mr-8 text-white"
                   >
                     <FontAwesomeIcon icon={faPlus} className="mr-3" />
                     Create new job

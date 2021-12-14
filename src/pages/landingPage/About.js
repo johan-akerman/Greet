@@ -1,9 +1,6 @@
 import { useEffect } from "react";
 
 function About() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div className="bg-primary">
       <div className="md:py-44 py-16 max-w-4xl mx-auto px-3 text-center">
