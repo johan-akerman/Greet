@@ -1,4 +1,10 @@
-import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import {
+  BrowserRouter as Router,
+  Route,
+  Redirect,
+  useHistory,
+} from "react-router-dom";
+import { useEffect } from "react";
 import Home from "./pages/landingPage/Home";
 import Refer from "./pages/landingPage/Refer";
 import PostJob from "./pages/landingPage/PostJob";
@@ -12,18 +18,16 @@ import Companies from "./pages/landingPage/Companies";
 import Job from "./pages/landingPage/Job";
 import About from "./pages/landingPage/About";
 import SignIn from "./pages/landingPage/SignIn";
-
-import { InfoBar } from "./components/InfoBar";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
 import { useAuthState, AuthContextProvider } from "src/firebase";
 import AdminJobs from "./pages/admin/AdminJobs";
 import AdminSettings from "./pages/admin/AdminSettings";
-import AdminProfile from "./pages/admin/AdminProfile";
 import AdminJob from "./pages/admin/AdminJob";
 import AdminRefer from "./pages/admin/AdminRefer";
 import AdminReferral from "./pages/admin/AdminReferral";
 import AdminAddJob from "./pages/admin/AdminAddJob";
+import ScrollToTop from "./hooks/scrollToTop";
 
 function AuthenticatedRoute({ component: C, ...props }) {
   const { isAuthenticated } = useAuthState();
@@ -37,71 +41,34 @@ function AuthenticatedRoute({ component: C, ...props }) {
   );
 }
 
-function UnauthenticatedRoute({ component: C, ...props }) {
-  const { isAuthenticated } = useAuthState();
-  return (
-    <Route
-      {...props}
-      render={(routeProps) =>
-        !isAuthenticated ? (
-          <>
-            <InfoBar />
-            <Navbar />
-            <C {...routeProps} />
-            <Footer />
-          </>
-        ) : (
-          <Redirect to="/admin" />
-        )
-      }
-    />
-  );
-}
-
 function App() {
+  const history = useHistory();
+
+  useEffect(() => {
+    window.scrollTo(0, 0);
+  }, [history]);
+
   return (
     <AuthContextProvider>
       <Router>
-        <UnauthenticatedRoute exact path="/" component={Home} />
-        <UnauthenticatedRoute
-          exact
-          path="/privacy-policy"
-          component={PrivacyPolicy}
-        />
-        <UnauthenticatedRoute
-          exact
-          path="/cookie-policy"
-          component={CookiePolicy}
-        />
-        <UnauthenticatedRoute exact path="/companies" component={Companies} />
-        <UnauthenticatedRoute exact path="/about" component={About} />
-        <UnauthenticatedRoute exact path="/sign-in" component={SignIn} />
-        <UnauthenticatedRoute exact path="/sign-up" component={PostJob} />
-        <UnauthenticatedRoute exact path="/jobs" component={Jobs} />
-        <UnauthenticatedRoute
-          exact
-          path="/for-companies"
-          component={ForCompanies}
-        />
-        <UnauthenticatedRoute
-          exact
-          path="/for-greeters"
-          component={ForGreeters}
-        />
-        <UnauthenticatedRoute exact path="/jobs/:job/refer" component={Refer} />
-        <UnauthenticatedRoute
-          exact
-          path="/companies/:url"
-          component={Company}
-        />
-        <UnauthenticatedRoute exact path="/jobs/:job" component={Job} />
+        <ScrollToTop />
+        <Navbar />
+        <Route exact path="/" component={Home} />
+        <Route exact path="/privacy-policy" component={PrivacyPolicy} />
+        <Route exact path="/cookie-policy" component={CookiePolicy} />
+        <Route exact path="/companies" component={Companies} />
+        <Route exact path="/about" component={About} />
+        <Route exact path="/sign-in" component={SignIn} />
+        <Route exact path="/sign-up" component={PostJob} />
+        <Route exact path="/jobs" component={Jobs} />
+        <Route exact path="/for-companies" component={ForCompanies} />
+        <Route exact path="/for-greeters" component={ForGreeters} />
+        <Route exact path="/jobs/:job/refer" component={Refer} />
+        <Route exact path="/companies/:url" component={Company} />
+        <Route exact path="/jobs/:job" component={Job} />
 
         <AuthenticatedRoute exact path="/admin" component={AdminJobs} />
-        <AuthenticatedRoute
-          exact
-          path="/admin/profile"
-          component={AdminProfile}
-        />
+
         <AuthenticatedRoute
           exact
           path="/admin/settings"
@@ -113,7 +80,7 @@ function App() {
           component={AdminAddJob}
         />
         <AuthenticatedRoute exact path="/admin/:job" component={AdminJob} />
-        <UnauthenticatedRoute
+        <AuthenticatedRoute
           exact
           path="/admin/:job/refer"
           component={AdminRefer}
@@ -124,6 +91,7 @@ function App() {
           path="/:job/candidates/:candidate"
           component={AdminReferral}
         />
+        <Footer />
       </Router>
     </AuthContextProvider>
   );

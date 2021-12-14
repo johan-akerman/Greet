@@ -9,9 +9,6 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 
 function ForGreeters() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <>
       <div className="bg-white md:pt-32 pt-16">

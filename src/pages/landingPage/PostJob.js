@@ -6,10 +6,6 @@ import ConfettiGenerator from "confetti-js";
 function PostJob() {
   const [submited, setSubmited] = useState(false);
 
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
-
   const [form, setForm] = useState({
     company: "",
     companyWebsite: "",
@@ -34,7 +30,6 @@ function PostJob() {
       };
       const confetti = new ConfettiGenerator(confettiSettings);
       confetti.render();
-      window.scrollTo(0, 0);
       return () => confetti.clear();
     }
   }, [submited]);

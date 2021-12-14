@@ -67,8 +67,6 @@ export default function ProfileSettings({ user, profile }) {
       displayName: tmpProfile.company,
       photoURL: tmpProfile.logo,
     });
-
-    console.log("user: " + user.displayName + ", image: " + user.photoURL);
   }
 
   return (

@@ -1,7 +1,6 @@
 import db from "src/firebase";
 import { useState } from "react";
 import { addDoc, collection, Timestamp } from "@firebase/firestore";
-import AdminNavbar from "src/components/AdminNavbar";
 
 export default function AdminRefer() {
   let url = window.location.href;
@@ -39,7 +38,6 @@ export default function AdminRefer() {
 
   return (
     <>
-      <AdminNavbar />
       <div className="w-6/12 mx-auto my-20">
         <label class="block uppercase tracking-wide text-black text-xs font-bold mb-2 mt-6">
           Do you want to split the hiring bonus if they get hired?

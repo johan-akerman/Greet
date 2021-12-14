@@ -9,9 +9,6 @@ import { JobBoard } from "src/components/JobBoard";
 import { Trusted } from "src/components/Trusted";
 
 function Home() {
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, []);
   return (
     <div>
       <Jumbotron />

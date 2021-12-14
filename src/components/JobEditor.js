@@ -168,7 +168,7 @@ export default function JobEditor({ jobToEdit, id }) {
           )}
 
           <Link
-            to="/"
+            to="/admin"
             className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black bg-light px-8 py-3 rounded-xl border-none"
           >
             Cancel

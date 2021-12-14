@@ -1,8 +1,11 @@
 import { useHistory } from "react-router-dom";
 import JobStatus from "src/components/statuses/JobStatus";
+import db from "src/firebase";
 import { useEffect, useState } from "react";
 import Select from "src/components/Select";
-import Loader from "../Loader";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import { collection, query, where, getDocs } from "firebase/firestore";
 
 const statuses = ["Show all statuses", "Open", "Hidden"];
 const times = ["Newest first", "Oldest first"];
@@ -71,36 +74,40 @@ export default function JobTable({ jobs }) {
       );
   }
 
-  if (displayedJobs.length === 0) {
-    return <Loader />;
-  }
-
   return (
     <>
-      <div className="mt-14 flex gap-3">
-        <input
-          className="appearance-none h-12 text-lg block w-1/3 text-gray-700 border-2 border-black rounded-lg py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
-          placeholder="Search job . . ."
-          onChange={(e) => search(e.target.value)}
-        />
+      <div className="mt-8 flex justify-between gap-3">
+        <div class="relative w-full">
+          <FontAwesomeIcon
+            icon={faSearch}
+            className="absolute top-4 left-4 text-gray-600 "
+          />
 
-        <Select
-          className="w-72"
-          selected={selectedStatus}
-          statuses={statuses}
-          changeStatus={changeStatus}
-        />
+          <input
+            className="bg-light h-12 w-2/3 text-lg block text-gray-700 rounded-lg py-3 pl-12 px-4 leading-tight focus:outline-none"
+            placeholder="Search job . . ."
+            onChange={(e) => search(e.target.value)}
+          />
+        </div>
 
-        <Select
-          className="w-52"
-          selected={selectedTime}
-          statuses={times}
-          changeStatus={time}
-        />
+        <div className="flex gap-3">
+          <Select
+            className="w-52"
+            selected={selectedStatus}
+            statuses={statuses}
+            changeStatus={changeStatus}
+          />
+          <Select
+            className="w-40"
+            selected={selectedTime}
+            statuses={times}
+            changeStatus={time}
+          />
+        </div>
       </div>
       <div className="mt-12 overflow-x-auto bg-white">
-        <table className="min-w-full divide-y divide-gray-500 z-0">
-          <thead>
+        <table className="min-w-full z-0">
+          <thead className="border-b border-gray-500">
             <tr>
               {th.map((t) => (
                 <th className="px-6 py-3 text-left text-xs text-gray-900 uppercase tracking-wider leading-tight font-semibold">
@@ -110,40 +117,51 @@ export default function JobTable({ jobs }) {
             </tr>
           </thead>
 
-          <tbody className="divide-y divide-gray-300 divide-dashed">
-            {displayedJobs.map((currentJob) => (
-              <tr key={currentJob.id} className="hover:bg-light">
-                <td
-                  className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                  onClick={() => handleClick(currentJob.id)}
-                >
-                  {currentJob.data().title}
-                </td>
-                <td
-                  className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                  onClick={() => handleClick(currentJob.id)}
-                >
-                  {currentJob.data().hiring} SEK
-                </td>
-                <td
-                  className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                  onClick={() => handleClick(currentJob.id)}
-                >
-                  {currentJob.data().interview} SEK
-                </td>
-                <td
-                  className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                  onClick={() => handleClick(currentJob.id)}
-                >
-                  {calculateDays(currentJob.data().time.toDate())}
-                </td>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                  <JobStatus id={currentJob.id} job={currentJob.data()} />
-                </td>
-              </tr>
-            ))}
-          </tbody>
+          {displayedJobs.length != 0 ? (
+            <tbody className="divide-y divide-gray-300 divide-dashed">
+              {displayedJobs.map((currentJob) => (
+                <tr key={currentJob.id} className="hover:bg-light">
+                  <td
+                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
+                    onClick={() => handleClick(currentJob.id)}
+                  >
+                    {currentJob.data().title}
+                  </td>
+                  <td
+                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
+                    onClick={() => handleClick(currentJob.id)}
+                  >
+                    {currentJob.data().hiring} SEK
+                  </td>
+                  <td
+                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
+                    onClick={() => handleClick(currentJob.id)}
+                  >
+                    {currentJob.data().interview} SEK
+                  </td>
+                  <td
+                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
+                    onClick={() => handleClick(currentJob.id)}
+                  >
+                    {calculateDays(currentJob.data().time.toDate())}
+                  </td>
+
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <JobStatus id={currentJob.id} job={currentJob.data()} />
+                  </td>
+                </tr>
+              ))}
+            </tbody>
+          ) : (
+            ""
+          )}
         </table>
+
+        {displayedJobs.length === 0 ? (
+          <h3 className="mt-20 text-center">No jobs matched your search...</h3>
+        ) : (
+          " "
+        )}
       </div>
     </>
   );

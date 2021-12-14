@@ -3,16 +3,18 @@ import logo from "../images/logo.png";
 import HowIt from "./HowIt";
 import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
-import { getAuth, signOut } from "@firebase/auth";
 import { useAuthState } from "src/firebase";
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
+import ProfileMenu from "./ProfileMenu";
 
 export function Navbar() {
   const { user } = useAuthState();
   return (
-    <Disclosure as="nav" className="bg-primary">
+    <Disclosure as="nav" className="bg-primary  w-full">
       {({ open }) => (
         <>
-          <div className="flex justify-between h-24 py-6 w-11/12 mx-auto">
+          <div className="flex justify-between h-24 py-6 w-11/12 mx-auto ">
             <div className="flex">
               <Link className="flex pt-1" to="/">
                 <img className="h-10 mb-1" src={logo} alt="logo" />
@@ -39,13 +41,18 @@ export function Navbar() {
             </div>
 
             <div className="flex">
+              <MobileMenu />
               {user ? (
-                <div
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  onClick={() => signOut(getAuth())}
-                >
-                  Logout
-                </div>
+                <>
+                  <Link
+                    to="/admin/create-new-job"
+                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-sm justify-center px-6 bg-black rounded-lg mr-8 text-white"
+                  >
+                    <FontAwesomeIcon icon={faPlus} className="mr-3" />
+                    Create new job
+                  </Link>
+                  <ProfileMenu />
+                </>
               ) : (
                 <>
                   <Link
@@ -62,8 +69,6 @@ export function Navbar() {
                   </Link>
                 </>
               )}
-
-              <MobileMenu />
             </div>
           </div>
         </>

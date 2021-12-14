@@ -15,7 +15,6 @@ import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import CandidateTable from "src/components/tables/CandidateTable";
 import JobEditor from "src/components/JobEditor";
 import JobSettings from "src/components/JobSettings";
-import AdminNavbar from "src/components/AdminNavbar";
 
 function AdminJob() {
   let [active, setActive] = useState(0);
@@ -42,16 +41,18 @@ function AdminJob() {
 
   return (
     <div className="bg-white">
-      <AdminNavbar />
-      <div className="py-32  w-11/12 mx-auto min-h-screen">
-        <Link to="/" className="text-4xl">
+      <div className="pt-32 pb-56 w-11/12 mx-auto min-h-screen">
+        <Link to="/admin" className="text-4xl">
           <FontAwesomeIcon icon={faChevronLeft} className="mr-3 text-xl mb-1" />
           {job.title}
         </Link>
         <div className="flex mt-12 gap-3">
           <button
-            className={`${active === 0 ? "bg-light" : "bg-white text-gray-500"}
-                     font-semibold cursor-pointer px-8 py-3 rounded-xl`}
+            className={`${
+              active === 0
+                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
+                : "bg-white text-black hover:bg-light"
+            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(0)}
           >
             Referrals
@@ -59,8 +60,10 @@ function AdminJob() {
 
           <button
             className={`${
-              active === 1 ? "bg-light" : "bg-white text-gray-500"
-            } font-semibold cursor-pointer px-8 py-3 rounded-xl`}
+              active === 1
+                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
+                : "bg-white text-black hover:bg-light"
+            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(1)}
           >
             Job description
@@ -68,8 +71,10 @@ function AdminJob() {
 
           <button
             className={`${
-              active === 2 ? "bg-light" : "bg-white text-gray-500"
-            } font-semibold cursor-pointer px-8 py-3 rounded-xl`}
+              active === 2
+                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
+                : "bg-white text-black hover:bg-light"
+            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
             onClick={() => setActive(2)}
           >
             Job settings
