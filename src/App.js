@@ -1,13 +1,6 @@
-import {
-  BrowserRouter as Router,
-  Route,
-  Redirect,
-  useHistory,
-} from "react-router-dom";
-import { useEffect } from "react";
+import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
 import Home from "./pages/landingPage/Home";
 import Refer from "./pages/landingPage/Refer";
-import PostJob from "./pages/landingPage/PostJob";
 import Jobs from "./pages/landingPage/Jobs";
 import Company from "./pages/landingPage/Company";
 import PrivacyPolicy from "./pages/landingPage/PrivacyPolicy";
@@ -28,8 +21,12 @@ import AdminRefer from "./pages/admin/AdminRefer";
 import AdminReferral from "./pages/admin/AdminReferral";
 import AdminAddJob from "./pages/admin/AdminAddJob";
 import ScrollToTop from "./hooks/scrollToTop";
+import SignUp from "./pages/landingPage/SignUp";
+import Settings from "./pages/greeter/Settings";
+import Referrals from "./pages/greeter/Referrals";
+import Leaderboard from "./pages/greeter/Leaderboard";
 
-function AuthenticatedRoute({ component: C, ...props }) {
+function CompanyRoute({ component: C, ...props }) {
   const { isAuthenticated } = useAuthState();
   return (
     <Route
@@ -41,13 +38,20 @@ function AuthenticatedRoute({ component: C, ...props }) {
   );
 }
 
+function GreeterRoute({ component: C, ...props }) {
+  const { isAuthenticated } = useAuthState();
+  console.log(useAuthState());
+  return (
+    <Route
+      {...props}
+      render={(routeProps) =>
+        isAuthenticated ? <C {...routeProps} /> : <Redirect to="/sign-in" />
+      }
+    />
+  );
+}
+
 function App() {
-  const history = useHistory();
-
-  useEffect(() => {
-    window.scrollTo(0, 0);
-  }, [history]);
-
   return (
     <AuthContextProvider>
       <Router>
@@ -59,7 +63,7 @@ function App() {
         <Route exact path="/companies" component={Companies} />
         <Route exact path="/about" component={About} />
         <Route exact path="/sign-in" component={SignIn} />
-        <Route exact path="/sign-up" component={PostJob} />
+        <Route exact path="/sign-up" component={SignUp} />
         <Route exact path="/jobs" component={Jobs} />
         <Route exact path="/for-companies" component={ForCompanies} />
         <Route exact path="/for-greeters" component={ForGreeters} />
@@ -67,29 +71,33 @@ function App() {
         <Route exact path="/companies/:url" component={Company} />
         <Route exact path="/jobs/:job" component={Job} />
 
-        <AuthenticatedRoute exact path="/admin" component={AdminJobs} />
-
-        <AuthenticatedRoute
-          exact
-          path="/admin/settings"
-          component={AdminSettings}
-        />
-        <AuthenticatedRoute
+        <CompanyRoute exact path="/admin" component={AdminJobs} />
+        <CompanyRoute exact path="/admin/settings" component={AdminSettings} />
+        <CompanyRoute
           exact
           path="/admin/create-new-job"
           component={AdminAddJob}
         />
-        <AuthenticatedRoute exact path="/admin/:job" component={AdminJob} />
-        <AuthenticatedRoute
-          exact
-          path="/admin/:job/refer"
-          component={AdminRefer}
-        />
+        <CompanyRoute exact path="/admin/:job" component={AdminJob} />
+        <CompanyRoute exact path="/admin/:job/refer" component={AdminRefer} />
 
-        <AuthenticatedRoute
+        <CompanyRoute
           exact
           path="/:job/candidates/:candidate"
           component={AdminReferral}
+        />
+
+        <GreeterRoute exact path="/greeter" component={Referrals} />
+        {/* <GreeterRoute
+          exact
+          path="/greeter/:referral"
+          component={AdminReferral}
+        /> */}
+        <GreeterRoute exact path="/greeter/settings" component={Settings} />
+        <GreeterRoute
+          exact
+          path="/greeter/leaderboard"
+          component={Leaderboard}
         />
         <Footer />
       </Router>

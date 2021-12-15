@@ -4,11 +4,12 @@ import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 const statuses = ["Show all statuses", "Open", "Hidden"];
 const times = ["Newest first", "Oldest first"];
 const th = ["Job", "Hiring reward", "Interview reward", "Posted", "Status"];
 
-export default function JobTable({ jobs }) {
+export default function ReferralsTable({ jobs }) {
   let [displayedJobs, setDisplayedJobs] = useState([]);
   let [selectedStatus, setSelectedStatus] = useState(statuses[0]);
   let [selectedTime, setSelectedTime] = useState(times[0]);

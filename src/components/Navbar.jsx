@@ -5,7 +5,7 @@ import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import { useAuthState } from "src/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import ProfileMenu from "./ProfileMenu";
 
 export function Navbar() {

@@ -1,7 +1,6 @@
 import { useAuthState } from "src/firebase";
 import { useCallback, useRef } from "react";
 import { signInWithEmailAndPassword, getAuth } from "@firebase/auth";
-
 import { Redirect, useHistory } from "react-router-dom";
 
 function SignIn() {

@@ -31,7 +31,6 @@ function AdminReferral() {
 
   return (
     <>
-      
       <div className="py-32 min-h-screen">
         <div className="w-11/12 mx-auto">
           <Link to={`/admin/${job}`} className="text-4xl">
