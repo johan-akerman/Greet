@@ -1,6 +1,8 @@
 import { BrowserRouter as Router, Route, Redirect } from "react-router-dom";
+import { useRole } from "./hooks/useRole";
 import Home from "./pages/landingPage/Home";
 import Refer from "./pages/landingPage/Refer";
+import ReferralComplete from "./pages/landingPage/ReferralComplete";
 import Jobs from "./pages/landingPage/Jobs";
 import Company from "./pages/landingPage/Company";
 import PrivacyPolicy from "./pages/landingPage/PrivacyPolicy";
@@ -13,7 +15,7 @@ import About from "./pages/landingPage/About";
 import SignIn from "./pages/landingPage/SignIn";
 import { Navbar } from "./components/Navbar";
 import { Footer } from "./components/Footer";
-import { useAuthState, AuthContextProvider } from "src/firebase";
+import { AuthContextProvider } from "src/firebase";
 import AdminJobs from "./pages/admin/AdminJobs";
 import AdminSettings from "./pages/admin/AdminSettings";
 import AdminJob from "./pages/admin/AdminJob";
@@ -25,33 +27,43 @@ import SignUp from "./pages/landingPage/SignUp";
 import Settings from "./pages/greeter/Settings";
 import Referrals from "./pages/greeter/Referrals";
 import Leaderboard from "./pages/greeter/Leaderboard";
+import SignUpGreeter from "./pages/landingPage/SignUpGreeter";
+import SignUpCompany from "./pages/landingPage/SignUpCompany";
+import ResetPassword from "./pages/landingPage/ResetPassword";
 
 function CompanyRoute({ component: C, ...props }) {
-  const { isAuthenticated } = useAuthState();
   return (
     <Route
       {...props}
       render={(routeProps) =>
-        isAuthenticated ? <C {...routeProps} /> : <Redirect to="/sign-in" />
+        props.role === "company" ? (
+          <C {...routeProps} />
+        ) : (
+          <Redirect to="/sign-in" />
+        )
       }
     />
   );
 }
 
 function GreeterRoute({ component: C, ...props }) {
-  const { isAuthenticated } = useAuthState();
-  console.log(useAuthState());
   return (
     <Route
       {...props}
       render={(routeProps) =>
-        isAuthenticated ? <C {...routeProps} /> : <Redirect to="/sign-in" />
+        props.role === "greeter" ? (
+          <C {...routeProps} />
+        ) : (
+          <Redirect to="/sign-in" />
+        )
       }
     />
   );
 }
 
 function App() {
+  const role = useRole();
+
   return (
     <AuthContextProvider>
       <Router>
@@ -63,41 +75,70 @@ function App() {
         <Route exact path="/companies" component={Companies} />
         <Route exact path="/about" component={About} />
         <Route exact path="/sign-in" component={SignIn} />
+        <Route exact path="/sign-in/reset-password" component={ResetPassword} />
         <Route exact path="/sign-up" component={SignUp} />
+        <Route exact path="/sign-up/new-greeter" component={SignUpGreeter} />
+        <Route exact path="/sign-up/new-company" component={SignUpCompany} />
         <Route exact path="/jobs" component={Jobs} />
         <Route exact path="/for-companies" component={ForCompanies} />
         <Route exact path="/for-greeters" component={ForGreeters} />
         <Route exact path="/jobs/:job/refer" component={Refer} />
+        <Route exact path="/referral-complete" component={ReferralComplete} />
         <Route exact path="/companies/:url" component={Company} />
         <Route exact path="/jobs/:job" component={Job} />
 
-        <CompanyRoute exact path="/admin" component={AdminJobs} />
-        <CompanyRoute exact path="/admin/settings" component={AdminSettings} />
+        <CompanyRoute exact path="/admin" component={AdminJobs} role={role} />
+        <CompanyRoute
+          exact
+          path="/admin/settings"
+          component={AdminSettings}
+          role={role}
+        />
         <CompanyRoute
           exact
           path="/admin/create-new-job"
           component={AdminAddJob}
+          role={role}
         />
-        <CompanyRoute exact path="/admin/:job" component={AdminJob} />
-        <CompanyRoute exact path="/admin/:job/refer" component={AdminRefer} />
+        <CompanyRoute
+          exact
+          path="/admin/:job"
+          component={AdminJob}
+          role={role}
+        />
+        <CompanyRoute
+          exact
+          path="/admin/:job/refer"
+          component={AdminRefer}
+          role={role}
+        />
 
         <CompanyRoute
           exact
           path="/:job/candidates/:candidate"
           component={AdminReferral}
+          role={role}
         />
 
-        <GreeterRoute exact path="/greeter" component={Referrals} />
-        {/* <GreeterRoute
+        <GreeterRoute exact path="/greeter" component={Referrals} role={role} />
+
+        <GreeterRoute
           exact
-          path="/greeter/:referral"
-          component={AdminReferral}
-        /> */}
-        <GreeterRoute exact path="/greeter/settings" component={Settings} />
+          path="/greeter/settings"
+          component={Settings}
+          role={role}
+        />
         <GreeterRoute
           exact
           path="/greeter/leaderboard"
           component={Leaderboard}
+          role={role}
+        />
+        <GreeterRoute
+          exact
+          path="/greeter/:referral"
+          component={AdminReferral}
+          role={role}
         />
         <Footer />
       </Router>

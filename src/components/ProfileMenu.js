@@ -6,7 +6,6 @@ import {
   faCaretDown,
   faCog,
   faCogs,
-  faPeopleCarry,
   faPoll,
   faTrophy,
   faUser,
@@ -14,7 +13,7 @@ import {
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
 
-export default function ProfileMenu() {
+export default function ProfileMenu({ role }) {
   const auth = getAuth();
   const user = auth.currentUser;
 
@@ -23,7 +22,7 @@ export default function ProfileMenu() {
       <Menu as="div" className="relative inline-block text-left ">
         <div>
           <Menu.Button className="flex relative">
-            {user.photoURL ? (
+            {user?.photoURL ? (
               <img
                 className="h-10 w-10 rounded-full"
                 src={user.photoURL}
@@ -54,67 +53,69 @@ export default function ProfileMenu() {
           leaveTo="transform opacity-0 scale-95"
         >
           <Menu.Items className="absolute right-0 w-56 mt-8 z-50 origin-top-right bg-white divide-y divide-gray-100 rounded-md shadow-lg ring-1 ring-black ring-opacity-5 focus:outline-none">
-            <div className="p-3 ">
-              <Menu.Item>
-                <Link
-                  to="/greeter"
-                  className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                >
-                  <FontAwesomeIcon icon={faUsers} className="mr-3" />
-                  My referrals
-                </Link>
-              </Menu.Item>
+            {role === "greeter" ? (
+              <div className="p-3 ">
+                <Menu.Item>
+                  <Link
+                    to="/greeter"
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon icon={faUsers} className="mr-3" />
+                    My referrals
+                  </Link>
+                </Menu.Item>
 
-              <Menu.Item>
-                <Link
-                  to="/greeter/leaderboard"
-                  className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                >
-                  <FontAwesomeIcon icon={faTrophy} className="ml-0.5 mr-3" />
-                  Leaderboard
-                </Link>
-              </Menu.Item>
+                <Menu.Item>
+                  <Link
+                    to="/greeter/leaderboard"
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon icon={faTrophy} className="ml-0.5 mr-3" />
+                    Leaderboard
+                  </Link>
+                </Menu.Item>
 
-              <Menu.Item>
-                <Link
-                  to="/greeter/settings"
-                  className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                >
-                  <FontAwesomeIcon icon={faCogs} className="mr-3" />
-                  Settings
-                </Link>
-              </Menu.Item>
-            </div>
-
-            <div className="p-3 ">
-              <Menu.Item>
-                <Link
-                  to="/admin"
-                  className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                >
-                  <FontAwesomeIcon icon={faPoll} className="mr-3" />
-                  Dashboard
-                </Link>
-              </Menu.Item>
-              <Menu.Item>
-                <Link
-                  to={`/companies/${user.uid}`}
-                  className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                >
-                  <FontAwesomeIcon icon={faUser} className="mr-3" />
-                  Profile
-                </Link>
-              </Menu.Item>
-              <Menu.Item>
-                <Link
-                  to="/admin/settings"
-                  className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                >
-                  <FontAwesomeIcon icon={faCog} className="mr-3" />
-                  Settings
-                </Link>
-              </Menu.Item>
-            </div>
+                <Menu.Item>
+                  <Link
+                    to="/greeter/settings"
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon icon={faCogs} className="mr-3" />
+                    Settings
+                  </Link>
+                </Menu.Item>
+              </div>
+            ) : (
+              <div className="p-3">
+                <Menu.Item>
+                  <Link
+                    to="/admin"
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon icon={faPoll} className="mr-3" />
+                    Dashboard
+                  </Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link
+                    to={`/companies/${user?.uid}`}
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon icon={faUser} className="mr-3" />
+                    Profile
+                  </Link>
+                </Menu.Item>
+                <Menu.Item>
+                  <Link
+                    to="/admin/settings"
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon icon={faCog} className="mr-3" />
+                    Settings
+                  </Link>
+                </Menu.Item>
+              </div>
+            )}
 
             <div className="px-3 py-3">
               <Menu.Item>

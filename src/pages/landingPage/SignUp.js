@@ -1,59 +1,39 @@
-import { useAuthState } from "src/firebase";
-import { useCallback, useRef } from "react";
-import { createUserWithEmailAndPassword, getAuth } from "@firebase/auth";
-import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
 function SignUp() {
-  const emailRef = useRef();
-  const passwordRef = useRef();
-  const currentUser = useAuthState();
-  const history = useHistory();
-
-  const handleLogin = useCallback(async (e) => {
-    const auth = getAuth();
-    try {
-      await createUserWithEmailAndPassword(
-        auth,
-        emailRef.current.value,
-        passwordRef.current.value
-      );
-
-      history.push("/company");
-    } catch (e) {
-      alert(e);
-    }
-  }, []);
-
   return (
-    <div class="min-h-screen flex flex-col">
-      {currentUser?.email}
-      <div class="container max-w-sm mx-auto flex-1 flex flex-col items-center justify-center px-2">
-        <div class="bg-white px-6 text-black w-full">
-          <h1 class="mb-8 text-4xl text-center">Sign up to Greet</h1>
+    <div class="md:py-44 py-12 text-center bg-primary">
+      <div class="grid cols grid-cols-12 gap-6 md:w-6/12 w-11/12 mx-auto">
+        <div className="md:col-span-6 col-span-12 transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg bg-white rounded-2xl pt-10 px-8 pb-8 text-left">
+          <h2 className="text-3xl font-semibold text-gray-900 leading-none pb-3">
+            Greeter
+          </h2>
+          <p className="text-md text-gray-600 pb-8">
+            Get rewarded to refer your friends to their dream job in tech.
+          </p>
 
-          <input
-            ref={emailRef}
-            type="text"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
-            name="email"
-            placeholder="Email"
-          />
-
-          <input
-            ref={passwordRef}
-            type="password"
-            class="block border border-grey-light w-full p-3 rounded mb-4"
-            name="password"
-            placeholder="Password"
-          />
-
-          <button
-            type="submit"
-            class="w-full text-center py-3 rounded bg-primary text-black font-semibold focus:outline-none my-1"
-            onClick={() => handleLogin()}
+          <Link
+            to="sign-up/new-greeter"
+            className="bg-yellow-100 text-yellow-800 border-yellow-100 font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm"
           >
-            Sign up
-          </button>
+            Get started
+          </Link>
+        </div>
+
+        <div className="md:col-span-6 col-span-12 transform ease-in duration-100 hover:-translate-y-2 hover:shadow-lg bg-white rounded-2xl pt-10 px-8 pb-8 text-left">
+          <h2 className="text-3xl font-semibold text-gray-900 leading-none pb-3">
+            Company
+          </h2>
+          <p className="text-md text-gray-600 pb-8">
+            Find the talent you need and strengthen your employer branding.
+          </p>
+
+          <Link
+            to="sign-up/new-company"
+            className="bg-yellow-100 text-yellow-800 border-yellow-100 font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm"
+          >
+            Get started
+          </Link>
         </div>
       </div>
     </div>

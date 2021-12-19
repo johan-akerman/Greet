@@ -25,6 +25,7 @@ export default function PasswordSettings({ user }) {
       <InputField
         className="w-1/2 mt-12"
         label="New password"
+        type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder=""

@@ -6,7 +6,7 @@ import {
 
 export default function ReferNavigation({ changeIndex, index, waiting }) {
   function BackBtn() {
-    if (index === 0 || index === 4) return null;
+    if (index === 0) return null;
     else
       return (
         <div

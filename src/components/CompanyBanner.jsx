@@ -31,7 +31,7 @@ export function CompanyBanner() {
 
         <div className="flex items-center pt-10">
           <Link
-            to="/sign-up"
+            to="/sign-up/new-company"
             className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
           >
             Request a demo

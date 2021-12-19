@@ -21,6 +21,7 @@ export default function AccountSettings({ user }) {
       <InputField
         className="w-1/2 mt-12"
         label="Email"
+        type="text"
         value={email}
         onChange={(e) => setEmail(e.target.value)}
         placeholder="firstname@company.com"

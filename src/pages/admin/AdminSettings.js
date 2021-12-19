@@ -2,7 +2,7 @@ import db, { useAuthState } from "src/firebase";
 import { useState, useEffect } from "react";
 import AccountSettings from "src/components/settings/AccountSettings";
 import PasswordSettings from "src/components/settings/PasswordSettings";
-import ProfileSettings from "src/components/settings/ProfileSettings";
+import CompanySettings from "src/components/settings/CompanySettings";
 import { doc, getDoc } from "@firebase/firestore";
 
 function AdminSettings() {
@@ -11,7 +11,7 @@ function AdminSettings() {
   const { user } = useAuthState();
 
   useEffect(() => {
-    getDoc(doc(db, "companies", user.uid)).then((doc) => {
+    getDoc(doc(db, "companies", user?.uid)).then((doc) => {
       setProfile(doc.data());
     });
   }, []);
@@ -50,7 +50,7 @@ function AdminSettings() {
           </div>
           <div className="col-span-7">
             {active === 0 ? (
-              <ProfileSettings user={user} profile={profile} />
+              <CompanySettings user={user} profile={profile} />
             ) : active === 1 ? (
               <AccountSettings user={user} />
             ) : (
