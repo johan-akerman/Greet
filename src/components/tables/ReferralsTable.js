@@ -1,27 +1,44 @@
 import ReferralStatus from "src/components/statuses/ReferralStatus";
 import { useHistory } from "react-router-dom";
+import db, { useAuthState } from "src/firebase";
 import { useState, useEffect } from "react";
-import Select from "src/components/Select";
-import Search from "src/components/Search";
-import NoReferral from "src/components/emptyStates/NoReferral";
+import NoReferralYet from "../emptyStates/NoReferralYet";
+import { doc, getDoc } from "@firebase/firestore";
 
 const th = [
   "Candidate",
   "Job",
-  "Hiring bonus",
-  "Interview bonus",
+  "Hiring reward",
+  "Interview reward",
   "Added",
   "Status",
 ];
 
-export default function ReferralsTable({ referrals }) {
+export default function ReferralsTable() {
   const history = useHistory();
   let currentDate = new Date();
-  let [displayedReferrals, setDisplayedReferrals] = useState(referrals);
+  const { user } = useAuthState();
+  let [referrals, setReferrals] = useState([]);
 
   useEffect(() => {
-    setDisplayedReferrals(referrals);
-  }, [referrals]);
+    var tmp = [];
+    getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
+      greeter.data().referrals.forEach((referral) => {
+        const referralRef = doc(db, "referrals", referral);
+        getDoc(referralRef).then((referral) => {
+          const jobRef = doc(db, "jobs", referral.data().job);
+          getDoc(jobRef).then((job) => {
+            tmp.unshift({
+              referral: referral,
+              job: job,
+            });
+          });
+        });
+      });
+    });
+
+    setReferrals(tmp);
+  }, []);
 
   function calculateDays(date) {
     let daysAgo = Math.floor((currentDate - date) / (1000 * 3600 * 24));
@@ -32,8 +49,8 @@ export default function ReferralsTable({ referrals }) {
     else return daysAgo + " days ago";
   }
 
-  if (!referrals) {
-    return <NoReferral />;
+  if (Object.keys(referrals).length === 0) {
+    return <NoReferralYet />;
   }
 
   return (
@@ -51,35 +68,34 @@ export default function ReferralsTable({ referrals }) {
               </tr>
             </thead>
             <tbody className="divide-y divide-gray-300 divide-dashed">
-              {displayedReferrals?.map((referral) => (
+              {referrals?.map((r, id) => (
                 <tr
-                  key={referral.id}
+                  key={id}
                   className="hover:bg-light"
-                  onClick={() => history.push(`/greeter/${referral.id}`)}
+                  onClick={() => history.push(`/greeter/${r.referral.id}`)}
                 >
-                  {console.log("referral: " + referral)}
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {referral.data().candidate.name}
+                    {r.referral.data().candidate.name}
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {referral.data().job}
+                    {r.job.data().title} @ {r.job.data().company}
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    -
+                    {r.job.data().hiring} SEK
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    -
+                    {r.job.data().interview} SEK
                   </td>
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {/* {new Date(referral.data().time.seconds * 1000).toString()} */}
-                    {calculateDays(referral.data().time.toDate())}
+                    {calculateDays(r.referral.data().time.toDate())}
                   </td>
 
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <ReferralStatus status={referral.data().general.status} />
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
+                    {" "}
+                    <ReferralStatus status={r.referral.data().general.status} />
                   </td>
                 </tr>
               ))}
