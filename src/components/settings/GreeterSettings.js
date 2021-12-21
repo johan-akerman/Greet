@@ -1,9 +1,6 @@
 import db from "src/firebase";
-import { storage } from "src/firebase";
-import { doc, setDoc } from "@firebase/firestore";
-import { updateProfile } from "firebase/auth";
+import { doc, updateDoc } from "@firebase/firestore";
 import { useEffect, useState } from "react";
-import { getDownloadURL, ref, uploadBytesResumable } from "@firebase/storage";
 import InputField from "../InputField";
 
 export default function GreeterSettings({ user, profile }) {
@@ -14,10 +11,10 @@ export default function GreeterSettings({ user, profile }) {
     setTmpProfile(profile);
   }, [profile]);
 
-  const greeterRef = doc(db, "greeters", user.uid);
+  const ref = doc(db, "greeters", user.uid);
 
   async function handleSave() {
-    await setDoc(greeterRef, {
+    await updateDoc(ref, {
       name: tmpProfile.name,
       title: tmpProfile.title,
       linkedin: tmpProfile.linkedin,

@@ -1,12 +1,24 @@
 import { useState } from "react";
 import { updateEmail } from "firebase/auth";
+import db from "src/firebase";
+import { doc, updateDoc } from "@firebase/firestore";
 import InputField from "src/components/InputField";
+import { useRole } from "src/hooks/useRole";
 
 export default function AccountSettings({ user }) {
+  const role = useRole();
   const [email, setEmail] = useState(user?.email);
 
   async function handleEmailUpdate() {
     updateEmail(user, email);
+
+    if (role === "greeter") {
+      const ref = doc(db, "greeters", user.uid);
+
+      await updateDoc(ref, {
+        email: email,
+      });
+    }
   }
 
   return (

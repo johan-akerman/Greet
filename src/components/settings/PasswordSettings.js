@@ -11,7 +11,7 @@ export default function PasswordSettings({ user }) {
         console.log("Success!");
       })
       .catch((error) => {
-        console.log("Failure");
+        console.log("Failure: " + error);
       });
   }
 

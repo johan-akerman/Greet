@@ -42,9 +42,6 @@ export default function Refer() {
 
   useEffect(() => {
     if (role === "greeter") {
-      indices = 4;
-      progress = Math.floor((100 / 2) * index);
-
       getDoc(doc(db, "greeters", user.uid)).then((doc) => {
         let data = doc.data();
         setReferrer({
@@ -58,10 +55,51 @@ export default function Refer() {
     }
   }, [role]);
 
-  let changeIndex = (value) => {
+  useEffect(() => {
+    if (role === "greeter" && index === 3) {
+      addToDatabase();
+    }
+
+    if (index === 4) {
+      addToDatabase();
+    }
+  }, [index]);
+
+  function changeIndex(value) {
     window.scrollTo(0, 0);
     setIndex(value);
-  };
+  }
+
+  function isComplete(index) {
+    if (index === 0) {
+      if (
+        candidate.name &&
+        candidate.title &&
+        candidate.email &&
+        candidate.linkedin
+      ) {
+        return true;
+      }
+      return false;
+    } else if (index === 1) {
+      if (referrer.motivation) {
+        return true;
+      }
+      return false;
+    } else if (index === 2) {
+      return true;
+    } else if (index === 3) {
+      if (
+        referrer.name &&
+        referrer.title &&
+        referrer.email &&
+        referrer.linkedin
+      ) {
+        return true;
+      }
+      return false;
+    }
+  }
 
   async function addToDatabase() {
     await addDoc(collection(db, "referrals"), {
@@ -89,16 +127,6 @@ export default function Refer() {
     });
   }
 
-  useEffect(() => {
-    if (role === "greeter" && index === 3) {
-      addToDatabase();
-    }
-
-    if (index === 4) {
-      addToDatabase();
-    }
-  }, [index]);
-
   function generateStep(value) {
     switch (value) {
       case 0:
@@ -119,7 +147,12 @@ export default function Refer() {
       <div className="bg-white rounded-2xl pt-10 md:px-8 px-6 pb-8 text-left md:w-5/12 w-11/12 mx-auto">
         <ProgressBar value={progress} />
         {generateStep(index)}
-        <ReferNavigation index={index} changeIndex={changeIndex} />
+        {console.log(isComplete(index))}
+        <ReferNavigation
+          index={index}
+          changeIndex={changeIndex}
+          isComplete={isComplete}
+        />
       </div>
     </div>
   );

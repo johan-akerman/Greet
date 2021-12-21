@@ -4,7 +4,7 @@ import {
   faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
 
-export default function ReferNavigation({ changeIndex, index, waiting }) {
+export default function ReferNavigation({ changeIndex, index, isComplete }) {
   function BackBtn() {
     if (index === 0) return null;
     else
@@ -21,7 +21,7 @@ export default function ReferNavigation({ changeIndex, index, waiting }) {
 
   function NextBtn() {
     if (index === 4) return null;
-    if (waiting)
+    if (isComplete(index) === false)
       return (
         <div className="w-32 ml-2 cursor-not-allowed flex items-center font-bold text-md justify-center px-8 py-3 bg-gray-200 rounded-xl text-black">
           Next{" "}

@@ -11,7 +11,7 @@ function Settings() {
   const { user } = useAuthState();
 
   useEffect(() => {
-    getDoc(doc(db, "companies", user.uid)).then((doc) => {
+    getDoc(doc(db, "greeters", user.uid)).then((doc) => {
       setProfile(doc.data());
     });
   }, []);
