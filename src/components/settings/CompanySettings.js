@@ -48,9 +48,8 @@ export default function CompanySettings({ user, profile }) {
     );
   };
 
-  const companiesRef = doc(db, "companies", user?.uid);
-
   async function handleSave() {
+    const companiesRef = doc(db, "companies", user?.uid);
     await setDoc(companiesRef, {
       company: tmpProfile.company,
       website: tmpProfile.website,

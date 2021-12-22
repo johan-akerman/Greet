@@ -4,30 +4,59 @@ import db, { useAuthState } from "src/firebase";
 import { doc, getDoc } from "@firebase/firestore";
 
 export default function Referrals() {
+  let [referrals, setReferrals] = useState([]);
   const { user } = useAuthState();
-  // let [displayedReferrals, setDisplayedReferrals] = useState();
 
   // useEffect(() => {
+  //   var tmp = [];
   //   getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
-  //     var tmp = [];
-  //     greeter.data().referrals.forEach((referral) => {
-  //       const docRef = doc(db, "referrals", referral);
-  //       getDoc(docRef).then((doc) => {
-  //         tmp.push(doc);
-  //         setDisplayedReferrals(tmp);
+  //     greeter.data().referrals?.forEach((referral) => {
+  //       const referralRef = doc(db, "referrals", referral);
+  //       getDoc(referralRef).then((referral) => {
+  //         const jobRef = doc(db, "jobs", referral.data().job);
+  //         getDoc(jobRef).then((job) => {
+  //           tmp.unshift({
+  //             referral: referral,
+  //             job: job,
+  //           });
+  //         });
   //       });
   //     });
+  //     setReferrals(tmp);
   //   });
   // }, []);
+
+  useEffect(() => {
+    getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
+      greeter.data().referrals?.forEach((referral, id) => {
+        const referralRef = doc(db, "referrals", referral);
+        getDoc(referralRef).then((referral) => {
+          const jobRef = doc(db, "jobs", referral.data().job);
+          getDoc(jobRef).then((job) => {
+            let response = {
+              referral: referral,
+              job: job,
+            };
+
+            setReferrals((referrals) => [...referrals, response]);
+          });
+        });
+      });
+    });
+  }, []);
+
+  if (!referrals) {
+    return <h1>Loading...</h1>;
+  }
 
   return (
     <div className="bg-white pb-3 ">
       <div className="md:w-11/12 w-11/12 mx-auto my-32">
         <h3 className="text-4xl mt-8" to="/admin">
-          My referrals
+          My referrals ({referrals.length})
         </h3>
 
-        <ReferralsTable />
+        <ReferralsTable referrals={referrals} />
       </div>
     </div>
   );

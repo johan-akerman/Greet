@@ -63,6 +63,7 @@ function GreeterRoute({ component: C, ...props }) {
 
 function App() {
   const role = useRole();
+  console.log("role: " + role);
 
   return (
     <AuthContextProvider>
@@ -124,6 +125,13 @@ function App() {
 
         <GreeterRoute
           exact
+          path="/greeter/referrals/:referral"
+          component={AdminReferral}
+          role={role}
+        />
+
+        <GreeterRoute
+          exact
           path="/greeter/settings"
           component={Settings}
           role={role}
@@ -132,12 +140,6 @@ function App() {
           exact
           path="/greeter/leaderboard"
           component={Leaderboard}
-          role={role}
-        />
-        <GreeterRoute
-          exact
-          path="/greeter/:referral"
-          component={AdminReferral}
           role={role}
         />
         <Footer />

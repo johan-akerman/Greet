@@ -1,6 +1,6 @@
 import db from "src/firebase";
 import { useEffect, useState } from "react";
-import { collection, getDocs, query, where } from "@firebase/firestore";
+import { collection, getDocs, query } from "@firebase/firestore";
 
 export function useLeaderboard() {
   const [greeters, setGreeters] = useState([]);

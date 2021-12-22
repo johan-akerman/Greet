@@ -10,20 +10,12 @@ export function useRole() {
     const auth = getAuth();
     onAuthStateChanged(auth, (user) => {
       if (user) {
-        const uid = user.uid;
-        const greeterRef = doc(db, "greeters", user.uid);
-        getDoc(greeterRef).then((d1) => {
+        const companyRef = doc(db, "companies", user.uid);
+        getDoc(companyRef).then((d1) => {
           if (d1.exists()) {
-            setRole("greeter");
+            setRole("company");
           } else {
-            const companyRef = doc(db, "companies", user.uid);
-            getDoc(companyRef).then((d2) => {
-              if (d2.exists()) {
-                setRole("company");
-              } else {
-                setRole("admin");
-              }
-            });
+            setRole("greeter");
           }
         });
       } else {

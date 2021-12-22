@@ -11,9 +11,9 @@ export default function GreeterSettings({ user, profile }) {
     setTmpProfile(profile);
   }, [profile]);
 
-  const ref = doc(db, "greeters", user.uid);
-
   async function handleSave() {
+    const ref = doc(db, "greeters", user.uid);
+
     await updateDoc(ref, {
       name: tmpProfile.name,
       title: tmpProfile.title,

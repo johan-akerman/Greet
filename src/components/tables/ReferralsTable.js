@@ -1,9 +1,6 @@
 import ReferralStatus from "src/components/statuses/ReferralStatus";
 import { useHistory } from "react-router-dom";
-import db, { useAuthState } from "src/firebase";
-import { useState, useEffect } from "react";
 import NoReferralYet from "../emptyStates/NoReferralYet";
-import { doc, getDoc } from "@firebase/firestore";
 
 const th = [
   "Candidate",
@@ -14,32 +11,10 @@ const th = [
   "Status",
 ];
 
-export default function ReferralsTable() {
+export default function ReferralsTable({ referrals }) {
   const history = useHistory();
   let currentDate = new Date();
-  const { user } = useAuthState();
-  let [referrals, setReferrals] = useState([]);
-
-  useEffect(() => {
-    var tmp = [];
-    getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
-      console.log(greeter.data());
-      greeter.data().referrals?.forEach((referral) => {
-        const referralRef = doc(db, "referrals", referral);
-        getDoc(referralRef).then((referral) => {
-          const jobRef = doc(db, "jobs", referral.data().job);
-          getDoc(jobRef).then((job) => {
-            tmp.unshift({
-              referral: referral,
-              job: job,
-            });
-          });
-        });
-      });
-    });
-
-    setReferrals(tmp);
-  }, []);
+  console.log(referrals);
 
   function calculateDays(date) {
     let daysAgo = Math.floor((currentDate - date) / (1000 * 3600 * 24));
@@ -48,10 +23,6 @@ export default function ReferralsTable() {
       return "Today";
     } else if (daysAgo < 2) return daysAgo + " day ago";
     else return daysAgo + " days ago";
-  }
-
-  if (Object.keys(referrals).length === 0) {
-    return <NoReferralYet />;
   }
 
   return (
@@ -68,12 +39,15 @@ export default function ReferralsTable() {
                 ))}
               </tr>
             </thead>
+
             <tbody className="divide-y divide-gray-300 divide-dashed">
               {referrals?.map((r, id) => (
                 <tr
                   key={id}
                   className="hover:bg-light"
-                  onClick={() => history.push(`/greeter/${r.referral.id}`)}
+                  onClick={() =>
+                    history.push(`/greeter/referrals/${r.referral.id}`)
+                  }
                 >
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
                     {r.referral.data().candidate.name}
@@ -95,7 +69,6 @@ export default function ReferralsTable() {
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {" "}
                     <ReferralStatus status={r.referral.data().general.status} />
                   </td>
                 </tr>

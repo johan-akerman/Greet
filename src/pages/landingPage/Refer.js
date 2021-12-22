@@ -147,7 +147,6 @@ export default function Refer() {
       <div className="bg-white rounded-2xl pt-10 md:px-8 px-6 pb-8 text-left md:w-5/12 w-11/12 mx-auto">
         <ProgressBar value={progress} />
         {generateStep(index)}
-        {console.log(isComplete(index))}
         <ReferNavigation
           index={index}
           changeIndex={changeIndex}

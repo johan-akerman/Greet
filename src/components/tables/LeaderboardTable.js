@@ -20,7 +20,6 @@ export default function LeaderboardTable({ greeters }) {
       </thead>
 
       <tbody className="divide-y divide-gray-300 divide-dashed">
-        {console.log(greeters[0])}
         {greeters?.map((greeter, id) => {
           return (
             <tr key={id}>
