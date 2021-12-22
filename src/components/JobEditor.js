@@ -79,6 +79,7 @@ export default function JobEditor({ jobToEdit, id }) {
       <div className="col-span-4 bg-light px-12 py-4 overflow-y-scroll">
         <InputField
           className="mt-12"
+          type="text"
           label="Job Title"
           value={job.title}
           onChange={(e) => {
@@ -92,6 +93,7 @@ export default function JobEditor({ jobToEdit, id }) {
         <div className="grid grid-cols-4 gap-4 mt-6">
           <InputField
             className="col-span-2"
+            type="text"
             label="Hiring Reward"
             placeholder="25 000"
             value={job.hiring}
@@ -105,6 +107,7 @@ export default function JobEditor({ jobToEdit, id }) {
           <InputField
             className="col-span-2"
             label="Interview Reward"
+            type="text"
             placeholder="1000"
             value={job.interview}
             onChange={(e) => {
@@ -118,6 +121,7 @@ export default function JobEditor({ jobToEdit, id }) {
         <div className="grid grid-cols-4 gap-4 mt-6">
           <InputField
             className="col-span-2"
+            type="text"
             label="Location"
             value={job.location}
             onChange={(e) => {
@@ -131,6 +135,7 @@ export default function JobEditor({ jobToEdit, id }) {
 
           <InputField
             className="col-span-2"
+            type="text"
             label="Employment Type"
             value={job.employment}
             onChange={(e) => {

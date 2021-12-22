@@ -1,12 +1,9 @@
 import { useHistory } from "react-router-dom";
 import JobStatus from "src/components/statuses/JobStatus";
-import db from "src/firebase";
 import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-import { collection, query, where, getDocs } from "firebase/firestore";
-
 const statuses = ["Show all statuses", "Open", "Hidden"];
 const times = ["Newest first", "Oldest first"];
 const th = ["Job", "Hiring reward", "Interview reward", "Posted", "Status"];

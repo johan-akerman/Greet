@@ -4,13 +4,14 @@ export default function InputField({
   onChange,
   className,
   placeholder,
+  type,
 }) {
   return (
     <div className={className}>
-      <label className="block text-sm font-medium text-gray-700">{label}</label>
+      <label class="block text-black text-sm font-semibold mb-2">{label}</label>
       <input
-        className="mt-1 focus:ring-primary focus:border-primary block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
-        type="text"
+        className="block border border-grey-light w-full p-3 rounded mb-4 focus:ring-primary focus:border-primary"
+        type={type}
         placeholder={placeholder}
         value={value}
         onChange={onChange}

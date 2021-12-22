@@ -5,11 +5,13 @@ import { Link } from "react-router-dom";
 import MobileMenu from "./MobileMenu";
 import { useAuthState } from "src/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
-import { faChevronDown, faPlus } from "@fortawesome/free-solid-svg-icons";
+import { faPlus } from "@fortawesome/free-solid-svg-icons";
 import ProfileMenu from "./ProfileMenu";
+import { useRole } from "src/hooks/useRole";
 
 export function Navbar() {
   const { user } = useAuthState();
+  const role = useRole();
   return (
     <Disclosure as="nav" className="bg-primary  w-full">
       {({ open }) => (
@@ -44,14 +46,19 @@ export function Navbar() {
               <MobileMenu />
               {user ? (
                 <>
-                  <Link
-                    to="/admin/create-new-job"
-                    className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-sm justify-center px-6 bg-black rounded-lg mr-8 text-white"
-                  >
-                    <FontAwesomeIcon icon={faPlus} className="mr-3" />
-                    Create new job
-                  </Link>
-                  <ProfileMenu />
+                  {role === "company" ? (
+                    <Link
+                      to="/admin/create-new-job"
+                      className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-sm justify-center px-6 bg-black rounded-lg mr-8 text-white"
+                    >
+                      <FontAwesomeIcon icon={faPlus} className="mr-3" />
+                      Create new job
+                    </Link>
+                  ) : (
+                    ""
+                  )}
+
+                  <ProfileMenu role={role} />
                 </>
               ) : (
                 <>

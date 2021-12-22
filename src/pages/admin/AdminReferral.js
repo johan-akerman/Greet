@@ -6,14 +6,14 @@ import db from "src/firebase";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faChevronLeft } from "@fortawesome/free-solid-svg-icons";
 import Loader from "src/components/Loader";
+import { useRole } from "src/hooks/useRole";
 
 function AdminReferral() {
-  let [referral, setReferral] = useState({});
+  let [referral, setReferral] = useState();
   let url = window.location.href;
+  const role = useRole();
   let job = url.split("/")[url.split("/").length - 3];
   let id = url.split("/")[url.split("/").length - 1];
-
-  console.log(job);
 
   const ref = doc(db, "referrals", id);
 
@@ -25,21 +25,23 @@ function AdminReferral() {
     getReferral();
   }, []);
 
-  if (Object.keys(referral).length === 0) {
+  if (!referral) {
     return <Loader />;
   }
 
   return (
     <>
-      
       <div className="py-32 min-h-screen">
         <div className="w-11/12 mx-auto">
-          <Link to={`/admin/${job}`} className="text-4xl">
+          <Link
+            to={role === "greeter" ? "/greeter" : `/admin/${job}`}
+            className="text-4xl"
+          >
             <FontAwesomeIcon
               icon={faChevronLeft}
               className="mr-3 text-xl mb-1"
             />
-            {referral.candidate.name}
+            {referral?.candidate.name}
           </Link>
 
           <div className="grid grid-cols-12 gap-12 mt-12">
@@ -57,7 +59,7 @@ function AdminReferral() {
                   <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                     <dt class="text-sm font-medium text-gray-500">Name</dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      {referral.candidate.name}
+                      {referral?.candidate.name}
                     </dd>
                   </div>
                   <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -65,7 +67,7 @@ function AdminReferral() {
                       Previous / current title
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      {referral.candidate.title}
+                      {referral?.candidate.title}
                     </dd>
                   </div>
                   <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -73,7 +75,7 @@ function AdminReferral() {
                       Email address
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      {referral.candidate.email}
+                      {referral?.candidate.email}
                     </dd>
                   </div>
                   <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -81,7 +83,7 @@ function AdminReferral() {
                       LinkedIn profile
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      {referral.candidate.linkedin}
+                      {referral?.candidate.linkedin}
                     </dd>
                   </div>
                   <div class="bg-white px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -89,7 +91,7 @@ function AdminReferral() {
                       Openness to a new job
                     </dt>
                     <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                      {referral.general.open}
+                      {referral?.general.open}
                     </dd>
                   </div>
                 </dl>

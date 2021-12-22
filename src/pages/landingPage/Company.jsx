@@ -8,12 +8,9 @@ function Company() {
   const [company, setCompany] = useState();
   const url = window.location.href;
   const id = url.split("/")[url.split("/").length - 1];
-  console.log(id);
   useEffect(() => {
     getDoc(doc(db, "companies", id)).then((doc) => setCompany(doc));
   }, []);
-
-  console.log(company?.data());
 
   if (!company) {
     return <Loader />;

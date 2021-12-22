@@ -6,7 +6,7 @@ import { useEffect, useState } from "react";
 import { getDownloadURL, ref, uploadBytesResumable } from "@firebase/storage";
 import InputField from "../InputField";
 
-export default function ProfileSettings({ user, profile }) {
+export default function CompanySettings({ user, profile }) {
   const [tmpProfile, setTmpProfile] = useState();
   const [originalProfile] = useState(profile);
 
@@ -48,9 +48,8 @@ export default function ProfileSettings({ user, profile }) {
     );
   };
 
-  const companiesRef = doc(db, "companies", user.uid);
-
   async function handleSave() {
+    const companiesRef = doc(db, "companies", user?.uid);
     await setDoc(companiesRef, {
       company: tmpProfile.company,
       website: tmpProfile.website,
@@ -106,6 +105,7 @@ export default function ProfileSettings({ user, profile }) {
         <InputField
           className="col-span-2"
           label="Company name"
+          type="text"
           value={tmpProfile?.company}
           onChange={(e) => {
             setTmpProfile({
@@ -119,6 +119,7 @@ export default function ProfileSettings({ user, profile }) {
         <InputField
           className="col-span-2"
           label="Website"
+          type="text"
           value={tmpProfile?.website}
           onChange={(e) => {
             setTmpProfile({
@@ -133,6 +134,7 @@ export default function ProfileSettings({ user, profile }) {
         <InputField
           className="col-span-2"
           label="Founded"
+          type="text"
           value={tmpProfile?.founded}
           onChange={(e) => {
             setTmpProfile({
@@ -146,6 +148,7 @@ export default function ProfileSettings({ user, profile }) {
         <InputField
           className="col-span-2"
           label="Employees"
+          type="text"
           value={tmpProfile?.employees}
           onChange={(e) => {
             setTmpProfile({
@@ -159,6 +162,7 @@ export default function ProfileSettings({ user, profile }) {
 
       <InputField
         label="Bio"
+        type="text"
         className="mt-4"
         value={tmpProfile?.bio}
         onChange={(e) => {
@@ -170,11 +174,11 @@ export default function ProfileSettings({ user, profile }) {
         placeholder="Bio"
       />
 
-      <label className="block text-sm font-medium text-gray-700 mt-4">
+      <label className="block text-black text-sm font-semibold mb-2">
         About
       </label>
       <textarea
-        className="mt-1 focus:ring-primary focus:border-primary block w-full shadow-sm sm:text-sm border-gray-300 rounded-md"
+        className="block border border-grey-light w-full p-3 rounded mb-4 focus:ring-primary focus:border-primary"
         rows="8"
         placeholder="Text about your company goes here."
         value={tmpProfile?.about}
@@ -213,6 +217,7 @@ export default function ProfileSettings({ user, profile }) {
       <InputField
         className="col-span-2"
         label="Banner caption"
+        type="text"
         value={tmpProfile?.caption}
         onChange={(e) => {
           setTmpProfile({

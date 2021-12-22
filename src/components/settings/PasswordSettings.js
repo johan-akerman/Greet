@@ -11,7 +11,7 @@ export default function PasswordSettings({ user }) {
         console.log("Success!");
       })
       .catch((error) => {
-        console.log("Failure");
+        console.log("Failure: " + error);
       });
   }
 
@@ -25,6 +25,7 @@ export default function PasswordSettings({ user }) {
       <InputField
         className="w-1/2 mt-12"
         label="New password"
+        type="password"
         value={password}
         onChange={(e) => setPassword(e.target.value)}
         placeholder=""
