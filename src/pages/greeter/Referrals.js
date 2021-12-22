@@ -33,12 +33,13 @@ export default function Referrals() {
         getDoc(referralRef).then((referral) => {
           const jobRef = doc(db, "jobs", referral.data().job);
           getDoc(jobRef).then((job) => {
-            let response = {
-              referral: referral,
-              job: job,
-            };
-
-            setReferrals((referrals) => [...referrals, response]);
+            setReferrals((referrals) => [
+              ...referrals,
+              {
+                referral: referral,
+                job: job,
+              },
+            ]);
           });
         });
       });
