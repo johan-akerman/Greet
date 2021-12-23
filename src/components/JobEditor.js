@@ -78,7 +78,7 @@ export default function JobEditor({ jobToEdit, id }) {
     <div className="grid grid-cols-12 overflow-y-hidden h-screen">
       <div className="col-span-4 bg-light px-12 py-4 overflow-y-scroll">
         <InputField
-          className="mt-12"
+          className="mt-8"
           type="text"
           label="Job Title"
           value={job.title}
@@ -118,7 +118,7 @@ export default function JobEditor({ jobToEdit, id }) {
             }}
           />
         </div>
-        <div className="grid grid-cols-4 gap-4 mt-6">
+        <div className="grid grid-cols-4 gap-4 mt-1">
           <InputField
             className="col-span-2"
             type="text"

@@ -9,7 +9,7 @@ export default function Leaderboard() {
   }
 
   return (
-    <div className="bg-primary py-32">
+    <div className="bg-primary py-28">
       <LeaderboardTable greeters={greeters} />
     </div>
   );
