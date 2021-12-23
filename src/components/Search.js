@@ -1,3 +1,6 @@
+import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { faSearch } from "@fortawesome/free-solid-svg-icons";
+
 export default function Search({ list, handleSearch }) {
   function search(input) {
     const filter = input.toUpperCase();
@@ -13,11 +16,17 @@ export default function Search({ list, handleSearch }) {
   }
 
   return (
-    <input
-      className="appearance-none h-12 text-lg block w-1/3 text-gray-700 border-2 border-black rounded-lg py-3 px-4 mb-8 leading-tight focus:outline-none focus:bg-white focus:border-primary focus:border-4"
-      placeholder="Search candidate . . ."
-      title="Type in a name"
-      onChange={(e) => search(e.target.value)}
-    />
+    <div class="relative w-full">
+      <FontAwesomeIcon
+        icon={faSearch}
+        className="absolute top-4 left-4 text-gray-600 "
+      />
+
+      <input
+        className="bg-light h-12 w-2/3 text-lg block text-gray-700 rounded-lg py-3 pl-12 px-4 leading-tight focus:outline-none"
+        placeholder="Search candidate . . ."
+        onChange={(e) => search(e.target.value)}
+      />
+    </div>
   );
 }
