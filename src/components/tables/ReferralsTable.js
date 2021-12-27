@@ -1,6 +1,5 @@
 import ReferralStatus from "src/components/statuses/ReferralStatus";
 import { useHistory } from "react-router-dom";
-import NoReferralYet from "../emptyStates/NoReferralYet";
 
 const th = [
   "Candidate",

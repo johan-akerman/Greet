@@ -12,7 +12,7 @@ export default function ReferralStatus({ status }) {
   return (
     <div
       className={`${generateBtn(status)}
-        -mt-4 relative py-1 px-5 inline-flex text-xs leading-5 font-semibold rounded-full border-2 z-0`}
+        -mt-4 relative py-1 md:px-5 px-2 inline-flex text-xs leading-5 font-semibold rounded-full border-2 z-0 h-8`}
     >
       <p>{status}</p>
     </div>
