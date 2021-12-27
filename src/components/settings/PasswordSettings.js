@@ -16,14 +16,12 @@ export default function PasswordSettings({ user }) {
   }
 
   return (
-    <div>
+    <div className="md:mt-0 my-16">
       <h3 className="text-2xl font-medium leading-6 text-gray-900">Password</h3>
-      <p className="mt-1 text-sm text-gray-600">
-        Change to a new password. More features coming soon!
-      </p>
+      <p className="mt-1 text-sm text-gray-600">Change to a new password.</p>
 
       <InputField
-        className="w-1/2 mt-12"
+        className="md:w-1/2 w-full mt-6"
         label="New password"
         type="password"
         value={password}

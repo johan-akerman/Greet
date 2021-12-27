@@ -36,6 +36,22 @@ export default function MobileMenu() {
                   <div className="relative bg-white p-3">
                     <Link
                       onClick={() => buttonRef.current?.click()}
+                      to="/sign-in"
+                      className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                    >
+                      Sign in
+                    </Link>
+
+                    <Link
+                      onClick={() => buttonRef.current?.click()}
+                      to="/sign-up"
+                      className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                    >
+                      Sign up
+                    </Link>
+
+                    <Link
+                      onClick={() => buttonRef.current?.click()}
                       to="/jobs"
                       className="flex items-center text-left p-2 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                     >

@@ -19,7 +19,7 @@ function Settings() {
   return (
     <>
       <div className="bg-white">
-        <div className="grid grid-cols-12 py-32  w-11/12 mx-auto min-h-screen gap-16">
+        <div className="md:grid hidden grid-cols-12 py-32  w-11/12 mx-auto min-h-screen gap-16">
           <div className="col-span-3">
             <button
               className={`${
@@ -57,6 +57,12 @@ function Settings() {
               <PasswordSettings user={user} />
             )}
           </div>
+        </div>
+
+        <div className="block md:hidden mt-16 p-8">
+          <GreeterSettings user={user} profile={profile} />
+          <AccountSettings user={user} />
+          <PasswordSettings user={user} />
         </div>
       </div>
     </>

@@ -33,7 +33,7 @@ export default function GreeterSettings({ user, profile }) {
 
       <div className="grid grid-cols-4 gap-4 mt-6">
         <InputField
-          className="col-span-2"
+          className="md:col-span-2 col-span-4"
           label="Name"
           type="text"
           value={tmpProfile?.name}
@@ -47,7 +47,7 @@ export default function GreeterSettings({ user, profile }) {
         />
 
         <InputField
-          className="col-span-2"
+          className="md:col-span-2 col-span-4"
           label="Title"
           type="text"
           value={tmpProfile?.title}
