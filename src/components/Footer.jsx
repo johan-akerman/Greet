@@ -28,6 +28,20 @@ export function Footer() {
 
           <Link
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/sign-in"
+          >
+            Sign in
+          </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/sign-up"
+          >
+            Sign up
+          </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             to="/about"
           >
             About us
