@@ -13,7 +13,7 @@ function SignIn() {
 
   useEffect(() => {
     if (role === "greeter") {
-      history.push("/greeter");
+      history.push("/referrals");
     } else if (role === "company") {
       history.push("/admin");
     }

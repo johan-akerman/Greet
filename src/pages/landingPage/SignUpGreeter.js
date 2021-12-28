@@ -59,7 +59,7 @@ function SignUpGreeter() {
             referrals: referrals,
             created: Timestamp.now(),
           }).then(() => {
-            history.push("/greeter");
+            history.push("/referrals");
           });
         });
       })

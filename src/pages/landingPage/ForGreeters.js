@@ -1,9 +1,12 @@
 import { FAQ } from "src/components/FAQ";
-import { useEffect } from "react";
 import { Banner } from "src/components/Banner";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
+import greeters from "src/images/greeters.png";
+
 import {
   faHandPeace,
+  faArrowRight,
   faSearch,
   faMoneyBillWave,
 } from "@fortawesome/free-solid-svg-icons";
@@ -69,13 +72,42 @@ function ForGreeters() {
           </div>
         </div>
       </div>
+
+      <div className="bg-white md:pt-0 mt-20 mb-20 md:w-10/12 w-11/12 mx-auto">
+        <div className="grid lg:grid-cols-12 md:gap-6 gap-24 grid-cols-1 md:mt-20 mt-0 mx-auto">
+          <div className="md:col-span-6 col-span-1 mt-0">
+            <h1 className="mt-12 mx-auto md:text-left text-center md:text-6xl text-4xl font-bold text-gray-900">
+              Become a Greeter
+            </h1>
+            <p className="text-xl mx-auto md:text-left text-center pt-4 md:pr-16 pr-0 mb-8">
+              Become a part of our Greeter community to keep track of your
+              referrals and to get exclusive updates when new jobs are posted.
+              You do not have to create a Greeter account to refer your friends
+              but it makes the referral process smoother.
+            </p>
+
+            <Link
+              to="/sign-up/new-greeter"
+              className="w-46 hover:opacity-80 cursor-pointer items-center font-semibold text-md justify-center px-8 py-3 bg-primary rounded-xl text-black"
+            >
+              Sign up
+            </Link>
+          </div>
+          <img
+            alt="pricing example chart"
+            className="md:col-span-6 col-span-1"
+            src={greeters}
+          />
+        </div>
+      </div>
       <FAQ
         questionOne="How many can I refer?"
         answerOne="You can refer how many friends you want. What are you waiting for?"
         questionTwo="When and how much do I get paid?"
         answerTwo="It varies. On each job ad you can find the specified hiring bonus and the interview bonus. You get paid when your candidate get an interview or get hired."
-        questionThree="What happens if someone already referred my friend?"
-        answerThree="The first one that refers someone to a job is the one that will get all the rewards. We will let you know if your friend has already been referred to that specific job. But remember, there are more great jobs on the job board that you can refer your friend to. "
+        questionThree="Do I have to sign up for a Greeter account to refer my friends?"
+        answerThree=" You do not have to create a Greeter account to refer your friends
+        but it makes the referral process smoother. For example you do not have to add your own personal information each time you submit a referral."
       />
       <Banner
         title="Ready to refer someone?"

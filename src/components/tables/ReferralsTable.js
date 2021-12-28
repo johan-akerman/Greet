@@ -44,9 +44,7 @@ export default function ReferralsTable({ referrals }) {
                 <tr
                   key={id}
                   className="hover:bg-light"
-                  onClick={() =>
-                    history.push(`/greeter/referrals/${r.referral.id}`)
-                  }
+                  onClick={() => history.push(`/referrals/${r.referral.id}`)}
                 >
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
                     {r.referral.data().candidate.name}

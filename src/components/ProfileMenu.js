@@ -57,26 +57,6 @@ export default function ProfileMenu({ role }) {
               <div className="p-3 ">
                 <Menu.Item>
                   <Link
-                    to="/greeter"
-                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                  >
-                    <FontAwesomeIcon icon={faUsers} className="mr-3" />
-                    My referrals
-                  </Link>
-                </Menu.Item>
-
-                <Menu.Item>
-                  <Link
-                    to="/greeter/leaderboard"
-                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                  >
-                    <FontAwesomeIcon icon={faTrophy} className="ml-0.5 mr-3" />
-                    Leaderboard
-                  </Link>
-                </Menu.Item>
-
-                <Menu.Item>
-                  <Link
                     to="/greeter/settings"
                     className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                   >

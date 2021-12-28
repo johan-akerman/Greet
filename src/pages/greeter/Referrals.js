@@ -3,30 +3,39 @@ import ReferralCard from "src/components/ReferralCard";
 import { useState, useEffect } from "react";
 import db, { useAuthState } from "src/firebase";
 import { doc, getDoc } from "@firebase/firestore";
+import { useRole } from "src/hooks/useRole";
+import NoReferrals from "src/components/emptyStates/NoReferrals";
 
 export default function Referrals() {
   let [referrals, setReferrals] = useState([]);
   const { user } = useAuthState();
+  const role = useRole();
 
   useEffect(() => {
-    getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
-      greeter.data().referrals?.forEach((referral) => {
-        const referralRef = doc(db, "referrals", referral);
-        getDoc(referralRef).then((referral) => {
-          const jobRef = doc(db, "jobs", referral.data().job);
-          getDoc(jobRef).then((job) => {
-            setReferrals((referrals) => [
-              ...referrals,
-              {
-                referral: referral,
-                job: job,
-              },
-            ]);
+    if (user) {
+      getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
+        greeter.data().referrals?.forEach((referral) => {
+          const referralRef = doc(db, "referrals", referral);
+          getDoc(referralRef).then((referral) => {
+            const jobRef = doc(db, "jobs", referral.data().job);
+            getDoc(jobRef).then((job) => {
+              setReferrals((referrals) => [
+                ...referrals,
+                {
+                  referral: referral,
+                  job: job,
+                },
+              ]);
+            });
           });
         });
       });
-    });
+    }
   }, []);
+
+  if (role === "none") {
+    return <NoReferrals />;
+  }
 
   if (!referrals) {
     return <h1>Loading...</h1>;
