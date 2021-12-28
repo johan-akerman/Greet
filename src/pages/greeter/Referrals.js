@@ -10,7 +10,7 @@ export default function Referrals() {
 
   useEffect(() => {
     getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
-      greeter.data().referrals?.forEach((referral, id) => {
+      greeter.data().referrals?.forEach((referral) => {
         const referralRef = doc(db, "referrals", referral);
         getDoc(referralRef).then((referral) => {
           const jobRef = doc(db, "jobs", referral.data().job);

@@ -32,12 +32,12 @@ function AdminReferral() {
 
   return (
     <>
-      <div className="md:py-32 py-20 md:bg-white bg-light">
+      <div className="lg:py-36 py-20 md:bg-white bg-light">
         <div className="w-11/12 mx-auto">
           <div className="flex justify-between">
             <Link
               to={role === "greeter" ? "/greeter" : `/admin/${job}`}
-              className="text-4xl text-center -mt-6"
+              className="text-4xl text-center -mt-4"
             >
               <FontAwesomeIcon
                 icon={faChevronLeft}

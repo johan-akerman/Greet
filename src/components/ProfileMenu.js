@@ -93,18 +93,10 @@ export default function ProfileMenu({ role }) {
                     className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                   >
                     <FontAwesomeIcon icon={faPoll} className="mr-3" />
-                    Dashboard
+                    My jobs
                   </Link>
                 </Menu.Item>
-                <Menu.Item>
-                  <Link
-                    to={`/companies/${user?.uid}`}
-                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                  >
-                    <FontAwesomeIcon icon={faUser} className="mr-3" />
-                    Profile
-                  </Link>
-                </Menu.Item>
+
                 <Menu.Item>
                   <Link
                     to="/admin/settings"

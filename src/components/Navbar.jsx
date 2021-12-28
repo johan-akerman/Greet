@@ -48,7 +48,7 @@ export function Navbar() {
                 <>
                   {role === "company" ? (
                     <Link
-                      to="/admin/create-new-job"
+                      to="/create-new-job"
                       className="hover:opacity-80 flex cursor-pointer items-center font-semibold text-sm justify-center px-6 bg-black rounded-lg mr-8 text-white"
                     >
                       <FontAwesomeIcon icon={faPlus} className="mr-3" />

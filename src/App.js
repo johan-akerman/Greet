@@ -88,6 +88,13 @@ function App() {
         <Route exact path="/companies/:url" component={Company} />
         <Route exact path="/jobs/:job" component={Job} />
 
+        <CompanyRoute
+          exact
+          path="/create-new-job"
+          component={AdminAddJob}
+          role={role}
+        />
+
         <CompanyRoute exact path="/admin" component={AdminJobs} role={role} />
         <CompanyRoute
           exact
@@ -95,12 +102,7 @@ function App() {
           component={AdminSettings}
           role={role}
         />
-        <CompanyRoute
-          exact
-          path="/admin/create-new-job"
-          component={AdminAddJob}
-          role={role}
-        />
+
         <CompanyRoute
           exact
           path="/admin/:job"
