@@ -15,7 +15,7 @@ export default function ReferralCard({ referrals }) {
         <div
           key={id}
           className="px-3 py-5 relative border-b border-gray items-center text-left "
-          onClick={() => history.push(`/greeter/referrals/${r.referral.id}`)}
+          onClick={() => history.push(`/referrals/${r.referral.id}`)}
         >
           <div class="text-lg font-medium text-gray-900">
             {r.referral.data().candidate.name}

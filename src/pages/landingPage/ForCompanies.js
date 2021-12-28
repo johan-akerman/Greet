@@ -1,8 +1,10 @@
 import { FAQ } from "src/components/FAQ";
 import { Banner } from "src/components/Banner";
-import { useEffect } from "react";
 import chart from "src/images/chart.png";
+import { Link } from "react-router-dom";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import companies from "src/images/companies.png";
+
 import {
   faCopy,
   faEnvelopeOpenText,
@@ -13,9 +15,34 @@ import {
 function ForCompanies() {
   return (
     <>
-      <div className="bg-white md:pt-32 pt-16">
+      <div className="bg-light pt-40 pb-8">
+        <div className="md:pt-0 mb-20 md:w-10/12 w-11/12 mx-auto text-center">
+          <h1 className="mx-auto md:text-7xl text-5xl font-bold text-gray-900">
+            Forget expensive headhunters
+          </h1>
+          <p className="text-xl mx-auto md:w-8/12 w-12/12 pt-4 mb-12">
+            Post jobs for free and only pay when you interview or hire someone.
+            Make your recruitment process crowdsourced and remove expensive
+            headhunters from the equation.
+          </p>
+
+          <Link
+            to="/sign-up/new-company"
+            className="mx-auto w-46 hover:opacity-80 cursor-pointer items-center font-semibold text-md justify-center px-8 py-4 bg-primary rounded-xl text-black"
+          >
+            Sign up
+          </Link>
+
+          <img
+            alt="pricing example chart"
+            className="mt-20 w-11/12 mx-auto"
+            src={companies}
+          />
+        </div>
+      </div>
+      <div className="pt-28">
         <h1 className="max-w-2xl mx-auto text-center md:text-6xl text-4xl font-bold text-gray-900">
-          Greet for Companies
+          How it works
         </h1>
 
         <div className="grid lg:grid-cols-4 md:grid-cols-2 grid-cols-1 gap-14 md:py-40 md:pb-12 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
@@ -87,88 +114,7 @@ function ForCompanies() {
           </div>
         </div>
       </div>
-      {/* <div className="bg-white pt-20 md:pb-20 lg:w-10/12 md:w-10/12 w-11/12 mx-auto">
-        <h1 className="text-center md:text-6xl text-4xl font-bold text-gray-900">
-          Pricing
-        </h1>
 
-        <div className="grid lg:grid-cols-3 md:gap-6 gap-10 grid-cols-1 mt-20 mx-auto">
-          <div className="w-full bg-gray-200 text-black rounded-2xl p-6 text-left relative">
-            <h1 className=" md:text-2xl text-xl font-bold">Greet Free</h1>
-            <span className="flex items-baseline mt-5 mb-2">
-              <h1 className=" md:text-5xl text-2xl font-bold mr-3">0 SEK</h1>
-              <p className="font-semibold tracking-wide align-baseline text-2xl">
-                / month
-              </p>
-            </span>
-
-            <ul className="list-disc ml-5 mb-6 text-xl">
-              <li>1 job post simultaneously. </li>
-              <li>Personalised company page. </li>
-              <li>Pay per interview and hiring.</li>
-            </ul>
-
-            <Link
-              to="/sign-up"
-              className="md:absolute md:bottom-6 transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0  w-48 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
-            >
-              Get started
-            </Link>
-          </div>
-          <div className="w-full bg-gray-200 text-black rounded-2xl p-6 text-left relative">
-            <img src={hot} className="absolute right-4 -top-6 w-12" alt="hot" />
-            <h1 className=" md:text-2xl text-xl font-bold">Greet Basic</h1>
-            <span className="flex items-baseline mt-5 mb-2">
-              <h1 className=" md:text-5xl text-2xl font-bold mr-3">250 SEK</h1>
-              <p className="font-semibold tracking-wide align-baseline text-2xl">
-                / month
-              </p>
-            </span>
-
-            <p className="text-black font-medium text-xl">
-              All Greet Free features plus:
-            </p>
-            <ul className="list-disc ml-5 mb-6 text-xl">
-              <li>Tot 3 job posts simultaneously. </li>
-              <li>Screening of candidates.</li>
-            </ul>
-
-            <Link
-              to="/sign-up"
-              className="transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg md:mx-0 w-48 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
-            >
-              Get started
-            </Link>
-          </div>
-
-          <div className="w-full bg-gray-200 text-black rounded-2xl p-6 text-left relative">
-            <h1 className=" md:text-2xl text-xl font-bold">Greet Pro</h1>
-            <span className="flex items-baseline mt-5 mb-2">
-              <h1 className=" md:text-5xl text-2xl font-bold mr-3">500 SEK</h1>
-              <p className="font-semibold tracking-wide align-baseline text-2xl">
-                / month
-              </p>
-            </span>
-
-            <p className="text-black font-medium text-xl">
-              All Greet Basic features plus:
-            </p>
-            <ul className="list-disc ml-5 mb-6 text-xl">
-              <li>Tot 10 job posts simultaneously.</li>
-            </ul>
-
-            <Link
-              to="/sign-up"
-              className="md:absolute md:bottom-6 transform ease-in duration-100 hover:-translate-y-1 hover:shadow-lg  w-48 text-white shadow font-semibold rounded-xl flex items-center justify-center px-8 py-3 border border-transparent text-base  bg-primary  md:py-4 md:text-lg md:px-10"
-            >
-              Get started
-            </Link>
-          </div>
-        </div>
-        <p className="mt-8 text-center text-xl text-gray-400">
-          You can switch and cancel plan at any time.
-        </p>
-      </div> */}
       <div className="bg-white md:pt-0 mt-32 mb-20 md:w-10/12 w-11/12 mx-auto">
         <div className="grid lg:grid-cols-5 md:gap-6 gap-24 grid-cols-1 md:mt-20 mt-0 mx-auto">
           <div className="md:col-span-3 col-span-1 md:mt-14 mt-0">

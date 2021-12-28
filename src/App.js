@@ -87,6 +87,8 @@ function App() {
         <Route exact path="/referral-complete" component={ReferralComplete} />
         <Route exact path="/companies/:url" component={Company} />
         <Route exact path="/jobs/:job" component={Job} />
+        <Route exact path="/leaderboard" component={Leaderboard} role={role} />
+        <Route exact path="/referrals" component={Referrals} role={role} />
 
         <CompanyRoute
           exact
@@ -123,11 +125,9 @@ function App() {
           role={role}
         />
 
-        <GreeterRoute exact path="/greeter" component={Referrals} role={role} />
-
         <GreeterRoute
           exact
-          path="/greeter/referrals/:referral"
+          path="/referrals/:referral"
           component={AdminReferral}
           role={role}
         />
@@ -138,12 +138,7 @@ function App() {
           component={Settings}
           role={role}
         />
-        <GreeterRoute
-          exact
-          path="/greeter/leaderboard"
-          component={Leaderboard}
-          role={role}
-        />
+
         <Footer />
       </Router>
     </AuthContextProvider>

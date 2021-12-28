@@ -36,7 +36,7 @@ function AdminReferral() {
         <div className="w-11/12 mx-auto">
           <div className="flex justify-between">
             <Link
-              to={role === "greeter" ? "/greeter" : `/admin/${job}`}
+              to={role === "greeter" ? "/referrals" : `/admin/${job}`}
               className="text-4xl text-center -mt-4"
             >
               <FontAwesomeIcon
