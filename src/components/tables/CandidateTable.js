@@ -96,7 +96,7 @@ export default function CandidateTable({ referrals, id }) {
         </div>
       </div>
 
-      <div className="mt-12 overflow-x-auto bg-white rounded-xl px-4">
+      <div className="mt-12 overflow-x-auto bg-white rounded-xl">
         <div className="py-2 align-middle inline-block min-w-full">
           <table className="min-w-full divide-y divide-gray-500 z-0">
             <thead>

@@ -21,7 +21,7 @@ export default function Select({
     <div className={className}>
       <Listbox value={local} onChange={setLocal}>
         <div className="relative">
-          <Listbox.Button className="w-full py-2.5 px-3 border-2 leading-tight border-gray-500 rounded focus:outline-none cursor-pointer text-left sm:text-sm text-gray-500">
+          <Listbox.Button className="w-full py-2.5 px-3 border leading-tight border-gray-500 rounded focus:outline-none cursor-pointer text-left sm:text-sm text-gray-500">
             <span className="block truncate leading-tight text-lg">
               {selected}
             </span>

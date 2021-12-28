@@ -8,7 +8,7 @@ function Jobs() {
       <Banner
         title="Want to post your own jobs?"
         button="Post a job"
-        link="/sign-up"
+        link="/sign-up/new-company"
       />
     </div>
   );

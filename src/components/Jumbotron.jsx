@@ -7,7 +7,7 @@ export function Jumbotron() {
   return (
     <main className="bg-primary ">
       <div className="w-11/12 flex flex-wrap mx-auto">
-        <div className="lg:text-left text-center lg:w-7/12 w-12/12 lg:pt-24 pt-12 lg:pb-40 pb-16 mx-auto">
+        <div className="lg:text-left text-center lg:w-7/12 w-12/12 pt-24 lg:pb-40 pb-0 mx-auto">
           <h1 className="text-black lg:text-6xl text-4xl sm:mt-5 font-bold sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
             Get rewarded to refer your friends to tech jobs in Sweden
             <br />
@@ -30,9 +30,9 @@ export function Jumbotron() {
           </div>
         </div>
 
-        <div className="md:w-5/12 w-12/12 md:pt-12 md:pl-10 pl-0 pt-0 md:pb-12 pb-20 mx-auto">
+        <div className="md:w-5/12 w-12/12 md:pt-12 md:pl-10 pl-0 pt-0 pb-12 mx-auto">
           <img
-            className="md:mt-28 mt-0 w-full lg:float-right float-none mx-auto"
+            className="md:mt-28 mt-16 md:w-full w-3/4 lg:float-right float-none mx-auto"
             src={phones}
             alt="phones"
           />

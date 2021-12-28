@@ -46,13 +46,11 @@ function AdminJob() {
           <FontAwesomeIcon icon={faChevronLeft} className="mr-3 text-xl mb-1" />
           {job.title}
         </Link>
-        <div className="flex mt-12 gap-3">
+        <div className="flex mt-6 gap-4 border-b border-gray-300 ">
           <button
             className={`${
-              active === 0
-                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
-                : "bg-white text-black hover:bg-light"
-            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
+              active === 0 ? "border-b-2 border-primary text-primary" : ""
+            } font-medium cursor-pointer px-4 py-4 text-sm text-gray-400`}
             onClick={() => setActive(0)}
           >
             Referrals
@@ -60,10 +58,8 @@ function AdminJob() {
 
           <button
             className={`${
-              active === 1
-                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
-                : "bg-white text-black hover:bg-light"
-            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
+              active === 1 ? "border-b-2 border-primary text-primary" : ""
+            } font-medium cursor-pointer px-4 py-4 text-sm text-gray-400`}
             onClick={() => setActive(1)}
           >
             Job description
@@ -71,10 +67,8 @@ function AdminJob() {
 
           <button
             className={`${
-              active === 2
-                ? "bg-yellow-100 text-yellow-800 border-yellow-100"
-                : "bg-white text-black hover:bg-light"
-            } font-semibold cursor-pointer px-4 py-3 rounded-lg text-sm`}
+              active === 2 ? "border-b-2 border-primary text-primary" : ""
+            } font-medium cursor-pointer px-4 py-4 text-sm text-gray-400`}
             onClick={() => setActive(2)}
           >
             Job settings
