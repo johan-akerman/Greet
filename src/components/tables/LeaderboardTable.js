@@ -28,13 +28,13 @@ export default function LeaderboardTable({ greeters }) {
   }
 
   return (
-    <div className="bg-white rounded-xl p-5 overflow-x-auto mx-auto md:w-5/12 w-11/12">
+    <div className="bg-white rounded-xl p-5 overflow-x-auto mx-auto mt-20 mb-32 md:w-5/12 w-11/12">
       <h2 className="text-4xl font-semibold text-gray-900 leading-none text-center mt-10">
         Leaderboard
       </h2>
       <p className="text-md text-gray-600 pb-8 text-center pt-2">
-        Helping your friends land their dream job is not a competition. But the
-        Greeter's who have helped a lot of their friends deserves recognition 🎉
+        Helping your friends land their dream job is not a competition. But it
+        deserves recognition 🎉
       </p>
       <table className="w-full">
         <thead className="border-b border-gray-500">

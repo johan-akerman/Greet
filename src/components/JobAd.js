@@ -3,7 +3,7 @@ import "src/editor.css";
 export default function JobAd({ job, description }) {
   return (
     <>
-      <div className="w-11/12 mx-auto md:mt-32 mt-20 pb-20">
+      <div className="w-11/12 mx-auto md:mt-32 mt-20 pb-8">
         <div className="flex">
           <img
             alt="company logo"
