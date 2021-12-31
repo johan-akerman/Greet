@@ -78,7 +78,7 @@ export default function JobEditor({ jobToEdit, id }) {
   }, [job, user, db, id]);
 
   return (
-    <div className="w-1/2 mx-auto mt-32 grid">
+    <div className="w-1/2 mx-auto mt-32  grid">
       <div className="bg-light p-1 rounded-xl w-56 justify-self-end ">
         <button
           className={`${
@@ -199,7 +199,7 @@ export default function JobEditor({ jobToEdit, id }) {
         <JobAd job={job} description={job.description} />
       )}
 
-      <div className="flex items-center pt-6">
+      <div className="flex items-center pt-6 mt-12">
         {isComplete ? (
           <button
             className="text-center transform hover:-translate-y-1 hover:shadow-lg cursor-pointer font-bold text-md px-8 py-3 bg-primary rounded-xl text-black"
