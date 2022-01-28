@@ -8,8 +8,7 @@ export default function NoLeaderboard() {
       <FontAwesomeIcon icon={faTrophy} className="text-6xl text-gray-300" />
       <h1 className="text-2xl mt-4">Join the leaderboard!</h1>
       <p className="mb-8">
-        The leaderboard is not available when you are signed out. Become a
-        Greeter to unlock the leaderboard and much (much) more.
+        Become a Greeter to unlock the leaderboard and much (much) more.
       </p>
       <div className="pt-3">
         <Link
@@ -20,7 +19,7 @@ export default function NoLeaderboard() {
         </Link>
 
         <Link
-          to="/sign-up"
+          to="/sign-up/new-greeter"
           className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
         >
           Sign up

@@ -19,7 +19,7 @@ export default function NoReferrals() {
         </Link>
 
         <Link
-          to="/sign-up"
+          to="/sign-up/new-greeter"
           className="ml-2 font-semibold mr-2 cursor-pointer border-b-2 border-black  hover:bg-light px-3 py-3 rounded-xl border-none"
         >
           Sign up

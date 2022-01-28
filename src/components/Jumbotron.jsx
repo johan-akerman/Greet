@@ -37,7 +37,7 @@ export function Jumbotron() {
             decimal=" "
             decimals={3}
           />{" "}
-          SEK* to refer your friends to tech jobs
+          SEK to refer your friends to tech jobs
         </h1>
         <p className="mt-3 text-2xl text-black sm:mt-5 md:mt-5 w-10/12 mx-auto">
           Greet let's you refer your friend to their dream job in tech. As a
