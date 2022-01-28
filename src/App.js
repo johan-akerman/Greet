@@ -30,6 +30,7 @@ import Leaderboard from "./pages/greeter/Leaderboard";
 import SignUpGreeter from "./pages/landingPage/SignUpGreeter";
 import SignUpCompany from "./pages/landingPage/SignUpCompany";
 import ResetPassword from "./pages/landingPage/ResetPassword";
+import { InfoBar } from "./components/InfoBar";
 
 function CompanyRoute({ component: C, ...props }) {
   return (
@@ -69,6 +70,7 @@ function App() {
     <AuthContextProvider>
       <Router>
         <ScrollToTop />
+        <InfoBar />
         <Navbar />
         <Route exact path="/" component={Home} />
         <Route exact path="/privacy-policy" component={PrivacyPolicy} />

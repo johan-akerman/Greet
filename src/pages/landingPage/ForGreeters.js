@@ -80,10 +80,10 @@ function ForGreeters() {
               Become a Greeter
             </h1>
             <p className="text-xl mx-auto md:text-left text-center pt-4 md:pr-16 pr-0 mb-12">
-              Become a part of our Greeter community to keep track of your
-              referrals and to get exclusive updates when new jobs are posted.
               You do not have to create a Greeter account to refer your friends
-              but it makes the referral process smoother.
+              but it makes the referral process smoother. Become a part of our
+              Greeter community to keep track of your referrals and to get
+              exclusive updates when new jobs are posted.
             </p>
 
             <Link

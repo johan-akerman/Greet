@@ -26,7 +26,7 @@ export function HowItWorks() {
             Find a job
           </h1>
           <p className="text-xl font-light">
-            Head over to the job board to find exciting tech jobs in Sweden.
+            Find exciting tech jobs on the job board.
           </p>
         </div>
 
@@ -42,8 +42,7 @@ export function HowItWorks() {
             Refer a friend
           </h1>
           <p className="text-xl font-light">
-            Refer a friend that fits the job description and who is looking for
-            new challenges.
+            Refer a friend who is looking for new challenges.
           </p>
         </div>
 
@@ -60,7 +59,7 @@ export function HowItWorks() {
             Get paid
           </h1>
           <p className="text-xl font-light">
-            Get paid if the friend you referred gets interviewed or hired.
+            Get paid if your friend gets interviewed or hired.
           </p>
         </div>
       </div>
