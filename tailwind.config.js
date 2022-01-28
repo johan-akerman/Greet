@@ -11,6 +11,7 @@ module.exports = {
         light: "#F3F4F6",
         lightYellow: "#FFF2C8",
         star: "#FFC828",
+        money: "#10a666",
       },
     },
   },

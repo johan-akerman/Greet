@@ -34,7 +34,7 @@ export function SocialMedia() {
       <div className="w-10/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-5 ">
         <a
           className="transform ease-in duration-100 hover:-translate-y-2 "
-          href="https://www.instagram.com/p/CT71ijVo9AI/"
+          href="https://www.instagram.com/p/CVYRGT1IQVH/"
           target="_blank"
           rel="noreferrer"
         >

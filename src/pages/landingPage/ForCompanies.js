@@ -154,7 +154,7 @@ function ForCompanies() {
       <Banner
         title="Ready to hire your next star?"
         button="Post a job"
-        link="/sign-up"
+        link="/sign-up/new-company"
       />
     </>
   );

@@ -9,7 +9,7 @@ export default function NoLeaderboard() {
       <h1 className="text-2xl mt-4">Join the leaderboard!</h1>
       <p className="mb-8">
         The leaderboard is not available when you are signed out. Become a
-        Greeter today and unlock the leaderboard and much (much) more.
+        Greeter to unlock the leaderboard and much (much) more.
       </p>
       <div className="pt-3">
         <Link

@@ -21,7 +21,7 @@ export function CompanyBanner() {
 
         <p className="mt-3 text-xl text-black sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
           <FontAwesomeIcon icon={faCheck} className="mr-3  opacity-70" />
-          Free job posting, promotion and screening.
+          Free job posting and promotion.
         </p>
 
         <p className="mt-3 text-xl text-black sm:mt-5 sm:max-w-xl sm:mx-auto md:mt-5 lg:mx-0">
