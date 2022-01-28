@@ -77,7 +77,7 @@ function ForGreeters() {
         <div className="grid lg:grid-cols-12 md:gap-6 gap-24 grid-cols-1 md:mt-20 mt-0 mx-auto">
           <div className="md:col-span-6 col-span-1 mt-0 md:text-left text-center">
             <h1 className="mx-auto md:text-left text-center md:text-6xl text-4xl font-bold text-gray-900">
-              Become a Greeter
+              We help you help your friends
             </h1>
             <p className="text-xl mx-auto md:text-left text-center pt-4 md:pr-16 pr-0 mb-12">
               You do not have to create a Greeter account to refer your friends
