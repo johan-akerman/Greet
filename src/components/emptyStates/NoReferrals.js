@@ -8,8 +8,7 @@ export default function NoReferrals() {
       <FontAwesomeIcon icon={faUsers} className="text-6xl text-gray-300" />
       <h1 className="text-2xl mt-4">Keep track of your referrals!</h1>
       <p className="mb-8">
-        Sign up and become a Greeter to keep track of your referrals and much
-        (much) more.
+        Become a Greeter to keep track of your referrals and much (much) more.
       </p>
       <div className="pt-3">
         <Link
