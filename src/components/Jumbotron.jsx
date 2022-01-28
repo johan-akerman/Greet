@@ -8,7 +8,7 @@ import CountUp from "react-countup";
 export function Jumbotron() {
   return (
     <main className="bg-primary">
-      <div className="text-center lg:w-7/12 w-12/12 md:pt-52 pt-32 pb-52 mx-auto h-2/3">
+      <div className="text-center lg:w-7/12 w-12/12 ld:pt-52 md:pt-40 pt-32 pb-52 mx-auto h-2/3">
         <div className="relative w-full bg-light h-2/3 md:block hidden ">
           <img
             src={billThree}
@@ -27,7 +27,7 @@ export function Jumbotron() {
             className="w-32 absolute md:bottom-0 md:top-40 md:-right-20 top-96 right-6"
           />
         </div>
-        <h1 className="text-black lg:text-7xl text-5xl sm:mt-5 font-bold md:mt-5">
+        <h1 className="text-black lg:text-6xl text-5xl sm:mt-5 font-bold md:mt-5">
           Earn up to <br className="md:hidden block" />
           <CountUp
             start={180.0}
@@ -39,7 +39,7 @@ export function Jumbotron() {
           />{" "}
           SEK* to refer your friends to tech jobs
         </h1>
-        <p className="mt-3 md:text-3xl text-2xl text-black sm:mt-5 md:mt-5 w-10/12 mx-auto">
+        <p className="mt-3 text-2xl text-black sm:mt-5 md:mt-5 w-10/12 mx-auto">
           Greet let's you refer your friend to their dream job in tech. As a
           reward, you get paid if they get interviewed or hired.
         </p>
