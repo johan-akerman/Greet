@@ -24,6 +24,69 @@ export function Footer() {
           </a>
         </div>
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
+          <h1 className="text-2xl font-semibold">Greeters</h1>
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/for-greeters"
+          >
+            How it works
+          </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/jobs"
+          >
+            Find jobs
+          </Link>
+
+          <Link
+            className="w-40 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/companies"
+          >
+            Find companies
+          </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/sign-in"
+          >
+            Sign in
+          </Link>
+
+          <Link
+            className="w-40 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/sign-up/new-greeter"
+          >
+            Sign up
+          </Link>
+        </div>
+
+        <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
+          <h1 className="text-2xl font-semibold">Companies</h1>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/for-companies"
+          >
+            How it works
+          </Link>
+
+          <Link
+            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/sign-in"
+          >
+            Sign in
+          </Link>
+
+          <Link
+            className="w-40 opacity-60 hover:opacity-100 font-semibold text-lg"
+            to="/sign-up/new-company"
+          >
+            Sign up
+          </Link>
+        </div>
+
+        <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
           <h1 className="text-2xl font-semibold">Greet</h1>
 
           <Link
@@ -32,37 +95,6 @@ export function Footer() {
           >
             About us
           </Link>
-
-          <Link
-            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/jobs"
-          >
-            Job board
-          </Link>
-
-          <Link
-            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/companies"
-          >
-            Companies
-          </Link>
-
-          <Link
-            className="w-32 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/for-companies"
-          >
-            For Companies
-          </Link>
-          <Link
-            className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
-            to="/for-greeters"
-          >
-            For Greeters
-          </Link>
-        </div>
-
-        <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
-          <h1 className="text-2xl font-semibold">Legal</h1>
 
           <Link
             className="opacity-60 hover:opacity-100 font-semibold text-lg"
@@ -80,7 +112,7 @@ export function Footer() {
         </div>
 
         <div className="w-full sm:w-1/5 flex flex-col space-y-2 pb-6">
-          <h1 className="text-2xl font-semibold">Social</h1>
+          <h1 className="text-2xl font-semibold">Follow us</h1>
           <a
             className="w-28 opacity-60 hover:opacity-100 font-semibold text-lg"
             href="https://www.instagram.com/joingreet/"
@@ -98,28 +130,6 @@ export function Footer() {
             LinkedIn
           </a>
         </div>
-        {/* 
-        <div className="w-full sm:w-2/5 flex flex-col space-y-2 pb-6">
-          <h1 className="text-2xl font-semibold">Newsletter</h1>
-          <p>Latest news and job posts straight to your inbox.</p>
-          <form action="#" class="mt-2 w-full">
-            <div class="flex items-center">
-              <input
-                type="email"
-                placeholder="Email"
-                class="appearance-none h-10 text-md block bg-white  border-black text-gray-700 border-2 rounded py-3 px-4  leading-tight focus:outline-none  focus:border-black focus:border-4 mr-3"
-                required
-              />
-              <button className="bg-black text-primary font-semibold px-5 py-2 rounded ">
-                Subscribe
-                <FontAwesomeIcon
-                  className="ml-3 mb-0.5 text-sm"
-                  icon={faPaperPlane}
-                />
-              </button>
-            </div>
-          </form>
-        </div> */}
       </div>
     </div>
   );
