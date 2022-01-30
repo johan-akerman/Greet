@@ -29,7 +29,7 @@ export function SocialMedia() {
         >
           LinkedIn{" "}
         </a>
-        to get updates on new positions and other fun stuff.
+        to get updates on new jobs, companies and other fun stuff.
       </p>
       <div className="w-10/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-5 ">
         <a

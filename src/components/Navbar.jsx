@@ -24,36 +24,23 @@ export function Navbar() {
                   Greet
                 </h1>
               </Link>
-              <div className="flex pl-5 pt-1 ">
-                <HowIt />
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/jobs"
-                >
-                  Job board
-                </Link>
+            </div>
 
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/companies"
-                >
-                  Companies
-                </Link>
+            <div className="flex pl-5 pt-1 ">
+              <HowIt />
+              <Link
+                className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+                to="/jobs"
+              >
+                Jobs
+              </Link>
 
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/referrals"
-                >
-                  My referrals
-                </Link>
-
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/leaderboard"
-                >
-                  Leaderboard
-                </Link>
-              </div>
+              <Link
+                className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+                to="/companies"
+              >
+                Companies
+              </Link>
             </div>
 
             <div className="flex">
