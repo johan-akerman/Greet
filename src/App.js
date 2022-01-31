@@ -31,6 +31,7 @@ import SignUpGreeter from "./pages/landingPage/SignUpGreeter";
 import SignUpCompany from "./pages/landingPage/SignUpCompany";
 import ResetPassword from "./pages/landingPage/ResetPassword";
 import { InfoBar } from "./components/InfoBar";
+import GreeterReferral from "./pages/greeter/GreeterReferral";
 
 function CompanyRoute({ component: C, ...props }) {
   return (
@@ -130,7 +131,7 @@ function App() {
         <GreeterRoute
           exact
           path="/referrals/:referral"
-          component={AdminReferral}
+          component={GreeterReferral}
           role={role}
         />
 

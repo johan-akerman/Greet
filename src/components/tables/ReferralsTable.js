@@ -1,19 +1,12 @@
 import ReferralStatus from "src/components/statuses/ReferralStatus";
 import { useHistory } from "react-router-dom";
+import { Link } from "react-router-dom";
 
-const th = [
-  "Candidate",
-  "Job",
-  "Hiring reward",
-  "Interview reward",
-  "Added",
-  "Status",
-];
+const th = ["Candidate", "Job", "Company", "Referred", "Status"];
 
 export default function ReferralsTable({ referrals }) {
   const history = useHistory();
   let currentDate = new Date();
-  console.log(referrals);
 
   function calculateDays(date) {
     let daysAgo = Math.floor((currentDate - date) / (1000 * 3600 * 24));
@@ -41,32 +34,44 @@ export default function ReferralsTable({ referrals }) {
 
             <tbody className="divide-y divide-gray-300 divide-dashed">
               {referrals?.map((r, id) => (
-                <tr
-                  key={id}
-                  className="hover:bg-light"
-                  onClick={() => history.push(`/referrals/${r.referral.id}`)}
-                >
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
+                <tr key={id}>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {r.referral.data().candidate.name}
                   </td>
 
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {r.job.data().title} @ {r.job.data().company}
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <Link
+                      to={`/jobs/${r.referral.data().job}`}
+                      className="hover:text-green-500 hover:underline border-green-500"
+                    >
+                      {r.job.data().title}
+                    </Link>
                   </td>
 
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {r.job.data().hiring} SEK
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <Link
+                      to={`/companies/${r.job.data().companyId}`}
+                      className="hover:text-green-500 hover:underline border-green-500"
+                    >
+                      {r.job.data().company}
+                    </Link>
                   </td>
 
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
-                    {r.job.data().interview} SEK
-                  </td>
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {calculateDays(r.referral.data().time.toDate())}
                   </td>
 
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     <ReferralStatus status={r.referral.data().general.status} />
+                  </td>
+
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer text-right">
+                    <Link
+                      to={`/referrals/${r.referral.id}`}
+                      className="text-green-600"
+                    >
+                      Preview
+                    </Link>
                   </td>
                 </tr>
               ))}
