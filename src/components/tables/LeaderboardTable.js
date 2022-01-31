@@ -33,10 +33,9 @@ export default function LeaderboardTable({ greeters }) {
         Leaderboard
       </h2>
       <p className="text-md text-gray-600 pb-8 text-center pt-2">
-        Helping your friends land their dream job is not a competition. But it
-        deserves recognition 🎉
+        Helping your friends land their dream job deserves recognition 🎉
       </p>
-      <table className="w-full">
+      <table className="w-full mt-12">
         <thead className="border-b border-gray-500">
           <tr>
             <th className="px-6 py-3 text-center text-xs text-gray-900 uppercase tracking-wider leading-tight font-semibold">
