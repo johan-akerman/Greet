@@ -29,8 +29,7 @@ export default function LeaderboardCard({ greeters }) {
         Leaderboard
       </h2>
       <p className="text-md text-gray-600 pb-8 text-center pt-2 px-4">
-        Helping your friends land their dream job is not a competition. But it
-        deserves recognition 🎉
+        Helping your friends land their dream job deserves recognition 🎉
       </p>
 
       {greeters.map((greeter, id) => (

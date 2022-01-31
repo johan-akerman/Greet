@@ -18,13 +18,9 @@ function Settings() {
 
   return (
     <div className="bg-white rounded-xl p-5 overflow-x-auto mx-auto md:mt-20 mt-4 mb-32 md:w-5/12 w-11/12">
-      <h2 className="text-4xl font-semibold text-gray-900 leading-none text-center mt-10">
+      <h2 className="text-4xl font-semibold text-gray-900 leading-none text-center mt-10 mb-16">
         Settings
       </h2>
-      <p className="text-md text-gray-600 pb-8 text-center pt-2">
-        Some of this information will be displayed publicly so be careful what
-        you share 🔒
-      </p>
 
       <div className="grid grid-cols-4 gap-4 mt-6">
         <InputField
