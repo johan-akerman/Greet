@@ -70,7 +70,7 @@ function GreeterReferral() {
           </div>
 
           <div className="grid grid-cols-12 gap-6 mt-16">
-            <div class="md:col-span-8 col-span-12 bg-white overflow-hidden rounded-lg">
+            <div class="md:col-span-8 col-span-12 bg-white overflow-hidden rounded-xl">
               <div class="px-4 py-5 sm:px-6">
                 <h3 class="text-xl leading-6 font-medium text-gray-900">
                   Candidate Information
@@ -120,7 +120,7 @@ function GreeterReferral() {
               </dl>
             </div>
 
-            <div class="md:col-span-4 col-span-12 bg-white overflow-hidden rounded-lg">
+            <div class="md:col-span-4 col-span-12 bg-white overflow-hidden rounded-xl">
               <div class="px-4 py-5 sm:px-6">
                 <h3 class="text-xl leading-6 font-medium text-gray-900">
                   Job Information

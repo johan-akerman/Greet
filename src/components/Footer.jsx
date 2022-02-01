@@ -13,7 +13,7 @@ export function Footer() {
             </h1>
           </Link>
           <p className="md:w-80 w-full text-lg font-medium -mt-2 ">
-            Get rewarded to refer your friends to tech jobs in Sweden.
+            Get paid to refer your friends to their dream job in tech.
           </p>
 
           <a

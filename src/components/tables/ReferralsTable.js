@@ -2,7 +2,7 @@ import ReferralStatus from "src/components/statuses/ReferralStatus";
 import { useHistory } from "react-router-dom";
 import { Link } from "react-router-dom";
 
-const th = ["Candidate", "Job", "Company", "Referred", "Status"];
+const th = ["Candidate", "Job", "Company", "Status", "Referred"];
 
 export default function ReferralsTable({ referrals }) {
   const history = useHistory();
@@ -19,7 +19,7 @@ export default function ReferralsTable({ referrals }) {
 
   return (
     <>
-      <div className="mt-12 overflow-x-auto bg-white rounded-xl">
+      <div className="mt-6 overflow-x-auto bg-white rounded-xl px-6 py-3">
         <div className="py-2 align-middle inline-block min-w-full">
           <table className="min-w-full divide-y divide-gray-500 z-0">
             <thead>
@@ -58,17 +58,16 @@ export default function ReferralsTable({ referrals }) {
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
+                    <ReferralStatus status={r.referral.data().general.status} />
+                  </td>
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
                     {calculateDays(r.referral.data().time.toDate())}
                   </td>
 
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <ReferralStatus status={r.referral.data().general.status} />
-                  </td>
-
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer text-right">
+                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
                     <Link
                       to={`/referrals/${r.referral.id}`}
-                      className="text-green-600"
+                      className="text-green-600 hover:underline"
                     >
                       Preview
                     </Link>

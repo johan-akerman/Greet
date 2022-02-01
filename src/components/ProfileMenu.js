@@ -12,10 +12,17 @@ import {
   faUsers,
 } from "@fortawesome/free-solid-svg-icons";
 import { Link } from "react-router-dom";
+import { useHistory } from "react-router-dom";
 
 export default function ProfileMenu({ role }) {
   const auth = getAuth();
   const user = auth.currentUser;
+  let history = useHistory();
+
+  function handleSignOut() {
+    history.push("/");
+    signOut(getAuth());
+  }
 
   return (
     <div className="text-right ">
@@ -113,7 +120,7 @@ export default function ProfileMenu({ role }) {
               <Menu.Item>
                 <button
                   className="flex items-center text-left p-2 w-full transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                  onClick={() => signOut(getAuth())}
+                  onClick={() => handleSignOut()}
                 >
                   Logout
                 </button>
