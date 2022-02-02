@@ -59,7 +59,7 @@ export function HowItWorks() {
             Get paid
           </h1>
           <p className="text-xl font-light">
-            Get paid if your friend gets interviewed or hired.
+            Get paid if they get interviewed or hired.
           </p>
         </div>
       </div>
