@@ -4,7 +4,7 @@ import { useEffect } from "react";
 
 function Jobs() {
   return (
-    <div className="pt-32 bg-light">
+    <div className="pt-32">
       <JobBoard title={false} />
       <Banner
         title="Want to post your own jobs?"

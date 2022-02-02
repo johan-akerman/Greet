@@ -11,7 +11,7 @@ export function InfoBar() {
               <strong> 28</strong> jobs and <strong>570 000</strong> SEK
               available.{" "}
               <Link to="/jobs" className="border-b-2 border-black ">
-                Find jobs
+                Refer a friend
               </Link>
             </span>
           </p>

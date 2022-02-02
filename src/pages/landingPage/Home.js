@@ -3,8 +3,6 @@ import { HowItWorks } from "src/components/HowItWorks";
 import { Banner } from "src/components/Banner";
 import { SocialMedia } from "src/components/SocialMedia";
 import { CompanyBanner } from "src/components/CompanyBanner";
-import { useEffect } from "react";
-
 import { JobBoard } from "src/components/JobBoard";
 import { Trusted } from "src/components/Trusted";
 
