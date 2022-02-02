@@ -35,7 +35,7 @@ function ForGreeters() {
               Find a job
             </h1>
             <p className="text-xl font-light">
-              Head over to the job board to find exciting tech jobs in Sweden.
+              Head over to the job board to find exciting tech jobs.
             </p>
           </div>
           <div>

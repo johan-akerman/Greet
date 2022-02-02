@@ -42,11 +42,11 @@ export default function Referrals() {
   }
 
   return (
-    <div className="bg-white pb-3 ">
-      <div className="md:w-11/12 w-12/12 mx-auto md:py-32 py-16">
-        <h3 className="text-4xl mt-8 md:text-left text-center">
+    <div className="md:bg-light  ">
+      <div className="md:w-11/12 w-12/12 mx-auto md:py-28 py-10">
+        <h2 className="text-4xl font-semibold text-gray-900 leading-none text-center mt-10 mb-20">
           My referrals ({referrals.length})
-        </h3>
+        </h2>
 
         <div className="md:block hidden">
           <ReferralsTable referrals={referrals} />

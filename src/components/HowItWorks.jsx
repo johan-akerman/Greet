@@ -12,7 +12,7 @@ export function HowItWorks() {
         How Greet works
       </h1>
 
-      <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 md:py-32 py-12   md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
+      <div className="grid lg:grid-cols-3 grid-cols-1 gap-12 md:py-32 py-12  md:text-left text-center md:w-10/12 w-11/12  mx-auto ">
         <div>
           <FontAwesomeIcon
             className="text-5xl mb-6 text-secondary"
@@ -42,7 +42,7 @@ export function HowItWorks() {
             Refer a friend
           </h1>
           <p className="text-xl font-light">
-            Refer a friend who is looking for new challenges.
+            Refer a friend who is looking for a job.
           </p>
         </div>
 
@@ -59,7 +59,7 @@ export function HowItWorks() {
             Get paid
           </h1>
           <p className="text-xl font-light">
-            Get paid if your friend gets interviewed or hired.
+            Get paid if they get interviewed or hired.
           </p>
         </div>
       </div>

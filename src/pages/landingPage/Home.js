@@ -15,7 +15,7 @@ function Home() {
       <Trusted />
       <HowItWorks />
       <JobBoard title={true} />
-      <CompanyBanner />
+      {/* <CompanyBanner /> */}
       <SocialMedia />
       <Banner
         title="Ready to refer someone?"

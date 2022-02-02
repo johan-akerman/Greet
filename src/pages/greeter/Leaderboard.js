@@ -18,7 +18,7 @@ export default function Leaderboard() {
 
   return (
     <>
-      <div className="md:block hidden">
+      <div className="md:block hidden bg-light py-28">
         <LeaderboardTable greeters={greeters} />
       </div>
 

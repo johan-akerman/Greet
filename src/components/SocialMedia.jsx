@@ -8,7 +8,7 @@ export function SocialMedia() {
   return (
     <div className="bg-lightYellow py-20">
       <h1 className="md:text-6xl text-4xl font-bold text-gray-900 text-center pb-3">
-        Follow us
+        Follow @joingreet
       </h1>
       <p className="text-lg text-center mb-12 px-3">
         Follow us on{" "}
@@ -29,7 +29,7 @@ export function SocialMedia() {
         >
           LinkedIn{" "}
         </a>
-        to get updates on new positions and other fun stuff.
+        to get updates on new jobs, companies and other fun stuff.
       </p>
       <div className="w-10/12 mx-auto grid md:grid-cols-5 grid-cols-2 gap-5 ">
         <a

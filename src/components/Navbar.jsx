@@ -16,7 +16,7 @@ export function Navbar() {
     <Disclosure as="nav" className="bg-primary  w-full">
       {({ open }) => (
         <>
-          <div className="flex justify-between h-24 py-6 w-11/12 mx-auto ">
+          <div className="flex justify-between h-24 py-6 md:w-10/12 w-11/12 mx-auto ">
             <div className="flex">
               <Link className="flex pt-1" to="/">
                 <img className="h-10 mb-1" src={logo} alt="logo" />
@@ -24,13 +24,14 @@ export function Navbar() {
                   Greet
                 </h1>
               </Link>
-              <div className="flex pl-5 pt-1 ">
+
+              <div className="flex pt-0.5 pl-8 ">
                 <HowIt />
                 <Link
                   className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
                   to="/jobs"
                 >
-                  Job board
+                  Jobs
                 </Link>
 
                 <Link
@@ -38,20 +39,6 @@ export function Navbar() {
                   to="/companies"
                 >
                   Companies
-                </Link>
-
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/referrals"
-                >
-                  My referrals
-                </Link>
-
-                <Link
-                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
-                  to="/leaderboard"
-                >
-                  Leaderboard
                 </Link>
               </div>
             </div>
@@ -77,7 +64,7 @@ export function Navbar() {
               ) : (
                 <>
                   <Link
-                    className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+                    className="lg:block hidden text-black text-lg font-semibold pr-6 py-2 hover:opacity-60"
                     to="/sign-in"
                   >
                     Sign in

@@ -27,21 +27,13 @@ export function Jumbotron() {
             className="w-32 absolute md:bottom-0 md:top-40 md:-right-20 top-96 right-6"
           />
         </div>
-        <h1 className="text-black lg:text-6xl text-5xl sm:mt-5 font-bold md:mt-5">
-          Earn up to <br className="md:hidden block" />
-          <CountUp
-            start={180.0}
-            end={570.0}
-            duration={0.65}
-            separator=" "
-            decimal=" "
-            decimals={3}
-          />{" "}
-          SEK to refer your friends to tech jobs
+        <h1 className="text-black text-6xl md:w-11/12 w-12/12 mx-auto sm:mt-5 font-bold md:mt-5">
+          Get paid to refer your friends to their dream job
         </h1>
         <p className="mt-3 text-2xl text-black sm:mt-5 md:mt-5 w-10/12 mx-auto">
-          Greet let's you refer your friend to their dream job in tech. As a
-          reward, you get paid if they get interviewed or hired.
+          Your friend's dream job is waiting. Greet let's you refer them in
+          under 2 minutes. As a reward, you get paid if they get interviewed or
+          hired.
         </p>
         <div className="mt-8 sm:mt-12 mx-auto flex gap-3 justify-center">
           <Link
@@ -58,11 +50,6 @@ export function Jumbotron() {
             Sign up for free
           </Link>
         </div>
-
-        <p className="mt-6">
-          <span className="text-xl mr-1">*</span>570 000 SEK is the total hiring
-          reward for all 28 available jobs
-        </p>
 
         <div className="relative w-full md:hidden block mt-12">
           <img src={billOne} className="w-32 absolute left-4" />
