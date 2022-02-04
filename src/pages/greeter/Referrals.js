@@ -16,18 +16,29 @@ export default function Referrals() {
       getDoc(doc(db, "greeters", user.uid)).then((greeter) => {
         greeter.data().referrals?.forEach((referral) => {
           const referralRef = doc(db, "referrals", referral);
-          getDoc(referralRef).then((referral) => {
-            const jobRef = doc(db, "jobs", referral.data().job);
-            getDoc(jobRef).then((job) => {
-              setReferrals((referrals) => [
-                ...referrals,
-                {
-                  referral: referral,
-                  job: job,
-                },
-              ]);
+
+          if (referral.job === "talent-pool") {
+            setReferrals((referrals) => [
+              ...referrals,
+              {
+                referral: referral,
+                job: null,
+              },
+            ]);
+          } else {
+            getDoc(referralRef).then((referral) => {
+              const jobRef = doc(db, "jobs", referral.data().job);
+              getDoc(jobRef).then((job) => {
+                setReferrals((referrals) => [
+                  ...referrals,
+                  {
+                    referral: referral,
+                    job: job,
+                  },
+                ]);
+              });
             });
-          });
+          }
         });
       });
     }

@@ -40,25 +40,33 @@ export default function ReferralsTable({ referrals }) {
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <Link
-                      to={`/jobs/${r.referral.data().job}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-money hover:underline"
-                    >
-                      {r.job.data().title}
-                    </Link>
+                    {r.referral.data().job === "talent-pool" ? (
+                      "Talent Pool"
+                    ) : (
+                      <Link
+                        to={`/jobs/${r.referral.data().job}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-money hover:underline"
+                      >
+                        {r.job.data().title}
+                      </Link>
+                    )}
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <Link
-                      to={`/companies/${r.job.data().companyId}`}
-                      target="_blank"
-                      rel="noopener noreferrer"
-                      className="hover:text-money hover:underline "
-                    >
-                      {r.job.data().company}
-                    </Link>
+                    {r.referral.data().job === "talent-pool" ? (
+                      "-"
+                    ) : (
+                      <Link
+                        to={`/companies/${r.job.data().companyId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-money hover:underline "
+                      >
+                        {r.job.data().company}
+                      </Link>
+                    )}
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
