@@ -40,21 +40,33 @@ export default function ReferralsTable({ referrals }) {
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <Link
-                      to={`/jobs/${r.referral.data().job}`}
-                      className="hover:text-green-500 hover:underline border-green-500"
-                    >
-                      {r.job.data().title}
-                    </Link>
+                    {r.referral.data().job === "talent-pool" ? (
+                      "Talent Pool"
+                    ) : (
+                      <Link
+                        to={`/jobs/${r.referral.data().job}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-money hover:underline"
+                      >
+                        {r.job.data().title}
+                      </Link>
+                    )}
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <Link
-                      to={`/companies/${r.job.data().companyId}`}
-                      className="hover:text-green-500 hover:underline border-green-500"
-                    >
-                      {r.job.data().company}
-                    </Link>
+                    {r.referral.data().job === "talent-pool" ? (
+                      "-"
+                    ) : (
+                      <Link
+                        to={`/companies/${r.job.data().companyId}`}
+                        target="_blank"
+                        rel="noopener noreferrer"
+                        className="hover:text-money hover:underline "
+                      >
+                        {r.job.data().company}
+                      </Link>
+                    )}
                   </td>
 
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
@@ -67,7 +79,7 @@ export default function ReferralsTable({ referrals }) {
                   <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 text-right">
                     <Link
                       to={`/referrals/${r.referral.id}`}
-                      className="text-green-600 hover:underline"
+                      className="text-money hover:underline"
                     >
                       Preview
                     </Link>

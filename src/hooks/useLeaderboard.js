@@ -16,7 +16,7 @@ export function useLeaderboard() {
       items.sort((a, b) => {
         return b?.referrals?.length - a?.referrals?.length;
       });
-      setGreeters(items);
+      setGreeters(items.slice(0, 5));
     });
   }, []);
 

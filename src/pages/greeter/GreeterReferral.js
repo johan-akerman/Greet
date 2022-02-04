@@ -130,13 +130,17 @@ function GreeterReferral() {
                 <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Position</dt>
                   <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    {referral?.j.title}
+                    {referral?.r.job === "talent-pool"
+                      ? "Talent Pool"
+                      : referral?.j.title}
                   </dd>
                 </div>
                 <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
                   <dt class="text-sm font-medium text-gray-500">Company</dt>
                   <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    {referral?.j.company}
+                    {referral?.r.job === "talent-pool"
+                      ? "-"
+                      : referral?.j.company}
                   </dd>
                 </div>
                 <div class="px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -144,7 +148,9 @@ function GreeterReferral() {
                     Interview reward
                   </dt>
                   <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    {referral?.j.interview}
+                    {referral?.r.job === "talent-pool"
+                      ? "500 SEK"
+                      : referral?.j.interview + " SEK"}
                   </dd>
                 </div>
                 <div class=" px-4 py-5 sm:grid sm:grid-cols-3 sm:gap-4 sm:px-6">
@@ -152,7 +158,9 @@ function GreeterReferral() {
                     Hiring reward
                   </dt>
                   <dd class="mt-1 text-sm text-gray-900 sm:mt-0 sm:col-span-2">
-                    {referral?.j.hiring}
+                    {referral?.r.job === "talent-pool"
+                      ? "15 000 SEK"
+                      : referral?.j.hiring + " SEK"}
                   </dd>
                 </div>
 

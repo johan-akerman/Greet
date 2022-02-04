@@ -8,7 +8,7 @@
     "@fortawesome/fontawesome-svg-core": "^1.2.36",
     "@fortawesome/free-solid-svg-icons": "^5.15.4",
     "@fortawesome/react-fontawesome": "^0.1.15",
-    "@headlessui/react": "^1.4.0",
+    "@headlessui/react": "^0.0.0-dev.0ce63d8",
     "@tailwindcss/forms": "^0.3.4",
     "@tailwindcss/typography": "^0.4.1",
     "@testing-library/jest-dom": "^5.14.1",

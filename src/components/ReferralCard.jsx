@@ -21,7 +21,9 @@ export default function ReferralCard({ referrals }) {
             {r.referral.data().candidate.name}
           </h3>
           <p class="mt-2 text-md text-gray-500 mb-4">
-            {r.job.data().title} @ {r.job.data().company}{" "}
+            {r.referral.data().job === "talent-pool"
+              ? "Talent Pool"
+              : r.job.data().title + "@" + r.job.data().company}
           </p>
 
           <ReferralStatus status={r.referral.data().general.status} />

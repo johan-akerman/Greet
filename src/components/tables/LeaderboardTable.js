@@ -54,8 +54,8 @@ export default function LeaderboardTable({ greeters }) {
           {greeters?.map((greeter, id) => {
             return (
               <tr key={id}>
-                <td className="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-500">
-                  {generateIcon(id + 1)}
+                <td className="px-6 py-4 whitespace-nowrap text-sm text-center text-gray-900">
+                  <strong>{generateIcon(id + 1)}</strong>
                 </td>
 
                 <td class="px-6 py-4 whitespace-nowrap">
@@ -77,6 +77,9 @@ export default function LeaderboardTable({ greeters }) {
           })}
         </tbody>
       </table>
+      <p className="text-sm text-center mt-10 mb-3">
+        * The leaderboard only display Greeters.
+      </p>
     </div>
   );
 }
