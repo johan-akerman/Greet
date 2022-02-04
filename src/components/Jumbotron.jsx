@@ -46,7 +46,7 @@ export function Jumbotron() {
             />
           </div>
           <h1 className="text-black text-6xl md:w-11/12 w-12/12 mx-auto sm:mt-5 font-bold md:mt-5">
-            Get paid to refer your friends to their dream job
+            Earn up to 25 000 SEK to refer your friend to their dream job
           </h1>
           <p className="mt-3 text-2xl text-black sm:mt-5 md:mt-5 w-10/12 mx-auto">
             Your friend's dream job is waiting. Greet let's you refer them in

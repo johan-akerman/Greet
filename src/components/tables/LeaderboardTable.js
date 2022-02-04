@@ -5,6 +5,7 @@ import {
   faTrophy,
 } from "@fortawesome/free-solid-svg-icons";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
+import { Link } from "react-router-dom";
 
 export default function LeaderboardTable({ greeters }) {
   if (!greeters) {
@@ -78,7 +79,11 @@ export default function LeaderboardTable({ greeters }) {
         </tbody>
       </table>
       <p className="text-sm text-center mt-10 mb-3">
-        * The leaderboard only display Greeters.
+        * The leaderboard only shows users who have signed up for a Greeter
+        account.{" "}
+        <Link to="/sign-up/new-greeter" className="text-money hover:underline">
+          Sign up
+        </Link>
       </p>
     </div>
   );
