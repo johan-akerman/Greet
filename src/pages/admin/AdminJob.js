@@ -49,7 +49,7 @@ function AdminJob() {
         <div className="flex mt-6 gap-4 border-b border-gray-300 ">
           <button
             className={`${
-              active === 0 ? "border-b-2 border-secondary text-secondary" : ""
+              active === 0 ? "border-b-2 border-money text-money" : ""
             } font-medium cursor-pointer px-4 py-4 text-sm text-gray-400`}
             onClick={() => setActive(0)}
           >
@@ -58,7 +58,7 @@ function AdminJob() {
 
           <button
             className={`${
-              active === 1 ? "border-b-2 border-secondary text-secondary" : ""
+              active === 1 ? "border-b-2 border-money text-money" : ""
             } font-medium cursor-pointer px-4 py-4 text-sm text-gray-400`}
             onClick={() => setActive(1)}
           >
@@ -67,7 +67,7 @@ function AdminJob() {
 
           <button
             className={`${
-              active === 2 ? "border-b-2 border-secondary text-secondary" : ""
+              active === 2 ? "border-b-2 border-money text-money" : ""
             } font-medium cursor-pointer px-4 py-4 text-sm text-gray-400`}
             onClick={() => setActive(2)}
           >
