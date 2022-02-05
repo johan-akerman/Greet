@@ -45,7 +45,7 @@ export function Jumbotron() {
               className="w-32 absolute md:bottom-0 md:top-40 md:-right-20 top-96 right-6"
             />
           </div>
-          <h1 className="text-black text-6xl md:w-11/12 w-12/12 mx-auto sm:mt-5 font-bold md:mt-5">
+          <h1 className="text-black text-6xl md:w-11/12 w-12/12 mx-auto sm:mt-5 font-bold md:mt-5 px-5">
             Earn up to 25 000 SEK to refer your friend to their dream job
           </h1>
           <p className="mt-3 text-2xl text-black sm:mt-5 md:mt-5 w-10/12 mx-auto">
@@ -103,7 +103,7 @@ export function Jumbotron() {
               leaveFrom="opacity-100 scale-100"
               leaveTo="opacity-0 scale-95"
             >
-              <div className="inline-block w-full max-w-lg p-6 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
+              <div className="inline-block w-full max-w-lg md:p-6 p-3 my-8 overflow-hidden text-left align-middle transition-all transform bg-white shadow-xl rounded-2xl">
                 <h1 className="text-center text-3xl font-semibold">
                   Refer a friend
                 </h1>
@@ -111,7 +111,7 @@ export function Jumbotron() {
                   Refer your friend to a specific job or to the talent pool.
                 </p>
 
-                <div className="relative bg-white p-3 mt-6">
+                <div className="relative bg-white p-2 mt-6">
                   <Link
                     to="/jobs"
                     className="border-2 border-gray-200 flex items-center text-left p-3 mx-1 my-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 focus:outline-none focus-visible:ring focus-visible:ring-orange-500 focus-visible:ring-opacity-50"
