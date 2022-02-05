@@ -7,6 +7,8 @@ import {
   faCog,
   faCogs,
   faPoll,
+  faSwimmer,
+  faSwimmingPool,
   faTrophy,
   faUser,
   faUsers,
@@ -91,6 +93,19 @@ export default function ProfileMenu({ role }) {
                   >
                     <FontAwesomeIcon icon={faPoll} className="mr-3" />
                     My jobs
+                  </Link>
+                </Menu.Item>
+
+                <Menu.Item>
+                  <Link
+                    to="/talent-pool"
+                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
+                  >
+                    <FontAwesomeIcon
+                      icon={faSwimmingPool}
+                      className="mr-1.5 -ml-0.5"
+                    />
+                    Talent pool
                   </Link>
                 </Menu.Item>
 

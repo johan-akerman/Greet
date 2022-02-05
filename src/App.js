@@ -19,7 +19,6 @@ import { AuthContextProvider } from "src/firebase";
 import AdminJobs from "./pages/admin/AdminJobs";
 import AdminSettings from "./pages/admin/AdminSettings";
 import AdminJob from "./pages/admin/AdminJob";
-import AdminRefer from "./pages/admin/AdminRefer";
 import AdminReferral from "./pages/admin/AdminReferral";
 import AdminAddJob from "./pages/admin/AdminAddJob";
 import ScrollToTop from "./hooks/scrollToTop";
@@ -30,6 +29,7 @@ import Leaderboard from "./pages/greeter/Leaderboard";
 import SignUpGreeter from "./pages/landingPage/SignUpGreeter";
 import SignUpCompany from "./pages/landingPage/SignUpCompany";
 import ResetPassword from "./pages/landingPage/ResetPassword";
+import TalentPool from "./pages/admin/TalentPool";
 import { InfoBar } from "./components/InfoBar";
 import GreeterReferral from "./pages/greeter/GreeterReferral";
 
@@ -110,20 +110,28 @@ function App() {
 
         <CompanyRoute
           exact
-          path="/admin/:job"
-          component={AdminJob}
-          role={role}
-        />
-        <CompanyRoute
-          exact
-          path="/admin/:job/refer"
-          component={AdminRefer}
+          path="/talent-pool"
+          component={TalentPool}
           role={role}
         />
 
         <CompanyRoute
           exact
-          path="/:job/candidates/:candidate"
+          path="/talent-pool/:candidate"
+          component={AdminReferral}
+          role={role}
+        />
+
+        <CompanyRoute
+          exact
+          path="/admin/:job"
+          component={AdminJob}
+          role={role}
+        />
+
+        <CompanyRoute
+          exact
+          path="/admin/:job/:candidate"
           component={AdminReferral}
           role={role}
         />

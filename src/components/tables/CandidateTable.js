@@ -1,50 +1,38 @@
-import CandidateStatus from "src/components/statuses/CandidateStatus";
 import { useHistory } from "react-router-dom";
-import { useState } from "react";
+import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import Search from "src/components/Search";
 import NoReferral from "src/components/emptyStates/NoReferral";
 
-const statuses = [
-  "Show all statuses",
-  "In progress",
-  "Shortlisted",
-  "Not a fit",
-  "Hired",
-];
-
 const times = ["Newest first", "Oldest first"];
-const th = ["Candidate", "Title", "Referred by", "Added", "Status"];
+const th = ["Candidate", "Referred by", "Added"];
 
-export default function CandidateTable({ referrals, id }) {
-  let [displayedReferrals, setDisplayedReferrals] = useState(referrals);
-  const [selectedStatus, setSelectedStatus] = useState(statuses[0]);
+export default function CandidateTable({ referrals }) {
+  const history = useHistory();
+  let currentDate = new Date();
   const [selectedTime, setSelectedTime] = useState(times[0]);
+  let [displayedReferrals, setDisplayedReferrals] = useState([]);
+  let url = window.location.href;
+  let job = url.split("/")[url.split("/").length - 1];
 
-  function changeStatus(data) {
-    var tmp = [];
-    referrals.forEach((referral) => {
-      if (data === "Show all statuses") {
-        tmp.push(referral);
-      }
+  useEffect(() => {
+    setDisplayedReferrals(referrals);
+  }, []);
 
-      if (referral.data().general.status === data) {
-        tmp.push(referral);
-      }
-    });
-    setSelectedStatus(data);
-    setDisplayedReferrals(tmp);
-  }
+  useEffect(() => {
+    setDisplayedReferrals(referrals);
+  }, [referrals]);
 
   const handleSearch = (data) => {
     setDisplayedReferrals(data);
   };
 
-  const history = useHistory();
-  let currentDate = new Date();
-
-  function handleClick(job, id) {
-    history.push(`/${job}/candidates/${id}`);
+  function handleClick(id) {
+    if (job === "talent-pool") {
+      history.push(`/talent-pool/${id}`);
+    } else {
+      history.push(`/admin/${url.split("/")[url.split("/").length - 1]}/${id}`);
+    }
   }
 
   function calculateDays(date) {
@@ -79,14 +67,6 @@ export default function CandidateTable({ referrals, id }) {
       <div className="mt-14 flex gap-3">
         <Search list={referrals} handleSearch={handleSearch} />
 
-        <div className="w-72">
-          <Select
-            selected={selectedStatus}
-            statuses={statuses}
-            changeStatus={changeStatus}
-          />
-        </div>
-
         <div class="w-52">
           <Select
             selected={selectedTime}
@@ -113,33 +93,45 @@ export default function CandidateTable({ referrals, id }) {
                 <tr key={referral.id} className="hover:bg-light">
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                    onClick={() => handleClick(id, referral.id)}
+                    onClick={() => handleClick(referral.id)}
                   >
-                    {referral.data().candidate.name}
+                    <div className="h-10 w-10 border border-gray-500 rounded-full mr-3 text-center pt-1 text-lg capitalize float-left ">
+                      {referral.data().candidate.name[0]}
+                    </div>
+
+                    <div className="float-left">
+                      <div class="text-sm font-medium text-gray-900">
+                        {referral.data().candidate.name}
+                      </div>
+                      <div class="text-sm text-gray-500">
+                        {referral.data().candidate.title}{" "}
+                      </div>
+                    </div>
                   </td>
 
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                    onClick={() => handleClick(id, referral.id)}
+                    onClick={() => handleClick(referral.id)}
                   >
-                    {referral.data().candidate.title}
+                    <div className="h-10 w-10 border border-gray-500 rounded-full mr-3 text-center pt-1 text-lg capitalize float-left ">
+                      {referral.data().referrer.name[0]}
+                    </div>
+
+                    <div className="float-left">
+                      <div class="text-sm font-medium text-gray-900">
+                        {referral.data().referrer.name}
+                      </div>
+                      <div class="text-sm text-gray-500">
+                        {referral.data().referrer.title}{" "}
+                      </div>
+                    </div>
                   </td>
 
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                    onClick={() => handleClick(id, referral.id)}
-                  >
-                    {referral.data().referrer.name}
-                  </td>
-                  <td
-                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                    onClick={() => handleClick(id, referral.id)}
+                    onClick={() => handleClick(referral.id)}
                   >
                     {calculateDays(referral.data().time.toDate())}
-                  </td>
-
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <CandidateStatus referral={referral} />
                   </td>
                 </tr>
               ))}

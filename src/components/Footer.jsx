@@ -4,7 +4,7 @@ import logo from "../images/logo.png";
 export function Footer() {
   return (
     <div className="bg-primary text-whblackite text-left">
-      <div className="w-11/12 mx-auto pt-20 pb-8 flex flex-col sm:flex-row space-y-2 justify-start">
+      <div className="w-10/12 mx-auto pt-20 pb-8 flex flex-col sm:flex-row space-y-2 justify-start">
         <div className="w-full sm:w-2/5 pr-6 flex flex-col space-y-2 pb-6">
           <Link className="flex pt-1" to="/">
             <img className="h-12 pb-2 " src={logo} alt="logo" />

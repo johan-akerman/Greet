@@ -13,7 +13,7 @@ export default function AdminJobs() {
   return (
     <>
       <div className="bg-white pb-3 ">
-        <div className="md:w-11/12 w-11/12 mx-auto mt-32 mb-56">
+        <div className="w-10/12 mx-auto mt-32 mb-56">
           <h3 className="text-4xl mt-8" to="/admin">
             Jobs
           </h3>

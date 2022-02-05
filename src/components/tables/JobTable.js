@@ -1,38 +1,25 @@
 import { useHistory } from "react-router-dom";
-import JobStatus from "src/components/statuses/JobStatus";
 import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-const statuses = ["Show all statuses", "Open", "Hidden"];
+import db from "src/firebase";
+
+import { collection, query, where, getDocs, getDoc } from "firebase/firestore";
+import ReferralCount from "../ReferralCount";
+
 const times = ["Newest first", "Oldest first"];
-const th = ["Job", "Hiring reward", "Interview reward", "Posted", "Status"];
+const th = ["Job", "Location", "Referrals", "Posted"];
 
 export default function JobTable({ jobs }) {
   let [displayedJobs, setDisplayedJobs] = useState([]);
-  let [selectedStatus, setSelectedStatus] = useState(statuses[0]);
+
   let [selectedTime, setSelectedTime] = useState(times[0]);
   const history = useHistory();
 
   useEffect(() => {
     setDisplayedJobs(jobs);
   }, [jobs]);
-
-  function changeStatus(data) {
-    var tmp = [];
-    jobs.forEach((job) => {
-      if (data === "Show all statuses") {
-        tmp.push(job);
-      }
-
-      if (job.data().status === data) {
-        tmp.push(job);
-      }
-    });
-
-    setSelectedStatus(data);
-    setDisplayedJobs(tmp);
-  }
 
   function handleClick(id) {
     history.push(`/admin/${id}`);
@@ -56,6 +43,22 @@ export default function JobTable({ jobs }) {
     });
 
     setDisplayedJobs(tmp);
+  }
+
+  async function findNumberOfReferrals(id) {
+    const q = query(collection(db, "referrals"), where("job", "==", id));
+
+    let count = 0;
+
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      count++;
+    });
+
+    console.log(count);
+
+    return count;
   }
 
   function time(input) {
@@ -88,12 +91,6 @@ export default function JobTable({ jobs }) {
         </div>
 
         <div className="flex gap-3">
-          <Select
-            className="w-52"
-            selected={selectedStatus}
-            statuses={statuses}
-            changeStatus={changeStatus}
-          />
           <Select
             className="w-40"
             selected={selectedTime}
@@ -128,23 +125,14 @@ export default function JobTable({ jobs }) {
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}
                   >
-                    {currentJob.data().hiring} SEK
+                    {currentJob.data().location}
                   </td>
-                  <td
-                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                    onClick={() => handleClick(currentJob.id)}
-                  >
-                    {currentJob.data().interview} SEK
-                  </td>
+                  <ReferralCount id={currentJob.id} handleClick={handleClick} />
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}
                   >
                     {calculateDays(currentJob.data().time.toDate())}
-                  </td>
-
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <JobStatus id={currentJob.id} job={currentJob.data()} />
                   </td>
                 </tr>
               ))}
