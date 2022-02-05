@@ -74,16 +74,6 @@ export default function ProfileMenu({ role }) {
 
                 <Menu.Item>
                   <Link
-                    to="/leaderboard"
-                    className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
-                  >
-                    <FontAwesomeIcon icon={faTrophy} className="mr-3" />
-                    Leaderboard
-                  </Link>
-                </Menu.Item>
-
-                <Menu.Item>
-                  <Link
                     to="/greeter/settings"
                     className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                   >

@@ -40,6 +40,13 @@ export function Navbar() {
                 >
                   Companies
                 </Link>
+
+                <Link
+                  className="lg:block hidden text-black text-lg font-semibold pl-3 pr-6 py-2 hover:opacity-60"
+                  to="/leaderboard"
+                >
+                  Leaderboard
+                </Link>
               </div>
             </div>
 
