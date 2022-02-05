@@ -41,7 +41,7 @@ function AdminJob() {
 
   return (
     <div className="bg-white">
-      <div className="pt-32 pb-56 w-11/12 mx-auto min-h-screen">
+      <div className="pt-32 pb-56 w-10/12 mx-auto min-h-screen">
         <Link to="/admin" className="text-4xl">
           <FontAwesomeIcon icon={faChevronLeft} className="mr-3 text-xl mb-1" />
           {job.title}

@@ -1,11 +1,9 @@
-import ReferralsTable from "src/components/tables/ReferralsTable";
-import ReferralCard from "src/components/ReferralCard";
 import { useState, useEffect } from "react";
 import db from "src/firebase";
 import { collection, query, where, getDocs } from "firebase/firestore";
 
 import { useRole } from "src/hooks/useRole";
-import TalentPoolTable from "src/components/tables/TalentPoolTable";
+import CandidateTable from "src/components/tables/CandidateTable";
 
 export default function TalentPool() {
   let [referrals, setReferrals] = useState([]);
@@ -44,7 +42,7 @@ export default function TalentPool() {
         </p>
 
         <div className="md:block hidden">
-          <TalentPoolTable referrals={referrals} />
+          <CandidateTable referrals={referrals} />
         </div>
       </div>
     </div>

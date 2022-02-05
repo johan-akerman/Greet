@@ -110,6 +110,20 @@ function App() {
 
         <CompanyRoute
           exact
+          path="/talent-pool"
+          component={TalentPool}
+          role={role}
+        />
+
+        <CompanyRoute
+          exact
+          path="/talent-pool/:candidate"
+          component={AdminReferral}
+          role={role}
+        />
+
+        <CompanyRoute
+          exact
           path="/admin/:job"
           component={AdminJob}
           role={role}
@@ -117,14 +131,7 @@ function App() {
 
         <CompanyRoute
           exact
-          path="/admin/talent-pool"
-          component={TalentPool}
-          role={role}
-        />
-
-        <CompanyRoute
-          exact
-          path="/:job/candidates/:candidate"
+          path="/admin/:job/:candidate"
           component={AdminReferral}
           role={role}
         />

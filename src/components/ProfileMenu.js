@@ -98,10 +98,13 @@ export default function ProfileMenu({ role }) {
 
                 <Menu.Item>
                   <Link
-                    to="/admin/talent-pool"
+                    to="/talent-pool"
                     className="flex items-center text-left p-2 transition duration-150 ease-in-out rounded-lg hover:bg-gray-100 text-lg font-semibold text-gray-900"
                   >
-                    <FontAwesomeIcon icon={faSwimmer} className="mr-3" />
+                    <FontAwesomeIcon
+                      icon={faSwimmingPool}
+                      className="mr-1.5 -ml-0.5"
+                    />
                     Talent pool
                   </Link>
                 </Menu.Item>
