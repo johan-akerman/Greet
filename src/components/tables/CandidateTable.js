@@ -19,6 +19,10 @@ export default function CandidateTable({ referrals }) {
     setDisplayedReferrals(referrals);
   }, []);
 
+  useEffect(() => {
+    setDisplayedReferrals(referrals);
+  }, [referrals]);
+
   const handleSearch = (data) => {
     setDisplayedReferrals(data);
   };

@@ -1,9 +1,12 @@
 import { useHistory } from "react-router-dom";
-import JobStatus from "src/components/statuses/JobStatus";
 import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
+import db from "src/firebase";
+
+import { collection, query, where, getDocs, getDoc } from "firebase/firestore";
+import ReferralCount from "../ReferralCount";
 
 const times = ["Newest first", "Oldest first"];
 const th = ["Job", "Location", "Referrals", "Posted"];
@@ -40,6 +43,22 @@ export default function JobTable({ jobs }) {
     });
 
     setDisplayedJobs(tmp);
+  }
+
+  async function findNumberOfReferrals(id) {
+    const q = query(collection(db, "referrals"), where("job", "==", id));
+
+    let count = 0;
+
+    const querySnapshot = await getDocs(q);
+
+    querySnapshot.forEach((doc) => {
+      count++;
+    });
+
+    console.log(count);
+
+    return count;
   }
 
   function time(input) {
@@ -106,14 +125,9 @@ export default function JobTable({ jobs }) {
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}
                   >
-                    -
+                    {currentJob.data().location}
                   </td>
-                  <td
-                    className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
-                    onClick={() => handleClick(currentJob.id)}
-                  >
-                    -
-                  </td>
+                  <ReferralCount id={currentJob.id} handleClick={handleClick} />
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}

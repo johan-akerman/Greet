@@ -24,15 +24,18 @@ function AdminJob() {
   const id = url.split("/")[url.split("/").length - 1];
 
   useEffect(() => {
-    getDoc(doc(db, "jobs", id)).then((doc) => setJob(doc.data()));
-    const tmpReferrals = [];
-    const q = query(collection(db, "referrals"), where("job", "==", id));
-    getDocs(q).then((documents) => {
-      documents.forEach((doc) => {
-        tmpReferrals.push(doc);
+    getDoc(doc(db, "jobs", id))
+      .then((doc) => setJob(doc.data()))
+      .then(() => {
+        const tmpReferrals = [];
+        const q = query(collection(db, "referrals"), where("job", "==", id));
+        getDocs(q).then((documents) => {
+          documents.forEach((doc) => {
+            tmpReferrals.push(doc);
+          });
+          setReferrals(tmpReferrals);
+        });
       });
-      setReferrals(tmpReferrals);
-    });
   }, []);
 
   if (!job) {
