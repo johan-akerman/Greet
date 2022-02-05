@@ -89,7 +89,7 @@ export default function JobEditor({ jobToEdit, id }) {
           <FontAwesomeIcon
             icon={faPen}
             className={`${
-              editing ? "text-secondary" : "text-gray-400"
+              editing ? "text-money" : "text-gray-400"
             } mr-2.5 text-sm`}
           />
           Edit
@@ -103,7 +103,7 @@ export default function JobEditor({ jobToEdit, id }) {
           <FontAwesomeIcon
             icon={faEye}
             className={`${
-              !editing ? "text-secondary" : "text-gray-400"
+              !editing ? "text-money" : "text-gray-400"
             } mr-2.5 text-sm`}
           />
           Preview

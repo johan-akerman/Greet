@@ -4,35 +4,19 @@ import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faSearch } from "@fortawesome/free-solid-svg-icons";
-const statuses = ["Show all statuses", "Open", "Hidden"];
+
 const times = ["Newest first", "Oldest first"];
-const th = ["Job", "Hiring reward", "Interview reward", "Posted", "Status"];
+const th = ["Job", "Location", "Referrals", "Posted"];
 
 export default function JobTable({ jobs }) {
   let [displayedJobs, setDisplayedJobs] = useState([]);
-  let [selectedStatus, setSelectedStatus] = useState(statuses[0]);
+
   let [selectedTime, setSelectedTime] = useState(times[0]);
   const history = useHistory();
 
   useEffect(() => {
     setDisplayedJobs(jobs);
   }, [jobs]);
-
-  function changeStatus(data) {
-    var tmp = [];
-    jobs.forEach((job) => {
-      if (data === "Show all statuses") {
-        tmp.push(job);
-      }
-
-      if (job.data().status === data) {
-        tmp.push(job);
-      }
-    });
-
-    setSelectedStatus(data);
-    setDisplayedJobs(tmp);
-  }
 
   function handleClick(id) {
     history.push(`/admin/${id}`);
@@ -89,12 +73,6 @@ export default function JobTable({ jobs }) {
 
         <div className="flex gap-3">
           <Select
-            className="w-52"
-            selected={selectedStatus}
-            statuses={statuses}
-            changeStatus={changeStatus}
-          />
-          <Select
             className="w-40"
             selected={selectedTime}
             statuses={times}
@@ -128,23 +106,19 @@ export default function JobTable({ jobs }) {
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}
                   >
-                    {currentJob.data().hiring} SEK
+                    -
                   </td>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}
                   >
-                    {currentJob.data().interview} SEK
+                    -
                   </td>
                   <td
                     className="px-6 py-4 whitespace-nowrap text-sm text-gray-500 cursor-pointer"
                     onClick={() => handleClick(currentJob.id)}
                   >
                     {calculateDays(currentJob.data().time.toDate())}
-                  </td>
-
-                  <td className="px-6 py-4 whitespace-nowrap text-sm text-gray-500">
-                    <JobStatus id={currentJob.id} job={currentJob.data()} />
                   </td>
                 </tr>
               ))}
