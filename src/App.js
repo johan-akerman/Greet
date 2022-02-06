@@ -32,6 +32,7 @@ import ResetPassword from "./pages/landingPage/ResetPassword";
 import TalentPool from "./pages/admin/TalentPool";
 import { InfoBar } from "./components/InfoBar";
 import GreeterReferral from "./pages/greeter/GreeterReferral";
+import NotMobileFriendlyYet from "./components/emptyStates/NotMobileFriendlyYet";
 
 function CompanyRoute({ component: C, ...props }) {
   return (
@@ -39,7 +40,15 @@ function CompanyRoute({ component: C, ...props }) {
       {...props}
       render={(routeProps) =>
         props.role === "company" ? (
-          <C {...routeProps} />
+          <>
+            <div className="md:hidden block">
+              <NotMobileFriendlyYet />
+            </div>
+
+            <div className="md:block hidden">
+              <C {...routeProps} />
+            </div>
+          </>
         ) : (
           <Redirect to="/sign-in" />
         )
