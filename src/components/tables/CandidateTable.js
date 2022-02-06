@@ -6,7 +6,7 @@ import NoReferral from "src/components/emptyStates/NoReferral";
 import CandidateStatus from "../statuses/CandidateStatus";
 
 const times = ["Newest first", "Oldest first"];
-const th = ["Candidate", "Referred by", "Added", ""];
+let th = [];
 
 export default function CandidateTable({ referrals }) {
   const history = useHistory();
@@ -15,6 +15,14 @@ export default function CandidateTable({ referrals }) {
   let [displayedReferrals, setDisplayedReferrals] = useState([]);
   let url = window.location.href;
   let job = url.split("/")[url.split("/").length - 1];
+
+  if (job === "talent-pool") {
+    th = ["Candidate", "Referred by", "Added"];
+  }
+
+  if (job != "talent-pool") {
+    th = ["Candidate", "Referred by", "Added", ""];
+  }
 
   useEffect(() => {
     setDisplayedReferrals(referrals);
@@ -135,9 +143,11 @@ export default function CandidateTable({ referrals }) {
                     {calculateDays(referral.data().time.toDate())}
                   </td>
 
-                  <td>
-                    <CandidateStatus referral={referral} />
-                  </td>
+                  {job === "talent-pool" ? null : (
+                    <td>
+                      <CandidateStatus referral={referral} />
+                    </td>
+                  )}
                 </tr>
               ))}
             </tbody>
