@@ -3,9 +3,10 @@ import { useEffect, useState } from "react";
 import Select from "src/components/Select";
 import Search from "src/components/Search";
 import NoReferral from "src/components/emptyStates/NoReferral";
+import CandidateStatus from "../statuses/CandidateStatus";
 
 const times = ["Newest first", "Oldest first"];
-const th = ["Candidate", "Referred by", "Added"];
+const th = ["Candidate", "Referred by", "Added", ""];
 
 export default function CandidateTable({ referrals }) {
   const history = useHistory();
@@ -132,6 +133,10 @@ export default function CandidateTable({ referrals }) {
                     onClick={() => handleClick(referral.id)}
                   >
                     {calculateDays(referral.data().time.toDate())}
+                  </td>
+
+                  <td>
+                    <CandidateStatus referral={referral} />
                   </td>
                 </tr>
               ))}
