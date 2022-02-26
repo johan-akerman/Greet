@@ -1,6 +1,6 @@
 # 👋 Greet | Get rewarded to refer your friends
 
-I discovered that hiring is a difficult, time consuming and expensive task. Especially for startups with a limited budget and no prior experience in recruiting. To solve this problem I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. The project is under development and there are currently 5 companies on board, 11 jobs posted and 220 000 SEK available in hiring rewards.
+I discovered that hiring is a difficult, time consuming and expensive task. Especially for startups with a limited budget and no prior experience in recruiting. To solve this problem I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. The project is under development and there are currently 6 companies on board, 28 jobs posted and 570 000 SEK available in hiring rewards.
 
 <strong>Try Greet:</strong> www.joingreet.com
 <br />
