@@ -1,6 +1,6 @@
 # 👋 Greet | Get rewarded to refer your friends
 
-I discovered that hiring is a difficult, time consuming and expensive task. Especially for startups with a limited budget and no prior experience in recruiting. To solve this problem I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. The project is under development and there are currently 6 companies on board, 28 jobs posted and 570 000 SEK available in hiring rewards.
+I discovered that hiring is a difficult, time consuming and expensive task. Especially for startups with a limited budget and no prior experience in recruiting. To solve this problem I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. 6 companies joined and posted 28 jobs with a total referral bounty of 570 000 SEK. The project is no longer under development.
 
 <strong>Try Greet:</strong> www.joingreet.com
 <br />
@@ -14,6 +14,7 @@ The frontend is built with React and styled with Tailwind CSS. Firebase is used 
 <br />
 
 ## Sitemap
+There are three possible types of users on the site who get access to various content: users who are not logged in (orange), greeters (green) and companies (yellow).
 
 <img src="src/images/readme/sitemap.png" alt="1"
 	title="sitemap" width="800" /> <br /><br/>
