@@ -72,9 +72,10 @@ Greet is my biggest project so far. There are a lot of various pages and functio
 
 #### 2.2 Leaderboard and settings
 <img src="src/images/readme/2.1.2.png" alt="4"
-	title="4" width="400" />
+	title="4" width="800" />
+	<br /><br/>
 <img src="src/images/readme/2.1.3.png" alt="5"
-	title="5" width="400" />
+	title="5" width="800" />
 	
 ### 3. Company view
 
@@ -84,6 +85,7 @@ Greet is my biggest project so far. There are a lot of various pages and functio
 	
 #### 3.2 Job editor and settings
 <img src="src/images/readme/3.1.2.png" alt="4"
-	title="4" width="400" />
+	title="4" width="800" />
+	
 <img src="src/images/readme/3.1.3.gif" alt="5"
-	title="5" width="400" />
+	title="5" width="800" />
