@@ -1,6 +1,6 @@
 # 👋 Greet | Get rewarded to refer your friends
 
-I discovered that hiring is a difficult, time consuming and expensive task. Especially for startups with a limited budget and no prior experience in recruiting. To solve this problem I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. 6 companies joined and posted 28 jobs with a total referral bounty of 570 000 SEK. The project is no longer under development.
+A marketplace where you get paid to refer your friends to tech jobs. 
 
 <strong>Try Greet:</strong> www.joingreet.com
 <br />
@@ -8,18 +8,22 @@ I discovered that hiring is a difficult, time consuming and expensive task. Espe
 <img src="src/images/readme/landingpage.png" alt="1"
 	title="homepage" width="800" /> <br /><br/>
 
-## Technologies used
+
+## 📖 Story behind the project
+After realizing that hiring is a difficult, time consuming and expensive task for startups I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. By using Greet, companies can spend less time (and money) on recruitment by getting high quality candidates referred to their open positions. 6 companies joined and posted 28 jobs with a total referral bounty of 570 000 SEK. 
+
+## ⚙️ Technologies used
 
 The frontend is built with React and styled with Tailwind CSS. Firebase is used as a database and to handle authentication. 
 <br />
 
-## Sitemap
-There are three possible types of users on the site who get access to various content: users who are not logged in (orange), greeters (green) and companies (yellow).
+## 🗺️ Sitemap
+Greet is my biggest project so far. There are a lot of various pages and functionality which can be seen in the sitemap below. There are three possible types of users on the site who get access to various content: users who are not logged in (orange), greeters (green) and companies (yellow).
 
 <img src="src/images/readme/sitemap.png" alt="1"
 	title="sitemap" width="800" /> <br /><br/>
 
-## Product overview screenshots
+## 📸 Screenshots
 
 ### 1. Homepage
 <img src="src/images/readme/landingpage.gif" alt="1"
