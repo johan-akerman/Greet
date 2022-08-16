@@ -10,7 +10,7 @@ A marketplace where you get paid to refer your friends to tech jobs.
 
 
 ## 📖 Story behind the project
-After realizing that hiring is a difficult, time consuming and expensive task for startups I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. By using Greet, companies can spend less time (and money) on recruitment by getting high quality candidates referred to their open positions. 6 companies joined and posted 28 jobs with a total referral bounty of 570 000 SEK. 
+After realizing that hiring is a difficult, time consuming and expensive task for startups I launched Greet, a marketplace where you get paid to refer your friends to tech jobs. By using Greet, companies can spend less time (and money) on recruitment by getting high quality candidates referred to their open positions. 6 companies joined and posted 28 jobs with a total referral bounty of $57 000. 
 
 ## ⚙️ Technologies used
 
